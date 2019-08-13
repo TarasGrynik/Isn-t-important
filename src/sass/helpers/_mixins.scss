@@ -1,4 +1,5 @@
 //mixin add flex property for element
+
 @mixin flex-center($type: 'flex') {
   @if $type == 'flex' {
     display: flex;
