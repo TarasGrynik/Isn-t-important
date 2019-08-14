@@ -1,0 +1,16 @@
+.page-footer__bottom {
+  height: 24px;
+  background-color: #202020;
+}
+
+@media screen and (min-width: 48em) {
+  .page-footer__bottom {
+    height: 34px;
+  }
+}
+
+@media screen and (min-width: 75em) {
+  .page-footer__bottom {
+    height: 38px;
+  }
+}
