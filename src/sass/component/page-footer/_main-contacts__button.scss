@@ -40,7 +40,8 @@
     font-size: remy(12);
   }
 
-  &:hover {
+  &:hover,
+  &:focus {
     background-color: $main-style-color;
     border: none;
   }
