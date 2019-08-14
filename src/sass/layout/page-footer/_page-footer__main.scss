@@ -1,0 +1,12 @@
+.page-footer__main {
+  height: 104px;
+  background-color: #181c27;
+
+  @media screen and (min-width: 48em) {
+    height: 150px;
+  }
+
+  @media screen and (min-width: 75em) {
+    height: 168px;
+  }
+}

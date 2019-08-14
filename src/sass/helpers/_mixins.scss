@@ -17,5 +17,8 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
+  }@else if $type == 'column' {
+    display: flex;
+    flex-flow: column nowrap;
   }
 }
