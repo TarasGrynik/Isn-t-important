@@ -1,0 +1,47 @@
+.main-contacts__call-button {
+  display: flex;
+  justify-content: flex-end;
+}
+
+.main-contacts__button {
+  font-family: $special-font;
+  font-size: remy(9);
+  color: #ffffff;
+  background-color: transparent;
+  text-transform: uppercase;
+  border-width: 0.625px;
+  border-color: #1b4371;
+  border-style: solid;
+  margin-left: -15px;
+  width: 120px;
+  height: 20px;
+  transition: all 0.3s linear;
+
+  @media screen and (min-width: 36em) {
+    width: 140px;
+    height: 30px;
+    font-size: remy(10);
+  }
+
+  @media screen and (min-width: 48em) {
+    width: 160px;
+    height: 40px;
+    font-size: remy(11);
+  }
+
+  @media screen and (min-width: 62em) {
+    width: 160px;
+    height: 50px;
+    font-size: remy(11);
+  }
+
+  @media screen and (min-width: 75em) {
+    width: 200px;
+    font-size: remy(12);
+  }
+
+  &:hover {
+    background-color: $main-style-color;
+    border: none;
+  }
+}
