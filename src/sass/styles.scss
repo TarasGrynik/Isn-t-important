@@ -2,6 +2,7 @@
 @import "../../node_modules/bootstrap-scss/bootstrap.scss";
 
 /* Helpers */
+@import './base/fonts.scss';
 @import './helpers/variables';
 @import './helpers/functions';
 @import './helpers/mixins';
@@ -13,8 +14,11 @@
 
 /* Components */
 @import './component/page-footer/advertising.scss';
+@import './component/page-footer/social-list';
+@import './component/page-footer/main-contacts__button';
 
 /* Layout */
+@import './layout/page-footer/main-contacts';
 @import './layout/page-footer/page-footer__main.scss';
 @import './layout/page-footer/page-footer__bottom.scss';
 @import './layout/page-footer/law-info.scss';
