@@ -13,8 +13,12 @@
     font-family: $special-font;
     font-size: remy(11);
 
+    @media screen and (min-width: 62em) {
+      font-size: remy(12);
+    }
+
     @media screen and (min-width: 75em) {
-      font-size: remy(14);
+      font-size: remy(13);
     }
   }
 
