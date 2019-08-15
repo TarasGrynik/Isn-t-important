@@ -6,8 +6,19 @@
 text-transform: uppercase;
 font-family: $special-font;
 color: $title-text-color;
+text-align: center;
 font-size: remy(18);
 margin-bottom: 40px;
+
+@media (min-width: 640px) {
+    font-size: remy(27);
+    text-align: left;
+}
+
+@media (min-width: 732px) {
+    font-size: remy(30);
+    text-align: left;
+}
 }
 
 .facts--about {
@@ -15,30 +26,52 @@ margin-bottom: 40px;
     color: $title-text-color;
     margin-bottom: 40px;
     position: relative;
+    padding-left: 60px;
 
     &:before {
         position: absolute;
         top: 10px;
-        left: -26px;
+        left: 12px;
         content: '';
         display: block;
         width: 26px;
         height: 4px;
         background-color: $title-text-color;
     }
+
+    @media (min-width: 640px) {
+        font-size: remy(9);
+    }
+
+    @media (min-width: 732px) {
+        font-size: remy(10);
+    }
 }
 
 .facts--list {
     list-style: none;
     padding: 0;
+    // display: flex;
+    // flex-wrap: wrap;
+
+    @media (min-width: 640px) {
+        background: url(../../../images/main-images/decorative-images/schedule.png) bottom right/auto no-repeat ;
+    }
 }
 
 .facts--item {
+    margin-right: 20px;
     margin-bottom: 12px;
     position: relative;
+
     &:last-child {
         margin-bottom: 0;
+
+        @media (min-width: 640px) {
+            margin-bottom: 12px; 
+        }
     }
+
     &:before {
         content: '';
         position: absolute;
@@ -48,6 +81,19 @@ margin-bottom: 40px;
         width: 10px;
         height: 10px;
         background-color: $main-style-color;
+
+        @media (min-width: 640px) {
+            display: none;
+        }
+    }
+
+    @media (min-width: 640px) {
+        font-size: remy(8);
+    }
+
+    @media (min-width: 732px) {
+        width: 165px;
+        font-size: remy(9);
     }
 }
 
@@ -59,13 +105,28 @@ margin-bottom: 40px;
     &__span {
         font-size: remy(13);
         margin-left: 10px;
+
+        @media (min-width: 640px) {
+            font-size: remy(9);
+        }
+    }
+
+    @media (min-width: 640px) {
+        font-size: remy(16);
+    }
+
+    @media (min-width: 732px) {
+        font-size: remy(19);
     }
 }
 
 .facts--acent {
-    display: inline-block;
+    display: inline;
     font-family: $style-font;
     color: $title-text-color;
     background-color: $addition-style-color;
 }
 
+.facts--item-text {
+    margin-bottom: 0;
+}

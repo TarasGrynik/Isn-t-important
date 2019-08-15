@@ -8,22 +8,30 @@
 
 .future--header-wrapper {
     margin-bottom: 22px;
+    padding: 0;
 }
 
 .future--header {
-    display: inline-block;
+    display: inline;
     font-family: $section-title-font;
     background-color: $title-text-color;
     color: $banner-title-text-color;
     text-transform: uppercase;
     font-size: remy(18);
-    margin-bottom: 6px;
+
+    @media (min-width: 640px) {
+        font-size: remy(9);
+    }
 }
 
 .future--call {
     font-family: $section-title-font;
     color: $title-text-color;
 margin-bottom: 14px;
+
+@media (min-width: 640px) {
+    font-size: remy(9);
+}
 }
 
 .future--about {
@@ -33,10 +41,23 @@ margin-bottom: 14px;
         color: $title-text-color;
         background-color: $addition-style-color;
     }
+
+    @media (min-width: 640px) {
+        font-size: remy(9);
+    }
 }
 
 .future--second-header {
-    margin-bottom: 20px;
+    display: inline;
+    font-family: $section-title-font;
+    background-color: $title-text-color;
+    color: $banner-title-text-color;
+    text-transform: uppercase;
+    font-size: remy(18);
+
+    @media (min-width: 640px) {
+        font-size: remy(27);
+    }
 }
 
 .future--more {
@@ -44,6 +65,7 @@ margin-bottom: 14px;
     color: $title-text-color;
     margin-bottom: 45px;
     position: relative;
+    padding-left: 10px;
 
     &:before {
         position: absolute;
@@ -54,6 +76,16 @@ margin-bottom: 14px;
         width: 14px;
         height: 4px;
         background-color: $title-text-color;
+
+        @media (min-width: 640px) {
+            top: 2px;
+            left: -22px;
+        }
+    }
+
+    @media (min-width: 640px) {
+        font-size: remy(9);
+        margin-bottom: 40px;
     }
 }
 
@@ -79,6 +111,12 @@ margin-bottom: 14px;
         width: 6px;
         height: 6px;
         background-color: $title-text-color;
+        @media (min-width: 640px) {
+            top: 2px;
+        }
+    }
+    @media (min-width: 640px) {
+        margin-bottom: 20px;
     }
 }
 
@@ -88,4 +126,15 @@ margin-bottom: 14px;
     color: $title-text-color;
     font-size: remy(13.5);
     margin-bottom: 22px;
+
+    @media (min-width: 640px) {
+        font-size: remy(9);
+        margin-bottom: 8px;
+    }
+}
+
+.future--item-text {
+    @media (min-width: 640px) {
+        font-size: remy(8);
+    }
 }
