@@ -7100,11 +7100,11 @@ h6 {
 /* Layout */
 
 .career {
-  padding-bottom: 45px;
+  padding: 20px 0 20px;
 }
 
 .career__main-title {
-  padding-bottom: 10px;
+  padding-bottom: 15px;
 }
 
 .career__text {
@@ -7117,7 +7117,7 @@ h6 {
   line-height: 1.53;
   color: #000000;
   text-transform: uppercase;
-  padding: 25px 0 50px;
+  padding-bottom: 25px;
 }
 
 .career__text-light {
@@ -9204,15 +9204,15 @@ h6 {
   }
 
   .career {
-    padding-bottom: 100px;
+    padding: 30px 0 55px;
   }
 
   .career__main-title {
-    padding-bottom: 20px;
+    padding-bottom: 25px;
   }
 
   .career__text {
-    padding-bottom: 45px;
+    padding-bottom: 40px;
   }
 
   .career__titel {
@@ -11078,15 +11078,11 @@ h6 {
   }
 
   .career {
-    padding-bottom: 125px;
-  }
-
-  .career__main-title {
-    padding-bottom: 30px;
+    padding: 40px 0 65px;
   }
 
   .career__text {
-    padding-bottom: 50px;
+    padding-bottom: 45px;
   }
 
   .career__titel {
