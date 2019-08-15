@@ -1,0 +1,73 @@
+.law-info {
+  height: 24px;
+  @include flex-center('sp-between');
+
+  @media screen and (min-width: 48em) {
+    height: 34px;
+  }
+
+  @media screen and (min-width: 75em) {
+    height: 38px;
+  }
+
+  &__list {
+    margin: 0;
+    padding: 0;
+    display: flex;
+  }
+
+  &__button {
+    background-color: transparent;
+    border: none;
+    color: #65666a;
+    transition: color 0.3s linear;
+
+    &:hover,
+    &:focus {
+      color: $main-style-color;
+    }
+
+    &:active,
+    &:focus {
+      outline: none;
+    }
+  }
+
+  &__item {
+    list-style: none;
+    font-family: $footer-main-font;
+    font-size: remy(6);
+    @media screen and (min-width: 30em) {
+      font-size: remy(8);
+      margin-bottom: 2px;
+    }
+
+    @media screen and (min-width: 48em) {
+      font-size: remy(10);
+    }
+
+    @media screen and (min-width: 62em) {
+      font-size: remy(11);
+    }
+
+    @media screen and (min-width: 75em) {
+      font-size: remy(13);
+    }
+
+    &:not(:nth-of-type(1)) {
+      margin-left: 6px;
+
+      @media screen and (min-width: 30em) {
+        margin-left: 10px;
+      }
+
+      @media screen and (min-width: 48em) {
+        margin-left: 14px;
+      }
+
+      @media screen and (min-width: 75em) {
+        margin-left: 16px;
+      }
+    }
+  }
+}
