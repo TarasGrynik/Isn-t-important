@@ -7099,6 +7099,15 @@ h6 {
 
 /* Layout */
 
+header {
+  background-color: #ccc;
+}
+
+.nav__burger-img {
+  height: 28px;
+  fill: #ffffff;
+}
+
 .career {
   padding-bottom: 45px;
 }
