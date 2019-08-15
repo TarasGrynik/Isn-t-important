@@ -6612,6 +6612,7 @@ a.text-dark:focus {
 .btn--core {
   display: inline-block;
   border: none;
+  background-color: transparent;
 }
 
 .btn {
@@ -7104,12 +7105,13 @@ h6 {
 
 /* Layout */
 
-header {
-  background-color: #ccc;
+.header__nav {
+  position: absolute;
 }
 
 .nav__burger-img {
   height: 28px;
+  width: 28px;
   fill: #ffffff;
 }
 

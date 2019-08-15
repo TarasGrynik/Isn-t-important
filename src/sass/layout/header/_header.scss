@@ -1,8 +1,11 @@
-header {
-  background-color: #ccc;
+.header__nav {
+  position: absolute;
 }
 
 .nav__burger-img {
   height: 28px;
+  width: 28px;
   fill: $banner-title-text-color;
 }
+
+
