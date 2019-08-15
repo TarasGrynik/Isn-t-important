@@ -1,0 +1,31 @@
+.social-list {
+  display: none;
+
+  @media screen and (min-width: 48em) {
+    display: block;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    @include flex-center('column');
+  }
+
+  &__item {
+    font-family: $special-font;
+    font-size: remy(11);
+
+    @media screen and (min-width: 75em) {
+      font-size: remy(14);
+    }
+  }
+
+  &__link {
+    color: #ffffff;
+    transition: color 0.3s linear;
+
+    &:hover,
+    &:focus {
+      color: $main-style-color;
+      text-decoration: none;
+    }
+  }
+}
