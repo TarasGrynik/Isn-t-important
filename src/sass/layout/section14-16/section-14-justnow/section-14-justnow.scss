@@ -77,6 +77,43 @@
   font-size: 13.5px;
 }
 
+.list__title::before {
+  content: '';
+  display: inline-block;
+  left: -40px;
+  width: 40px;
+  height: 14px;
+  position: absolute;
+  transform: rotate(-90deg) translate(-40%, -40%);
+  color: #fff;
+  background-color: #ff6b08;
+  text-align: center;
+}
+
+.list__title__first::before {
+  content: '[001]';
+}
+
+.list__title__second::before {
+  content: '[002]'
+}
+
+.list__title__third::before {
+  content: '[003]'
+}
+
+.list__title__fourth::before {
+  content: '[004]'
+}
+
+.list__title__fifth::before {
+  content: '[005]'
+}
+
+.list__title__sixth::before {
+  content: '[006]'
+}
+
 .list__text {
   word-wrap: break-word;
 }
