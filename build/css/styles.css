@@ -6609,6 +6609,11 @@ a.text-dark:focus {
 
 /* Placeholder for list */
 
+.btn--core {
+  display: inline-block;
+  border: none;
+}
+
 .btn {
   display: inline-block;
   color: #ffffff;
@@ -7098,6 +7103,15 @@ h6 {
 }
 
 /* Layout */
+
+header {
+  background-color: #ccc;
+}
+
+.nav__burger-img {
+  height: 28px;
+  fill: #ffffff;
+}
 
 .career {
   padding-bottom: 45px;

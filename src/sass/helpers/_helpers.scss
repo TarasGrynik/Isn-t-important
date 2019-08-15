@@ -37,6 +37,12 @@
   padding: 0;
 }
 
+.btn--core {
+  display: inline-block;
+  border: none;
+  // background-color: transparent;
+}
+
 .btn {
   display: inline-block;
   color: $banner-title-text-color;
