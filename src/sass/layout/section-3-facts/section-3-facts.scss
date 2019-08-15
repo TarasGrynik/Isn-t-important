@@ -1,0 +1,70 @@
+.facts {
+    padding-top: 78px;
+}
+
+.facts--header {
+    text-transform: uppercase;
+font-family: $section-acent-font;
+color: $title-text-color;
+font-size: remy(18);
+margin-bottom: 40px;
+}
+
+.facts--about {
+    font-family: $style-font;
+    color: $title-text-color;
+    margin-bottom: 40px;
+    position: relative;
+    &:before {
+        position: absolute;
+        top: 10px;
+        left: -26px;
+        content: '';
+        display: block;
+        width: 26px;
+        height: 4px;
+        background-color: $title-text-color;
+    }
+}
+
+.facts--list {
+    list-style: none;
+    padding: 0;
+}
+
+.facts--item {
+    margin-bottom: 12px;
+    position: relative;
+    &:last-child {
+        margin-bottom: 0;
+    }
+    &:before {
+        content: '';
+        position: absolute;
+        top: 12px;
+        left: -20px;
+        display: block;
+        width: 10px;
+        height: 10px;
+        background-color: $main-style-color;
+    }
+}
+
+.facts--item-header {
+    font-family: $section-acent-font;
+    color: $title-text-color;
+    font-size: remy(23);
+    text-transform: uppercase;
+    &__span {
+        font-size: remy(13);
+        margin-left: 10px;
+    }
+}
+
+.facts--acent {
+    display: inline-block;
+    font-family: $style-font;
+    color: $title-text-color;
+    background-color: $addition-style-color;
+}
+

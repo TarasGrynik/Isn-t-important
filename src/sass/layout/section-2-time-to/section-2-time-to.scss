@@ -1,0 +1,117 @@
+.time-to {
+    padding-top: 58px;
+    @media (min-width: 768px) {
+        padding-top: 112px;
+    }
+}
+
+
+.time-to--question {
+    font-family: $style-font;
+    color: $title-text-color;
+    margin: 0;
+    padding-bottom: 27px;
+    
+    @media (min-width: 768px) {
+        font-size: remy(9);
+    }
+}
+
+.time-to-img {
+    margin-bottom: 45px;
+}
+
+.time-to--main-text {
+    font-family: $section-acent-font;
+    color: $title-text-color;
+    text-transform: uppercase;
+    font-size: remy(15);
+    margin-bottom: 45px;
+}
+
+.time-to--offer {
+    @include flex-center('sp-between');
+
+    &:before {
+        content: '';
+        display: block;
+        width: 26px;
+        height: 4px;
+        background-color: $title-text-color;
+    }
+
+    @media (min-width: 768px) {
+        font-size: remy(10);
+    }
+}
+
+.time-to--header {
+    font-size: remy(20);
+
+    &__span {
+        background-color: $title-text-color;
+        color: $banner-title-text-color;
+    }
+    @media (min-width: 768px) {
+        font-size: remy(27);
+    }
+}
+
+.time-to--list {
+    display: flex;
+    flex-wrap: wrap;
+    margin-bottom: 47px;
+    list-style: none;
+    padding: 0;
+}
+
+.time-to--list-header {
+    font-family: $section-acent-font;
+    text-transform: uppercase;
+    margin-bottom: 20px;
+
+    @media (min-width: 768px) {
+        font-size: remy(16.8);
+    }
+}
+
+.time-to--item {
+    position: relative;
+margin-bottom: 24px;
+
+&:last-child {
+    margin-bottom: 0;  
+}
+
+&__span {
+    font-family: $section-title-font;
+}
+
+&:before {
+    content: '';
+    position: absolute;
+    top: 6px;
+    left: -16px;
+    display: block;
+    width: 8px;
+    height: 8px;
+    background-color: $title-text-color;
+    
+    @media (min-width: 768px) {
+        display: none;
+    }
+}
+
+@media (min-width: 768px) {
+    font-size: remy(9);
+}
+}
+
+.time-to--action {
+    font-family: $style-font;
+    color: $main-style-color;
+
+    @media (min-width: 768px) {
+        font-size: remy(9);
+    }
+}
