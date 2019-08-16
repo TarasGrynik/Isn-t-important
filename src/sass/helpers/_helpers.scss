@@ -15,15 +15,62 @@
   }
 }
 
+/* accent orange text */
+%accent-text {
+  font-family: $style-font;
+  font-size: remy(15);
+  line-height: 1.27;
+  color: $main-style-color;
+  @media screen and (min-width: 48em) {
+    font-size: remy(9);
+  }
+  @media screen and (min-width: 75em) {
+    font-size: remy(10);
+  }
+}
+
+/* For h3 title */
+%career__titel {
+  font-family: $special-font;
+  font-size: remy(15);
+  line-height: 1.53;
+  color: $title-text-color;
+  text-transform: uppercase;
+
+  @media screen and (min-width: 48em) {
+    font-size: remy(9);
+  }
+
+  @media screen and (min-width: 75em) {
+    font-size: remy(10);
+  }
+}
+
+%main-page-font {
+  font-family: $main-page-font;
+  font-size: remy(14);
+  line-height: 1.45;
+  color: $main-text-color;
+
+  @media screen and (min-width: 48em) {
+    font-size: remy(8);
+  }
+
+  @media screen and (min-width: 75em) {
+    font-size: remy(9);
+  }
+}
+
 %sec-title-text-style {
   font-family: $style-font;
   font-size: remy(14);
   line-height: 1.45;
   color: $title-text-color;
-  
+
   @media screen and (min-width: 48em) {
     font-size: remy(9);
   }
+
   @media screen and (min-width: 75em) {
     font-size: remy(10);
   }
@@ -37,7 +84,36 @@
   padding: 0;
 }
 
+.btn--core {
+  display: inline-block;
+  border: none;
+  background-color: transparent;
+}
+
+%pseudos {
+  position: absolute;
+  display: block;
+}
+
+%article-title-style {
+  text-transform: uppercase;
+  font-family: $special-font;
+}
+
+%btn-hover {
+  background-color: $btn-hover-bg;
+  color: $banner-title-text-color;
+}
+
+%btn-active {
+  background-color: $btn-active-bg;
+}
+
+
 .btn {
+  border-radius: 0;
+  font-family: $special-font;
+  text-transform: uppercase;
   display: inline-block;
   color: $banner-title-text-color;
   background-color: $main-style-color;
