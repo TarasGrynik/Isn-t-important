@@ -1,23 +1,49 @@
-<div class="eleven">
+
+<div class="section11">
   <section class="container">
-    <div class="row">
-      <div class="col-md-5 d-flex flex-column">
-        <h2>[ сейчас у тебя есть возможность обучаться в goit _ ]</h2>
-        <p class="education-section__desc">
+    <div class="row section-university justify-content-md-between">
+      <div class="col-md-4 d-flex flex-column">
+        <h2 class="section-university__title--main">
+          [ Сейчас у тебя есть возможность обучаться в goit _ ]
+        </h2>
+        <p class="section-university__desc--main">
           Онлайн-университете №1 в Украине по IT-обучению, сидя в любимом кресле
           с чашкой чая
         </p>
       </div>
       <div class="col-md-7">
         <div class="row">
-          <h3 class="col-md-4">мы - самый крупный онлайн университет в украине</h3>
-          <p class="col-md-5">
+          <h3 class="col-md-3 section-university__title">
+            Мы - самый крупный онлайн университет в украине
+          </h3>
+          <p class="col-md-4 section-university__desc">
             Который профессионально, просто и доступно подготавливает
             IT-специалистов со всего СНГ в онлайн-режиме.
           </p>
         </div>
+        <div>
+          <img
+            class="section-university__image"
+            sizes="344px"
+            srcset="
+              ../images/main-images/jpg/dev-team.jpg    344w,
+              ../images/main-images/jpg/dev-team@2x.jpg 687w
+            "
+            src="../images/main-images/jpg/dev-team.jpg"
+            alt="dev-team"
+            height="141"
+            width="344"
+          />
+        </div>
+      </div>
+      <p class="education-section__desc--mobile">
+        Онлайн-университете №1 в Украине по IT-обучению, сидя в любимом кресле с
+        чашкой чая
+      </p>
+    </div>
 
-        <picture class="col-md-7">
+    <!-- 
+        <picture class="section-university__image">
           <source
             media="(max-width: 480px)"
             srcset="
@@ -45,20 +71,16 @@
             height="141"
             width="344"
           />
-        </picture>
-      </div>
-      <p class="education-section__desc--mobile">
-        Онлайн-университете №1 в Украине по IT-обучению, сидя в любимом кресле с
-        чашкой чая
-      </p>
-    </div>
+        </picture> -->
 
-    <ul class="row">
+    <ul class="row section-awards">
       <li class="col-8 col-md-3 d-flex">
         <div>
-          <span>Go for IT</span>
-          <h3>goit выиграла тендер пр оон украина</h3>
-          <p>
+          <span class="section-awards__title--dark">[ Go for IT ]</span>
+          <h3 class="section-awards__title">
+            goit выиграла тендер пр оон украина
+          </h3>
+          <p class="section-awards__desc">
             На реализацию социального проекта по бесплатному обучению Frontend.
             Мы стали самой молодой компанией -партнером ПР ООН. В рамках проекта
             Go for IT мы обязались обучить Frontend-разработке 300 переселенцев.
@@ -67,16 +89,33 @@
       </li>
       <li class="col-8 col-md-3 d-flex">
         <div>
-          <span>Это признано IT-сообществом</span>
-          <h4>ukranian it awards 2016</h4>
-          <span>Lorem ipsum dolor </span>
-          <p>
-            sit amet, consectetur adipisicing elit sed do eiusmod tempor
-            incididunt ut labore et dolore magna aliqua.
-          </p>
+          <span class="section-awards__title--dark"
+            >[ Это признано IT-сообществом ]</span
+          >
+          <h3 class="section-awards__title">Ukranian it awards 2016</h3>
+          <div class="section-awards__desc">
+            <span class="section-awards__desc--bold">Lorem ipsum dolor </span>
+            <p>
+              sit amet, consectetur adipisicing elit sed do eiusmod tempor
+              incididunt ut labore et dolore magna aliqua.
+            </p>
+          </div>
         </div>
-
-        <picture>
+        <div>
+          <img
+            class="section-awards__image"
+            srcset="
+              ../images/main-images/decorative-images/ukr-it-reward.png    47w,
+              ../images/main-images/decorative-images/ukr-it-reward@2x.png 94w
+            "
+            sizes="47px"
+            src="../images/main-images/decorative-images/desktop-mobile-images/ukr-it-reward-desktop.png"
+            alt="ukr-it-reward"
+            height="102"
+            width="47"
+          />
+        </div>
+        <!-- <picture>
           <source
             media="(max-width: 480px)"
             srcset="
@@ -99,25 +138,40 @@
             "
           />
           <img
-            class="icon"
+            class="section-awards__image"
             src="../images/main-images/decorative-images/desktop-mobile-images/ukr-it-reward-desktop.png"
             alt="ukr-it-reward"
             height="102"
             width="47"
           />
-        </picture>
+        </picture> -->
       </li>
       <li class="col-8 col-md-3 d-flex">
         <div>
-          <h4>best it education 2015</h4>
-          <span>Lorem ipsum dolor </span>
-          <p>
-            sit amet, consectetur adipisicing elit sed do eiusmod tempor
-            incididunt ut labore et dolore magna aliqua.
-          </p>
+          <h3 class="section-awards__title">Best it education 2015</h3>
+          <div class="section-awards__desc">
+            <span class="section-awards__desc--bold">Lorem ipsum dolor </span>
+            <p>
+              sit amet, consectetur adipisicing elit sed do eiusmod tempor
+              incididunt ut labore et dolore magna aliqua.
+            </p>
+          </div>
         </div>
-
-        <picture>
+        <div>
+          <img
+            class="section-awards__image"
+            srcset="
+              ../images/main-images/decorative-images/best-it-education-reward.png     57w,
+              ../images/main-images/decorative-images/best-it-education-reward@2x.png 114w
+            "
+            src="../images/main-images/decorative-images/best-it-education-reward.png"
+            alt="ukr-it-reward"
+            sizes="57px"
+            height="82"
+            width="57"
+          />
+        </div>
+        <!-- <picture>
           <source
             media="(max-width: 480px)"
             srcset="
@@ -140,24 +194,40 @@
             "
           />
           <img
+            class="section-awards__image"
             src="../images/main-images/decorative-images/best-it-education-reward.png"
             alt="ukr-it-reward"
             height="82"
             width="57"
           />
-        </picture>
+        </picture> -->
       </li>
       <li class="col-8 col-md-3 d-flex">
         <div>
-          <h4>best it education 2016</h4>
-          <span>Lorem ipsum dolor </span>
-          <p>
-            sit amet, consectetur adipisicing elit sed do eiusmod tempor
-            incididunt ut labore et dolore magna aliqua.
-          </p>
+          <h3 class="section-awards__title">Best it education 2016</h3>
+          <div class="section-awards__desc">
+            <span class="section-awards__desc--bold">Lorem ipsum dolor </span>
+            <p>
+              sit amet, consectetur adipisicing elit sed do eiusmod tempor
+              incididunt ut labore et dolore magna aliqua.
+            </p>
+          </div>
         </div>
-
-        <picture>
+        <div>
+          <img
+            class="section-awards__image"
+            srcset="
+              ../images/main-images/decorative-images/best-it-education-reward.png     57w,
+              ../images/main-images/decorative-images/best-it-education-reward@2x.png 114w
+            "
+            src="../images/main-images/decorative-images/best-it-education-reward.png"
+            alt="ukr-it-reward"
+            sizes="57px"
+            height="82"
+            width="57"
+          />
+        </div>
+        <!-- <picture>
           <source
             media="(max-width: 480px)"
             srcset="
@@ -180,12 +250,13 @@
             "
           />
           <img
+            class="section-awards__image"
             src="../images/main-images/decorative-images/best-it-education-reward.png"
             alt="ukr-it-reward"
             height="82"
             width="57"
           />
-        </picture>
+        </picture> -->
       </li>
     </ul>
   </section>
