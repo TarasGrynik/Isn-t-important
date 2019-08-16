@@ -22,8 +22,13 @@
     }
   }
 
+  &__link:not(:last-of-type) {
+    margin-bottom: 1px;
+  }
+
   &__link {
     color: #ffffff;
+    text-decoration: none;
     transition: color 0.3s linear;
 
     &:hover,
