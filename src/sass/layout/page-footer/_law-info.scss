@@ -11,13 +11,13 @@
   }
 
   &__list {
-    margin: 0;
-    padding: 0;
+    @extend %list;
     display: flex;
   }
 
   &__button {
     background-color: transparent;
+    cursor: pointer;
     border: none;
     color: #65666a;
     transition: color 0.3s linear;
@@ -37,6 +37,7 @@
     list-style: none;
     font-family: $footer-main-font;
     font-size: remy(6);
+    
     @media screen and (min-width: 30em) {
       font-size: remy(8);
       margin-bottom: 2px;
