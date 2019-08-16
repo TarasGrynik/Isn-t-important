@@ -948,7 +948,7 @@ html {
 /* Placeholder for section title */
 
 .career-additional__title,
-.four-step__main-title {
+.simple-steps-main__title {
   font-family: "Acrom-Bold", sans-serif;
   font-size: 1.125rem;
   line-height: 1.33;
@@ -958,9 +958,17 @@ html {
 
 /* accent orange text */
 
+.simple-steps-additional__text-decorative {
+  font-family: "Acrom-Medium", sans-serif;
+  font-size: 0.9375rem;
+  line-height: 1.27;
+  color: #ff6b08;
+}
+
 /* For h3 title */
 
-.career-main__subtitle {
+.career-main__subtitle,
+.simple-steps-additional__subtitle {
   font-family: "Acrom-ExtraBold", sans-serif;
   font-size: 0.9375rem;
   line-height: 1.53;
@@ -968,7 +976,8 @@ html {
   text-transform: uppercase;
 }
 
-.сareer-main__text--light {
+.сareer-main__text--light,
+.simple-steps-additional__text--light {
   font-family: "Acrom-Regular", sans-serif;
   font-size: 0.875rem;
   line-height: 1.45;
@@ -976,7 +985,7 @@ html {
 }
 
 .career-additional__text,
-.four-step__title-text {
+.simple-steps-main__text {
   font-family: "Acrom-Medium", sans-serif;
   font-size: 0.875rem;
   line-height: 1.45;
@@ -1815,38 +1824,69 @@ h6 {
   background-color: #000000;
 }
 
-.four-step__main-title {
+.simple-steps-main {
+  position: relative;
+}
+
+.simple-steps-main::before {
+  content: 'STEP';
+  position: absolute;
+  display: block;
+  top: 50px;
+  left: 115px;
+  font-family: "Acrom-ExtraBold", sans-serif;
+  color: #f7f7f7;
+  font-size: 3.5rem;
+  line-height: 1.4;
+  transform: rotate(90deg);
+  z-index: -1;
+}
+
+.simple-steps-main__title {
   padding-bottom: 15px;
 }
 
-.four-step__title-text {
+.simple-steps-main__title--dark {
+  color: #ffffff;
+  background-color: #000000;
+}
+
+.simple-steps-main__text {
   padding-bottom: 50px;
 }
 
-.four-step__title {
-  font-family: "Acrom-ExtraBold", sans-serif;
-  font-size: 0.8125rem;
-  line-height: 1.6;
-  color: #000000;
-  text-transform: uppercase;
+.simple-steps-main__text::before {
+  content: '';
+  position: absolute;
+  display: block;
+  left: -15px;
+  top: 10px;
+  width: 20px;
+  height: 2px;
+  background-color: #000000;
 }
 
-.four-step__text {
-  font-family: "Acrom-Regular", sans-serif;
-  font-size: 0.8125rem;
-  line-height: 1.46;
-  color: #3f4144;
+.simple-steps-additional__subtitle::before {
+  content: '';
+  position: absolute;
+  display: block;
+  left: -15px;
+  top: 30px;
+  width: 10px;
+  height: 10px;
+  background-color: #17ecff;
 }
 
-.four-stem_item {
+.simple-steps-additional__block {
   padding-bottom: 30px;
 }
 
-.four-step__text--color {
-  font-family: "Acrom-Medium", sans-serif;
-  font-size: 0.9375rem;
-  line-height: 1.27;
-  color: #ff6b08;
+.simple-steps-additional {
+  list-style-type: decimal-leading-zero;
+  font-size: 1.5625rem;
+  line-height: 1.16px;
+  color: #000000;
+  font-family: "Acrom-Bold", sans-serif;
 }
 
 .main-contacts {
@@ -3810,20 +3850,26 @@ h6 {
 
 @media screen and (min-width: 48em) {
   .career-additional__title,
-  .four-step__main-title {
+  .simple-steps-main__title {
     font-size: 1.6875rem;
   }
 
-  .career-main__subtitle {
+  .simple-steps-additional__text-decorative {
     font-size: 0.5625rem;
   }
 
-  .сareer-main__text--light {
+  .career-main__subtitle,
+  .simple-steps-additional__subtitle {
+    font-size: 0.5625rem;
+  }
+
+  .сareer-main__text--light,
+  .simple-steps-additional__text--light {
     font-size: 0.5rem;
   }
 
   .career-additional__text,
-  .four-step__title-text {
+  .simple-steps-main__text {
     font-size: 0.5625rem;
   }
 
@@ -3868,16 +3914,25 @@ h6 {
     top: 0px;
   }
 
-  .four-step__title {
-    font-size: 0.5625rem;
+  .simple-steps-main::before {
+    font-size: 5.0625rem;
+    left: 315px;
   }
 
-  .four-step__text {
-    font-size: 0.5rem;
+  .simple-steps-additional {
+    font-size: 1.8125rem;
   }
 
-  .four-step__text--color {
-    font-size: 0.5625rem;
+  .simple-steps-additional__text-decorative::before {
+    content: '';
+    position: absolute;
+    display: block;
+    left: -15px;
+    top: 10px;
+    width: 10px;
+    height: 2px;
+    background-color: #000000;
+    transform: skewY(-45deg);
   }
 
   .main-contacts {
@@ -5572,20 +5627,26 @@ h6 {
 
 @media screen and (min-width: 75em) {
   .career-additional__title,
-  .four-step__main-title {
+  .simple-steps-main__title {
     font-size: 1.875rem;
   }
 
-  .career-main__subtitle {
+  .simple-steps-additional__text-decorative {
     font-size: 0.625rem;
   }
 
-  .сareer-main__text--light {
+  .career-main__subtitle,
+  .simple-steps-additional__subtitle {
+    font-size: 0.625rem;
+  }
+
+  .сareer-main__text--light,
+  .simple-steps-additional__text--light {
     font-size: 0.5625rem;
   }
 
   .career-additional__text,
-  .four-step__title-text {
+  .simple-steps-main__text {
     font-size: 0.625rem;
   }
 
@@ -5611,16 +5672,13 @@ h6 {
     padding-bottom: 45px;
   }
 
-  .four-step__title {
-    font-size: 0.625rem;
+  .simple-steps-main::before {
+    font-size: 5.625rem;
+    left: 300px;
   }
 
-  .four-step__text {
-    font-size: 0.5625rem;
-  }
-
-  .four-step__text--color {
-    font-size: 0.625rem;
+  .simple-steps-additional {
+    font-size: 1.4375rem;
   }
 
   .main-contacts {
