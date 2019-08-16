@@ -1,6 +1,3 @@
-/* Vendors */
-@import '../../node_modules/bootstrap-scss/bootstrap.scss';
-
 /* Helpers */
 @import './base/fonts';
 @import './helpers/variables';
@@ -11,6 +8,7 @@
 /* Base */
 @import './base/normalize';
 @import './base/base'; // base style for elements
+@import './helpers/grid'; //custom css grid
 
 /* Components */
 @import './component/page-footer/advertising.scss';
@@ -18,7 +16,7 @@
 @import './component/page-footer/main-contacts__button';
 
 /* Layout */
-@import './layout/header/header';
+@import './layout/banner/banner';
 @import './layout/section8/section8.scss';
 @import './layout/section9/section9.scss';
 @import './layout/page-footer/main-contacts.scss';
