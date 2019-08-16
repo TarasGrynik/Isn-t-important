@@ -16,7 +16,7 @@
   border-style: solid;
   margin-left: -15px;
   padding: 6px 6px;
-  transition: all 0.3s linear;
+  transition: all 0.2s linear;
 
   @media screen and (min-width: 30em) {
     padding: 10px 20px;
@@ -39,12 +39,10 @@
 
   &:hover,
   &:focus {
-    background-color: $main-style-color;
-    border: none;
+    @extend %btn-hover;
   }
 
   &:active {
     @extend %btn-active;
-    border: none;
   }
 }
