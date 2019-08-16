@@ -1,5 +1,6 @@
 .simple-steps-main {
   position: relative;
+
   &::before {
     content: 'STEP';
     position: absolute;
@@ -36,6 +37,7 @@
 .simple-steps-main__text {
   @extend %sec-title-text-style;
   padding-bottom: 50px;
+
   &::before {
     content: '';
     position: absolute;
@@ -50,6 +52,7 @@
 
 .simple-steps-additional__subtitle {
   @extend %third-titel-style;
+  
   &::before {
     content: '';
     position: absolute;
