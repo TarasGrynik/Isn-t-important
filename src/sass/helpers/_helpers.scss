@@ -20,10 +20,11 @@
   font-size: remy(14);
   line-height: 1.45;
   color: $title-text-color;
-  
+
   @media screen and (min-width: 48em) {
     font-size: remy(9);
   }
+
   @media screen and (min-width: 75em) {
     font-size: remy(10);
   }
@@ -43,7 +44,30 @@
   background-color: transparent;
 }
 
+%pseudos {
+  position: absolute;
+  display: block;
+}
+
+%article-title-style {
+  text-transform: uppercase;
+  font-family: $special-font;
+}
+
+%btn-hover {
+  background-color: $btn-hover-bg;
+  color: $banner-title-text-color;
+}
+
+%btn-active {
+  background-color: $btn-active-bg;
+}
+
+
 .btn {
+  border-radius: 0;
+  font-family: $special-font;
+  text-transform: uppercase;
   display: inline-block;
   color: $banner-title-text-color;
   background-color: $main-style-color;
