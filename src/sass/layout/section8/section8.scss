@@ -1,4 +1,4 @@
-.career {
+.career-main {
   padding: 20px 0 20px;
   @media screen and (min-width: 48em) {
     padding: 30px 0 55px;
@@ -8,7 +8,7 @@
   }
 }
 
-.career__main-title {
+.career-additional__title {
   @extend %sec-title-style;
   padding-bottom: 15px;
   @media screen and (min-width: 48em) {
@@ -16,7 +16,7 @@
   }
 }
 
-.career__text {
+.career-additional__text {
   @extend %sec-title-text-style;
   padding-bottom: 30px;
   @media screen and (min-width: 48em) {
@@ -35,19 +35,11 @@
   }
 }
 
-.career__titel {
-  font-family: $special-font;
-  font-size: remy(15);
-  line-height: 1.53;
-  color: $title-text-color;
-  text-transform: uppercase;
+.career-main__subtitle {
+  @extend %third-titel-style;
   padding: 20px 0 25px;
   @media screen and (min-width: 48em) {
-    font-size: remy(9);
-    padding-bottom: 15px;
-  }
-  @media screen and (min-width: 75em) {
-    font-size: remy(10);}
+    padding-bottom: 15px;}
    &::before {
     content: '';
     position: absolute;
@@ -64,15 +56,6 @@
       top: 0px;}}
 }
 
-.career__text-light {
-  font-family: $main-page-font;
-  font-size: remy(14);
-  line-height: 1.45;
-  color: $main-text-color;
-  @media screen and (min-width: 48em) {
-    font-size: remy(8);
-  }
-  @media screen and (min-width: 75em) {
-    font-size: remy(9);
-  }
+.сareer-main__text--light {
+  @extend %main-page-font;
 }
