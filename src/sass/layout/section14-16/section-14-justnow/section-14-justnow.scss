@@ -72,6 +72,10 @@
   list-style: none;
 }
 
+.list__main {
+  margin-bottom: 30px;
+}
+
 .list__title {
   font-family: $section-title-font;
   font-size: 13.5px;
@@ -116,4 +120,23 @@
 
 .list__text {
   word-wrap: break-word;
+  padding-top: 15px;
+}
+
+@media (min-width: 768px) {
+  .container {
+    width: 768px;
+  }
+
+  .section__title {
+    font-size: 9px;
+  }
+
+  .section__reverse {
+    font-size: 27px;
+  }
+  
+  .section__text {
+    font-size: 9px;
+  }
 }
