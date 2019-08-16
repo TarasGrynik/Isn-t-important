@@ -7099,6 +7099,15 @@ h6 {
 
 /* Layout */
 
+header {
+  background-color: #ccc;
+}
+
+.nav__burger-img {
+  height: 28px;
+  fill: #ffffff;
+}
+
 .career {
   padding: 20px 0 20px;
 }
@@ -7238,6 +7247,118 @@ h6 {
 
 .law-info__item:not(:nth-of-type(1)) {
   margin-left: 4px;
+}
+
+.section__img {
+  margin: 0 auto;
+}
+
+.section__title {
+  font-family: "Acrom-Medium", sans-serif;
+  font-size: 14px;
+  color: #ff6b08;
+  line-height: 1.5;
+  text-align: left;
+  padding-top: 30px;
+  padding-bottom: 20px;
+}
+
+.section__title::before {
+  content: '';
+  position: absolute;
+  left: -15px;
+  top: 35px;
+  width: 10px;
+  height: 10px;
+  background-position: center;
+  background-image: linear-gradient(120deg, transparent 50%, #000, transparent 65%);
+  background-repeat: no-repeat;
+}
+
+.section__reverse {
+  font-family: "Acrom-Bold", sans-serif;
+  font-size: 18px;
+  text-transform: uppercase;
+  background-color: #000000;
+  color: #ffffff;
+  margin-bottom: 20px;
+}
+
+.section__text {
+  font-family: "Acrom-Medium", sans-serif;
+  font-size: 13.5px;
+  font-weight: 600;
+  margin-bottom: 56px;
+}
+
+.section__text::before {
+  content: '';
+  position: absolute;
+  display: block;
+  left: -15px;
+  top: 10px;
+  width: 18px;
+  height: 2px;
+  background-color: #000000;
+}
+
+.info__about {
+  font-family: "Acrom-ExtraBold", sans-serif;
+  font-size: 13.5px;
+  font-weight: 600;
+  text-transform: uppercase;
+  line-height: 1.5;
+  margin-bottom: 30px;
+}
+
+.list {
+  list-style: none;
+}
+
+.list__title {
+  font-family: "Acrom-Bold", sans-serif;
+  font-size: 13.5px;
+}
+
+.list__title::before {
+  content: '';
+  display: inline-block;
+  left: -40px;
+  width: 40px;
+  height: 14px;
+  position: absolute;
+  transform: rotate(-90deg) translate(-40%, -40%);
+  color: #fff;
+  background-color: #ff6b08;
+  text-align: center;
+}
+
+.list__title__first::before {
+  content: '[001]';
+}
+
+.list__title__second::before {
+  content: '[002]';
+}
+
+.list__title__third::before {
+  content: '[003]';
+}
+
+.list__title__fourth::before {
+  content: '[004]';
+}
+
+.list__title__fifth::before {
+  content: '[005]';
+}
+
+.list__title__sixth::before {
+  content: '[006]';
+}
+
+.list__text {
+  word-wrap: break-word;
 }
 
 @media screen and (min-width: 30em) {
