@@ -1,3 +1,5 @@
+@import '../../node_modules/bootstrap-scss/bootstrap-grid';
+
 /* Helpers */
 @import './base/fonts';
 @import './helpers/variables';
@@ -8,7 +10,6 @@
 /* Base */
 @import './base/normalize';
 @import './base/base'; // base style for elements
-@import './helpers/grid'; //custom css grid
 
 /* Components */
 @import './component/page-footer/advertising.scss';
