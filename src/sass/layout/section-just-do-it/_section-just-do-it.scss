@@ -1,0 +1,81 @@
+.just-do-it-main {
+  position: relative;
+
+  &::before {
+    content: 'GO';
+    font-size: 110px;
+    transform: rotate(90deg);
+    font-family: $special-font;
+    color: rgba(0, 0, 0, 0.04);
+    position: absolute;
+    left: -44%;
+    top: 0;
+    z-index: -1;
+
+    @media screen and (min-width: 48em) {
+      font-size: 160px;
+      left: 55%;
+    }
+  }
+}
+
+.just-do-it-main__title {
+  @extend %sec-title-style;
+}
+
+.just-do-it-main__text {
+  @extend %sec-title-text-style;
+  position: relative;
+  padding-left: 20px;
+  margin-bottom: 30px;
+
+  &::before {
+    @extend %pseudos;
+    content: '—';
+    font-size: remy(30);
+    left: -8px;
+    top: -14px;
+    font-family: $special-font;
+  }
+}
+
+.just-do-it-main__button {
+  padding: 14px 30px;
+  font-size: remy(12);
+  margin-bottom: 64px;
+
+  &:hover,
+  &:focus {
+    @extend %btn-hover;
+  }
+
+  &:active {
+    @extend %btn-active;
+  }
+}
+
+.just-do-it-additional__block:nth-of-type(1)::before {
+  @extend %pseudos;
+  content: 'P.S. :';
+  font-size: remy(20);
+  left: 14;
+  top: -18px;
+  font-family: $special-font;
+
+  @media screen and (min-width: 48em) {
+    top: 4px;
+    left: -52px;
+  }
+}
+
+.just-do-it-additional__text--bold {
+  @extend %bold-text-style;
+}
+
+.just-do-it-additional__text--light {
+  @extend %main-page-font;
+}
+
+.just-do-it-additional__text--decorative {
+  @extend %accent-text;
+}
