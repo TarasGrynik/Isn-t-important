@@ -1,18 +1,18 @@
 .main-contacts {
-  height: 104px;
-  
+  padding: 31px 0;
+
   @media screen and (min-width: 48em) {
-    height: 150px;
+    padding: 50px 0;
   }
 
   @media screen and (min-width: 75em) {
-    height: 168px;
+    padding: 54px 0;
   }
 }
 
 .page-footer__logo {
   width: 40px;
-  height: 14px;
+  height: 12px;
 
   @media screen and (min-width: 48em) {
     width: 64px;
@@ -47,7 +47,8 @@
   }
 }
 
-.main-contacts__text {
+.main-contacts__text,
+.main-contacts__link {
   margin: 0;
   padding: 0;
   font-family: $main-page-font;
@@ -60,5 +61,16 @@
 
   @media screen and (min-width: 75em) {
     font-size: remy(12);
+  }
+}
+
+.main-contacts__link {
+  text-decoration: none;
+  transition: color 0.3s linear;
+
+  &:hover,
+  &:focus {
+    color: $main-style-color;
+    text-decoration: none;
   }
 }

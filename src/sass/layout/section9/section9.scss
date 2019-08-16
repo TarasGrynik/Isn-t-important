@@ -1,0 +1,53 @@
+.four-step__main-title {
+  @extend %sec-title-style;
+  padding-bottom: 15px;
+}
+
+.four-step__title-text {
+  @extend %sec-title-text-style;
+  padding-bottom: 50px;
+}
+
+.four-step__title {
+  font-family: $special-font;
+  font-size: remy(13);
+  line-height: 1.6;
+  color: $title-text-color;
+  text-transform: uppercase;
+  @media screen and (min-width: 48em) {
+    font-size: remy(9);
+  }
+  @media screen and (min-width: 75em) {
+    font-size: remy(10);
+  }
+}
+
+.four-step__text {
+  font-family: $main-page-font;
+  font-size: remy(13);
+  line-height: 1.46;
+  color: $main-text-color;
+  @media screen and (min-width: 48em) {
+    font-size: remy(8);
+  }
+  @media screen and (min-width: 75em) {
+    font-size: remy(9);
+  }
+}
+
+.four-stem_item {
+  padding-bottom: 30px;
+}
+
+.four-step__text--color {
+  font-family: $style-font;
+  font-size: remy(15);
+  line-height: 1.27;
+  color: $main-style-color;
+  @media screen and (min-width: 48em) {
+    font-size: remy(9);
+  }
+  @media screen and (min-width: 75em) {
+    font-size: remy(10);
+  }
+}
