@@ -51,7 +51,7 @@
 }
 
 .simple-steps-additional__subtitle {
-  @extend %third-titel-style;
+  @extend %third-title-style;
   
   &::before {
     content: '';
