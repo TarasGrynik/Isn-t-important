@@ -12,7 +12,7 @@
 .section-awards__items {
   list-style: none;
 
-  @media (max-width: 768px) {
+  @media (max-width: 767px) {
     margin: 0 auto;
   }
 
@@ -22,7 +22,7 @@
     background-position: 90% 0;
     background-size: 85px 75px;
 
-    @media (min-resolution: 192dpi), (min-resolution: 2ddpx) {
+    @media (min-resolution: 192dpi), (min-resolution: 2dppx) {
       background-image: url("../../../images/main-images/decorative-images/un@2x.png");
     }
     @media (min-width: 768px) {
@@ -53,7 +53,7 @@
     }
   }
 
-  @media (max-width: 768px) {
+  @media (max-width: 767px) {
     width: 220px;
   }
   @media (min-width: 768px) {

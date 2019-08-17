@@ -4,13 +4,17 @@
 .section-expert {
   position: relative;
   padding-bottom: 110px;
+
+  @media (max-width: 767px) {
+    padding-bottom: 70px;
+  }
 }
 
 .section-expert__title {
   @extend %sec-title-style;
   padding-bottom: 25px;
 
-  @media (max-width: 768px) {
+  @media (max-width: 767px) {
     margin: 0 auto;
     text-align: center;
   }
@@ -23,24 +27,23 @@
 .section-expert__desc {
   @extend %sec-title-text-style;
   position: relative;
-  padding: 0 0 40px 30px;
+  padding: 0 0 40px 25px;
 
   &--blue {
-    background-color: rgb(22, 235, 254);
+    background-color: $addition-style-color;
   }
-  @media (max-width: 768px) {
+
+  @media (max-width: 767px) {
     margin: 0 auto;
   }
 
   &::before {
     content: '';
-    position: absolute;
+    @extend %pseudos;
     top: 7px;
     left: 0;
-    width: 17px;
-    margin-right: 5px;
-    display: block;
-    border-bottom: 2px solid rgb(0, 0, 0);
+    width: 15px;
+    border-bottom: 3px solid $title-text-color;
   }
 
   @media (min-width: 768px) {
@@ -50,13 +53,13 @@
 
     &::before {
       width: 30px;
-      border-bottom: 3px solid rgb(0, 0, 0);
+      border-bottom: 3px solid $title-text-color;
     }
   }
 }
 
 .section-expert__image {
-  @media (max-width: 768px) {
+  @media (max-width: 767px) {
     margin: 0 auto 40px;
   }
 
@@ -66,7 +69,7 @@
 }
 
 .section-expert__list {
-  @media (max-width: 768px) {
+  @media (max-width: 767px) {
     margin: 0 auto;
   }
   @media (min-width: 768px) {
@@ -77,12 +80,15 @@
 }
 
 .section-expert__item {
-  padding: 0 0 30px;
   list-style: none;
   position: relative;
 
-  @media (min-width: 768px) {
-    &:not(nth-last-child) {
+  &:not(:last-child) {
+    @media (max-width: 767px) {
+      padding: 0 0 30px;
+    }
+
+    @media (min-width: 768px) {
       padding: 0 0 15px;
     }
   }
@@ -93,13 +99,11 @@
 
     &::before {
       content: '';
-      position: absolute;
+      @extend %pseudos;
       top: 5px;
       left: 0;
       width: 7px;
-      margin-right: 8px;
-      display: block;
-      border-bottom: 7px solid rgb(0, 0, 0);
+      border-bottom: 7px solid $title-text-color;
     }
 
     @media (min-width: 768px) {
@@ -112,9 +116,9 @@
   &--desc {
     @extend %main-page-font;
     margin: 0;
-    padding: 0 0 15px;
+    padding: 0 0 0 15px;
 
-    @media (max-width: 768px) {
+    @media (max-width: 767px) {
       margin: 0 auto;
     }
   }

@@ -14,7 +14,7 @@
   @extend %sec-title-style;
   padding: 0 0 24px;
 
-  @media (max-width: 768px) {
+  @media (max-width: 767px) {
     margin: 0 auto;
   }
   @media (min-width: 768px) {
@@ -27,7 +27,7 @@
   position: relative;
   margin: 0;
 
-  @media (max-width: 768px) {
+  @media (max-width: 767px) {
     display: none;
   }
 
@@ -37,13 +37,11 @@
 
   &::before {
     content: '';
-    position: absolute;
+    @extend %pseudos;
     top: 5px;
     left: 0;
     width: 30px;
-    margin-right: 7px;
-    display: block;
-    border-bottom: 3px solid rgb(0, 0, 0);
+    border-bottom: 3px solid $title-text-color;
   }
 }
 
@@ -52,7 +50,7 @@
   @extend %third-titel-style;
   padding: 0 0 20px;
 
-  @media (max-width: 768px) {
+  @media (max-width: 767px) {
     margin: 0 auto;
   }
 
@@ -67,7 +65,7 @@
   padding: 0 0 40px;
   margin: 0;
 
-  @media (max-width: 768px) {
+  @media (max-width: 767px) {
     margin: 0 auto;
   }
 
@@ -89,7 +87,7 @@
   @extend %sec-title-text-style;
   margin: 0 auto;
   position: relative;
-  padding: 0 0 0 25px;
+  padding: 0 0 0 27px;
 
   @media (min-width: 768px) {
     display: none;
@@ -97,12 +95,10 @@
 
   &::before {
     content: '';
-    position: absolute;
+    @extend %pseudos;
     top: 7px;
     left: 0;
-    width: 20px;
-    margin-right: 5px;
-    display: block;
-    border-bottom: 2px solid rgb(0, 0, 0);
+    width: 17px;
+    border-bottom: 3px solid $title-text-color;
   }
 }
