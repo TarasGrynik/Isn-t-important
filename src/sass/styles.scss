@@ -1,4 +1,9 @@
+<<<<<<< HEAD
 @import '../../node_modules/bootstrap-scss/bootstrap.scss';
+=======
+<<<<<<< HEAD
+@import '../../node_modules/bootstrap-scss/bootstrap-grid';
+>>>>>>> bab8998103d4e501809dfbfd75238fc6478f3f68
 
 /* Helpers */
 @import './base/fonts';
@@ -17,10 +22,17 @@
 @import './component/page-footer/main-contacts__button';
 
 /* Layout */
+<<<<<<< HEAD
 @import './layout/section-2-time-to/section-2-time-to.scss';
 @import './layout/section-3-facts/section-3-facts.scss';
 @import './layout/section-4-future/section-4-future.scss';
 @import './layout/header/header';
+=======
+
+@import './layout/section-start-it/section-start-it.scss';
+@import './layout/section-facts/section-facts.scss';
+@import './layout/section-except-numbers/section-except-numbers.scss';
+>>>>>>> bab8998103d4e501809dfbfd75238fc6478f3f68
 @import './layout/banner/banner';
 @import './layout/section8/section8.scss';
 @import './layout/section9/section9.scss';
@@ -36,3 +48,7 @@
 
 @import './layout/section14-16/section-14-justnow/section-14-justnow.scss';
 @import './layout/section14-16/section-15/section-15.scss';
+<<<<<<< HEAD
+=======
+@import './layout/section-just-do-it/section-just-do-it.scss';
+>>>>>>> bab8998103d4e501809dfbfd75238fc6478f3f68
