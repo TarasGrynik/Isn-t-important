@@ -1,0 +1,55 @@
+.section-awards__title {
+  font-family: $section-title-font;
+  font-size: 13.5px;
+  line-height: 19.5px;
+  text-transform: uppercase;
+  color: $title-text-color;
+
+  &--dark {
+    font-family: $style-font;
+    color: $banner-title-text-color;
+    background: $title-text-color;
+    font-size: 13px;
+    line-height: 16px;
+
+    @media (min-width: 640px) {
+      font-size: 9px;
+      line-height: 12px;
+      margin-bottom: 30px;
+    }
+    @media (min-width: 714px) {
+      font-size: 10px;
+      line-height: 13px;
+    }
+  }
+
+  @media (min-width: 640px) {
+    font-size: 8px;
+    line-height: 13.5px;
+    padding-bottom: 10px;
+  }
+  @media (min-width: 714px) {
+    font-size: 10px;
+    line-height: 15px;
+  }
+}
+
+.section-awards__desc {
+  font-family: $main-page-font;
+  color: $main-text-color;
+  font-size: 13.5px;
+  line-height: 19.5px;
+
+  @media (min-width: 640px) {
+    font-size: 8px;
+    line-height: 12px;
+  }
+  @media (min-width: 714px) {
+    font-size: 9px;
+    line-height: 13px;
+  }
+}
+
+.section-awards__desc--bold {
+  font-family: $special-font;
+}
