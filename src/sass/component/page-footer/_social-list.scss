@@ -1,16 +1,14 @@
 .social-list {
+  @extend %list;
   display: none;
 
   @media screen and (min-width: 48em) {
     display: block;
-    list-style: none;
-    margin: 0;
-    padding: 0;
     @include flex-center('column');
   }
 
   &__item {
-    font-family: $special-font;
+    font-family: $section-title-font;
     font-size: remy(11);
 
     @media screen and (min-width: 62em) {
@@ -22,8 +20,13 @@
     }
   }
 
+  &__link:not(:last-of-type) {
+    margin-bottom: 1px;
+  }
+
   &__link {
     color: #ffffff;
+    text-decoration: none;
     transition: color 0.3s linear;
 
     &:hover,

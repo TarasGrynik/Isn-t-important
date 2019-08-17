@@ -1,101 +1,93 @@
-.time-to {
+.start-it {
     padding-top: 58px;
-    @media (min-width: 768px) {
+    @media (min-width: 48em) {
         padding-top: 112px;
     }
 }
 
 
-.time-to--question__mobile {
+.start-it-main__text--mobile {
     font-family: $style-font;
     color: $title-text-color;
     margin: 0;
     padding-bottom: 27px;
     
-    @media (min-width: 768px) {
+    @media (min-width: 48em) {
         display: none;
     }
 }
 
-.time-to--question__tablet {
+.start-it-main__text--tablet {
+    @extend %sec-title-text-style;
     text-transform: none;
     display: none;
-    font-family: $style-font;
-    color: $title-text-color;
     margin: 0;
     padding-bottom: 27px;
     
-    @media (min-width: 768px) {
+    @media (min-width: 48em) {
         display: block;
-        font-size: remy(9);
-    }
-
-    @media (min-width: 1200px) {
-        font-size: remy(10);
     }
 }
 
-.time-to--img {
+.start-it-main__img {
     margin-bottom: 45px;
 
-    @media (min-width: 768px) {
+    @media (min-width: 48em) {
         margin-bottom: 66px;
     }
 }
 
-.time-to--main-text {
-    font-family: $special-font;
+.start-it-main__special-text {
+    @extend %article-title-style;
     color: $title-text-color;
-    text-transform: uppercase;
     font-size: remy(15);
     margin-bottom: 45px;
 }
 
-.time-to--offer {
+.start-it-main__offer {
 position: relative;
 padding-left: 40px;
 
     &:before {
-        position: absolute;
+        @extend %pseudos;
         top: 8px;
         left: 0px;
         content: '';
-        display: block;
         width: 26px;
         height: 4px;
         background-color: $title-text-color;
 
-        @media (min-width: 768px) {
+        @media (min-width: 48em) {
             top: 2px;
         }
     }
 
-    @media (min-width: 768px) {
+    @media (min-width: 48em) {
         font-size: remy(10);
     }
 
-    @media (min-width: 1200px) {
+    @media (min-width: 75em) {
         font-size: remy(11);
     }
 }
 
-.time-to--header {
+.start-it-main__title {
     font-size: remy(20);
 
     &__span {
         background-color: $title-text-color;
         color: $banner-title-text-color;
     }
-    @media (min-width: 768px) {
+    @media (min-width: 48em) {
         font-size: remy(27);
     }
 
-    @media (min-width: 1200px) {
+    @media (min-width: 75em) {
         font-size: remy(30);
     }
 }
 
-.time-to--list {
+.start-in-preferences {
     display: flex;
     flex-wrap: wrap;
     margin-bottom: 47px;
@@ -104,50 +96,49 @@ padding-left: 40px;
     position: relative;
 
     &:before {
+        @extend %pseudos;
+        @extend %article-title-style;
         content: 'YOU';
-        position: absolute;
         top: -150px;
         left: -90px;
-        font-family: $special-font;
         color: $title-text-color;
         font-size: remy(98);
         opacity: 0.05;
         transform: rotate(90deg);
         z-index: -1;
 
-        @media (min-width: 768px) {
+        @media (min-width: 48em) {
             font-size: remy(140);
             top: -80px;
             left: -75px;
         }
 
-        @media (min-width: 1200px) {
+        @media (min-width: 75em) {
             font-size: remy(156);
             top: -35px;
             left: -310px;
         }
     }
 
-    @media (min-width: 768px) {
+    @media (min-width: 48em) {
         margin-bottom: 15px;
     }
 }
 
-.time-to--list-header {
-    font-family: $special-font;
-    text-transform: uppercase;
+.start-it-additional__subtitle {
+    @extend %article-title-style;
     margin-bottom: 20px;
 
-    @media (min-width: 768px) {
+    @media (min-width: 48em) {
         font-size: remy(16.8);
     }
 
-    @media (min-width: 1200px) {
+    @media (min-width: 75em) {
         font-size: remy(19);
     }
 }
 
-.time-to--item {
+.start-in-preferences__item {
 position: relative;
 margin-bottom: 24px;
 
@@ -156,16 +147,16 @@ margin-bottom: 24px;
 }
 
 &:nth-last-child(-n+4) {
-    @media (min-width: 768px) {
+    @media (min-width: 48em) {
         margin-bottom: 0;
     }
 
-    @media (min-width: 1200px) {
+    @media (min-width: 75em) {
         margin-bottom: 20px;
     }
 }
 
-@media (min-width: 1200px) {
+@media (min-width: 75em) {
     margin-bottom: 20px;
 }
 
@@ -174,8 +165,8 @@ margin-bottom: 24px;
 }
 
 &:before {
+    @extend %pseudos;
     content: '';
-    position: absolute;
     top: 6px;
     left: -16px;
     display: block;
@@ -183,31 +174,25 @@ margin-bottom: 24px;
     height: 8px;
     background-color: $title-text-color;
     
-    @media (min-width: 768px) {
+    @media (min-width: 48em) {
         display: none;
         margin-bottom: 20px;
     }
 }
 
-@media (min-width: 768px) {
+@media (min-width: 48em) {
     font-size: remy(9);
 }
 
-@media (min-width: 1200px) {
+@media (min-width: 75em) {
     font-size: remy(10);
 }
 }
 
-.time-to--action {
-    font-family: $style-font;
-    color: $main-style-color;
+.start-it-additional__text--decorative {
+    @extend %accent-text;
 
-    @media (min-width: 768px) {
-        font-size: remy(9);
-    }
-
-    @media (min-width: 1200px) {
-        font-size: remy(10);
+    @media (min-width: 75em) {
         position: relative;
         top: -80px;
     }

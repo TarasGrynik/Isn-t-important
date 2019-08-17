@@ -4,45 +4,45 @@
 }
 
 .main-contacts__button {
+  display: inline-block;
   font-family: $special-font;
   font-size: remy(7);
   color: #ffffff;
+  cursor: pointer;
   background-color: transparent;
   text-transform: uppercase;
   border-width: 0.625px;
   border-color: #1b4371;
   border-style: solid;
   margin-left: -15px;
-  width: 120px;
-  height: 26px;
-  transition: all 0.3s linear;
+  padding: 6px 6px;
+  transition: all 0.2s linear;
+
+  @media screen and (min-width: 30em) {
+    padding: 10px 20px;
+    font-size: remy(8);
+  }
 
   @media screen and (min-width: 36em) {
-    width: 140px;
-    height: 30px;
+    padding: 10px 24px;
     font-size: remy(8);
   }
 
   @media screen and (min-width: 48em) {
-    width: 160px;
-    height: 40px;
+    padding: 14px 30px;
     font-size: remy(10);
   }
 
   @media screen and (min-width: 62em) {
-    width: 180px;
-    height: 50px;
-    font-size: remy(11);
-  }
-
-  @media screen and (min-width: 75em) {
-    width: 200px;
-    font-size: remy(12);
+    padding: 16px 34px;
   }
 
   &:hover,
   &:focus {
-    background-color: $main-style-color;
-    border: none;
+    @extend %btn-hover;
+  }
+
+  &:active {
+    @extend %btn-active;
   }
 }
