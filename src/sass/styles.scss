@@ -1,4 +1,4 @@
-@import '../../node_modules/bootstrap-scss/bootstrap-grid';
+@import '../../node_modules/bootstrap-scss/bootstrap.scss';
 
 /* Helpers */
 @import './base/fonts';
@@ -20,6 +20,7 @@
 @import './layout/section-2-time-to/section-2-time-to.scss';
 @import './layout/section-3-facts/section-3-facts.scss';
 @import './layout/section-4-future/section-4-future.scss';
+@import './layout/header/header';
 @import './layout/banner/banner';
 @import './layout/section8/section8.scss';
 @import './layout/section9/section9.scss';
