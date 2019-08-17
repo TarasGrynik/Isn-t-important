@@ -1,17 +1,25 @@
-.future {
+.except-numbers {
     padding-top: 34px;
+
+    @media (min-width: 48em) {
+        padding-top: 90px;
+    }
+
+    @media (min-width: 75em) {
+        padding-top: 115px;
+    }
 }
 
-.future--img {
+.except-numbers-main__img {
     margin-bottom: 34px;
 }
 
-.future--header-wrapper {
+.except-numbers-main__title {
     margin-bottom: 22px;
     padding: 0;
 }
 
-.future--header {
+.except-numbers-main__text {
     display: inline;
     font-family: $section-title-font;
     background-color: $title-text-color;
@@ -19,82 +27,71 @@
     text-transform: uppercase;
     font-size: remy(18);
 
-    @media (min-width: 768px) {
+    @media (min-width: 48em) {
         font-size: remy(9);
     }
 }
 
-.future--call {
+.except-numbers-main__text--bold {
     font-family: $section-title-font;
     color: $title-text-color;
-margin-bottom: 14px;
+    margin-bottom: 14px;
 
-@media (min-width: 768px) {
+@media (min-width: 48em) {
     font-size: remy(9);
 }
 }
 
-.future--about {
+.except-numbers-main__text--light {
     margin-bottom: 46px;
 
-    &__span {
-        color: $title-text-color;
-        background-color: $addition-style-color;
-    }
-
-    @media (min-width: 768px) {
+    @media (min-width: 48em) {
         font-size: remy(9);
     }
 }
 
-.future--second-header {
-    display: inline;
-    font-family: $section-title-font;
-    background-color: $title-text-color;
-    color: $banner-title-text-color;
-    text-transform: uppercase;
-    font-size: remy(18);
-
-    @media (min-width: 768px) {
-        font-size: remy(27);
-    }
+.except-numbers-main__text--special {
+    color: $title-text-color;
+    background-color: $addition-style-color;
 }
 
-.future--more {
-    font-family: $style-font;
-    color: $title-text-color;
+.except-numbers-additional__title {
+    display: inline;
+    @extend %sec-title-style--reverse;
+}
+
+.except-numbers-additional__text {
+    @extend %sec-title-text-style;
     margin-bottom: 45px;
     position: relative;
     padding-left: 10px;
 
     &:before {
-        position: absolute;
+        @extend %pseudos;
         top: 10px;
         left: -12px;
         content: '';
-        display: block;
         width: 14px;
         height: 4px;
         background-color: $title-text-color;
 
-        @media (min-width: 768px) {
+        @media (min-width: 48em) {
             top: 2px;
             left: -22px;
         }
     }
 
-    @media (min-width: 768px) {
-        font-size: remy(9);
+    @media (min-width: 48em) {
         margin-bottom: 40px;
     }
 }
 
-.future--list {
+.except-numbers-additional__list {
     list-style: none;
     padding: 0;
 }
 
-.future--item {
+.except-numbers-additional__item {
     margin-bottom: 30px;
     position: relative;
 
@@ -104,37 +101,35 @@ margin-bottom: 14px;
     
     &:before {
         content: '';
-        position: absolute;
+        @extend %pseudos;
         top: 6px;
         left: -16px;
-        display: block;
         width: 6px;
         height: 6px;
         background-color: $title-text-color;
-        @media (min-width: 768px) {
+        @media (min-width: 48em) {
             top: 2px;
         }
     }
-    @media (min-width: 768px) {
+    @media (min-width: 48em) {
         margin-bottom: 20px;
     }
 }
 
-.future--item-header {
-    text-transform: uppercase;
-    font-family: $special-font;
+.except-numbers-additional__subtitle {
+    @extend %article-title-style;
     color: $title-text-color;
     font-size: remy(13.5);
     margin-bottom: 22px;
 
-    @media (min-width: 768px) {
+    @media (min-width: 48em) {
         font-size: remy(9);
         margin-bottom: 8px;
     }
 }
 
-.future--item-text {
-    @media (min-width: 768px) {
-        font-size: remy(8);
+.except-numbers-additional__text {
+    @media (min-width: 48em) {
+        font-size: remy(9);
     }
 }
