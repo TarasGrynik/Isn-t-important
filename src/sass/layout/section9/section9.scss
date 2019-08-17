@@ -1,4 +1,23 @@
 .simple-steps-main {
+<<<<<<< HEAD
+  position: relative;
+
+  &::before {
+    content: 'STEP';
+    position: absolute;
+    display: block;
+    top: 50px;
+    left: 115px;
+    font-family: $special-font;
+    color: $rotate-elem-text-color;
+    font-size: remy(56);
+    line-height: 1.4;
+    transform: rotate(90deg);
+    z-index: -1;
+    @media screen and (min-width: 48em) {
+      font-size: remy(81);
+      left: 315px;
+=======
   background-image: url(../images/background-png/stap-mobile.png);
   background-repeat: no-repeat;
   background-position: 20% 0%;
@@ -9,6 +28,7 @@
     background-image: url(../images/background-png/stap.png);
     @media (min-resolution: 192dpi), (min-resolution: 2dppx) {
       background-image: url(../images/background-png/stap@2x.png);
+>>>>>>> bab8998103d4e501809dfbfd75238fc6478f3f68
     }
   }
   @media screen and (min-width: 75em) {
@@ -32,6 +52,7 @@
 .simple-steps-main__text {
   @extend %sec-title-text-style;
   padding-bottom: 50px;
+
   &::before {
     @extend %pseudos;
     content: '';
@@ -44,7 +65,8 @@
 }
 
 .simple-steps-additional__subtitle {
-  @extend %third-titel-style;
+  @extend %third-title-style;
+  
   &::before {
     content: '';
     @extend %pseudos;
