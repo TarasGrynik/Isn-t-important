@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 @import '../../node_modules/bootstrap-scss/bootstrap-grid';
 
 /* Helpers */
@@ -29,3 +30,38 @@
 @import './layout/page-footer/page-footer__bottom.scss';
 @import './layout/page-footer/law-info.scss';
 @import './layout/section-14-justnow/section-14-justnow.scss';
+=======
+@import '../../node_modules/bootstrap-scss/bootstrap-grid';
+
+/* Helpers */
+@import './base/fonts';
+@import './helpers/variables';
+@import './helpers/functions';
+@import './helpers/mixins';
+@import './helpers/helpers'; // Class & placeholders
+
+/* Base */
+@import './base/normalize';
+@import './base/base'; // base style for elements
+
+/* Components */
+@import './component/page-footer/advertising.scss';
+@import './component/page-footer/social-list';
+@import './component/page-footer/main-contacts__button';
+
+/* Layout */
+
+@import './layout/section-2-time-to/section-2-time-to.scss';
+@import './layout/section-3-facts/section-3-facts.scss';
+@import './layout/section-4-future/section-4-future.scss';
+@import './layout/banner/banner';
+@import './layout/section8/section8.scss';
+@import './layout/section9/section9.scss';
+@import './layout/page-footer/main-contacts.scss';
+@import './layout/page-footer/page-footer__main.scss';
+@import './layout/page-footer/page-footer__bottom.scss';
+@import './layout/page-footer/law-info.scss';
+@import './layout/section14-16/section-14-justnow/section-14-justnow.scss';
+@import './layout/section14-16/section-15/section-15.scss';
+@import './layout/section-just-do-it/section-just-do-it.scss';
+>>>>>>> a86b0f4675cd0f5cb53eb3c57acece33182e9a79
