@@ -948,7 +948,9 @@ html {
 /* Placeholder for section title */
 
 .career-additional__title,
-.simple-steps-main__title {
+.simple-steps-main__title,
+.section-university__title--main,
+.section-expert__title {
   font-family: "Acrom-Bold", sans-serif;
   font-size: 1.125rem;
   line-height: 1.33;
@@ -968,7 +970,10 @@ html {
 /* For h3 title */
 
 .career-main__subtitle,
-.simple-steps-additional__subtitle {
+.simple-steps-additional__subtitle,
+.section-awards__title,
+.section-university__title,
+.section-expert__item--title {
   font-family: "Acrom-ExtraBold", sans-serif;
   font-size: 0.9375rem;
   line-height: 1.53;
@@ -977,7 +982,10 @@ html {
 }
 
 .сareer-main__text--light,
-.simple-steps-additional__text--light {
+.simple-steps-additional__text--light,
+.section-awards__desc,
+.section-university__desc,
+.section-expert__item--desc {
   font-family: "Acrom-Regular", sans-serif;
   font-size: 0.875rem;
   line-height: 1.45;
@@ -985,7 +993,10 @@ html {
 }
 
 .career-additional__text,
-.simple-steps-main__text {
+.simple-steps-main__text,
+.section-university__desc--main,
+.education-section__desc--mobile,
+.section-expert__desc {
   font-family: "Acrom-Medium", sans-serif;
   font-size: 0.875rem;
   line-height: 1.45;
@@ -1980,6 +1991,102 @@ h6 {
   margin-left: 4px;
 }
 
+/* Placeholder for section title */
+
+.career-additional__title,
+.simple-steps-main__title,
+.section-university__title--main,
+.section-expert__title {
+  font-family: "Acrom-Bold", sans-serif;
+  font-size: 1.125rem;
+  line-height: 1.33;
+  text-transform: uppercase;
+  color: #000000;
+}
+
+/* accent orange text */
+
+.simple-steps-additional__text-decorative {
+  font-family: "Acrom-Medium", sans-serif;
+  font-size: 0.9375rem;
+  line-height: 1.27;
+  color: #ff6b08;
+}
+
+/* For h3 title */
+
+.career-main__subtitle,
+.simple-steps-additional__subtitle,
+.section-awards__title,
+.section-university__title,
+.section-expert__item--title {
+  font-family: "Acrom-ExtraBold", sans-serif;
+  font-size: 0.9375rem;
+  line-height: 1.53;
+  color: #000000;
+  text-transform: uppercase;
+}
+
+.сareer-main__text--light,
+.simple-steps-additional__text--light,
+.section-awards__desc,
+.section-university__desc,
+.section-expert__item--desc {
+  font-family: "Acrom-Regular", sans-serif;
+  font-size: 0.875rem;
+  line-height: 1.45;
+  color: #3f4144;
+}
+
+.career-additional__text,
+.simple-steps-main__text,
+.section-university__desc--main,
+.education-section__desc--mobile,
+.section-expert__desc {
+  font-family: "Acrom-Medium", sans-serif;
+  font-size: 0.875rem;
+  line-height: 1.45;
+  color: #000000;
+}
+
+/* Placeholder for list */
+
+.btn--core {
+  display: inline-block;
+  border: none;
+  background-color: transparent;
+}
+
+.btn {
+  border-radius: 0;
+  font-family: "Acrom-ExtraBold", sans-serif;
+  text-transform: uppercase;
+  display: inline-block;
+  color: #ffffff;
+  background-color: #ff6b08;
+  text-align: center;
+  border: none;
+  box-shadow: 0px 5px 6px rgba(196, 87, 15, 0.26);
+}
+
+/* VISUALLY HIDDEN HELPER CLASS */
+
+.visually-hidden:not(:focus):not(:active),
+input[type='checkbox'].visually-hidden,
+input[type='radio'].visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  border: 0;
+  padding: 0;
+  white-space: nowrap;
+  -webkit-clip-path: inset(100%);
+  clip-path: inset(100%);
+  clip: rect(0, 0, 0, 0);
+  overflow: hidden;
+}
+
 .section-awards {
   padding: 0;
 }
@@ -1996,11 +2103,6 @@ h6 {
 }
 
 .section-awards__title {
-  font-family: "Acrom-Bold", sans-serif;
-  font-size: 13.5px;
-  line-height: 19.5px;
-  text-transform: uppercase;
-  color: #000000;
   padding: 40px 0 10px;
 }
 
@@ -2020,16 +2122,12 @@ h6 {
 }
 
 .section-awards__desc {
-  font-family: "Acrom-Regular", sans-serif;
-  color: #3f4144;
-  font-size: 13.5px;
-  line-height: 19.5px;
   margin: 0;
   padding: 0 0 40px;
 }
 
 .section-awards__desc--bold {
-  font-family: "Acrom-ExtraBold", sans-serif;
+  font-family: "Acrom-Bold", sans-serif;
 }
 
 .section-awards__desc--light {
@@ -2044,15 +2142,107 @@ h6 {
   width: 100%;
 }
 
+/* Placeholder for section title */
+
+.career-additional__title,
+.simple-steps-main__title,
+.section-university__title--main,
+.section-expert__title {
+  font-family: "Acrom-Bold", sans-serif;
+  font-size: 1.125rem;
+  line-height: 1.33;
+  text-transform: uppercase;
+  color: #000000;
+}
+
+/* accent orange text */
+
+.simple-steps-additional__text-decorative {
+  font-family: "Acrom-Medium", sans-serif;
+  font-size: 0.9375rem;
+  line-height: 1.27;
+  color: #ff6b08;
+}
+
+/* For h3 title */
+
+.career-main__subtitle,
+.simple-steps-additional__subtitle,
+.section-awards__title,
+.section-university__title,
+.section-expert__item--title {
+  font-family: "Acrom-ExtraBold", sans-serif;
+  font-size: 0.9375rem;
+  line-height: 1.53;
+  color: #000000;
+  text-transform: uppercase;
+}
+
+.сareer-main__text--light,
+.simple-steps-additional__text--light,
+.section-awards__desc,
+.section-university__desc,
+.section-expert__item--desc {
+  font-family: "Acrom-Regular", sans-serif;
+  font-size: 0.875rem;
+  line-height: 1.45;
+  color: #3f4144;
+}
+
+.career-additional__text,
+.simple-steps-main__text,
+.section-university__desc--main,
+.education-section__desc--mobile,
+.section-expert__desc {
+  font-family: "Acrom-Medium", sans-serif;
+  font-size: 0.875rem;
+  line-height: 1.45;
+  color: #000000;
+}
+
+/* Placeholder for list */
+
+.btn--core {
+  display: inline-block;
+  border: none;
+  background-color: transparent;
+}
+
+.btn {
+  border-radius: 0;
+  font-family: "Acrom-ExtraBold", sans-serif;
+  text-transform: uppercase;
+  display: inline-block;
+  color: #ffffff;
+  background-color: #ff6b08;
+  text-align: center;
+  border: none;
+  box-shadow: 0px 5px 6px rgba(196, 87, 15, 0.26);
+}
+
+/* VISUALLY HIDDEN HELPER CLASS */
+
+.visually-hidden:not(:focus):not(:active),
+input[type='checkbox'].visually-hidden,
+input[type='radio'].visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  border: 0;
+  padding: 0;
+  white-space: nowrap;
+  -webkit-clip-path: inset(100%);
+  clip-path: inset(100%);
+  clip: rect(0, 0, 0, 0);
+  overflow: hidden;
+}
+
 .section-university {
   margin-bottom: 40px;
 }
 
 .section-university__title--main {
-  font-family: "Acrom-ExtraBold", sans-serif;
-  font-size: 18px;
-  line-height: 23.4px;
-  text-transform: uppercase;
   padding: 0 0 24px;
 }
 
@@ -2073,17 +2263,10 @@ h6 {
 }
 
 .section-university__title {
-  font-family: "Acrom-ExtraBold", sans-serif;
-  font-size: 13.5px;
-  line-height: 19.5px;
-  text-transform: uppercase;
   padding: 0 0 20px;
 }
 
 .section-university__desc {
-  font-family: "Acrom-Regular", sans-serif;
-  font-size: 13.5px;
-  line-height: 19.5px;
   padding: 0 0 40px;
   margin: 0;
 }
@@ -2095,9 +2278,6 @@ h6 {
 
 .education-section__desc--mobile {
   margin: 0 auto;
-  font-family: "Acrom-Medium", sans-serif;
-  font-size: 13.5px;
-  line-height: 19.5px;
   position: relative;
   padding: 0 0 0 25px;
 }
@@ -2113,23 +2293,112 @@ h6 {
   border-bottom: 2px solid black;
 }
 
+/* Placeholder for section title */
+
+.career-additional__title,
+.simple-steps-main__title,
+.section-university__title--main,
+.section-expert__title {
+  font-family: "Acrom-Bold", sans-serif;
+  font-size: 1.125rem;
+  line-height: 1.33;
+  text-transform: uppercase;
+  color: #000000;
+}
+
+/* accent orange text */
+
+.simple-steps-additional__text-decorative {
+  font-family: "Acrom-Medium", sans-serif;
+  font-size: 0.9375rem;
+  line-height: 1.27;
+  color: #ff6b08;
+}
+
+/* For h3 title */
+
+.career-main__subtitle,
+.simple-steps-additional__subtitle,
+.section-awards__title,
+.section-university__title,
+.section-expert__item--title {
+  font-family: "Acrom-ExtraBold", sans-serif;
+  font-size: 0.9375rem;
+  line-height: 1.53;
+  color: #000000;
+  text-transform: uppercase;
+}
+
+.сareer-main__text--light,
+.simple-steps-additional__text--light,
+.section-awards__desc,
+.section-university__desc,
+.section-expert__item--desc {
+  font-family: "Acrom-Regular", sans-serif;
+  font-size: 0.875rem;
+  line-height: 1.45;
+  color: #3f4144;
+}
+
+.career-additional__text,
+.simple-steps-main__text,
+.section-university__desc--main,
+.education-section__desc--mobile,
+.section-expert__desc {
+  font-family: "Acrom-Medium", sans-serif;
+  font-size: 0.875rem;
+  line-height: 1.45;
+  color: #000000;
+}
+
+/* Placeholder for list */
+
+.btn--core {
+  display: inline-block;
+  border: none;
+  background-color: transparent;
+}
+
+.btn {
+  border-radius: 0;
+  font-family: "Acrom-ExtraBold", sans-serif;
+  text-transform: uppercase;
+  display: inline-block;
+  color: #ffffff;
+  background-color: #ff6b08;
+  text-align: center;
+  border: none;
+  box-shadow: 0px 5px 6px rgba(196, 87, 15, 0.26);
+}
+
+/* VISUALLY HIDDEN HELPER CLASS */
+
+.visually-hidden:not(:focus):not(:active),
+input[type='checkbox'].visually-hidden,
+input[type='radio'].visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  border: 0;
+  padding: 0;
+  white-space: nowrap;
+  -webkit-clip-path: inset(100%);
+  clip-path: inset(100%);
+  clip: rect(0, 0, 0, 0);
+  overflow: hidden;
+}
+
 .section-expert {
   position: relative;
   padding-bottom: 110px;
 }
 
 .section-expert__title {
-  font-family: "Acrom-ExtraBold", sans-serif;
-  font-size: 18px;
-  line-height: 23.4px;
   padding-bottom: 25px;
-  text-transform: uppercase;
 }
 
 .section-expert__desc {
-  font-family: "Acrom-Medium", sans-serif;
-  font-size: 13.5px;
-  line-height: 19.5px;
   position: relative;
   padding: 0 0 40px 30px;
 }
@@ -2156,11 +2425,6 @@ h6 {
 }
 
 .section-expert__item--title {
-  font-family: "Acrom-Bold", sans-serif;
-  font-size: 13.5px;
-  line-height: 19.5px;
-  text-transform: uppercase;
-  color: #000000;
   padding: 0 0 5px 15px;
 }
 
@@ -2176,12 +2440,8 @@ h6 {
 }
 
 .section-expert__item--desc {
-  font-family: "Acrom-Regular", sans-serif;
-  color: #3f4144;
-  font-size: 13.5px;
-  line-height: 19.5px;
   margin: 0;
-  padding: 0 0 0 15px;
+  padding: 0 0 15px;
 }
 
 .section__img {
@@ -4049,14 +4309,10 @@ h6 {
   }
 
   .section-awards__title {
-    font-size: 8px;
-    line-height: 13.5px;
-    padding: 30px 0 0 0;
+    padding: 30px 0 7px;
   }
 
   .section-awards__desc {
-    font-size: 8px;
-    line-height: 12px;
     padding: 0;
   }
 
@@ -4065,28 +4321,19 @@ h6 {
   }
 
   .section-university__title--main {
-    font-size: 27px;
-    line-height: 33.7px;
     padding: 0 0 30px;
   }
 
   .section-university__desc--main {
     padding-left: 45px;
-    font-family: "Acrom-Medium", sans-serif;
-    font-size: 9px;
-    line-height: 13.5px;
   }
 
   .section-university__title {
-    font-size: 9px;
-    line-height: 15px;
     padding-bottom: 30px;
     margin-left: 55px;
   }
 
   .section-university__desc {
-    font-size: 8px;
-    line-height: 12px;
     padding: 0;
   }
 
@@ -4099,15 +4346,10 @@ h6 {
   }
 
   .section-expert__title {
-    font-size: 27px;
-    line-height: 33.7px;
     padding: 0 0 10px;
   }
 
   .section-expert__desc {
-    font-family: "Acrom-Medium", sans-serif;
-    font-size: 9px;
-    line-height: 13.5px;
     padding: 0 0 20px 45px;
     margin-top: 0;
     margin-bottom: 0;
@@ -4132,18 +4374,8 @@ h6 {
     padding: 0 0 15px;
   }
 
-  .section-expert__item--title {
-    font-size: 9px;
-    line-height: 12px;
-  }
-
   .section-expert__item--title::before {
     top: 2px;
-  }
-
-  .section-expert__item--desc {
-    font-size: 8px;
-    line-height: 12px;
   }
 
   .container {
@@ -4165,7 +4397,9 @@ h6 {
 
 @media screen and (min-width: 48em) {
   .career-additional__title,
-  .simple-steps-main__title {
+  .simple-steps-main__title,
+  .section-university__title--main,
+  .section-expert__title {
     font-size: 1.6875rem;
   }
 
@@ -4174,17 +4408,26 @@ h6 {
   }
 
   .career-main__subtitle,
-  .simple-steps-additional__subtitle {
+  .simple-steps-additional__subtitle,
+  .section-awards__title,
+  .section-university__title,
+  .section-expert__item--title {
     font-size: 0.5625rem;
   }
 
   .сareer-main__text--light,
-  .simple-steps-additional__text--light {
+  .simple-steps-additional__text--light,
+  .section-awards__desc,
+  .section-university__desc,
+  .section-expert__item--desc {
     font-size: 0.5rem;
   }
 
   .career-additional__text,
-  .simple-steps-main__text {
+  .simple-steps-main__text,
+  .section-university__desc--main,
+  .education-section__desc--mobile,
+  .section-expert__desc {
     font-size: 0.5625rem;
   }
 
@@ -4283,6 +4526,111 @@ h6 {
 
   .law-info__item:not(:nth-of-type(1)) {
     margin-left: 14px;
+  }
+
+  .career-additional__title,
+  .simple-steps-main__title,
+  .section-university__title--main,
+  .section-expert__title {
+    font-size: 1.6875rem;
+  }
+
+  .simple-steps-additional__text-decorative {
+    font-size: 0.5625rem;
+  }
+
+  .career-main__subtitle,
+  .simple-steps-additional__subtitle,
+  .section-awards__title,
+  .section-university__title,
+  .section-expert__item--title {
+    font-size: 0.5625rem;
+  }
+
+  .сareer-main__text--light,
+  .simple-steps-additional__text--light,
+  .section-awards__desc,
+  .section-university__desc,
+  .section-expert__item--desc {
+    font-size: 0.5rem;
+  }
+
+  .career-additional__text,
+  .simple-steps-main__text,
+  .section-university__desc--main,
+  .education-section__desc--mobile,
+  .section-expert__desc {
+    font-size: 0.5625rem;
+  }
+
+  .career-additional__title,
+  .simple-steps-main__title,
+  .section-university__title--main,
+  .section-expert__title {
+    font-size: 1.6875rem;
+  }
+
+  .simple-steps-additional__text-decorative {
+    font-size: 0.5625rem;
+  }
+
+  .career-main__subtitle,
+  .simple-steps-additional__subtitle,
+  .section-awards__title,
+  .section-university__title,
+  .section-expert__item--title {
+    font-size: 0.5625rem;
+  }
+
+  .сareer-main__text--light,
+  .simple-steps-additional__text--light,
+  .section-awards__desc,
+  .section-university__desc,
+  .section-expert__item--desc {
+    font-size: 0.5rem;
+  }
+
+  .career-additional__text,
+  .simple-steps-main__text,
+  .section-university__desc--main,
+  .education-section__desc--mobile,
+  .section-expert__desc {
+    font-size: 0.5625rem;
+  }
+
+  .career-additional__title,
+  .simple-steps-main__title,
+  .section-university__title--main,
+  .section-expert__title {
+    font-size: 1.6875rem;
+  }
+
+  .simple-steps-additional__text-decorative {
+    font-size: 0.5625rem;
+  }
+
+  .career-main__subtitle,
+  .simple-steps-additional__subtitle,
+  .section-awards__title,
+  .section-university__title,
+  .section-expert__item--title {
+    font-size: 0.5625rem;
+  }
+
+  .сareer-main__text--light,
+  .simple-steps-additional__text--light,
+  .section-awards__desc,
+  .section-university__desc,
+  .section-expert__item--desc {
+    font-size: 0.5rem;
+  }
+
+  .career-additional__text,
+  .simple-steps-main__text,
+  .section-university__desc--main,
+  .education-section__desc--mobile,
+  .section-expert__desc {
+    font-size: 0.5625rem;
   }
 }
 
@@ -5943,61 +6291,13 @@ h6 {
     font-size: 10px;
     line-height: 13px;
   }
-
-  .section-awards__title {
-    font-size: 10px;
-    line-height: 15px;
-  }
-
-  .section-awards__desc {
-    font-size: 9px;
-    line-height: 13px;
-  }
-
-  .section-university__title--main {
-    font-size: 30px;
-    line-height: 37.5px;
-  }
-
-  .section-university__desc--main {
-    font-size: 10px;
-    line-height: 15px;
-  }
-
-  .section-university__title {
-    font-size: 10px;
-    line-height: 16.2px;
-  }
-
-  .section-university__desc {
-    font-size: 9px;
-    line-height: 13px;
-  }
-
-  .section-expert__title {
-    font-size: 30px;
-    line-height: 37.5px;
-  }
-
-  .section-expert__desc {
-    font-size: 10px;
-    line-height: 15px;
-  }
-
-  .section-expert__item--title {
-    font-size: 10px;
-    line-height: 13px;
-  }
-
-  .section-expert__item--desc {
-    font-size: 9px;
-    line-height: 13px;
-  }
 }
 
 @media screen and (min-width: 75em) {
   .career-additional__title,
-  .simple-steps-main__title {
+  .simple-steps-main__title,
+  .section-university__title--main,
+  .section-expert__title {
     font-size: 1.875rem;
   }
 
@@ -6006,17 +6306,26 @@ h6 {
   }
 
   .career-main__subtitle,
-  .simple-steps-additional__subtitle {
+  .simple-steps-additional__subtitle,
+  .section-awards__title,
+  .section-university__title,
+  .section-expert__item--title {
     font-size: 0.625rem;
   }
 
   .сareer-main__text--light,
-  .simple-steps-additional__text--light {
+  .simple-steps-additional__text--light,
+  .section-awards__desc,
+  .section-university__desc,
+  .section-expert__item--desc {
     font-size: 0.5625rem;
   }
 
   .career-additional__text,
-  .simple-steps-main__text {
+  .simple-steps-main__text,
+  .section-university__desc--main,
+  .education-section__desc--mobile,
+  .section-expert__desc {
     font-size: 0.625rem;
   }
 
@@ -6085,6 +6394,111 @@ h6 {
   .law-info__item:not(:nth-of-type(1)) {
     margin-left: 16px;
   }
+
+  .career-additional__title,
+  .simple-steps-main__title,
+  .section-university__title--main,
+  .section-expert__title {
+    font-size: 1.875rem;
+  }
+
+  .simple-steps-additional__text-decorative {
+    font-size: 0.625rem;
+  }
+
+  .career-main__subtitle,
+  .simple-steps-additional__subtitle,
+  .section-awards__title,
+  .section-university__title,
+  .section-expert__item--title {
+    font-size: 0.625rem;
+  }
+
+  .сareer-main__text--light,
+  .simple-steps-additional__text--light,
+  .section-awards__desc,
+  .section-university__desc,
+  .section-expert__item--desc {
+    font-size: 0.5625rem;
+  }
+
+  .career-additional__text,
+  .simple-steps-main__text,
+  .section-university__desc--main,
+  .education-section__desc--mobile,
+  .section-expert__desc {
+    font-size: 0.625rem;
+  }
+
+  .career-additional__title,
+  .simple-steps-main__title,
+  .section-university__title--main,
+  .section-expert__title {
+    font-size: 1.875rem;
+  }
+
+  .simple-steps-additional__text-decorative {
+    font-size: 0.625rem;
+  }
+
+  .career-main__subtitle,
+  .simple-steps-additional__subtitle,
+  .section-awards__title,
+  .section-university__title,
+  .section-expert__item--title {
+    font-size: 0.625rem;
+  }
+
+  .сareer-main__text--light,
+  .simple-steps-additional__text--light,
+  .section-awards__desc,
+  .section-university__desc,
+  .section-expert__item--desc {
+    font-size: 0.5625rem;
+  }
+
+  .career-additional__text,
+  .simple-steps-main__text,
+  .section-university__desc--main,
+  .education-section__desc--mobile,
+  .section-expert__desc {
+    font-size: 0.625rem;
+  }
+
+  .career-additional__title,
+  .simple-steps-main__title,
+  .section-university__title--main,
+  .section-expert__title {
+    font-size: 1.875rem;
+  }
+
+  .simple-steps-additional__text-decorative {
+    font-size: 0.625rem;
+  }
+
+  .career-main__subtitle,
+  .simple-steps-additional__subtitle,
+  .section-awards__title,
+  .section-university__title,
+  .section-expert__item--title {
+    font-size: 0.625rem;
+  }
+
+  .сareer-main__text--light,
+  .simple-steps-additional__text--light,
+  .section-awards__desc,
+  .section-university__desc,
+  .section-expert__item--desc {
+    font-size: 0.5625rem;
+  }
+
+  .career-additional__text,
+  .simple-steps-main__text,
+  .section-university__desc--main,
+  .education-section__desc--mobile,
+  .section-expert__desc {
+    font-size: 0.625rem;
+  }
 }
 
 @media (max-width: 768px) {
@@ -6093,7 +6507,7 @@ h6 {
   }
 
   .section-awards__title {
-    width: 190px;
+    width: 220px;
   }
 
   .section-university__title--main {

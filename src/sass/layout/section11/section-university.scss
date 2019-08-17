@@ -1,3 +1,6 @@
+@import "../../helpers/helpers";
+@import "../../helpers/variables";
+
 .section-university {
   margin-bottom: 40px;
 
@@ -8,27 +11,19 @@
 
 
 .section-university__title--main {
-  font-family: $special-font;
-  font-size: 18px;
-  line-height: 23.4px;
-  text-transform: uppercase;
+  @extend %sec-title-style;
   padding: 0 0 24px;
 
   @media (max-width: 768px) {
     margin: 0 auto;
   }
   @media (min-width: 768px) {
-    font-size: 27px;
-    line-height: 33.7px;
     padding: 0 0 30px;
-  }
-  @media (min-width: 1200px) {
-    font-size: 30px;
-    line-height: 37.5px;
   }
 }
 
 .section-university__desc--main {
+  @extend %sec-title-text-style;
   position: relative;
   margin: 0;
 
@@ -38,14 +33,6 @@
 
   @media (min-width: 768px) {
     padding-left: 45px;
-    font-family: $style-font;
-    font-size: 9px;
-    line-height: 13.5px;
-
-  }
-  @media (min-width: 1200px) {
-    font-size: 10px;
-    line-height: 15px;
   }
 
   &::before {
@@ -62,10 +49,7 @@
 
 
 .section-university__title {
-  font-family: $special-font;
-  font-size: 13.5px;
-  line-height: 19.5px;
-  text-transform: uppercase;
+  @extend %third-titel-style;
   padding: 0 0 20px;
 
   @media (max-width: 768px) {
@@ -73,21 +57,13 @@
   }
 
   @media (min-width: 768px) {
-    font-size: 9px;
-    line-height: 15px;
     padding-bottom: 30px;
     margin-left: 55px;
-  }
-  @media (min-width: 1200px) {
-    font-size: 10px;
-    line-height: 16.2px;
   }
 }
 
 .section-university__desc {
-  font-family: $main-page-font;
-  font-size: 13.5px;
-  line-height: 19.5px;
+  @extend %main-page-font;
   padding: 0 0 40px;
   margin: 0;
 
@@ -96,13 +72,7 @@
   }
 
   @media (min-width: 768px) {
-    font-size: 8px;
-    line-height: 12px;
     padding: 0;
-  }
-  @media (min-width: 1200px) {
-    font-size: 9px;
-    line-height: 13px;
   }
 }
 
@@ -115,12 +85,9 @@
   }
 }
 
-
 .education-section__desc--mobile {
+  @extend %sec-title-text-style;
   margin: 0 auto;
-  font-family: $style-font;
-  font-size: 13.5px;
-  line-height: 19.5px;
   position: relative;
   padding: 0 0 0 25px;
 
