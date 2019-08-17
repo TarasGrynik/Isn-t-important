@@ -1,4 +1,4 @@
-.time-to {
+.start-it {
     padding-top: 58px;
     @media (min-width: 48em) {
         padding-top: 112px;
@@ -6,7 +6,7 @@
 }
 
 
-.time-to__question--mobile {
+.start-it-main__text--mobile {
     font-family: $style-font;
     color: $title-text-color;
     margin: 0;
@@ -17,7 +17,7 @@
     }
 }
 
-.time-to__question--tablet {
+.start-it-main__text--tablet {
     @extend %sec-title-text-style;
     text-transform: none;
     display: none;
@@ -29,7 +29,7 @@
     }
 }
 
-.time-to__img {
+.start-it-main__img {
     margin-bottom: 45px;
 
     @media (min-width: 48em) {
@@ -37,14 +37,14 @@
     }
 }
 
-.time-to__main-text {
+.start-it-main__special-text {
     @extend %article-title-style;
     color: $title-text-color;
     font-size: remy(15);
     margin-bottom: 45px;
 }
 
-.time-to__offer {
+.start-it-main__offer {
 position: relative;
 padding-left: 40px;
 
@@ -71,7 +71,7 @@ padding-left: 40px;
     }
 }
 
-.time-to__title {
+.start-it-main__title {
     font-size: remy(20);
 
     &__span {
@@ -87,7 +87,7 @@ padding-left: 40px;
     }
 }
 
-.time-to-list {
+.start-in-preferences {
     display: flex;
     flex-wrap: wrap;
     margin-bottom: 47px;
@@ -125,7 +125,7 @@ padding-left: 40px;
     }
 }
 
-.time-to-list__title {
+.start-it-additional__subtitle {
     @extend %article-title-style;
     margin-bottom: 20px;
 
@@ -138,7 +138,7 @@ padding-left: 40px;
     }
 }
 
-.time-to-list__item {
+.start-in-preferences__item {
 position: relative;
 margin-bottom: 24px;
 
@@ -189,7 +189,7 @@ margin-bottom: 24px;
 }
 }
 
-.time-to__action {
+.start-it-additional__text--decorative {
     @extend %accent-text;
 
     @media (min-width: 75em) {

@@ -1,17 +1,25 @@
-.future {
+.except-numbers {
     padding-top: 34px;
+
+    @media (min-width: 48em) {
+        padding-top: 90px;
+    }
+
+    @media (min-width: 75em) {
+        padding-top: 115px;
+    }
 }
 
-.future__img {
+.except-numbers-main__img {
     margin-bottom: 34px;
 }
 
-.future__title-wrapper {
+.except-numbers-main__title {
     margin-bottom: 22px;
     padding: 0;
 }
 
-.future__title {
+.except-numbers-main__text {
     display: inline;
     font-family: $section-title-font;
     background-color: $title-text-color;
@@ -24,7 +32,7 @@
     }
 }
 
-.future__call {
+.except-numbers-main__text--bold {
     font-family: $section-title-font;
     color: $title-text-color;
     margin-bottom: 14px;
@@ -34,25 +42,25 @@
 }
 }
 
-.future__about {
+.except-numbers-main__text--light {
     margin-bottom: 46px;
-
-    &__span {
-        color: $title-text-color;
-        background-color: $addition-style-color;
-    }
 
     @media (min-width: 48em) {
         font-size: remy(9);
     }
 }
 
-.future__second-title {
+.except-numbers-main__text--special {
+    color: $title-text-color;
+    background-color: $addition-style-color;
+}
+
+.except-numbers-additional__title {
     display: inline;
     @extend %sec-title-style--reverse;
 }
 
-.future__more {
+.except-numbers-additional__text {
     @extend %sec-title-text-style;
     margin-bottom: 45px;
     position: relative;
@@ -78,12 +86,12 @@
     }
 }
 
-.future-list {
+.except-numbers-additional__list {
     list-style: none;
     padding: 0;
 }
 
-.future-list__item {
+.except-numbers-additional__item {
     margin-bottom: 30px;
     position: relative;
 
@@ -108,7 +116,7 @@
     }
 }
 
-.future-list__title {
+.except-numbers-additional__subtitle {
     @extend %article-title-style;
     color: $title-text-color;
     font-size: remy(13.5);
@@ -120,7 +128,7 @@
     }
 }
 
-.future-list__text {
+.except-numbers-additional__text {
     @media (min-width: 48em) {
         font-size: remy(9);
     }

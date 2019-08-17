@@ -1,8 +1,16 @@
 .facts {
     padding-top: 78px;
+
+    @media (min-width: 48em) {
+        padding-top: 58px;
+    }
+
+    @media (min-width: 48em) {
+        padding-top: 0;
+    }
 }
 
-.facts__title {
+.facts-main__title {
 @extend %sec-title-style ;
 text-align: center;
 margin-bottom: 40px;
@@ -16,7 +24,7 @@ margin-bottom: 40px;
 }
 }
 
-.facts__about {
+.facts-main__text {
     @extend %sec-title-text-style;
     margin-bottom: 40px;
     position: relative;
@@ -33,7 +41,7 @@ margin-bottom: 40px;
     }
 }
 
-.facts-list {
+.facts-additional__list {
     list-style: none;
     padding: 0;
 
@@ -42,7 +50,7 @@ margin-bottom: 40px;
     }
 }
 
-.facts-list__item {
+.facts-additional__item {
     margin-right: 20px;
     margin-bottom: 12px;
     position: relative;
@@ -79,7 +87,7 @@ margin-bottom: 40px;
     }
 }
 
-.facts-list__title {
+.facts-additional__subtitle {
     @extend %article-title-style;
     color: $title-text-color;
     font-size: remy(23);
@@ -101,13 +109,13 @@ margin-bottom: 40px;
     }
 }
 
-.facts-list__acent {
+.facts-additional__text--special {
     display: inline;
     font-family: $style-font;
     color: $title-text-color;
     background-color: $addition-style-color;
 }
 
-.facts-list__text {
+.facts-additional__text--light {
     margin-bottom: 0;
 }
