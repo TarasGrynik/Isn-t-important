@@ -1980,6 +1980,210 @@ h6 {
   margin-left: 4px;
 }
 
+.section-awards {
+  padding: 0;
+}
+
+.section-awards__items {
+  list-style: none;
+}
+
+.section-awards__items--icon {
+  background-image: url("../../../images/main-images/decorative-images/un.png");
+  background-repeat: no-repeat;
+  background-position: 90% 0;
+  background-size: 85px 75px;
+}
+
+.section-awards__title {
+  font-family: "Acrom-Bold", sans-serif;
+  font-size: 13.5px;
+  line-height: 19.5px;
+  text-transform: uppercase;
+  color: #000000;
+  padding: 40px 0 10px;
+}
+
+.section-awards__title--dark {
+  font-family: "Acrom-Medium", sans-serif;
+  color: #ffffff;
+  background: #000000;
+  font-size: 13px;
+  line-height: 16px;
+  padding: 0;
+}
+
+.section-awards__title--dark-position {
+  white-space: nowrap;
+  position: absolute;
+  top: 5px;
+}
+
+.section-awards__desc {
+  font-family: "Acrom-Regular", sans-serif;
+  color: #3f4144;
+  font-size: 13.5px;
+  line-height: 19.5px;
+  margin: 0;
+  padding: 0 0 40px;
+}
+
+.section-awards__desc--bold {
+  font-family: "Acrom-ExtraBold", sans-serif;
+}
+
+.section-awards__desc--light {
+  margin: 0;
+}
+
+.section-awards__image {
+  flex-shrink: 0;
+}
+
+.section-awards__image--main {
+  width: 100%;
+}
+
+.section-university {
+  margin-bottom: 40px;
+}
+
+.section-university__title--main {
+  font-family: "Acrom-ExtraBold", sans-serif;
+  font-size: 18px;
+  line-height: 23.4px;
+  text-transform: uppercase;
+  padding: 0 0 24px;
+}
+
+.section-university__desc--main {
+  position: relative;
+  margin: 0;
+}
+
+.section-university__desc--main::before {
+  content: '';
+  position: absolute;
+  top: 5px;
+  left: 0;
+  width: 30px;
+  margin-right: 7px;
+  display: block;
+  border-bottom: 3px solid black;
+}
+
+.section-university__title {
+  font-family: "Acrom-ExtraBold", sans-serif;
+  font-size: 13.5px;
+  line-height: 19.5px;
+  text-transform: uppercase;
+  padding: 0 0 20px;
+}
+
+.section-university__desc {
+  font-family: "Acrom-Regular", sans-serif;
+  font-size: 13.5px;
+  line-height: 19.5px;
+  padding: 0 0 40px;
+  margin: 0;
+}
+
+.section-university__image {
+  width: 100%;
+  padding: 0 0 60px;
+}
+
+.education-section__desc--mobile {
+  margin: 0 auto;
+  font-family: "Acrom-Medium", sans-serif;
+  font-size: 13.5px;
+  line-height: 19.5px;
+  position: relative;
+  padding: 0 0 0 25px;
+}
+
+.education-section__desc--mobile::before {
+  content: '';
+  position: absolute;
+  top: 7px;
+  left: 0;
+  width: 20px;
+  margin-right: 5px;
+  display: block;
+  border-bottom: 2px solid black;
+}
+
+.section-expert {
+  position: relative;
+  padding-bottom: 110px;
+}
+
+.section-expert__title {
+  font-family: "Acrom-ExtraBold", sans-serif;
+  font-size: 18px;
+  line-height: 23.4px;
+  padding-bottom: 25px;
+  text-transform: uppercase;
+}
+
+.section-expert__desc {
+  font-family: "Acrom-Medium", sans-serif;
+  font-size: 13.5px;
+  line-height: 19.5px;
+  position: relative;
+  padding: 0 0 40px 30px;
+}
+
+.section-expert__desc--blue {
+  background-color: #16ebfe;
+}
+
+.section-expert__desc::before {
+  content: '';
+  position: absolute;
+  top: 7px;
+  left: 0;
+  width: 17px;
+  margin-right: 5px;
+  display: block;
+  border-bottom: 2px solid black;
+}
+
+.section-expert__item {
+  padding: 0 0 30px;
+  list-style: none;
+  position: relative;
+}
+
+.section-expert__item--title {
+  font-family: "Acrom-Bold", sans-serif;
+  font-size: 13.5px;
+  line-height: 19.5px;
+  text-transform: uppercase;
+  color: #000000;
+  padding: 0 0 5px 15px;
+}
+
+.section-expert__item--title::before {
+  content: '';
+  position: absolute;
+  top: 5px;
+  left: 0;
+  width: 7px;
+  margin-right: 8px;
+  display: block;
+  border-bottom: 7px solid black;
+}
+
+.section-expert__item--desc {
+  font-family: "Acrom-Regular", sans-serif;
+  color: #3f4144;
+  font-size: 13.5px;
+  line-height: 19.5px;
+  margin: 0;
+  padding: 0 0 0 15px;
+}
+
 .section__img {
   margin: 0 auto;
 }
@@ -3831,6 +4035,117 @@ h6 {
     font-size: 0.5rem;
   }
 
+  .section-awards {
+    margin-bottom: 90px;
+  }
+
+  .section-awards__items--icon {
+    background-size: 75px 65px;
+  }
+
+  .section-awards__title--dark {
+    font-size: 9px;
+    line-height: 12px;
+  }
+
+  .section-awards__title {
+    font-size: 8px;
+    line-height: 13.5px;
+    padding: 30px 0 0 0;
+  }
+
+  .section-awards__desc {
+    font-size: 8px;
+    line-height: 12px;
+    padding: 0;
+  }
+
+  .section-university {
+    margin-bottom: 60px;
+  }
+
+  .section-university__title--main {
+    font-size: 27px;
+    line-height: 33.7px;
+    padding: 0 0 30px;
+  }
+
+  .section-university__desc--main {
+    padding-left: 45px;
+    font-family: "Acrom-Medium", sans-serif;
+    font-size: 9px;
+    line-height: 13.5px;
+  }
+
+  .section-university__title {
+    font-size: 9px;
+    line-height: 15px;
+    padding-bottom: 30px;
+    margin-left: 55px;
+  }
+
+  .section-university__desc {
+    font-size: 8px;
+    line-height: 12px;
+    padding: 0;
+  }
+
+  .section-university__image {
+    padding: 0;
+  }
+
+  .education-section__desc--mobile {
+    display: none;
+  }
+
+  .section-expert__title {
+    font-size: 27px;
+    line-height: 33.7px;
+    padding: 0 0 10px;
+  }
+
+  .section-expert__desc {
+    font-family: "Acrom-Medium", sans-serif;
+    font-size: 9px;
+    line-height: 13.5px;
+    padding: 0 0 20px 45px;
+    margin-top: 0;
+    margin-bottom: 0;
+  }
+
+  .section-expert__desc::before {
+    width: 30px;
+    border-bottom: 3px solid black;
+  }
+
+  .section-expert__image {
+    position: absolute;
+  }
+
+  .section-expert__list {
+    padding: 0;
+    margin-top: 0;
+    margin-bottom: 0;
+  }
+
+  .section-expert__item:not(nth-last-child) {
+    padding: 0 0 15px;
+  }
+
+  .section-expert__item--title {
+    font-size: 9px;
+    line-height: 12px;
+  }
+
+  .section-expert__item--title::before {
+    top: 2px;
+  }
+
+  .section-expert__item--desc {
+    font-size: 8px;
+    line-height: 12px;
+  }
+
   .container {
     width: 768px;
   }
@@ -5623,6 +5938,61 @@ h6 {
   .facts--item-header {
     font-size: 1.1875rem;
   }
+
+  .section-awards__title--dark {
+    font-size: 10px;
+    line-height: 13px;
+  }
+
+  .section-awards__title {
+    font-size: 10px;
+    line-height: 15px;
+  }
+
+  .section-awards__desc {
+    font-size: 9px;
+    line-height: 13px;
+  }
+
+  .section-university__title--main {
+    font-size: 30px;
+    line-height: 37.5px;
+  }
+
+  .section-university__desc--main {
+    font-size: 10px;
+    line-height: 15px;
+  }
+
+  .section-university__title {
+    font-size: 10px;
+    line-height: 16.2px;
+  }
+
+  .section-university__desc {
+    font-size: 9px;
+    line-height: 13px;
+  }
+
+  .section-expert__title {
+    font-size: 30px;
+    line-height: 37.5px;
+  }
+
+  .section-expert__desc {
+    font-size: 10px;
+    line-height: 15px;
+  }
+
+  .section-expert__item--title {
+    font-size: 10px;
+    line-height: 13px;
+  }
+
+  .section-expert__item--desc {
+    font-size: 9px;
+    line-height: 13px;
+  }
 }
 
 @media screen and (min-width: 75em) {
@@ -5717,6 +6087,53 @@ h6 {
   }
 }
 
+@media (max-width: 768px) {
+  .section-awards__items {
+    margin: 0 auto;
+  }
+
+  .section-awards__title {
+    width: 190px;
+  }
+
+  .section-university__title--main {
+    margin: 0 auto;
+  }
+
+  .section-university__desc--main {
+    display: none;
+  }
+
+  .section-university__title {
+    margin: 0 auto;
+  }
+
+  .section-university__desc {
+    margin: 0 auto;
+  }
+
+  .section-expert__title {
+    margin: 0 auto;
+    text-align: center;
+  }
+
+  .section-expert__desc {
+    margin: 0 auto;
+  }
+
+  .section-expert__image {
+    margin: 0 auto 40px;
+  }
+
+  .section-expert__list {
+    margin: 0 auto;
+  }
+
+  .section-expert__item--desc {
+    margin: 0 auto;
+  }
+}
+
 @media print {
   .d-print-none {
     display: none !important;
@@ -5752,5 +6169,11 @@ h6 {
 
   .d-print-inline-flex {
     display: inline-flex !important;
+  }
+}
+
+@media (-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi), (min-resolution: 2ddpx) {
+  .section-awards__items--icon {
+    background-image: url("../../../images/main-images/decorative-images/un@2x.png");
   }
 }
