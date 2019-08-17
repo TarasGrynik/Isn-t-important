@@ -1,4 +1,4 @@
-@import '../../node_modules/bootstrap-scss/bootstrap-grid';
+@import '../../node_modules/bootstrap-scss/bootstrap.scss';
 
 /* Helpers */
 @import './base/fonts';
@@ -17,10 +17,10 @@
 @import './component/page-footer/main-contacts__button';
 
 /* Layout */
-
 @import './layout/section-2-time-to/section-2-time-to.scss';
 @import './layout/section-3-facts/section-3-facts.scss';
 @import './layout/section-4-future/section-4-future.scss';
+@import './layout/header/header';
 @import './layout/banner/banner';
 @import './layout/section8/section8.scss';
 @import './layout/section9/section9.scss';
@@ -28,5 +28,11 @@
 @import './layout/page-footer/page-footer__main.scss';
 @import './layout/page-footer/page-footer__bottom.scss';
 @import './layout/page-footer/law-info.scss';
+
+@import './layout/section11/section-awards.scss';
+@import './layout/section11/section-university.scss';
+@import './layout/section12/section12.scss';
+@import './layout/section13/section13.scss';
+
 @import './layout/section14-16/section-14-justnow/section-14-justnow.scss';
 @import './layout/section14-16/section-15/section-15.scss';

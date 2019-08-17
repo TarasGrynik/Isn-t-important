@@ -23,6 +23,7 @@
     padding-bottom: 40px;}
   @media screen and (min-width: 75em) {
     padding-bottom: 45px;}
+
   &::before {
     content: '';
     position: absolute;
@@ -36,7 +37,7 @@
 }
 
 .career-main__subtitle {
-  @extend %third-titel-style;
+  @extend %third-title-style;
   padding: 20px 0 25px;
   @media screen and (min-width: 48em) {
     padding-bottom: 15px;}
