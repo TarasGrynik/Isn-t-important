@@ -66,20 +66,20 @@
     position: relative;
     padding-left: 10px;
 
-    &:before {
-        @extend %pseudos;
-        top: 10px;
-        left: -12px;
-        content: '';
-        width: 14px;
-        height: 4px;
-        background-color: $title-text-color;
+    // &:before {
+    //     @extend %pseudos;
+    //     top: 10px;
+    //     left: -12px;
+    //     content: '';
+    //     width: 14px;
+    //     height: 4px;
+    //     background-color: $title-text-color;
 
-        @media (min-width: 48em) {
-            top: 2px;
-            left: -22px;
-        }
-    }
+    //     @media (min-width: 48em) {
+    //         top: 2px;
+    //         left: -22px;
+    //     }
+    // }
 
     @media (min-width: 48em) {
         margin-bottom: 40px;

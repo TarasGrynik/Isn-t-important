@@ -1,3 +1,5 @@
+@charset "UTF-8";
+
 /*!
  * Bootstrap Grid v4.3.1 (https://getbootstrap.com/)
  * Copyright 2011-2019 The Bootstrap Authors
@@ -932,8 +934,10 @@ html {
 /* Placeholder for section title */
 
 .facts-main__title,
-.career__main-title,
-.four-step__main-title {
+.warning-main__title,
+.career-additional__title,
+.simple-steps-main__title,
+.just-do-it-main__title {
   font-family: "Acrom-Bold", sans-serif;
   font-size: 1.125rem;
   line-height: 1.33;
@@ -952,7 +956,9 @@ html {
 
 /* accent orange text */
 
-.start-it-additional__text--decorative {
+.start-it-additional__text--decorative,
+.simple-steps-additional__text-decorative,
+.just-do-it-additional__text--decorative {
   font-family: "Acrom-Medium", sans-serif;
   font-size: 0.9375rem;
   line-height: 1.27;
@@ -961,12 +967,40 @@ html {
 
 /* For h3 title */
 
+.warning-main__subtitle,
+.career-main__subtitle,
+.simple-steps-additional__subtitle {
+  font-family: "Acrom-ExtraBold", sans-serif;
+  font-size: 0.9375rem;
+  line-height: 1.53;
+  color: #000000;
+  text-transform: uppercase;
+}
+
+.сareer-main__text--light,
+.simple-steps-additional__text--light,
+.just-do-it-additional__text--light {
+  font-family: "Acrom-Regular", sans-serif;
+  font-size: 0.875rem;
+  line-height: 1.45;
+  color: #3f4144;
+}
+
 .start-it-main__text--tablet,
 .facts-main__text,
 .except-numbers-additional__text,
-.career__text,
-.four-step__title-text {
+.warning-main__text,
+.career-additional__text,
+.simple-steps-main__text,
+.just-do-it-main__text {
   font-family: "Acrom-Medium", sans-serif;
+  font-size: 0.875rem;
+  line-height: 1.45;
+  color: #000000;
+}
+
+.just-do-it-additional__text--bold {
+  font-family: "Acrom-Bold", sans-serif;
   font-size: 0.875rem;
   line-height: 1.45;
   color: #000000;
@@ -974,9 +1008,17 @@ html {
 
 /* Placeholder for list */
 
+.social-list,
+.law-info__list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
 .btn--core {
   display: inline-block;
   border: none;
+  cursor: pointer;
   background-color: transparent;
 }
 
@@ -985,8 +1027,14 @@ html {
 .start-in-preferences__item:before,
 .facts-main__text:before,
 .facts-additional__item:before,
-.except-numbers-additional__text:before,
-.except-numbers-additional__item:before {
+.except-numbers-additional__item:before,
+.warning-main__text:before,
+.warning-main__item:before,
+.simple-steps-main__text::before,
+.simple-steps-additional__subtitle::before,
+.simple-steps-additional__text-decorative::before,
+.just-do-it-main__text::before,
+.just-do-it-additional__block:nth-of-type(1)::before {
   position: absolute;
   display: block;
 }
@@ -1000,16 +1048,31 @@ html {
   font-family: "Acrom-ExtraBold", sans-serif;
 }
 
+.main-contacts__button:hover,
+.main-contacts__button:focus,
+.just-do-it-main__button:hover,
+.just-do-it-main__button:focus {
+  background-color: #17ecff;
+  color: #ffffff;
+}
+
+.main-contacts__button:active,
+.just-do-it-main__button:active {
+  background-color: #06a4b2;
+}
+
 .btn {
   border-radius: 0;
   font-family: "Acrom-ExtraBold", sans-serif;
   text-transform: uppercase;
+  cursor: pointer;
   display: inline-block;
   color: #ffffff;
   background-color: #ff6b08;
   text-align: center;
   border: none;
   box-shadow: 0px 5px 6px rgba(196, 87, 15, 0.26);
+  transition: all 0.2s linear;
 }
 
 /* VISUALLY HIDDEN HELPER CLASS */
@@ -1450,12 +1513,17 @@ h6 {
 }
 
 .social-list__item {
-  font-family: "Acrom-ExtraBold", sans-serif;
+  font-family: "Acrom-Bold", sans-serif;
   font-size: 0.6875rem;
+}
+
+.social-list__link:not(:last-of-type) {
+  margin-bottom: 1px;
 }
 
 .social-list__link {
   color: #ffffff;
+  text-decoration: none;
   transition: color 0.3s linear;
 }
 
@@ -1471,24 +1539,19 @@ h6 {
 }
 
 .main-contacts__button {
+  display: inline-block;
   font-family: "Acrom-ExtraBold", sans-serif;
   font-size: 0.4375rem;
   color: #ffffff;
+  cursor: pointer;
   background-color: transparent;
   text-transform: uppercase;
   border-width: 0.625px;
   border-color: #1b4371;
   border-style: solid;
   margin-left: -15px;
-  width: 120px;
-  height: 26px;
-  transition: all 0.3s linear;
-}
-
-.main-contacts__button:hover,
-.main-contacts__button:focus {
-  background-color: #ff6b08;
-  border: none;
+  padding: 6px 6px;
+  transition: all 0.2s linear;
 }
 
 /* Layout */
@@ -1707,15 +1770,6 @@ h6 {
   padding-left: 10px;
 }
 
-.except-numbers-additional__text:before {
-  top: 10px;
-  left: -12px;
-  content: '';
-  width: 14px;
-  height: 4px;
-  background-color: #000000;
-}
-
 .except-numbers-additional__list {
   list-style: none;
   padding: 0;
@@ -1745,66 +1799,168 @@ h6 {
   margin-bottom: 22px;
 }
 
-.career {
-  padding-bottom: 45px;
+.warning {
+  padding-top: 50px;
 }
 
-.career__main-title {
-  padding-bottom: 10px;
+.warning-additional__img {
+  display: none;
+  position: relative;
 }
 
-.career__text {
-  padding-bottom: 30px;
-}
-
-.career__titel {
+.warning-additional__img:before {
+  display: none;
+  content: 'HARD';
+  position: absolute;
+  top: 100px;
+  left: 0px;
+  transform: rotate(90deg);
   font-family: "Acrom-ExtraBold", sans-serif;
-  font-size: 0.9375rem;
-  line-height: 1.53;
+  font-size: 140px;
   color: #000000;
-  text-transform: uppercase;
-  padding: 25px 0 50px;
+  opacity: 0.05;
+  z-index: -1;
 }
 
-.career__text-light {
-  font-family: "Acrom-Regular", sans-serif;
-  font-size: 0.875rem;
-  line-height: 1.45;
-  color: #3f4144;
+.warning-main__title {
+  margin-bottom: 6px;
+  padding: 0;
 }
 
-.four-step__main-title {
+.warning-main__text {
+  margin-bottom: 40px;
+  position: relative;
+  padding-left: 10px;
+}
+
+.warning-main__text:before {
+  top: 10px;
+  left: -22px;
+  content: '';
+  width: 20px;
+  height: 4px;
+  background-color: #000000;
+}
+
+.warning-main__list {
+  list-style: none;
+  padding: 0;
+}
+
+.warning-main__item {
+  margin-bottom: 30px;
+  position: relative;
+}
+
+.warning-main__item:last-child {
+  margin-bottom: 0;
+}
+
+.warning-main__item:before {
+  content: '';
+  top: 6px;
+  left: -16px;
+  width: 6px;
+  height: 6px;
+  background-color: #000000;
+}
+
+.career-main {
+  padding: 20px 0 20px;
+}
+
+.career-additional__title {
   padding-bottom: 15px;
 }
 
-.four-step__title-text {
-  padding-bottom: 50px;
-}
-
-.four-step__title {
-  font-family: "Acrom-ExtraBold", sans-serif;
-  font-size: 0.8125rem;
-  line-height: 1.6;
-  color: #000000;
-  text-transform: uppercase;
-}
-
-.four-step__text {
-  font-family: "Acrom-Regular", sans-serif;
-  font-size: 0.8125rem;
-  line-height: 1.46;
-  color: #3f4144;
-}
-
-.four-stem_item {
+.career-additional__text {
   padding-bottom: 30px;
 }
 
-.four-step__text--color {
-  font-family: "Acrom-Medium", sans-serif;
-  font-size: 0.9375rem;
-  line-height: 1.27;
-  color: #ff6b08;
+.career-additional__text::before {
+  content: '';
+  position: absolute;
+  display: block;
+  left: -15px;
+  top: 10px;
+  width: 20px;
+  height: 2px;
+  background-color: #000000;
+}
+
+.career-main__subtitle {
+  padding: 20px 0 25px;
+}
+
+.career-main__subtitle::before {
+  content: '';
+  position: absolute;
+  display: block;
+  left: -15px;
+  top: 30px;
+  width: 5px;
+  height: 5px;
+  background-color: #000000;
+}
+
+.simple-steps-main {
+  background-image: url(../images/background-png/stap-mobile.png);
+  background-repeat: no-repeat;
+  background-position: 20% 0%;
+}
+
+.simple-steps-main__title {
+  padding-bottom: 15px;
+}
+
+.simple-steps-main__title--dark {
+  color: #ffffff;
+  background-color: #000000;
+}
+
+.simple-steps-main__text {
+  padding-bottom: 50px;
+}
+
+.simple-steps-main__text::before {
+  content: '';
+  left: -15px;
+  top: 8px;
+  width: 20px;
+  height: 2px;
+  background-color: #000000;
+}
+
+.simple-steps-additional__subtitle::before {
+  content: '';
+  left: -15px;
+  top: 20px;
+  width: 10px;
+  height: 10px;
+  background-color: #17ecff;
+}
+
+.simple-steps-additional__block {
+  padding-bottom: 30px;
+}
+
+.simple-steps-additional {
+  list-style-type: decimal-leading-zero;
+  font-size: 1.5625rem;
+  padding-top: 5px;
+  line-height: 1.16px;
+  color: #000000;
+  font-family: "Acrom-Bold", sans-serif;
+}
+
+.simple-steps-additional__text-decorative::before {
+  content: '';
+  left: -10px;
+  top: 10px;
+  width: 10px;
+  height: 2px;
+  background-color: #000000;
+  transform: skewY(-45deg);
 }
 
 .main-contacts {
@@ -1866,13 +2022,12 @@ h6 {
 }
 
 .law-info__list {
-  margin: 0;
-  padding: 0;
   display: flex;
 }
 
 .law-info__button {
   background-color: transparent;
+  cursor: pointer;
   border: none;
   color: #65666a;
   transition: color 0.3s linear;
@@ -1964,6 +2119,10 @@ h6 {
   list-style: none;
 }
 
+.list__main {
+  margin-bottom: 30px;
+}
+
 .list__title {
   font-family: "Acrom-Bold", sans-serif;
   font-size: 13.5px;
@@ -2008,6 +2167,71 @@ h6 {
 
 .list__text {
   word-wrap: break-word;
+  padding-top: 15px;
+}
+
+.just-do-it {
+  margin-bottom: 40px;
+}
+
+.just-do-it-main {
+  position: relative;
+}
+
+.just-do-it-main::before {
+  content: 'GO';
+  font-size: 110px;
+  transform: rotate(90deg);
+  font-family: "Acrom-ExtraBold", sans-serif;
+  color: rgba(0, 0, 0, 0.04);
+  position: absolute;
+  left: -44%;
+  top: 0;
+  z-index: -1;
+}
+
+.just-do-it-main__text {
+  position: relative;
+  padding-left: 20px;
+  margin-bottom: 30px;
+}
+
+.just-do-it-main__text::before {
+  content: '—';
+  font-size: 1.875rem;
+  left: -8px;
+  top: -14px;
+  font-family: "Acrom-ExtraBold", sans-serif;
+}
+
+.just-do-it-main__button {
+  padding: 14px 30px;
+  font-size: 0.75rem;
+  margin-bottom: 64px;
+}
+
+.just-do-it-additional__block:nth-of-type(1)::before {
+  content: 'P.S. :';
+  font-size: 1.25rem;
+  left: 14;
+  top: -18px;
+  font-family: "Acrom-ExtraBold", sans-serif;
+}
+
+@media screen and (min-width: 30em) {
+  .main-contacts__button {
+    padding: 10px 20px;
+    font-size: 0.5rem;
+  }
+
+  .law-info__item {
+    font-size: 0.5rem;
+    margin-bottom: 2px;
+  }
+
+  .law-info__item:not(:nth-of-type(1)) {
+    margin-left: 10px;
+  }
 }
 
 @media (min-width: 480px) {
@@ -2800,22 +3024,150 @@ h6 {
   }
 }
 
-@media screen and (min-width: 30em) {
-  .law-info__item {
+@media screen and (min-width: 36em) {
+  .main-contacts__button {
+    padding: 10px 24px;
     font-size: 0.5rem;
-    margin-bottom: 2px;
-  }
-
-  .law-info__item:not(:nth-of-type(1)) {
-    margin-left: 10px;
   }
 }
 
-@media screen and (min-width: 36em) {
-  .main-contacts__button {
-    width: 140px;
-    height: 30px;
+@media screen and (min-width: 48em) {
+  .facts-main__title,
+  .warning-main__title,
+  .career-additional__title,
+  .simple-steps-main__title,
+  .just-do-it-main__title {
+    font-size: 1.6875rem;
+  }
+
+  .except-numbers-additional__title {
+    font-size: 1.6875rem;
+  }
+
+  .start-it-additional__text--decorative,
+  .simple-steps-additional__text-decorative,
+  .just-do-it-additional__text--decorative {
+    font-size: 0.5625rem;
+  }
+
+  .warning-main__subtitle,
+  .career-main__subtitle,
+  .simple-steps-additional__subtitle {
+    font-size: 0.5625rem;
+  }
+
+  .сareer-main__text--light,
+  .simple-steps-additional__text--light,
+  .just-do-it-additional__text--light {
     font-size: 0.5rem;
+  }
+
+  .start-it-main__text--tablet,
+  .facts-main__text,
+  .except-numbers-additional__text,
+  .warning-main__text,
+  .career-additional__text,
+  .simple-steps-main__text,
+  .just-do-it-main__text {
+    font-size: 0.5625rem;
+  }
+
+  .just-do-it-additional__text--bold {
+    font-size: 0.5625rem;
+  }
+
+  .advertising__image {
+    width: 20px;
+    height: 12px;
+  }
+
+  .social-list {
+    display: block;
+    display: flex;
+    flex-flow: column nowrap;
+  }
+
+  .main-contacts__button {
+    padding: 14px 30px;
+    font-size: 0.625rem;
+  }
+
+  .career-main {
+    padding: 30px 0 55px;
+  }
+
+  .career-additional__title {
+    padding-bottom: 25px;
+  }
+
+  .career-additional__text {
+    padding-bottom: 40px;
+  }
+
+  .career-main__subtitle {
+    padding-bottom: 15px;
+  }
+
+  .career-main__subtitle::before {
+    left: 15px;
+    top: 0px;
+  }
+
+  .simple-steps-main {
+    background-image: url(../images/background-png/stap.png);
+  }
+
+  .simple-steps-additional {
+    font-size: 1.0625rem;
+  }
+
+  .main-contacts {
+    padding: 50px 0;
+  }
+
+  .page-footer__logo {
+    width: 64px;
+    height: 20px;
+  }
+
+  .main-contacts__title {
+    font-size: 0.75rem;
+    margin-bottom: 6px;
+  }
+
+  .main-contacts__text,
+  .main-contacts__link {
+    font-size: 0.625rem;
+  }
+
+  .page-footer__bottom {
+    height: 34px;
+  }
+
+  .law-info {
+    height: 34px;
+  }
+
+  .law-info__item {
+    font-size: 0.625rem;
+  }
+
+  .law-info__item:not(:nth-of-type(1)) {
+    margin-left: 14px;
+  }
+
+  .just-do-it {
+    margin-bottom: 60px;
+  }
+
+  .just-do-it-main::before {
+    font-size: 160px;
+    left: 55%;
+  }
+
+  .just-do-it-additional__block:nth-of-type(1)::before {
+    top: 4px;
+    left: -52px;
   }
 }
 
@@ -3607,117 +3959,21 @@ h6 {
   .mx-md-auto {
     margin-left: auto !important;
   }
-}
 
-@media screen and (min-width: 48em) {
-  .facts-main__title,
-  .career__main-title,
-  .four-step__main-title {
-    font-size: 1.6875rem;
+  .container {
+    width: 768px;
   }
 
-  .except-numbers-additional__title {
-    font-size: 1.6875rem;
+  .section__title {
+    font-size: 9px;
   }
 
-  .start-it-additional__text--decorative {
-    font-size: 0.5625rem;
+  .section__reverse {
+    font-size: 27px;
   }
 
-  .start-it-main__text--tablet,
-  .facts-main__text,
-  .except-numbers-additional__text,
-  .career__text,
-  .four-step__title-text {
-    font-size: 0.5625rem;
-  }
-
-  .advertising__image {
-    width: 20px;
-    height: 12px;
-  }
-
-  .social-list {
-    display: block;
-    list-style: none;
-    margin: 0;
-    padding: 0;
-    display: flex;
-    flex-flow: column nowrap;
-  }
-
-  .main-contacts__button {
-    width: 160px;
-    height: 40px;
-    font-size: 0.625rem;
-  }
-
-  .career {
-    padding-bottom: 100px;
-  }
-
-  .career__main-title {
-    padding-bottom: 20px;
-  }
-
-  .career__text {
-    padding-bottom: 45px;
-  }
-
-  .career__titel {
-    font-size: 0.5625rem;
-    padding-bottom: 15px;
-  }
-
-  .career__text-light {
-    font-size: 0.5rem;
-  }
-
-  .four-step__title {
-    font-size: 0.5625rem;
-  }
-
-  .four-step__text {
-    font-size: 0.5rem;
-  }
-
-  .four-step__text--color {
-    font-size: 0.5625rem;
-  }
-
-  .main-contacts {
-    padding: 50px 0;
-  }
-
-  .page-footer__logo {
-    width: 64px;
-    height: 20px;
-  }
-
-  .main-contacts__title {
-    font-size: 0.75rem;
-    margin-bottom: 6px;
-  }
-
-  .main-contacts__text,
-  .main-contacts__link {
-    font-size: 0.625rem;
-  }
-
-  .page-footer__bottom {
-    height: 34px;
-  }
-
-  .law-info {
-    height: 34px;
-  }
-
-  .law-info__item {
-    font-size: 0.625rem;
-  }
-
-  .law-info__item:not(:nth-of-type(1)) {
-    margin-left: 14px;
+  .section__text {
+    font-size: 9px;
   }
 }
 
@@ -3829,11 +4085,6 @@ h6 {
     font-size: 0.5625rem;
   }
 
-  .except-numbers-additional__text:before {
-    top: 2px;
-    left: -22px;
-  }
-
   .except-numbers-additional__text {
     margin-bottom: 40px;
   }
@@ -3854,6 +4105,46 @@ h6 {
   .except-numbers-additional__text {
     font-size: 0.5625rem;
   }
+
+  .warning {
+    padding-top: 90px;
+  }
+
+  .warning-additional__img:before {
+    display: block;
+  }
+
+  .warning-additional__img {
+    display: block;
+  }
+
+  .warning-main__text:before {
+    width: 30px;
+    top: 2px;
+    left: -28px;
+  }
+
+  .warning-main__text {
+    margin-bottom: 40px;
+  }
+
+  .warning-main__item:before {
+    top: 2px;
+  }
+
+  .warning-main__item {
+    margin-bottom: 20px;
+  }
+
+  .warning-main__text--light {
+    margin-top: 8px;
+  }
+}
+
+@media screen and (min-width: 48em) and (-webkit-min-device-pixel-ratio: 2), screen and (min-width: 48em) and (min-resolution: 192dpi), screen and (min-width: 48em) and (min-resolution: 2dppx) {
+  .simple-steps-main {
+    background-image: url(../images/background-png/stap@2x.png);
+  }
 }
 
 @media screen and (min-width: 62em) {
@@ -3862,9 +4153,7 @@ h6 {
   }
 
   .main-contacts__button {
-    width: 180px;
-    height: 50px;
-    font-size: 0.6875rem;
+    padding: 16px 34px;
   }
 
   .law-info__item {
@@ -4664,8 +4953,10 @@ h6 {
 
 @media screen and (min-width: 75em) {
   .facts-main__title,
-  .career__main-title,
-  .four-step__main-title {
+  .warning-main__title,
+  .career-additional__title,
+  .simple-steps-main__title,
+  .just-do-it-main__title {
     font-size: 1.875rem;
   }
 
@@ -4673,15 +4964,35 @@ h6 {
     font-size: 1.875rem;
   }
 
-  .start-it-additional__text--decorative {
+  .start-it-additional__text--decorative,
+  .simple-steps-additional__text-decorative,
+  .just-do-it-additional__text--decorative {
     font-size: 0.625rem;
+  }
+
+  .warning-main__subtitle,
+  .career-main__subtitle,
+  .simple-steps-additional__subtitle {
+    font-size: 0.625rem;
+  }
+
+  .сareer-main__text--light,
+  .simple-steps-additional__text--light,
+  .just-do-it-additional__text--light {
+    font-size: 0.5625rem;
   }
 
   .start-it-main__text--tablet,
   .facts-main__text,
   .except-numbers-additional__text,
-  .career__text,
-  .four-step__title-text {
+  .warning-main__text,
+  .career-additional__text,
+  .simple-steps-main__text,
+  .just-do-it-main__text {
+    font-size: 0.625rem;
+  }
+
+  .just-do-it-additional__text--bold {
     font-size: 0.625rem;
   }
 
@@ -4694,41 +5005,20 @@ h6 {
     font-size: 0.8125rem;
   }
 
-  .main-contacts__button {
-    width: 200px;
-    font-size: 0.75rem;
+  .career-main {
+    padding: 40px 0 65px;
   }
 
-  .career {
-    padding-bottom: 125px;
+  .career-additional__text {
+    padding-bottom: 45px;
   }
 
-  .career__main-title {
-    padding-bottom: 30px;
+  .simple-steps-main {
+    background-image: url(../images/background-png/stap-dectop.png);
   }
 
-  .career__text {
-    padding-bottom: 50px;
-  }
-
-  .career__titel {
-    font-size: 0.625rem;
-  }
-
-  .career__text-light {
-    font-size: 0.5625rem;
-  }
-
-  .four-step__title {
-    font-size: 0.625rem;
-  }
-
-  .four-step__text {
-    font-size: 0.5625rem;
-  }
-
-  .four-step__text--color {
-    font-size: 0.625rem;
+  .simple-steps-additional {
+    font-size: 1.1875rem;
   }
 
   .main-contacts {
@@ -4764,6 +5054,10 @@ h6 {
 
   .law-info__item:not(:nth-of-type(1)) {
     margin-left: 16px;
+  }
+
+  .just-do-it {
+    margin-bottom: 80px;
   }
 }
 
@@ -4819,6 +5113,20 @@ h6 {
   .except-numbers {
     padding-top: 115px;
   }
+
+  .warning {
+    padding-top: 115px;
+  }
+
+  .warning-main__item:before {
+    left: -24px;
+  }
+}
+
+@media screen and (min-width: 75em) and (-webkit-min-device-pixel-ratio: 2), screen and (min-width: 75em) and (min-resolution: 192dpi), screen and (min-width: 75em) and (min-resolution: 2dppx) {
+  .simple-steps-main {
+    background-image: url(../images/background-png/stap-dectop@2x.png);
+  }
 }
 
 @media print {
@@ -4856,5 +5164,11 @@ h6 {
 
   .d-print-inline-flex {
     display: inline-flex !important;
+  }
+}
+
+@media (-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi), (min-resolution: 2dppx) {
+  .simple-steps-main {
+    background-image: url(../images/background-png/stap-mobile@2x.png);
   }
 }
