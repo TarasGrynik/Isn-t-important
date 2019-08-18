@@ -7213,6 +7213,26 @@ h6 {
 
 /* Layout */
 
+.header {
+  position: relative;
+}
+
+.header__wrapper {
+  max-width: 714px;
+}
+
+.header__btn {
+  border: none;
+  background-color: transparent;
+  cursor: pointer;
+}
+
+.header__img {
+  width: 28px;
+  height: 17px;
+  fill: #ffffff;
+}
+
 .start-it {
   padding-top: 58px;
 }
@@ -9123,176 +9143,6 @@ h6 {
   }
 }
 
-@media (min-width: 48em) {
-  .start-it {
-    padding-top: 112px;
-  }
-
-  .start-it-main__text--mobile {
-    display: none;
-  }
-
-  .start-it-main__text--tablet {
-    display: block;
-  }
-
-  .start-it-main__img {
-    margin-bottom: 66px;
-  }
-
-  .start-it-main__offer:before {
-    top: 2px;
-  }
-
-  .start-it-main__offer {
-    font-size: 0.625rem;
-  }
-
-  .start-it-main__title {
-    font-size: 1.6875rem;
-  }
-
-  .start-in-preferences:before {
-    font-size: 8.75rem;
-    top: -80px;
-    left: -75px;
-  }
-
-  .start-in-preferences {
-    margin-bottom: 15px;
-  }
-
-  .start-it-additional__subtitle {
-    font-size: 1.05rem;
-  }
-
-  .start-in-preferences__item:nth-last-child(-n+4) {
-    margin-bottom: 0;
-  }
-
-  .start-in-preferences__item:before {
-    display: none;
-    margin-bottom: 20px;
-  }
-
-  .start-in-preferences__item {
-    font-size: 0.5625rem;
-  }
-
-  .facts {
-    padding-top: 58px;
-  }
-
-  .facts {
-    padding-top: 0;
-  }
-
-  .facts-main__title {
-    text-align: left;
-  }
-
-  .facts-additional__list {
-    background: url(../../../images/main-images/decorative-images/schedule.png) bottom right/auto no-repeat;
-  }
-
-  .facts-additional__item:last-child {
-    margin-bottom: 12px;
-  }
-
-  .facts-additional__item:before {
-    display: none;
-  }
-
-  .facts-additional__item {
-    font-size: 0.5rem;
-  }
-
-  .facts-additional__subtitle__span {
-    font-size: 0.5625rem;
-  }
-
-  .facts-additional__subtitle {
-    font-size: 1rem;
-  }
-
-  .except-numbers {
-    padding-top: 90px;
-  }
-
-  .except-numbers-main__text {
-    font-size: 0.5625rem;
-  }
-
-  .except-numbers-main__text--bold {
-    font-size: 0.5625rem;
-  }
-
-  .except-numbers-main__text--light {
-    font-size: 0.5625rem;
-  }
-
-  .except-numbers-additional__text {
-    margin-bottom: 40px;
-  }
-
-  .except-numbers-additional__item:before {
-    top: 2px;
-  }
-
-  .except-numbers-additional__item {
-    margin-bottom: 20px;
-  }
-
-  .except-numbers-additional__subtitle {
-    font-size: 0.5625rem;
-    margin-bottom: 8px;
-  }
-
-  .except-numbers-additional__text {
-    font-size: 0.5625rem;
-  }
-
-  .warning {
-    padding-top: 90px;
-  }
-
-  .warning-additional__img:before {
-    display: block;
-  }
-
-  .warning-additional__img {
-    display: block;
-  }
-
-  .warning-main__text:before {
-    width: 30px;
-    top: 2px;
-    left: -28px;
-  }
-
-  .warning-main__text {
-    margin-bottom: 40px;
-  }
-
-  .warning-main__item:before {
-    top: 2px;
-  }
-
-  .warning-main__item {
-    margin-bottom: 20px;
-  }
-
-  .warning-main__text--light {
-    margin-top: 8px;
-  }
-}
-
-@media screen and (min-width: 48em) and (-webkit-min-device-pixel-ratio: 2), screen and (min-width: 48em) and (min-resolution: 192dpi), screen and (min-width: 48em) and (min-resolution: 2dppx) {
-  .simple-steps-main {
-    background-image: url(../images/background-png/stap@2x.png);
-  }
-}
-
 @media (min-width: 768px) {
   .container {
     max-width: 720px;
@@ -10336,6 +10186,190 @@ h6 {
   }
 }
 
+@media (min-width: 48em) {
+  .start-it {
+    padding-top: 112px;
+  }
+
+  .start-it-main__text--mobile {
+    display: none;
+  }
+
+  .start-it-main__text--tablet {
+    display: block;
+  }
+
+  .start-it-main__img {
+    margin-bottom: 66px;
+  }
+
+  .start-it-main__offer:before {
+    top: 2px;
+  }
+
+  .start-it-main__offer {
+    font-size: 0.625rem;
+  }
+
+  .start-it-main__title {
+    font-size: 1.6875rem;
+  }
+
+  .start-in-preferences:before {
+    font-size: 8.75rem;
+    top: -80px;
+    left: -75px;
+  }
+
+  .start-in-preferences {
+    margin-bottom: 15px;
+  }
+
+  .start-it-additional__subtitle {
+    font-size: 1.05rem;
+  }
+
+  .start-in-preferences__item:nth-last-child(-n+4) {
+    margin-bottom: 0;
+  }
+
+  .start-in-preferences__item:before {
+    display: none;
+    margin-bottom: 20px;
+  }
+
+  .start-in-preferences__item {
+    font-size: 0.5625rem;
+  }
+
+  .facts {
+    padding-top: 58px;
+  }
+
+  .facts {
+    padding-top: 0;
+  }
+
+  .facts-main__title {
+    text-align: left;
+  }
+
+  .facts-additional__list {
+    background: url(../../../images/main-images/decorative-images/schedule.png) bottom right/auto no-repeat;
+  }
+
+  .facts-additional__item:last-child {
+    margin-bottom: 12px;
+  }
+
+  .facts-additional__item:before {
+    display: none;
+  }
+
+  .facts-additional__item {
+    font-size: 0.5rem;
+  }
+
+  .facts-additional__subtitle__span {
+    font-size: 0.5625rem;
+  }
+
+  .facts-additional__subtitle {
+    font-size: 1rem;
+  }
+
+  .except-numbers {
+    padding-top: 90px;
+  }
+
+  .except-numbers-main__text {
+    font-size: 0.5625rem;
+  }
+
+  .except-numbers-main__text--bold {
+    font-size: 0.5625rem;
+  }
+
+  .except-numbers-main__text--light {
+    font-size: 0.5625rem;
+  }
+
+  .except-numbers-additional__text {
+    margin-bottom: 40px;
+  }
+
+  .except-numbers-additional__item:before {
+    top: 2px;
+  }
+
+  .except-numbers-additional__item {
+    margin-bottom: 20px;
+  }
+
+  .except-numbers-additional__subtitle {
+    font-size: 0.5625rem;
+    margin-bottom: 8px;
+  }
+
+  .except-numbers-additional__text {
+    font-size: 0.5625rem;
+  }
+
+  .warning {
+    padding-top: 90px;
+  }
+
+  .warning-additional__img:before {
+    display: block;
+  }
+
+  .warning-additional__img {
+    display: block;
+  }
+
+  .warning-main__text:before {
+    width: 30px;
+    top: 2px;
+    left: -28px;
+  }
+
+  .warning-main__text {
+    margin-bottom: 40px;
+  }
+
+  .warning-main__item:before {
+    top: 2px;
+  }
+
+  .warning-main__item {
+    margin-bottom: 20px;
+  }
+
+  .warning-main__text--light {
+    margin-top: 8px;
+  }
+}
+
+@media screen and (min-width: 48em) and (-webkit-min-device-pixel-ratio: 2), screen and (min-width: 48em) and (min-resolution: 192dpi), screen and (min-width: 48em) and (min-resolution: 2dppx) {
+  .simple-steps-main {
+    background-image: url(../images/background-png/stap@2x.png);
+  }
+}
+
+@media screen and (min-width: 62em) {
+  .social-list__item {
+    font-size: 0.75rem;
+  }
+
+  .main-contacts__button {
+    padding: 16px 34px;
+  }
+
+  .law-info__item {
+    font-size: 0.6875rem;
+  }
+}
+
 @media (min-width: 992px) {
   .container {
     max-width: 960px;
@@ -11219,88 +11253,6 @@ h6 {
   }
 }
 
-@media screen and (min-width: 62em) {
-  .social-list__item {
-    font-size: 0.75rem;
-  }
-
-  .main-contacts__button {
-    padding: 16px 34px;
-  }
-
-  .law-info__item {
-    font-size: 0.6875rem;
-  }
-}
-
-@media (min-width: 75em) {
-  .start-it-main__offer {
-    font-size: 0.6875rem;
-  }
-
-  .start-it-main__title {
-    font-size: 1.875rem;
-  }
-
-  .start-in-preferences:before {
-    font-size: 9.75rem;
-    top: -35px;
-    left: -310px;
-  }
-
-  .start-it-additional__subtitle {
-    font-size: 1.1875rem;
-  }
-
-  .start-in-preferences__item:nth-last-child(-n+4) {
-    margin-bottom: 20px;
-  }
-
-  .start-in-preferences__item {
-    margin-bottom: 20px;
-  }
-
-  .start-in-preferences__item {
-    font-size: 0.625rem;
-  }
-
-  .start-it-additional__text--decorative {
-    position: relative;
-    top: -80px;
-  }
-
-  .facts-main__title {
-    text-align: left;
-  }
-
-  .facts-additional__item {
-    width: 165px;
-    font-size: 0.5625rem;
-  }
-
-  .facts-additional__subtitle {
-    font-size: 1.1875rem;
-  }
-
-  .except-numbers {
-    padding-top: 115px;
-  }
-
-  .warning {
-    padding-top: 115px;
-  }
-
-  .warning-main__item:before {
-    left: -24px;
-  }
-}
-
-@media screen and (min-width: 75em) and (-webkit-min-device-pixel-ratio: 2), screen and (min-width: 75em) and (min-resolution: 192dpi), screen and (min-width: 75em) and (min-resolution: 2dppx) {
-  .simple-steps-main {
-    background-image: url(../images/background-png/stap-dectop@2x.png);
-  }
-}
-
 @media screen and (min-width: 75em) {
   .facts-main__title,
   .warning-main__title,
@@ -11408,6 +11360,12 @@ h6 {
 
   .just-do-it {
     margin-bottom: 80px;
+  }
+}
+
+@media screen and (min-width: 75em) and (-webkit-min-device-pixel-ratio: 2), screen and (min-width: 75em) and (min-resolution: 192dpi), screen and (min-width: 75em) and (min-resolution: 2dppx) {
+  .simple-steps-main {
+    background-image: url(../images/background-png/stap-dectop@2x.png);
   }
 }
 
@@ -12290,6 +12248,77 @@ h6 {
 
   .text-xl-center {
     text-align: center !important;
+  }
+}
+
+@media (min-width: 75em) {
+  .header__wrapper {
+    max-width: 100%;
+  }
+
+  .header-logo__link {
+    position: absolute;
+    left: 20px;
+  }
+
+  .start-it-main__offer {
+    font-size: 0.6875rem;
+  }
+
+  .start-it-main__title {
+    font-size: 1.875rem;
+  }
+
+  .start-in-preferences:before {
+    font-size: 9.75rem;
+    top: -35px;
+    left: -310px;
+  }
+
+  .start-it-additional__subtitle {
+    font-size: 1.1875rem;
+  }
+
+  .start-in-preferences__item:nth-last-child(-n+4) {
+    margin-bottom: 20px;
+  }
+
+  .start-in-preferences__item {
+    margin-bottom: 20px;
+  }
+
+  .start-in-preferences__item {
+    font-size: 0.625rem;
+  }
+
+  .start-it-additional__text--decorative {
+    position: relative;
+    top: -80px;
+  }
+
+  .facts-main__title {
+    text-align: left;
+  }
+
+  .facts-additional__item {
+    width: 165px;
+    font-size: 0.5625rem;
+  }
+
+  .facts-additional__subtitle {
+    font-size: 1.1875rem;
+  }
+
+  .except-numbers {
+    padding-top: 115px;
+  }
+
+  .warning {
+    padding-top: 115px;
+  }
+
+  .warning-main__item:before {
+    left: -24px;
   }
 }
 
