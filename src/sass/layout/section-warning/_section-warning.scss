@@ -1,0 +1,117 @@
+.warning {
+    padding-top: 50px;
+
+    @media (min-width: 48em) {
+        padding-top: 90px;
+    }
+
+    @media (min-width: 75em) {
+        padding-top: 115px;
+    }
+}
+
+.warning-additional__img {
+    display: none;
+    position: relative;
+
+    &:before {
+        display: none;
+        content: 'HARD';
+        position: absolute;
+        top: 100px;
+        left:0px;
+        transform: rotate(90deg);
+        font-family: $special-font;
+        font-size: 140px;
+        color: $title-text-color;
+        opacity: 0.05;
+        z-index: -1;
+
+        @media (min-width: 48em) {
+            display: block;
+        }
+    }
+
+    @media (min-width: 48em) {
+        display: block;
+    }
+}
+
+.warning-main__title {
+    @extend %sec-title-style;
+    margin-bottom: 6px;
+    padding: 0;
+}
+
+.warning-main__text {
+    @extend %sec-title-text-style;
+    margin-bottom: 40px;
+    position: relative;
+    padding-left: 10px;
+
+    &:before {
+        @extend %pseudos;
+        top: 10px;
+        left: -22px;
+        content: '';
+        width: 20px;
+        height: 4px;
+        background-color: $title-text-color;
+
+        @media (min-width: 48em) {
+            width: 30px;
+            top: 2px;
+            left: -28px;
+        }
+    }
+
+    @media (min-width: 48em) {
+        margin-bottom: 40px;
+    }
+}
+
+.warning-main__list {
+    list-style: none;
+    padding: 0;
+}
+
+.warning-main__item {
+    margin-bottom: 30px;
+    position: relative;
+
+    &:last-child {
+        margin-bottom: 0;
+    }
+    
+    &:before {
+        content: '';
+        @extend %pseudos;
+        top: 6px;
+        left: -16px;
+        width: 6px;
+        height: 6px;
+        background-color: $title-text-color;
+
+        @media (min-width: 48em) {
+            top: 2px;
+        }
+
+        @media (min-width: 75em) {
+            left: -24px;
+        }
+    }
+    @media (min-width: 48em) {
+        margin-bottom: 20px;
+    }
+}
+
+.warning-main__subtitle {
+    @extend %third-title-style;
+}
+
+.warning-main__text--light {
+
+    @media (min-width: 48em) {
+        margin-top: 8px;
+    }
+}

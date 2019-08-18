@@ -1,4 +1,5 @@
-@import '../../node_modules/bootstrap-scss/bootstrap-grid';
+
+@import '../../node_modules/bootstrap-scss/bootstrap.scss';
 
 /* Helpers */
 @import './base/fonts';
@@ -17,10 +18,10 @@
 @import './component/page-footer/main-contacts__button';
 
 /* Layout */
-@import './layout/section-2-time-to/section-2-time-to.scss';
-@import './layout/section-3-facts/section-3-facts.scss';
-@import './layout/section-4-future/section-4-future.scss';
-@import './layout/banner/banner';
+@import './layout/section-start-it/section-start-it.scss';
+@import './layout/section-facts/section-facts.scss';
+@import './layout/section-except-numbers/section-except-numbers.scss';
+@import './layout/section-warning/section-warning.scss';
 @import './layout/section8/section8.scss';
 @import './layout/section9/section9.scss';
 @import './layout/page-footer/main-contacts.scss';
@@ -35,3 +36,4 @@
 
 @import './layout/section14-16/section-14-justnow/section-14-justnow.scss';
 @import './layout/section14-16/section-15/section-15.scss';
+@import './layout/section-just-do-it/section-just-do-it.scss';
