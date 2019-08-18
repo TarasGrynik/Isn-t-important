@@ -1,0 +1,279 @@
+<<<<<<< HEAD:src/sass/layout/section-4-future/_section-4-future.scss
+.future {
+  padding-top: 34px;
+}
+
+.future--img {
+  margin-bottom: 34px;
+}
+
+.future--header-wrapper {
+  margin-bottom: 22px;
+  padding: 0;
+}
+
+.future--header {
+  display: inline;
+  font-family: $section-title-font;
+  background-color: $title-text-color;
+  color: $banner-title-text-color;
+  text-transform: uppercase;
+  font-size: remy(18);
+
+  @media (min-width: 768px) {
+    font-size: remy(9);
+  }
+}
+
+.future--call {
+  font-family: $section-title-font;
+  color: $title-text-color;
+  margin-bottom: 14px;
+
+  @media (min-width: 768px) {
+=======
+.except-numbers {
+    padding-top: 34px;
+
+    @media (min-width: 48em) {
+        padding-top: 90px;
+    }
+
+    @media (min-width: 75em) {
+        padding-top: 115px;
+    }
+}
+
+.except-numbers-main__img {
+    margin-bottom: 34px;
+}
+
+.except-numbers-main__title {
+    margin-bottom: 22px;
+    padding: 0;
+}
+
+.except-numbers-main__text {
+    display: inline;
+    font-family: $section-title-font;
+    background-color: $title-text-color;
+    color: $banner-title-text-color;
+    text-transform: uppercase;
+    font-size: remy(18);
+
+    @media (min-width: 48em) {
+        font-size: remy(9);
+    }
+}
+
+.except-numbers-main__text--bold {
+    font-family: $section-title-font;
+    color: $title-text-color;
+    margin-bottom: 14px;
+
+@media (min-width: 48em) {
+>>>>>>> bab8998103d4e501809dfbfd75238fc6478f3f68:src/sass/layout/section-except-numbers/_section-except-numbers.scss
+    font-size: remy(9);
+  }
+}
+
+<<<<<<< HEAD:src/sass/layout/section-4-future/_section-4-future.scss
+.future--about {
+  margin-bottom: 46px;
+
+  &__span {
+    color: $title-text-color;
+    background-color: $addition-style-color;
+  }
+
+  @media (min-width: 768px) {
+    font-size: remy(9);
+  }
+}
+
+.future--second-header {
+  display: inline;
+  font-family: $section-title-font;
+  background-color: $title-text-color;
+  color: $banner-title-text-color;
+  text-transform: uppercase;
+  font-size: remy(18);
+
+  @media (min-width: 768px) {
+    font-size: remy(27);
+  }
+}
+
+.future--more {
+  font-family: $style-font;
+  color: $title-text-color;
+  margin-bottom: 45px;
+  position: relative;
+  padding-left: 10px;
+
+  &:before {
+    position: absolute;
+    top: 10px;
+    left: -12px;
+    content: '';
+    display: block;
+    width: 14px;
+    height: 4px;
+    background-color: $title-text-color;
+
+    @media (min-width: 768px) {
+      top: 2px;
+      left: -22px;
+=======
+.except-numbers-main__text--light {
+    margin-bottom: 46px;
+
+    @media (min-width: 48em) {
+        font-size: remy(9);
+    }
+}
+
+.except-numbers-main__text--special {
+    color: $title-text-color;
+    background-color: $addition-style-color;
+}
+
+.except-numbers-additional__title {
+    display: inline;
+    @extend %sec-title-style--reverse;
+}
+
+.except-numbers-additional__text {
+    @extend %sec-title-text-style;
+    margin-bottom: 45px;
+    position: relative;
+    padding-left: 10px;
+
+    &:before {
+        @extend %pseudos;
+        top: 10px;
+        left: -12px;
+        content: '';
+        width: 14px;
+        height: 4px;
+        background-color: $title-text-color;
+
+        @media (min-width: 48em) {
+            top: 2px;
+            left: -22px;
+        }
+    }
+
+    @media (min-width: 48em) {
+        margin-bottom: 40px;
+>>>>>>> bab8998103d4e501809dfbfd75238fc6478f3f68:src/sass/layout/section-except-numbers/_section-except-numbers.scss
+    }
+  }
+
+  @media (min-width: 768px) {
+    font-size: remy(9);
+    margin-bottom: 40px;
+  }
+}
+
+<<<<<<< HEAD:src/sass/layout/section-4-future/_section-4-future.scss
+.future--list {
+  list-style: none;
+  padding: 0;
+}
+
+.future--item {
+  margin-bottom: 30px;
+  position: relative;
+
+  &:last-child {
+    margin-bottom: 0;
+  }
+
+  &:before {
+    content: '';
+    position: absolute;
+    top: 6px;
+    left: -16px;
+    display: block;
+    width: 6px;
+    height: 6px;
+    background-color: $title-text-color;
+
+    @media (min-width: 768px) {
+      top: 2px;
+=======
+.except-numbers-additional__list {
+    list-style: none;
+    padding: 0;
+}
+
+.except-numbers-additional__item {
+    margin-bottom: 30px;
+    position: relative;
+
+    &:last-child {
+        margin-bottom: 0;
+    }
+    
+    &:before {
+        content: '';
+        @extend %pseudos;
+        top: 6px;
+        left: -16px;
+        width: 6px;
+        height: 6px;
+        background-color: $title-text-color;
+        @media (min-width: 48em) {
+            top: 2px;
+        }
+    }
+    @media (min-width: 48em) {
+        margin-bottom: 20px;
+>>>>>>> bab8998103d4e501809dfbfd75238fc6478f3f68:src/sass/layout/section-except-numbers/_section-except-numbers.scss
+    }
+  }
+
+  @media (min-width: 768px) {
+    margin-bottom: 20px;
+  }
+}
+
+<<<<<<< HEAD:src/sass/layout/section-4-future/_section-4-future.scss
+.future--item-header {
+  text-transform: uppercase;
+  font-family: $special-font;
+  color: $title-text-color;
+  font-size: remy(13.5);
+  margin-bottom: 22px;
+
+  @media (min-width: 768px) {
+    font-size: remy(9);
+    margin-bottom: 8px;
+  }
+}
+
+.future--item-text {
+  @media (min-width: 768px) {
+    font-size: remy(8);
+  }
+}
+=======
+.except-numbers-additional__subtitle {
+    @extend %article-title-style;
+    color: $title-text-color;
+    font-size: remy(13.5);
+    margin-bottom: 22px;
+
+    @media (min-width: 48em) {
+        font-size: remy(9);
+        margin-bottom: 8px;
+    }
+}
+
+.except-numbers-additional__text {
+    @media (min-width: 48em) {
+        font-size: remy(9);
+    }
+}
+>>>>>>> bab8998103d4e501809dfbfd75238fc6478f3f68:src/sass/layout/section-except-numbers/_section-except-numbers.scss
