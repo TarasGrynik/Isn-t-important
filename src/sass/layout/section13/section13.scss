@@ -1,0 +1,78 @@
+@import "../../helpers/helpers";
+@import "../../helpers/variables";
+
+.section-help {
+  margin-bottom: 50px;
+
+  @media (min-width: 768px) {
+    margin-bottom: 90px;
+  }
+}
+
+.section-help--position {
+  @media (max-width: 767px) {
+    margin: 0 auto;
+  }
+}
+
+.section-help__title {
+  @extend %sec-title-style;
+  padding-bottom: 25px;
+
+
+  @media (min-width: 768px) {
+    padding: 0 0 30px;
+  }
+}
+
+.section-help__desc {
+  @extend %sec-title-text-style;
+  margin: 0;
+  padding: 0 0 30px 25px;
+  position: relative;
+
+  &::before {
+    content: '';
+    @extend %pseudos;
+    top: 7px;
+    left: 0;
+    width: 15px;
+    border-bottom: 3px solid $title-text-color;
+  }
+
+  @media (min-width: 768px) {
+    padding: 0 0 0 45px;
+
+    &::before {
+      width: 30px;
+    }
+  }
+}
+
+.section-help__image {
+  width: 100%;
+
+  &--mobile {
+    margin: 0 auto;
+    padding-bottom: 40px;
+    @media (min-width: 767px) {
+      display: none;
+    }
+  }
+
+  &--tablet {
+    @media (max-width: 768px) {
+      display: none;
+    }
+  }
+}
+
+.section-help__second-title {
+  @extend %third-title-style;
+  padding-bottom: 15px;
+}
+
+.section-help__second-desc {
+  @extend %main-page-font;
+  margin: 0;
+}
