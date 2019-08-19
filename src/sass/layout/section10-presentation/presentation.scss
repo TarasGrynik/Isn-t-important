@@ -37,7 +37,6 @@
   }
 }
 
-
 .presentation-main__subtitle {
   @extend %third-title-style;
   padding-top: 25px;
@@ -151,11 +150,9 @@
 }
 
 .presentation-additional__btn {
-  // margin-top: 40px;
   &:hover {
-    @extend %btn-hover;
-  }
-  &:active {
+    @extend %btn-hover;}
+    &:active {
     @extend %btn-active;
   }
 }
