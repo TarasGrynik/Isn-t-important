@@ -6594,6 +6594,8 @@ a.text-dark:focus {
 .warning-main__title,
 .career-additional__title,
 .simple-steps-main__title,
+.important-additional__title,
+.important-main__title,
 .just-do-it-main__title {
   font-family: "Acrom-Bold", sans-serif;
   font-size: 1.125rem;
@@ -6615,6 +6617,7 @@ a.text-dark:focus {
 
 .start-it-additional__text--decorative,
 .simple-steps-additional__text-decorative,
+.important-main__text-decorative,
 .just-do-it-additional__text--decorative {
   font-family: "Acrom-Medium", sans-serif;
   font-size: 0.9375rem;
@@ -6636,6 +6639,7 @@ a.text-dark:focus {
 
 .сareer-main__text--light,
 .simple-steps-additional__text--light,
+.important-main__text--light,
 .just-do-it-additional__text--light {
   font-family: "Acrom-Regular", sans-serif;
   font-size: 0.875rem;
@@ -6649,6 +6653,8 @@ a.text-dark:focus {
 .warning-main__text,
 .career-additional__text,
 .simple-steps-main__text,
+.important-additional__text,
+.important-additional__text--special,
 .just-do-it-main__text {
   font-family: "Acrom-Medium", sans-serif;
   font-size: 0.875rem;
@@ -6656,6 +6662,7 @@ a.text-dark:focus {
   color: #000000;
 }
 
+.important-main__text--bold,
 .just-do-it-additional__text--bold {
   font-family: "Acrom-Bold", sans-serif;
   font-size: 0.875rem;
@@ -6690,6 +6697,8 @@ a.text-dark:focus {
 .simple-steps-main__text::before,
 .simple-steps-additional__subtitle::before,
 .simple-steps-additional__text-decorative::before,
+.important-additional__price::before,
+.important-main__text-decorative::before,
 .just-do-it-main__text::before,
 .just-do-it-additional__block:nth-of-type(1)::before {
   position: absolute;
@@ -6700,13 +6709,17 @@ a.text-dark:focus {
 .start-in-preferences:before,
 .start-it-additional__subtitle,
 .facts-additional__subtitle,
-.except-numbers-additional__subtitle {
+.except-numbers-additional__subtitle,
+.important-additional__price,
+.important-additional__price--extra {
   text-transform: uppercase;
   font-family: "Acrom-ExtraBold", sans-serif;
 }
 
 .main-contacts__button:hover,
 .main-contacts__button:focus,
+.important-main__button:hover,
+.important-main__button:focus,
 .just-do-it-main__button:hover,
 .just-do-it-main__button:focus {
   background-color: #17ecff;
@@ -6714,6 +6727,7 @@ a.text-dark:focus {
 }
 
 .main-contacts__button:active,
+.important-main__button:active,
 .just-do-it-main__button:active {
   background-color: #06a4b2;
 }
@@ -7923,6 +7937,102 @@ h6 {
   padding-top: 15px;
 }
 
+.important {
+  margin-bottom: 80px;
+}
+
+.important-additional {
+  text-align: center;
+}
+
+.important-additional__title {
+  margin-bottom: 20px;
+}
+
+.important-main__title {
+  display: none;
+}
+
+.important-additional__block {
+  background-color: #052139;
+  padding: 80px;
+  margin-bottom: 40px;
+}
+
+.important-additional__subblock {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.important-additional__text {
+  max-width: 95px;
+  color: #ffffff;
+}
+
+.important-additional__price-subblock {
+  max-width: 70px;
+}
+
+.important-additional__text--special {
+  display: inline-block;
+  margin-right: auto;
+  margin-bottom: 4px;
+  line-height: 1.1;
+  background-color: #16ebfe;
+}
+
+.important-additional__price {
+  position: relative;
+  color: #ffffff;
+  margin-left: 50px;
+}
+
+.important-additional__price::before {
+  content: '';
+  height: 1px;
+  width: 36px;
+  left: -50px;
+  top: 10px;
+  background-color: #ffffff;
+}
+
+.important-additional__price--special {
+  margin: 0;
+  font-family: "Acrom-ExtraBold", sans-serif;
+  font-size: 2.5rem;
+  margin-left: 50px;
+  color: #ffffff;
+}
+
+.important-additional__price--extra {
+  margin: 0;
+  color: #ffffff;
+  margin-top: 14px;
+  margin-left: 6px;
+}
+
+.important-main__text-decorative {
+  position: relative;
+  margin-bottom: 30px;
+}
+
+.important-main__text-decorative::before {
+  content: '';
+  height: 2px;
+  width: 36px;
+  transform: rotate(124deg);
+  left: -50px;
+  top: 18px;
+  z-index: 20;
+  background-color: #000000;
+}
+
+.important-main__button {
+  padding: 14px 40px;
+  font-size: 0.75rem;
+}
+
 .just-do-it {
   margin-bottom: 40px;
 }
@@ -7967,7 +8077,7 @@ h6 {
   content: 'P.S. :';
   font-size: 1.25rem;
   left: 14;
-  top: -18px;
+  top: -30px;
   font-family: "Acrom-ExtraBold", sans-serif;
 }
 
@@ -10051,6 +10161,8 @@ h6 {
   .warning-main__title,
   .career-additional__title,
   .simple-steps-main__title,
+  .important-additional__title,
+  .important-main__title,
   .just-do-it-main__title {
     font-size: 1.6875rem;
   }
@@ -10061,6 +10173,7 @@ h6 {
 
   .start-it-additional__text--decorative,
   .simple-steps-additional__text-decorative,
+  .important-main__text-decorative,
   .just-do-it-additional__text--decorative {
     font-size: 0.5625rem;
   }
@@ -10073,6 +10186,7 @@ h6 {
 
   .сareer-main__text--light,
   .simple-steps-additional__text--light,
+  .important-main__text--light,
   .just-do-it-additional__text--light {
     font-size: 0.5rem;
   }
@@ -10083,10 +10197,13 @@ h6 {
   .warning-main__text,
   .career-additional__text,
   .simple-steps-main__text,
+  .important-additional__text,
+  .important-additional__text--special,
   .just-do-it-main__text {
     font-size: 0.5625rem;
   }
 
+  .important-main__text--bold,
   .just-do-it-additional__text--bold {
     font-size: 0.5625rem;
   }
@@ -10171,6 +10288,44 @@ h6 {
     margin-left: 14px;
   }
 
+  .important {
+    margin-bottom: 100px;
+  }
+
+  .important-additional__title {
+    display: none;
+  }
+
+  .important-main__title {
+    display: block;
+    margin-bottom: 30px;
+  }
+
+  .important-additional__block {
+    padding: 60px;
+    margin-left: 15px;
+    margin-top: 20px;
+  }
+
+  .important-additional__text {
+    max-width: 65px;
+  }
+
+  .important-additional__price--special {
+    margin-left: 20px;
+  }
+
+  .important-main__text-decorative::before {
+    width: 20px;
+    left: -29px;
+    top: 13px;
+  }
+
+  .important-main__button {
+    font-size: 0.625rem;
+    padding: 14px 10px;
+  }
+
   .just-do-it {
     margin-bottom: 60px;
   }
@@ -10180,8 +10335,12 @@ h6 {
     left: 55%;
   }
 
+  .just-do-it-main__text::before {
+    top: -17px;
+  }
+
   .just-do-it-additional__block:nth-of-type(1)::before {
-    top: 4px;
+    top: -3px;
     left: -52px;
   }
 }
@@ -10366,6 +10525,10 @@ h6 {
   }
 
   .law-info__item {
+    font-size: 0.6875rem;
+  }
+
+  .important-main__button {
     font-size: 0.6875rem;
   }
 }
@@ -11258,6 +11421,8 @@ h6 {
   .warning-main__title,
   .career-additional__title,
   .simple-steps-main__title,
+  .important-additional__title,
+  .important-main__title,
   .just-do-it-main__title {
     font-size: 1.875rem;
   }
@@ -11268,6 +11433,7 @@ h6 {
 
   .start-it-additional__text--decorative,
   .simple-steps-additional__text-decorative,
+  .important-main__text-decorative,
   .just-do-it-additional__text--decorative {
     font-size: 0.625rem;
   }
@@ -11280,6 +11446,7 @@ h6 {
 
   .сareer-main__text--light,
   .simple-steps-additional__text--light,
+  .important-main__text--light,
   .just-do-it-additional__text--light {
     font-size: 0.5625rem;
   }
@@ -11290,10 +11457,13 @@ h6 {
   .warning-main__text,
   .career-additional__text,
   .simple-steps-main__text,
+  .important-additional__text,
+  .important-additional__text--special,
   .just-do-it-main__text {
     font-size: 0.625rem;
   }
 
+  .important-main__text--bold,
   .just-do-it-additional__text--bold {
     font-size: 0.625rem;
   }
@@ -11356,6 +11526,27 @@ h6 {
 
   .law-info__item:not(:nth-of-type(1)) {
     margin-left: 16px;
+  }
+
+  .important {
+    margin-bottom: 120px;
+  }
+
+  .important-main__title {
+    margin-bottom: 34px;
+  }
+
+  .important-additional__block {
+    padding: 60px;
+  }
+
+  .important-main__text-decorative::before {
+    width: 24px;
+  }
+
+  .important-main__button {
+    font-size: 0.6875rem;
+    padding: 14px 12px;
   }
 
   .just-do-it {

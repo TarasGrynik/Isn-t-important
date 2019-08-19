@@ -48,6 +48,10 @@
     left: -8px;
     top: -14px;
     font-family: $special-font;
+
+    @media screen and (min-width: 48em) {
+      top: -17px;
+    }
   }
 }
 
@@ -71,11 +75,11 @@
   content: 'P.S. :';
   font-size: remy(20);
   left: 14;
-  top: -18px;
+  top: -30px;
   font-family: $special-font;
 
   @media screen and (min-width: 48em) {
-    top: 4px;
+    top: -3px;
     left: -52px;
   }
 }
