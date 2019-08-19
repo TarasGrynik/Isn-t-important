@@ -6594,6 +6594,7 @@ a.text-dark:focus {
 .warning-main__title,
 .career-additional__title,
 .simple-steps-main__title,
+.presentation-main__title,
 .just-do-it-main__title {
   font-family: "Acrom-Bold", sans-serif;
   font-size: 1.125rem;
@@ -6615,6 +6616,7 @@ a.text-dark:focus {
 
 .start-it-additional__text--decorative,
 .simple-steps-additional__text-decorative,
+.presentation-additional__text--decorative,
 .just-do-it-additional__text--decorative {
   font-family: "Acrom-Medium", sans-serif;
   font-size: 0.9375rem;
@@ -6626,7 +6628,8 @@ a.text-dark:focus {
 
 .warning-main__subtitle,
 .career-main__subtitle,
-.simple-steps-additional__subtitle {
+.simple-steps-additional__subtitle,
+.presentation-main__subtitle {
   font-family: "Acrom-ExtraBold", sans-serif;
   font-size: 0.9375rem;
   line-height: 1.53;
@@ -6636,6 +6639,7 @@ a.text-dark:focus {
 
 .сareer-main__text--light,
 .simple-steps-additional__text--light,
+.presentation-additional__text--light,
 .just-do-it-additional__text--light {
   font-family: "Acrom-Regular", sans-serif;
   font-size: 0.875rem;
@@ -6649,6 +6653,7 @@ a.text-dark:focus {
 .warning-main__text,
 .career-additional__text,
 .simple-steps-main__text,
+.presentation-main__text,
 .just-do-it-main__text {
   font-family: "Acrom-Medium", sans-serif;
   font-size: 0.875rem;
@@ -6656,6 +6661,7 @@ a.text-dark:focus {
   color: #000000;
 }
 
+.presentation-additional__text--bold,
 .just-do-it-additional__text--bold {
   font-family: "Acrom-Bold", sans-serif;
   font-size: 0.875rem;
@@ -6666,6 +6672,7 @@ a.text-dark:focus {
 /* Placeholder for list */
 
 .social-list,
+.presentation-additional__block,
 .law-info__list {
   list-style: none;
   margin: 0;
@@ -6692,6 +6699,9 @@ a.text-dark:focus {
 .simple-steps-main__text::before,
 .simple-steps-additional__subtitle::before,
 .simple-steps-additional__text-decorative::before,
+.presentation-main__text::before,
+.presentation-additional__text--decorative::before,
+.presentation-additional__item::before,
 .just-do-it-main__text::before,
 .just-do-it-additional__block:nth-of-type(1)::before {
   position: absolute;
@@ -6710,6 +6720,7 @@ a.text-dark:focus {
 .main-contacts__button:hover,
 .main-contacts__button:focus,
 .banner__btn:hover,
+.presentation-additional__btn:hover,
 .just-do-it-main__button:hover,
 .just-do-it-main__button:focus {
   background-color: #17ecff;
@@ -6719,6 +6730,7 @@ a.text-dark:focus {
 .main-contacts__button:active,
 .banner__btn,
 .banner__btn:active,
+.presentation-additional__btn:active,
 .just-do-it-main__button:active {
   background-color: #06a4b2;
 }
@@ -7729,6 +7741,84 @@ h6 {
   height: 2px;
   background-color: #000000;
   transform: skewY(-45deg);
+}
+
+.presentation-main {
+  padding: 20px 0 45px;
+}
+
+.presentation-main__title {
+  padding-bottom: 15px;
+}
+
+.presentation-main__text {
+  position: relative;
+}
+
+.presentation-main__text::before {
+  content: '';
+  left: -15px;
+  top: 8px;
+  width: 20px;
+  height: 2px;
+  background-color: #000000;
+}
+
+.presentation-additional__block {
+  padding: 35px 0 50px;
+}
+
+.presentation-main__subtitle {
+  padding-top: 25px;
+}
+
+.presentation-additional__text--decorative::before {
+  content: '';
+  left: -10px;
+  top: 7px;
+  width: 12px;
+  height: 1.5px;
+  background-color: #000000;
+  transform: skewY(-45deg);
+}
+
+.presentation-additional__item::before {
+  content: ' ';
+  left: -35px;
+  top: 35px;
+  width: 50px;
+  height: 15px;
+  transform: rotate(-90deg);
+  color: #fff;
+  background-color: #ff6b08;
+  text-align: center;
+  font-family: "Acrom-Bold", sans-serif;
+  font-size: 0.75rem;
+  line-height: 1.45;
+}
+
+.presentation-additional__item:nth-child(1)::before {
+  content: '[001]';
+}
+
+.presentation-additional__item:nth-child(2)::before {
+  content: '[002]';
+}
+
+.presentation-additional__item:nth-child(3)::before {
+  content: '[003]';
+}
+
+.presentation-additional__item:nth-child(4)::before {
+  content: '[004]';
+}
+
+.presentation-additional__item:nth-child(5)::before {
+  content: '[005]';
+}
+
+.presentation-additional__item:nth-child(6)::before {
+  content: '[006]';
 }
 
 .main-contacts {
@@ -10142,6 +10232,7 @@ h6 {
   .warning-main__title,
   .career-additional__title,
   .simple-steps-main__title,
+  .presentation-main__title,
   .just-do-it-main__title {
     font-size: 1.6875rem;
   }
@@ -10152,18 +10243,21 @@ h6 {
 
   .start-it-additional__text--decorative,
   .simple-steps-additional__text-decorative,
+  .presentation-additional__text--decorative,
   .just-do-it-additional__text--decorative {
     font-size: 0.5625rem;
   }
 
   .warning-main__subtitle,
   .career-main__subtitle,
-  .simple-steps-additional__subtitle {
+  .simple-steps-additional__subtitle,
+  .presentation-main__subtitle {
     font-size: 0.5625rem;
   }
 
   .сareer-main__text--light,
   .simple-steps-additional__text--light,
+  .presentation-additional__text--light,
   .just-do-it-additional__text--light {
     font-size: 0.5rem;
   }
@@ -10174,10 +10268,12 @@ h6 {
   .warning-main__text,
   .career-additional__text,
   .simple-steps-main__text,
+  .presentation-main__text,
   .just-do-it-main__text {
     font-size: 0.5625rem;
   }
 
+  .presentation-additional__text--bold,
   .just-do-it-additional__text--bold {
     font-size: 0.5625rem;
   }
@@ -10225,6 +10321,31 @@ h6 {
 
   .simple-steps-additional {
     font-size: 1.0625rem;
+  }
+
+  .presentation-main {
+    padding: 30px 0 50px;
+  }
+
+  .presentation-additional__block {
+    padding: 55px 0 20px;
+  }
+
+  .presentation-main__subtitle {
+    padding-top: 64px;
+  }
+
+  .presentation-additional__text--decorative::before {
+    width: 10px;
+    height: 2.5px;
+  }
+
+  .presentation-additional__item::before {
+    width: 20px;
+    height: 10px;
+    font-size: 0.4375rem;
+    top: 18px;
+    left: -15px;
   }
 
   .main-contacts {
@@ -11395,6 +11516,152 @@ h6 {
 
   .text-lg-center {
     text-align: center !important;
+  }
+}
+
+@media screen and (min-width: 75em) {
+  .facts-main__title,
+  .warning-main__title,
+  .career-additional__title,
+  .simple-steps-main__title,
+  .presentation-main__title,
+  .just-do-it-main__title {
+    font-size: 1.875rem;
+  }
+
+  .except-numbers-additional__title {
+    font-size: 1.875rem;
+  }
+
+  .start-it-additional__text--decorative,
+  .simple-steps-additional__text-decorative,
+  .presentation-additional__text--decorative,
+  .just-do-it-additional__text--decorative {
+    font-size: 0.625rem;
+  }
+
+  .warning-main__subtitle,
+  .career-main__subtitle,
+  .simple-steps-additional__subtitle,
+  .presentation-main__subtitle {
+    font-size: 0.625rem;
+  }
+
+  .сareer-main__text--light,
+  .simple-steps-additional__text--light,
+  .presentation-additional__text--light,
+  .just-do-it-additional__text--light {
+    font-size: 0.5625rem;
+  }
+
+  .start-it-main__text--tablet,
+  .facts-main__text,
+  .except-numbers-additional__text,
+  .warning-main__text,
+  .career-additional__text,
+  .simple-steps-main__text,
+  .presentation-main__text,
+  .just-do-it-main__text {
+    font-size: 0.625rem;
+  }
+
+  .presentation-additional__text--bold,
+  .just-do-it-additional__text--bold {
+    font-size: 0.625rem;
+  }
+
+  .advertising__image {
+    width: 24px;
+    height: 14px;
+  }
+
+  .social-list__item {
+    font-size: 0.8125rem;
+  }
+
+  .career-main {
+    padding: 40px 0 65px;
+  }
+
+  .career-additional__text {
+    padding-bottom: 45px;
+  }
+
+  .simple-steps-main {
+    background-image: url(../images/background-png/stap-dectop.png);
+  }
+
+  .simple-steps-additional {
+    font-size: 1.1875rem;
+  }
+
+  .presentation-main {
+    padding: 40px 0 65px;
+  }
+
+  .presentation-additional__block {
+    padding: 60px 0 20px;
+  }
+
+  .presentation-main__subtitle {
+    padding-top: 69px;
+  }
+
+  .presentation-additional__text--decorative::before {
+    width: 11px;
+    height: 3.125px;
+  }
+
+  .presentation-additional__item::before {
+    width: 23px;
+    height: 9px;
+    top: 20px;
+    font-size: 0.375rem;
+  }
+
+  .main-contacts {
+    padding: 54px 0;
+  }
+
+  .page-footer__logo {
+    width: 70px;
+    height: 24px;
+  }
+
+  .main-contacts__title {
+    font-size: 0.875rem;
+    margin-bottom: 8px;
+  }
+
+  .main-contacts__text,
+  .main-contacts__link {
+    font-size: 0.75rem;
+  }
+
+  .page-footer__bottom {
+    height: 38px;
+  }
+
+  .law-info {
+    height: 38px;
+  }
+
+  .law-info__item {
+    font-size: 0.8125rem;
+  }
+
+  .law-info__item:not(:nth-of-type(1)) {
+    margin-left: 16px;
+  }
+
+  .just-do-it {
+    margin-bottom: 80px;
+  }
+}
+
+@media screen and (min-width: 75em) and (-webkit-min-device-pixel-ratio: 2), screen and (min-width: 75em) and (min-resolution: 192dpi), screen and (min-width: 75em) and (min-resolution: 2dppx) {
+  .simple-steps-main {
+    background-image: url(../images/background-png/stap-dectop@2x.png);
   }
 }
 
