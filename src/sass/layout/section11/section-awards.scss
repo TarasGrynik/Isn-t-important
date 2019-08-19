@@ -1,9 +1,39 @@
+@import "../../helpers/helpers";
+@import "../../helpers/variables";
+
+.section-awards {
+  padding: 0;
+
+  @media (min-width: 768px) {
+    margin-bottom: 90px;
+  }
+}
+
+.section-awards__items {
+  list-style: none;
+
+  @media (max-width: 767px) {
+    margin: 0 auto;
+  }
+
+  &--icon {
+    background-image: url("../images/main-images/decorative-images/un.png");
+    background-repeat: no-repeat;
+    background-position: 90% 0;
+    background-size: 85px 75px;
+
+    @media (min-resolution: 192dpi), (min-resolution: 2dppx) {
+      background-image: url("../images/main-images/decorative-images/un@2x.png");
+    }
+    @media (min-width: 768px) {
+      background-size: 75px 65px;
+    }
+  }
+}
+
 .section-awards__title {
-  font-family: $section-title-font;
-  font-size: 13.5px;
-  line-height: 19.5px;
-  text-transform: uppercase;
-  color: $title-text-color;
+  @extend %third-title-style;
+  padding: 40px 0 10px;
 
   &--dark {
     font-family: $style-font;
@@ -11,45 +41,55 @@
     background: $title-text-color;
     font-size: 13px;
     line-height: 16px;
+    padding: 0;
 
-    @media (min-width: 640px) {
+    @media (min-width: 768px) {
       font-size: 9px;
       line-height: 12px;
-      margin-bottom: 30px;
     }
-    @media (min-width: 714px) {
+    @media (min-width: 1200px) {
       font-size: 10px;
       line-height: 13px;
     }
   }
 
-  @media (min-width: 640px) {
-    font-size: 8px;
-    line-height: 13.5px;
-    padding-bottom: 10px;
+  @media (max-width: 767px) {
+    width: 220px;
   }
-  @media (min-width: 714px) {
-    font-size: 10px;
-    line-height: 15px;
+  @media (min-width: 768px) {
+    padding: 30px 0 7px;
   }
 }
 
-.section-awards__desc {
-  font-family: $main-page-font;
-  color: $main-text-color;
-  font-size: 13.5px;
-  line-height: 19.5px;
+.section-awards__title--dark-position {
+  white-space: nowrap;
+  position: absolute;
+  top: 5px;
+}
 
-  @media (min-width: 640px) {
-    font-size: 8px;
-    line-height: 12px;
-  }
-  @media (min-width: 714px) {
-    font-size: 9px;
-    line-height: 13px;
+.section-awards__desc {
+  @extend %main-page-font;
+  margin: 0;
+  padding: 0 0 40px;
+
+  @media (min-width: 768px) {
+    padding: 0;
   }
 }
 
 .section-awards__desc--bold {
-  font-family: $special-font;
+  font-family: $section-title-font;
 }
+
+.section-awards__desc--light {
+  margin: 0;
+}
+
+.section-awards__image {
+  flex-shrink: 0;
+
+  &--main {
+    width: 100%;
+  }
+}
+
