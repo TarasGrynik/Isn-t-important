@@ -1,103 +1,104 @@
+@import "../../helpers/helpers";
+@import "../../helpers/variables";
+
 .section-university {
   margin-bottom: 40px;
 
-  @media (min-width: 640px) {
-    margin-bottom: 70px;
+  @media (min-width: 768px) {
+    margin-bottom: 60px;
   }
 }
 
-.section-university__title--main {
-  font-family: $special-font;
-  font-size: 18px;
-  line-height: 23.4px;
-  padding-bottom: 25px;
-  text-transform: uppercase;
 
-  @media (min-width: 640px) {
-    font-size: 27px;
-    line-height: 33.7px;
-    padding-bottom: 35px;
+.section-university__title--main {
+  @extend %sec-title-style;
+  padding: 0 0 24px;
+
+  @media (max-width: 767px) {
+    margin: 0 auto;
   }
-  @media (min-width: 714px) {
-    font-size: 30px;
-    line-height: 37.5px;
+  @media (min-width: 768px) {
+    padding: 0 0 30px;
   }
 }
 
 .section-university__desc--main {
-  @media (max-width: 640px) {
+  @extend %sec-title-text-style;
+  position: relative;
+  margin: 0;
+
+  @media (max-width: 767px) {
     display: none;
   }
 
-  @media (min-width: 640px) {
-    font-family: $style-font;
-    font-size: 9px;
-    line-height: 13.5px;
-    width: 160px;
+  @media (min-width: 768px) {
+    padding-left: 45px;
   }
-  @media (min-width: 714px) {
-    font-size: 10px;
-    line-height: 15px;
-    width: 150px;
-  }
-}
 
-.education-section__desc--mobile {
-  font-family: $style-font;
-  font-size: 13.5px;
-  line-height: 19.5px;
-
-  @media (min-width: 640px) {
-    display: none;
-  }
-}
-
-// .section-university__desc--main-before {
-//   width: 20px;
-//   padding-right: 7px;
-//   display: block;
-//   border-bottom: 2px solid rgb(0, 0, 0);
-// }
-
-@media (max-width: 640px) {
-  .section-university__desc--main {
-    display: none;
+  &::before {
+    content: '';
+    @extend %pseudos;
+    top: 5px;
+    left: 0;
+    width: 30px;
+    border-bottom: 3px solid $title-text-color;
   }
 }
 
 
 .section-university__title {
-  font-family: $special-font;
-  font-size: 13.5px;
-  line-height: 19.5px;
-  padding-bottom: 20px;
-  text-transform: uppercase;
+  @extend %third-title-style;
+  padding: 0 0 20px;
 
-  @media (min-width: 640px) {
-    font-size: 9px;
-    line-height: 15px;
+  @media (max-width: 767px) {
+    margin: 0 auto;
+  }
+
+  @media (min-width: 768px) {
     padding-bottom: 30px;
     margin-left: 55px;
-  }
-  @media (min-width: 714px) {
-    font-size: 10px;
-    line-height: 16.2px;
   }
 }
 
 .section-university__desc {
-  font-family: $main-page-font;
-  font-size: 13.5px;
-  line-height: 19.5px;
-  padding-bottom: 40px;
+  @extend %main-page-font;
+  padding: 0 0 40px;
+  margin: 0;
 
-  @media (min-width: 640px) {
-    font-size: 8px;
-    line-height: 12px;
-    padding-bottom: 0;
+  @media (max-width: 767px) {
+    margin: 0 auto;
   }
-  @media (min-width: 714px) {
-    font-size: 9px;
-    line-height: 13px;
+
+  @media (min-width: 768px) {
+    padding: 0;
+  }
+}
+
+.section-university__image {
+  width: 100%;
+  padding: 0 0 60px;
+
+  @media (min-width: 768px) {
+    padding: 0;
+  }
+}
+
+.education-section__desc--mobile {
+  @extend %sec-title-text-style;
+  margin: 0 auto;
+  position: relative;
+  padding: 0 0 0 27px;
+
+  @media (min-width: 768px) {
+    display: none;
+  }
+
+  &::before {
+    content: '';
+    @extend %pseudos;
+    top: 7px;
+    left: 0;
+    width: 17px;
+    border-bottom: 3px solid $title-text-color;
   }
 }
