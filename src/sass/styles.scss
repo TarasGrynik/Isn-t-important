@@ -18,12 +18,15 @@
 @import './component/page-footer/main-contacts__button';
 
 /* Layout */
+@import './layout/page-header/page-header.scss';
+@import './layout/page-banner/page-banner.scss';
 @import './layout/section-start-it/section-start-it.scss';
 @import './layout/section-facts/section-facts.scss';
 @import './layout/section-except-numbers/section-except-numbers.scss';
 @import './layout/section-warning/section-warning.scss';
 @import './layout/section8/section8.scss';
 @import './layout/section9/section9.scss';
+@import './layout/section10-presentation/presentation.scss';
 @import './layout/page-footer/main-contacts.scss';
 @import './layout/page-footer/page-footer__main.scss';
 @import './layout/page-footer/page-footer__bottom.scss';
