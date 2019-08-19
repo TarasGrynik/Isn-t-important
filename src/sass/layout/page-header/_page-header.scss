@@ -3,10 +3,15 @@
 }
 
 .header__wrapper {
+  position: relative;
   max-width: 714px;
   @media (min-width: 75em) {
     max-width: 100%;
   }
+}
+
+.header__nav {
+  top: 20px;
 }
 
 .header__btn {
