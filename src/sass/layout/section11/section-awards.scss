@@ -17,13 +17,13 @@
   }
 
   &--icon {
-    background-image: url("../../../images/main-images/decorative-images/un.png");
+    background-image: url("./images/main-images/decorative-images/un.png");
     background-repeat: no-repeat;
     background-position: 90% 0;
     background-size: 85px 75px;
 
     @media (min-resolution: 192dpi), (min-resolution: 2dppx) {
-      background-image: url("../../../images/main-images/decorative-images/un@2x.png");
+      background-image: url("./images/main-images/decorative-images/un@2x.png");
     }
     @media (min-width: 768px) {
       background-size: 75px 65px;
