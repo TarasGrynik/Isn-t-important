@@ -6679,6 +6679,8 @@ a.text-dark:focus {
   background-color: transparent;
 }
 
+.banner__desc:before,
+.banner__desc:after,
 .start-it-main__offer:before,
 .start-in-preferences:before,
 .start-in-preferences__item:before,
@@ -6707,6 +6709,7 @@ a.text-dark:focus {
 
 .main-contacts__button:hover,
 .main-contacts__button:focus,
+.banner__btn:hover,
 .just-do-it-main__button:hover,
 .just-do-it-main__button:focus {
   background-color: #17ecff;
@@ -6714,6 +6717,8 @@ a.text-dark:focus {
 }
 
 .main-contacts__button:active,
+.banner__btn,
+.banner__btn:active,
 .just-do-it-main__button:active {
   background-color: #06a4b2;
 }
@@ -7218,7 +7223,12 @@ h6 {
 }
 
 .header__wrapper {
+  position: relative;
   max-width: 714px;
+}
+
+.header__nav {
+  top: 20px;
 }
 
 .header__btn {
@@ -7231,6 +7241,87 @@ h6 {
   width: 28px;
   height: 17px;
   fill: #ffffff;
+}
+
+.banner {
+  padding-top: 60px;
+  text-transform: uppercase;
+  color: #ffffff;
+  background: url("../images/Banner-background/banner-shadow.png") no-repeat center, #181c27;
+  background-size: cover;
+}
+
+.banner__title {
+  z-index: 1;
+  font: 1.875rem/1.3 "Acrom-ExtraBold", sans-serif;
+}
+
+.banner__desc {
+  z-index: 1;
+  font-family: "Acrom-Bold", sans-serif;
+}
+
+.banner__desc:before,
+.banner__desc:after {
+  font-size: 1.40625rem;
+  color: #17ecff;
+}
+
+.banner__desc:before {
+  line-height: 0;
+  content: "<";
+  left: -11px;
+  top: 8px;
+}
+
+.banner__desc:after {
+  line-height: 0;
+  content: "/>";
+  right: 0;
+}
+
+.banner__company {
+  font: 7.5rem/1.2 "Acrom-ExtraBold", sans-serif;
+  color: rgba(0, 0, 0, 0.2);
+}
+
+.article-career__title {
+  font: 0.84375rem/1.44 "Acrom-ExtraBold", sans-serif;
+}
+
+.article-career__desc {
+  text-transform: none;
+  color: #afb0b3;
+}
+
+.banner__btn {
+  margin-bottom: 40px;
+  padding: 16px 0;
+  font-size: 0.75rem;
+}
+
+.banner__page-num {
+  font-family: "Acrom-Medium", sans-serif;
+  transform: rotate(-90deg);
+  padding-left: 30px;
+}
+
+.banner__social {
+  position: relative;
+  bottom: 150px;
+}
+
+.banner__img {
+  fill: #ffffff;
+  width: 14px;
+}
+
+.banner__img:hover {
+  fill: #ff6b08;
+}
+
+.banner__img--facebook {
+  margin-right: 8px;
 }
 
 .start-it {
@@ -7984,6 +8075,13 @@ h6 {
 
   .law-info__item:not(:nth-of-type(1)) {
     margin-left: 10px;
+  }
+}
+
+@media screen and (min-width: 36em) {
+  .main-contacts__button {
+    padding: 10px 24px;
+    font-size: 0.5rem;
   }
 }
 
@@ -9019,13 +9117,6 @@ h6 {
 
   .text-sm-center {
     text-align: center !important;
-  }
-}
-
-@media screen and (min-width: 36em) {
-  .main-contacts__button {
-    padding: 10px 24px;
-    font-size: 0.5rem;
   }
 }
 
@@ -10187,6 +10278,54 @@ h6 {
 }
 
 @media (min-width: 48em) {
+  .banner {
+    padding-top: 85px;
+    background: url("../images/banner-bg/devs-work.png") bottom 0 right 22% no-repeat, url("../images/Banner-background/banner-shadow.png") no-repeat center, #181c27;
+  }
+
+  .banner__title {
+    font-size: 2.8125rem;
+    line-height: 1.25;
+  }
+
+  .banner__desc {
+    font-size: 0.5rem;
+    line-height: 1.7;
+  }
+
+  .banner__company {
+    font-size: 14.75rem;
+    line-height: 1.2;
+  }
+
+  .banner__company {
+    position: absolute;
+    z-index: 0;
+    top: 50%;
+    left: 50%;
+    right: 50%;
+    transform: translate(-50%, -75%);
+  }
+
+  .article-career__title {
+    font-size: 0.65625rem;
+    line-height: 1.6;
+  }
+
+  .article-career__desc {
+    font-size: 0.625rem;
+    line-height: 1.35;
+  }
+
+  .banner__btn {
+    font-size: 0.4375rem;
+    line-height: 1.44;
+  }
+
+  .banner__btn {
+    margin-bottom: 66px;
+  }
+
   .start-it {
     padding-top: 112px;
   }
@@ -10347,6 +10486,12 @@ h6 {
 
   .warning-main__text--light {
     margin-top: 8px;
+  }
+}
+
+@media (min-width: 48em) and (-webkit-min-device-pixel-ratio: 2), (min-width: 48em) and (min-resolution: 192dpi) {
+  .banner {
+    background: url("../images/banner-bg/devs-work@2x.png") bottom 0 right 22% no-repeat, url("../images/Banner-background/banner-shadow@2x.png") no-repeat center, #181c27;
   }
 }
 
@@ -11253,122 +11398,6 @@ h6 {
   }
 }
 
-@media screen and (min-width: 75em) {
-  .facts-main__title,
-  .warning-main__title,
-  .career-additional__title,
-  .simple-steps-main__title,
-  .just-do-it-main__title {
-    font-size: 1.875rem;
-  }
-
-  .except-numbers-additional__title {
-    font-size: 1.875rem;
-  }
-
-  .start-it-additional__text--decorative,
-  .simple-steps-additional__text-decorative,
-  .just-do-it-additional__text--decorative {
-    font-size: 0.625rem;
-  }
-
-  .warning-main__subtitle,
-  .career-main__subtitle,
-  .simple-steps-additional__subtitle {
-    font-size: 0.625rem;
-  }
-
-  .сareer-main__text--light,
-  .simple-steps-additional__text--light,
-  .just-do-it-additional__text--light {
-    font-size: 0.5625rem;
-  }
-
-  .start-it-main__text--tablet,
-  .facts-main__text,
-  .except-numbers-additional__text,
-  .warning-main__text,
-  .career-additional__text,
-  .simple-steps-main__text,
-  .just-do-it-main__text {
-    font-size: 0.625rem;
-  }
-
-  .just-do-it-additional__text--bold {
-    font-size: 0.625rem;
-  }
-
-  .advertising__image {
-    width: 24px;
-    height: 14px;
-  }
-
-  .social-list__item {
-    font-size: 0.8125rem;
-  }
-
-  .career-main {
-    padding: 40px 0 65px;
-  }
-
-  .career-additional__text {
-    padding-bottom: 45px;
-  }
-
-  .simple-steps-main {
-    background-image: url(../images/background-png/stap-dectop.png);
-  }
-
-  .simple-steps-additional {
-    font-size: 1.1875rem;
-  }
-
-  .main-contacts {
-    padding: 54px 0;
-  }
-
-  .page-footer__logo {
-    width: 70px;
-    height: 24px;
-  }
-
-  .main-contacts__title {
-    font-size: 0.875rem;
-    margin-bottom: 8px;
-  }
-
-  .main-contacts__text,
-  .main-contacts__link {
-    font-size: 0.75rem;
-  }
-
-  .page-footer__bottom {
-    height: 38px;
-  }
-
-  .law-info {
-    height: 38px;
-  }
-
-  .law-info__item {
-    font-size: 0.8125rem;
-  }
-
-  .law-info__item:not(:nth-of-type(1)) {
-    margin-left: 16px;
-  }
-
-  .just-do-it {
-    margin-bottom: 80px;
-  }
-}
-
-@media screen and (min-width: 75em) and (-webkit-min-device-pixel-ratio: 2), screen and (min-width: 75em) and (min-resolution: 192dpi), screen and (min-width: 75em) and (min-resolution: 2dppx) {
-  .simple-steps-main {
-    background-image: url(../images/background-png/stap-dectop@2x.png);
-  }
-}
-
 @media (min-width: 1200px) {
   .container {
     max-width: 1140px;
@@ -12251,6 +12280,122 @@ h6 {
   }
 }
 
+@media screen and (min-width: 75em) and (-webkit-min-device-pixel-ratio: 2), screen and (min-width: 75em) and (min-resolution: 192dpi), screen and (min-width: 75em) and (min-resolution: 2dppx) {
+  .simple-steps-main {
+    background-image: url(../images/background-png/stap-dectop@2x.png);
+  }
+}
+
+@media screen and (min-width: 75em) {
+  .facts-main__title,
+  .warning-main__title,
+  .career-additional__title,
+  .simple-steps-main__title,
+  .just-do-it-main__title {
+    font-size: 1.875rem;
+  }
+
+  .except-numbers-additional__title {
+    font-size: 1.875rem;
+  }
+
+  .start-it-additional__text--decorative,
+  .simple-steps-additional__text-decorative,
+  .just-do-it-additional__text--decorative {
+    font-size: 0.625rem;
+  }
+
+  .warning-main__subtitle,
+  .career-main__subtitle,
+  .simple-steps-additional__subtitle {
+    font-size: 0.625rem;
+  }
+
+  .сareer-main__text--light,
+  .simple-steps-additional__text--light,
+  .just-do-it-additional__text--light {
+    font-size: 0.5625rem;
+  }
+
+  .start-it-main__text--tablet,
+  .facts-main__text,
+  .except-numbers-additional__text,
+  .warning-main__text,
+  .career-additional__text,
+  .simple-steps-main__text,
+  .just-do-it-main__text {
+    font-size: 0.625rem;
+  }
+
+  .just-do-it-additional__text--bold {
+    font-size: 0.625rem;
+  }
+
+  .advertising__image {
+    width: 24px;
+    height: 14px;
+  }
+
+  .social-list__item {
+    font-size: 0.8125rem;
+  }
+
+  .career-main {
+    padding: 40px 0 65px;
+  }
+
+  .career-additional__text {
+    padding-bottom: 45px;
+  }
+
+  .simple-steps-main {
+    background-image: url(../images/background-png/stap-dectop.png);
+  }
+
+  .simple-steps-additional {
+    font-size: 1.1875rem;
+  }
+
+  .main-contacts {
+    padding: 54px 0;
+  }
+
+  .page-footer__logo {
+    width: 70px;
+    height: 24px;
+  }
+
+  .main-contacts__title {
+    font-size: 0.875rem;
+    margin-bottom: 8px;
+  }
+
+  .main-contacts__text,
+  .main-contacts__link {
+    font-size: 0.75rem;
+  }
+
+  .page-footer__bottom {
+    height: 38px;
+  }
+
+  .law-info {
+    height: 38px;
+  }
+
+  .law-info__item {
+    font-size: 0.8125rem;
+  }
+
+  .law-info__item:not(:nth-of-type(1)) {
+    margin-left: 16px;
+  }
+
+  .just-do-it {
+    margin-bottom: 80px;
+  }
+}
+
 @media (min-width: 75em) {
   .header__wrapper {
     max-width: 100%;
@@ -12259,6 +12404,31 @@ h6 {
   .header-logo__link {
     position: absolute;
     left: 20px;
+  }
+
+  .banner__title {
+    font-size: 3.125rem;
+    line-height: 1.25;
+  }
+
+  .banner__desc {
+    font-size: 0.5625rem;
+    line-height: 1.7;
+  }
+
+  .banner__company {
+    font-size: 16.4375rem;
+    line-height: 1.2;
+  }
+
+  .article-career__title {
+    font-size: 0.70625rem;
+    line-height: 1.6;
+  }
+
+  .article-career__desc {
+    font-size: 0.625rem;
+    line-height: 1.5;
   }
 
   .start-it-main__offer {
@@ -12614,6 +12784,13 @@ h6 {
   .table .thead-dark th {
     color: inherit;
     border-color: #dee2e6;
+  }
+}
+
+@media (-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi) {
+  .banner {
+    background: url("../images/Banner-background/banner-shadow@2x.png") no-repeat center, #181c27;
+    background-size: cover;
   }
 }
 
