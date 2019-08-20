@@ -6678,6 +6678,7 @@ a.text-dark:focus {
 .section-expert__desc,
 .section-help__desc,
 .get-your-bonus-main__text,
+.main-form__input,
 .important-additional__text,
 .important-additional__text--special,
 .just-do-it-main__text {
@@ -6735,6 +6736,8 @@ a.text-dark:focus {
 .section-expert__item--title::before,
 .section-help__desc::before,
 .get-your-bonus-main__text::before,
+.get-your-bonus-main__block::after,
+.get-your-bonus-main__block::before,
 .important-additional__price::before,
 .important-main__text-decorative::before,
 .just-do-it-main__text::before,
@@ -6749,7 +6752,7 @@ a.text-dark:focus {
 .facts-additional__subtitle,
 .except-numbers-additional__subtitle,
 .important-additional__price,
-.important-additional__price--extra {
+.important-additional__price--currency {
   text-transform: uppercase;
   font-family: "Acrom-ExtraBold", sans-serif;
 }
@@ -6758,6 +6761,8 @@ a.text-dark:focus {
 .main-contacts__button:focus,
 .banner__btn:hover,
 .presentation-additional__btn:hover,
+.main-form__button:hover,
+.main-form__button:focus,
 .important-main__button:hover,
 .important-main__button:focus,
 .just-do-it-main__button:hover,
@@ -6770,6 +6775,7 @@ a.text-dark:focus {
 .banner__btn,
 .banner__btn:active,
 .presentation-additional__btn:active,
+.main-form__button:active,
 .important-main__button:active,
 .just-do-it-main__button:active {
   background-color: #06a4b2;
@@ -8047,6 +8053,7 @@ h6 {
 .section-expert__desc,
 .section-help__desc,
 .get-your-bonus-main__text,
+.main-form__input,
 .important-additional__text,
 .important-additional__text--special,
 .just-do-it-main__text {
@@ -8104,6 +8111,8 @@ h6 {
 .section-expert__item--title::before,
 .section-help__desc::before,
 .get-your-bonus-main__text::before,
+.get-your-bonus-main__block::after,
+.get-your-bonus-main__block::before,
 .important-additional__price::before,
 .important-main__text-decorative::before,
 .just-do-it-main__text::before,
@@ -8118,7 +8127,7 @@ h6 {
 .facts-additional__subtitle,
 .except-numbers-additional__subtitle,
 .important-additional__price,
-.important-additional__price--extra {
+.important-additional__price--currency {
   text-transform: uppercase;
   font-family: "Acrom-ExtraBold", sans-serif;
 }
@@ -8127,6 +8136,8 @@ h6 {
 .main-contacts__button:focus,
 .banner__btn:hover,
 .presentation-additional__btn:hover,
+.main-form__button:hover,
+.main-form__button:focus,
 .important-main__button:hover,
 .important-main__button:focus,
 .just-do-it-main__button:hover,
@@ -8139,6 +8150,7 @@ h6 {
 .banner__btn,
 .banner__btn:active,
 .presentation-additional__btn:active,
+.main-form__button:active,
 .important-main__button:active,
 .just-do-it-main__button:active {
   background-color: #06a4b2;
@@ -8321,6 +8333,7 @@ input[type='radio'].visually-hidden {
 .section-expert__desc,
 .section-help__desc,
 .get-your-bonus-main__text,
+.main-form__input,
 .important-additional__text,
 .important-additional__text--special,
 .just-do-it-main__text {
@@ -8378,6 +8391,8 @@ input[type='radio'].visually-hidden {
 .section-expert__item--title::before,
 .section-help__desc::before,
 .get-your-bonus-main__text::before,
+.get-your-bonus-main__block::after,
+.get-your-bonus-main__block::before,
 .important-additional__price::before,
 .important-main__text-decorative::before,
 .just-do-it-main__text::before,
@@ -8392,7 +8407,7 @@ input[type='radio'].visually-hidden {
 .facts-additional__subtitle,
 .except-numbers-additional__subtitle,
 .important-additional__price,
-.important-additional__price--extra {
+.important-additional__price--currency {
   text-transform: uppercase;
   font-family: "Acrom-ExtraBold", sans-serif;
 }
@@ -8401,6 +8416,8 @@ input[type='radio'].visually-hidden {
 .main-contacts__button:focus,
 .banner__btn:hover,
 .presentation-additional__btn:hover,
+.main-form__button:hover,
+.main-form__button:focus,
 .important-main__button:hover,
 .important-main__button:focus,
 .just-do-it-main__button:hover,
@@ -8413,6 +8430,7 @@ input[type='radio'].visually-hidden {
 .banner__btn,
 .banner__btn:active,
 .presentation-additional__btn:active,
+.main-form__button:active,
 .important-main__button:active,
 .just-do-it-main__button:active {
   background-color: #06a4b2;
@@ -8589,6 +8607,7 @@ input[type='radio'].visually-hidden {
 .section-expert__desc,
 .section-help__desc,
 .get-your-bonus-main__text,
+.main-form__input,
 .important-additional__text,
 .important-additional__text--special,
 .just-do-it-main__text {
@@ -8646,6 +8665,8 @@ input[type='radio'].visually-hidden {
 .section-expert__item--title::before,
 .section-help__desc::before,
 .get-your-bonus-main__text::before,
+.get-your-bonus-main__block::after,
+.get-your-bonus-main__block::before,
 .important-additional__price::before,
 .important-main__text-decorative::before,
 .just-do-it-main__text::before,
@@ -8660,7 +8681,7 @@ input[type='radio'].visually-hidden {
 .facts-additional__subtitle,
 .except-numbers-additional__subtitle,
 .important-additional__price,
-.important-additional__price--extra {
+.important-additional__price--currency {
   text-transform: uppercase;
   font-family: "Acrom-ExtraBold", sans-serif;
 }
@@ -8669,6 +8690,8 @@ input[type='radio'].visually-hidden {
 .main-contacts__button:focus,
 .banner__btn:hover,
 .presentation-additional__btn:hover,
+.main-form__button:hover,
+.main-form__button:focus,
 .important-main__button:hover,
 .important-main__button:focus,
 .just-do-it-main__button:hover,
@@ -8681,6 +8704,7 @@ input[type='radio'].visually-hidden {
 .banner__btn,
 .banner__btn:active,
 .presentation-additional__btn:active,
+.main-form__button:active,
 .important-main__button:active,
 .just-do-it-main__button:active {
   background-color: #06a4b2;
@@ -8856,6 +8880,7 @@ input[type='radio'].visually-hidden {
 .section-expert__desc,
 .section-help__desc,
 .get-your-bonus-main__text,
+.main-form__input,
 .important-additional__text,
 .important-additional__text--special,
 .just-do-it-main__text {
@@ -8913,6 +8938,8 @@ input[type='radio'].visually-hidden {
 .section-expert__item--title::before,
 .section-help__desc::before,
 .get-your-bonus-main__text::before,
+.get-your-bonus-main__block::after,
+.get-your-bonus-main__block::before,
 .important-additional__price::before,
 .important-main__text-decorative::before,
 .just-do-it-main__text::before,
@@ -8927,7 +8954,7 @@ input[type='radio'].visually-hidden {
 .facts-additional__subtitle,
 .except-numbers-additional__subtitle,
 .important-additional__price,
-.important-additional__price--extra {
+.important-additional__price--currency {
   text-transform: uppercase;
   font-family: "Acrom-ExtraBold", sans-serif;
 }
@@ -8936,6 +8963,8 @@ input[type='radio'].visually-hidden {
 .main-contacts__button:focus,
 .banner__btn:hover,
 .presentation-additional__btn:hover,
+.main-form__button:hover,
+.main-form__button:focus,
 .important-main__button:hover,
 .important-main__button:focus,
 .just-do-it-main__button:hover,
@@ -8948,6 +8977,7 @@ input[type='radio'].visually-hidden {
 .banner__btn,
 .banner__btn:active,
 .presentation-additional__btn:active,
+.main-form__button:active,
 .important-main__button:active,
 .just-do-it-main__button:active {
   background-color: #06a4b2;
@@ -9166,6 +9196,32 @@ input[type='radio'].visually-hidden {
 
 .get-your-bonus-main__block {
   margin-bottom: 32px;
+  position: relative;
+}
+
+.get-your-bonus-main__block::after {
+  content: '';
+  left: -30px;
+  top: 30px;
+  width: 10px;
+  height: 10px;
+  background-color: #16ebfe;
+}
+
+.get-your-bonus-main__block::before {
+  left: -60px;
+  top: -4px;
+  font-size: 26px;
+  font-family: "Acrom-ExtraBold", sans-serif;
+  color: #000000;
+}
+
+.get-your-bonus-main__block--first::before {
+  content: '01.';
+}
+
+.get-your-bonus-main__block--second::before {
+  content: '02.';
 }
 
 .get-your-bonus-main__subtitle {
@@ -9175,6 +9231,83 @@ input[type='radio'].visually-hidden {
 .get-your-bonus-main__text--special {
   color: #ffffff;
   background-color: #000000;
+}
+
+.main-form {
+  box-shadow: 0px 14px 27px 0px rgba(0, 0, 0, 0.15);
+  display: flex;
+  flex-flow: column nowrap;
+  justify-content: center;
+  padding: 64px;
+}
+
+.main-form__block {
+  display: flex;
+  flex-direction: column-reverse;
+}
+
+.main-form__label {
+  font-family: "Acrom-Bold", sans-serif;
+  font-size: 9px;
+  color: #bfbfbf;
+  transition: all 0.2s linear;
+}
+
+.main-form__input {
+  border: none;
+  border-bottom: 1px solid #eaeaea;
+  padding: 6px 0;
+  margin-bottom: 20px;
+  transition: all 0.2s linear;
+}
+
+.main-form__input:focus {
+  border-bottom: 1px solid #ff6b08;
+}
+
+.main-form__input:focus + .main-form__label {
+  color: #ff6b08;
+}
+
+.main-form__input:required:valid {
+  border-bottom: 3px solid #39e600;
+}
+
+.main-form__input::-webkit-input-placeholder {
+  font-family: "Acrom-Bold", sans-serif;
+  font-size: 12px;
+  color: #000000;
+}
+
+.main-form__input::-moz-placeholder {
+  font-family: "Acrom-Bold", sans-serif;
+  font-size: 12px;
+  color: #000000;
+}
+
+.main-form__input:-ms-input-placeholder {
+  font-family: "Acrom-Bold", sans-serif;
+  font-size: 12px;
+  color: #000000;
+}
+
+.main-form__input::-ms-input-placeholder {
+  font-family: "Acrom-Bold", sans-serif;
+  font-size: 12px;
+  color: #000000;
+}
+
+.main-form__input::placeholder {
+  font-family: "Acrom-Bold", sans-serif;
+  font-size: 12px;
+  color: #000000;
+}
+
+.main-form__button {
+  margin-top: 28px;
+  padding: 14px 20px;
+  font-size: 0.75rem;
+  font-family: "Acrom-ExtraBold", sans-serif;
 }
 
 .important {
@@ -9247,7 +9380,7 @@ input[type='radio'].visually-hidden {
   color: #ffffff;
 }
 
-.important-additional__price--extra {
+.important-additional__price--currency {
   margin: 0;
   color: #ffffff;
   margin-top: 14px;
@@ -11455,6 +11588,7 @@ input[type='radio'].visually-hidden {
   .section-expert__desc,
   .section-help__desc,
   .get-your-bonus-main__text,
+  .main-form__input,
   .important-additional__text,
   .important-additional__text--special,
   .just-do-it-main__text {
@@ -11643,6 +11777,7 @@ input[type='radio'].visually-hidden {
   .section-expert__desc,
   .section-help__desc,
   .get-your-bonus-main__text,
+  .main-form__input,
   .important-additional__text,
   .important-additional__text--special,
   .just-do-it-main__text {
@@ -11720,6 +11855,7 @@ input[type='radio'].visually-hidden {
   .section-expert__desc,
   .section-help__desc,
   .get-your-bonus-main__text,
+  .main-form__input,
   .important-additional__text,
   .important-additional__text--special,
   .just-do-it-main__text {
@@ -11797,6 +11933,7 @@ input[type='radio'].visually-hidden {
   .section-expert__desc,
   .section-help__desc,
   .get-your-bonus-main__text,
+  .main-form__input,
   .important-additional__text,
   .important-additional__text--special,
   .just-do-it-main__text {
@@ -11874,6 +12011,7 @@ input[type='radio'].visually-hidden {
   .section-expert__desc,
   .section-help__desc,
   .get-your-bonus-main__text,
+  .main-form__input,
   .important-additional__text,
   .important-additional__text--special,
   .just-do-it-main__text {
@@ -11904,6 +12042,37 @@ input[type='radio'].visually-hidden {
     margin-bottom: 20px;
   }
 
+  .get-your-bonus-main__block::after {
+    width: 8px;
+    height: 8px;
+    left: -28px;
+    top: 22px;
+  }
+
+  .get-your-bonus-main__block::after {
+    left: -20px;
+  }
+
+  .get-your-bonus-main__block::before {
+    font-size: 16px;
+    left: -44px;
+    top: -1px;
+  }
+
+  .get-your-bonus-main__block::before {
+    font-size: 18px;
+    left: -40px;
+    top: -3px;
+  }
+
+  .main-form {
+    padding: 44px;
+  }
+
+  .main-form__button {
+    margin-top: 18px;
+  }
+
   .important {
     margin-bottom: 100px;
   }
@@ -11931,9 +12100,17 @@ input[type='radio'].visually-hidden {
     font-size: 0.875rem;
   }
 
+  .important-additional__price::before {
+    left: -46px;
+  }
+
   .important-additional__price--special {
     margin-left: 20px;
     font-size: 1.875rem;
+  }
+
+  .important-additional__price--currency {
+    margin-top: 10px;
   }
 
   .important-main__text-decorative::before {
@@ -13157,6 +13334,7 @@ input[type='radio'].visually-hidden {
   .section-expert__desc,
   .section-help__desc,
   .get-your-bonus-main__text,
+  .main-form__input,
   .important-additional__text,
   .important-additional__text--special,
   .just-do-it-main__text {
@@ -13317,6 +13495,7 @@ input[type='radio'].visually-hidden {
   .section-expert__desc,
   .section-help__desc,
   .get-your-bonus-main__text,
+  .main-form__input,
   .important-additional__text,
   .important-additional__text--special,
   .just-do-it-main__text {
@@ -13394,6 +13573,7 @@ input[type='radio'].visually-hidden {
   .section-expert__desc,
   .section-help__desc,
   .get-your-bonus-main__text,
+  .main-form__input,
   .important-additional__text,
   .important-additional__text--special,
   .just-do-it-main__text {
@@ -13471,6 +13651,7 @@ input[type='radio'].visually-hidden {
   .section-expert__desc,
   .section-help__desc,
   .get-your-bonus-main__text,
+  .main-form__input,
   .important-additional__text,
   .important-additional__text--special,
   .just-do-it-main__text {
@@ -13548,6 +13729,7 @@ input[type='radio'].visually-hidden {
   .section-expert__desc,
   .section-help__desc,
   .get-your-bonus-main__text,
+  .main-form__input,
   .important-additional__text,
   .important-additional__text--special,
   .just-do-it-main__text {
@@ -13578,6 +13760,10 @@ input[type='radio'].visually-hidden {
 
   .important-additional__block {
     padding: 60px;
+  }
+
+  .important-additional__text {
+    max-width: 70px;
   }
 
   .important-main__text-decorative::before {

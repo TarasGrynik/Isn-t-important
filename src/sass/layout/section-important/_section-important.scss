@@ -74,6 +74,10 @@
   @media screen and (min-width: 48em) {
     max-width: 65px;
   }
+
+  @media screen and (min-width: 75em) {
+    max-width: 70px;
+  }
 }
 
 .important-additional__price-subblock {
@@ -106,6 +110,10 @@
     left: -50px;
     top: 10px;
     background-color: $banner-title-text-color;
+
+    @media screen and (min-width: 48em) {
+      left: -46px;
+    }
   }
 }
 
@@ -122,12 +130,16 @@
   }
 }
 
-.important-additional__price--extra {
+.important-additional__price--currency {
   margin: 0;
   @extend %article-title-style;
   color: $banner-title-text-color;
   margin-top: 14px;
   margin-left: 6px;
+
+  @media screen and (min-width: 48em) {
+    margin-top: 10px;
+  }
 }
 
 .important-main__text--bold {
