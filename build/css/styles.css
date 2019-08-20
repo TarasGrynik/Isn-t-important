@@ -6699,6 +6699,7 @@ a.text-dark:focus {
 /* Placeholder for list */
 
 .social-list,
+.simple-steps-additional,
 .presentation-additional__block,
 .law-info__list {
   list-style: none;
@@ -6725,6 +6726,7 @@ a.text-dark:focus {
 .warning-main__item:before,
 .simple-steps-main__text::before,
 .simple-steps-additional__subtitle::before,
+.simple-steps-additional__block::before,
 .simple-steps-additional__text-decorative::before,
 .presentation-main__text::before,
 .presentation-additional__text--decorative::before,
@@ -7754,7 +7756,7 @@ h6 {
 .simple-steps-additional__subtitle::before {
   content: '';
   left: -15px;
-  top: 20px;
+  top: 30px;
   width: 10px;
   height: 10px;
   background-color: #17ecff;
@@ -7764,23 +7766,44 @@ h6 {
   padding-bottom: 30px;
 }
 
-.simple-steps-additional {
-  list-style-type: decimal-leading-zero;
+.simple-steps-additional__block {
+  padding-bottom: 30px;
+}
+
+.simple-steps-additional__block::before {
+  content: ' ';
+  left: -40px;
+  top: -10px;
+  clip: rect(auto, auto, auto, 9px);
   font-size: 1.5625rem;
-  padding-top: 5px;
-  line-height: 1.16px;
   color: #000000;
   font-family: "Acrom-Bold", sans-serif;
+}
+
+.simple-steps-additional__block:nth-child(1)::before {
+  content: '01.';
+}
+
+.simple-steps-additional__block:nth-child(2)::before {
+  content: '02.';
+}
+
+.simple-steps-additional__block:nth-child(3)::before {
+  content: '03.';
+}
+
+.simple-steps-additional__block:nth-child(4)::before {
+  content: '04.';
 }
 
 .simple-steps-additional__text-decorative::before {
   content: '';
   left: -10px;
   top: 10px;
-  width: 10px;
-  height: 2px;
+  width: 14px;
+  height: 1.562px;
   background-color: #000000;
-  transform: skewY(-45deg);
+  transform: skewY(-56deg);
 }
 
 .presentation-main {
@@ -8068,6 +8091,7 @@ h6 {
 /* Placeholder for list */
 
 .social-list,
+.simple-steps-additional,
 .presentation-additional__block,
 .law-info__list {
   list-style: none;
@@ -8094,6 +8118,7 @@ h6 {
 .warning-main__item:before,
 .simple-steps-main__text::before,
 .simple-steps-additional__subtitle::before,
+.simple-steps-additional__block::before,
 .simple-steps-additional__text-decorative::before,
 .presentation-main__text::before,
 .presentation-additional__text--decorative::before,
@@ -8342,6 +8367,7 @@ input[type='radio'].visually-hidden {
 /* Placeholder for list */
 
 .social-list,
+.simple-steps-additional,
 .presentation-additional__block,
 .law-info__list {
   list-style: none;
@@ -8368,6 +8394,7 @@ input[type='radio'].visually-hidden {
 .warning-main__item:before,
 .simple-steps-main__text::before,
 .simple-steps-additional__subtitle::before,
+.simple-steps-additional__block::before,
 .simple-steps-additional__text-decorative::before,
 .presentation-main__text::before,
 .presentation-additional__text--decorative::before,
@@ -8610,6 +8637,7 @@ input[type='radio'].visually-hidden {
 /* Placeholder for list */
 
 .social-list,
+.simple-steps-additional,
 .presentation-additional__block,
 .law-info__list {
   list-style: none;
@@ -8636,6 +8664,7 @@ input[type='radio'].visually-hidden {
 .warning-main__item:before,
 .simple-steps-main__text::before,
 .simple-steps-additional__subtitle::before,
+.simple-steps-additional__block::before,
 .simple-steps-additional__text-decorative::before,
 .presentation-main__text::before,
 .presentation-additional__text--decorative::before,
@@ -8877,6 +8906,7 @@ input[type='radio'].visually-hidden {
 /* Placeholder for list */
 
 .social-list,
+.simple-steps-additional,
 .presentation-additional__block,
 .law-info__list {
   list-style: none;
@@ -8903,6 +8933,7 @@ input[type='radio'].visually-hidden {
 .warning-main__item:before,
 .simple-steps-main__text::before,
 .simple-steps-additional__subtitle::before,
+.simple-steps-additional__block::before,
 .simple-steps-additional__text-decorative::before,
 .presentation-main__text::before,
 .presentation-additional__text--decorative::before,
@@ -11505,11 +11536,24 @@ input[type='radio'].visually-hidden {
   }
 
   .simple-steps-main {
+    background-size: auto 100%;
     background-image: url(../images/background-png/stap.png);
   }
 
-  .simple-steps-additional {
+  .simple-steps-additional__subtitle::before {
+    width: 7px;
+    height: 7px;
+    top: 20px;
+  }
+
+  .simple-steps-additional__block::before {
     font-size: 1.0625rem;
+    clip: rect(auto, auto, auto, 6px);
+  }
+
+  .simple-steps-additional__text-decorative::before {
+    width: 10px;
+    height: 2.5px;
   }
 
   .presentation-main {
@@ -13190,8 +13234,13 @@ input[type='radio'].visually-hidden {
     background-image: url(../images/background-png/stap-dectop.png);
   }
 
-  .simple-steps-additional {
+  .simple-steps-additional__block::before {
     font-size: 1.1875rem;
+  }
+
+  .simple-steps-additional__text-decorative::before {
+    width: 11px;
+    height: 3.125px;
   }
 
   .presentation-main {
