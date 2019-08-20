@@ -11,7 +11,7 @@
 }
 
 .important-additional {
-  text-align: center;
+  text-align: start;
 }
 
 .important-additional__title,
@@ -20,6 +20,8 @@
 }
 
 .important-additional__title {
+  margin-left: 60%;
+  transform: translateX(-50%);
   margin-bottom: 20px;
 
   @media screen and (min-width: 48em) {
@@ -92,6 +94,10 @@
   color: $banner-title-text-color;
   margin-left: 50px;
 
+  @media screen and (min-width: 48em) {
+    font-size: remy(14);
+  }
+
   &::before {
     @extend %pseudos;
     content: '';
@@ -112,6 +118,7 @@
 
   @media screen and (min-width: 48em) {
     margin-left: 20px;
+    font-size: remy(30);
   }
 }
 
@@ -160,7 +167,7 @@
 }
 
 .important-main__button {
-  padding: 14px 40px;
+  padding: 14px 30px;
   font-size: remy(12);
 
   @media screen and (min-width: 48em) {
