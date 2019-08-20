@@ -6,11 +6,15 @@
           <section class="get-your-bonus-main col-9 offset-1 col-md-10">
             <h2 class="get-your-bonus-main__title">[ плюс получи бонусы_ ]</h2>
             <div class="row justify-content-start">
-              <div class="get-your-bonus-main__subblock col-10 col-md-10 offset-1">
+              <div
+                class="get-your-bonus-main__subblock col-10 col-md-8 offset-1"
+              >
                 <p class="get-your-bonus-main__text">
                   Которые помогут тебе быстрее стартовать карьеру разработчика:
                 </p>
-                <div class="get-your-bonus-main__block get-your-bonus-main__block--first">
+                <div
+                  class="get-your-bonus-main__block get-your-bonus-main__block--first"
+                >
                   <h3 class="get-your-bonus-main__subtitle">
                     PDF «Карта профессий в IT»
                   </h3>
@@ -22,7 +26,9 @@
                     >
                   </p>
                 </div>
-                <div class="get-your-bonus-main__block get-your-bonus-main__block--second">
+                <div
+                  class="get-your-bonus-main__block get-your-bonus-main__block--second"
+                >
                   <h3 class="get-your-bonus-main__subtitle">
                     PDF «Переводчик с IT-языка на человеческий»
                   </h3>
@@ -40,40 +46,56 @@
       </div>
       <div class="col-12 col-md-6">
         <div class="row justify-content-center">
-          <section class="get-your-bonus-additional">
-            <form action="#">
-              <div class="main-form">
-                <label for="input-name" class="main-form__label">Имя</label>
-                <input
-                  type="text"
-                  name="name"
-                  id="input_name"
-                  class="form__input"
-                  required
-                />
-                <label for="input-telephone" class="main-form__label"
-                  >Телефон</label
-                >
-                <input
-                  type="tel"
-                  name="telephone"
-                  id="input_telephone"
-                  class="form__input"
-                  required
-                />
-                <label for="input-email" class="main-form__label">E-mail</label>
-                <input
-                  type="email"
-                  name="email"
-                  id="input_email"
-                  class="form__input"
-                  required
-                />
-                <button type="submit" class="form__button btn">
+          <section class="get-your-bonus-additional col-12">
+            <div class="row justify-content-center">
+              <form
+                action="#"
+                name="contact-form"
+                class="main-form col-10 col-md-12"
+              >
+                <div class="main-form__block">
+                  <input
+                    type="text"
+                    name="name"
+                    id="input_name"
+                    class="main-form__input"
+                    placeholder="Как вас зовут?"
+                    required
+                  />
+
+                  <label for="input-name" class="main-form__label">Имя</label>
+                </div>
+                <div class="main-form__block">
+                  <input
+                    type="tel"
+                    name="telephone"
+                    id="input_telephone"
+                    class="main-form__input"
+                    placeholder="Ваш номер телефона"
+                    required
+                  />
+                  <label for="input-telephone" class="main-form__label"
+                    >Телефон</label
+                  >
+                </div>
+                <div class="main-form__block">
+                  <input
+                    type="email"
+                    name="email"
+                    id="input_email"
+                    class="main-form__input"
+                    placeholder="Адрес электронного ящика"
+                    required
+                  />
+                  <label for="input-email" class="main-form__label"
+                    >E-mail</label
+                  >
+                </div>
+                <button type="submit" class="main-form__button btn">
                   приобрести видео-курс
                 </button>
-              </div>
-            </form>
+              </form>
+            </div>
           </section>
         </div>
       </div>
