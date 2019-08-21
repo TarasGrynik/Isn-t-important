@@ -46,8 +46,8 @@
   font: remy(10.5)/1.53 $special-font;
   color: $title-text-color;
   text-transform: uppercase;
-
   padding: 25px 0 40px;
+  
   @media screen and (min-width: 48em) {
     padding-top: 55px;
     padding-bottom: 0px;

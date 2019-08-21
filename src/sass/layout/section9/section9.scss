@@ -123,12 +123,13 @@
 
 .simple-steps-additional__text-decorative {
   @extend %accent-text;
+
   &::before {
     content: '';
     @extend %pseudos;
     left: -10px;
     top: 10px;
-    width: 14px;
+    width: 13px;
     height: 1.562px;
     background-color: $title-text-color;
     transform: skewY(-56deg);
