@@ -1,0 +1,69 @@
+.main-form {
+  box-shadow: 0px 14px 27px 0px rgba(0, 0, 0, 0.15);
+  @include flex-center('column');
+  justify-content: center;
+  padding: 64px;
+
+  @media screen and (min-width: 48em) {
+    padding: 44px;
+  }
+}
+
+.main-form__block {
+  display: flex;
+  flex-direction: column-reverse;
+}
+
+.main-form__label {
+  font-family: $section-title-font;
+  font-size: 9px;
+  color: #bfbfbf;
+  transition: all 0.2s linear;
+}
+
+.main-form__input {
+  border: none;
+  border-bottom: 1px solid #eaeaea;
+  padding: 6px 0;
+  @extend %sec-title-text-style;
+  margin-bottom: 20px;
+  transition: all 0.2s linear;
+}
+
+.main-form__input:focus {
+  border-bottom: 1px solid $main-style-color;
+}
+
+.main-form__input:focus + .main-form__label {
+  color: $main-style-color;
+}
+
+.main-form__input:required:valid {
+  border-bottom: 3px solid #39e600;
+}
+
+.main-form__input::placeholder {
+  font-family: $section-title-font;
+  font-size: 12px;
+  color: $title-text-color;
+}
+
+.main-form__button {
+  margin-top: 28px;
+  padding: 14px 20px;
+  font-size: remy(12);
+  font-family: $special-font;
+
+  @media screen and (min-width: 48em) {
+    margin-top: 18px;
+  }
+
+  &:hover,
+  &:focus {
+    @extend %btn-hover;
+  }
+
+  &:active {
+    @extend %btn-active;
+  }
+}

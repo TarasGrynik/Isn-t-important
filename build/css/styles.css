@@ -6591,13 +6591,16 @@ a.text-dark:focus {
 /* Placeholder for section title */
 
 .facts-main__title,
+.examples-main__title,
 .warning-main__title,
 .career-additional__title,
-.simple-steps-main__title,
+.simple-steps-main .simple-steps-main__title,
 .presentation-main__title,
 .section-university__title--main,
 .section-expert__title,
 .section-help__title,
+.important-additional__title,
+.important-main__title,
 .just-do-it-main__title {
   font-family: "Acrom-Bold", sans-serif;
   font-size: 1.125rem;
@@ -6606,7 +6609,8 @@ a.text-dark:focus {
   color: #000000;
 }
 
-.except-numbers-additional__title {
+.except-numbers-additional__title,
+.get-your-bonus-main__title {
   font-family: "Acrom-Bold", sans-serif;
   font-size: 1.125rem;
   line-height: 1.33;
@@ -6618,8 +6622,9 @@ a.text-dark:focus {
 /* accent orange text */
 
 .start-it-additional__text--decorative,
-.simple-steps-additional__text-decorative,
+.simple-steps-main .simple-steps-additional__text-decorative,
 .presentation-additional__text--decorative,
+.important-main__text-decorative,
 .just-do-it-additional__text--decorative {
   font-family: "Acrom-Medium", sans-serif;
   font-size: 0.9375rem;
@@ -6631,12 +6636,12 @@ a.text-dark:focus {
 
 .warning-main__subtitle,
 .career-main__subtitle,
-.simple-steps-additional__subtitle,
-.presentation-main__subtitle,
+.simple-steps-main .simple-steps-additional__subtitle,
 .section-awards__title,
 .section-university__title,
 .section-expert__item--title,
-.section-help__second-title {
+.section-help__second-title,
+.get-your-bonus-main__subtitle {
   font-family: "Acrom-ExtraBold", sans-serif;
   font-size: 0.9375rem;
   line-height: 1.53;
@@ -6645,12 +6650,15 @@ a.text-dark:focus {
 }
 
 .сareer-main__text--light,
-.simple-steps-additional__text--light,
+.simple-steps-main .simple-steps-additional__text--light,
 .presentation-additional__text--light,
 .section-awards__desc,
 .section-university__desc,
 .section-expert__item--desc,
 .section-help__second-desc,
+.get-your-bonus-main__text--light,
+.get-your-bonus-main__text--special,
+.important-main__text--light,
 .just-do-it-additional__text--light {
   font-family: "Acrom-Regular", sans-serif;
   font-size: 0.875rem;
@@ -6661,14 +6669,19 @@ a.text-dark:focus {
 .start-it-main__text--tablet,
 .facts-main__text,
 .except-numbers-additional__text,
+.examples-main__text,
 .warning-main__text,
 .career-additional__text,
-.simple-steps-main__text,
+.simple-steps-main .simple-steps-main__text,
 .presentation-main__text,
 .section-university__desc--main,
 .education-section__desc--mobile,
 .section-expert__desc,
 .section-help__desc,
+.get-your-bonus-main__text,
+.main-form__input,
+.important-additional__text,
+.important-additional__text--special,
 .just-do-it-main__text {
   font-family: "Acrom-Medium", sans-serif;
   font-size: 0.875rem;
@@ -6677,6 +6690,7 @@ a.text-dark:focus {
 }
 
 .presentation-additional__text--bold,
+.important-main__text--bold,
 .just-do-it-additional__text--bold {
   font-family: "Acrom-Bold", sans-serif;
   font-size: 0.875rem;
@@ -6687,6 +6701,8 @@ a.text-dark:focus {
 /* Placeholder for list */
 
 .social-list,
+.examples-pagination__numbers,
+.simple-steps-main .simple-steps-additional,
 .presentation-additional__block,
 .law-info__list {
   list-style: none;
@@ -6709,19 +6725,26 @@ a.text-dark:focus {
 .facts-main__text:before,
 .facts-additional__item:before,
 .except-numbers-additional__item:before,
+.examples-main__text:before,
+.examples-pagination__item--active::before,
 .warning-main__text:before,
 .warning-main__item:before,
-.simple-steps-main__text::before,
-.simple-steps-additional__subtitle::before,
-.simple-steps-additional__text-decorative::before,
+.simple-steps-main .simple-steps-main__text::before,
+.simple-steps-main .simple-steps-additional__subtitle::before,
+.simple-steps-main .simple-steps-additional__block::before,
+.simple-steps-main .simple-steps-additional__text-decorative::before,
 .presentation-main__text::before,
-.presentation-additional__text--decorative::before,
 .presentation-additional__item::before,
 .section-university__desc--main::before,
 .education-section__desc--mobile::before,
 .section-expert__desc::before,
 .section-expert__item--title::before,
 .section-help__desc::before,
+.get-your-bonus-main__text::before,
+.get-your-bonus-main__block::after,
+.get-your-bonus-main__block::before,
+.important-additional__price::before,
+.important-main__text-decorative::before,
 .just-do-it-main__text::before,
 .just-do-it-additional__block:nth-of-type(1)::before {
   position: absolute;
@@ -6732,7 +6755,9 @@ a.text-dark:focus {
 .start-in-preferences:before,
 .start-it-additional__subtitle,
 .facts-additional__subtitle,
-.except-numbers-additional__subtitle {
+.except-numbers-additional__subtitle,
+.important-additional__price,
+.important-additional__price--currency {
   text-transform: uppercase;
   font-family: "Acrom-ExtraBold", sans-serif;
 }
@@ -6741,6 +6766,11 @@ a.text-dark:focus {
 .main-contacts__button:focus,
 .banner__btn:hover,
 .presentation-additional__btn:hover,
+.presentation-additional__btn:focus,
+.main-form__button:hover,
+.main-form__button:focus,
+.important-main__button:hover,
+.important-main__button:focus,
 .just-do-it-main__button:hover,
 .just-do-it-main__button:focus {
   background-color: #17ecff;
@@ -6751,6 +6781,8 @@ a.text-dark:focus {
 .banner__btn,
 .banner__btn:active,
 .presentation-additional__btn:active,
+.main-form__button:active,
+.important-main__button:active,
 .just-do-it-main__button:active {
   background-color: #06a4b2;
 }
@@ -7599,6 +7631,127 @@ h6 {
   margin-bottom: 22px;
 }
 
+.examples {
+  padding-top: 50px;
+}
+
+.examples-main__title {
+  margin-bottom: 6px;
+  padding: 0;
+}
+
+.examples-main__text {
+  margin-bottom: 40px;
+  position: relative;
+  padding-left: 10px;
+}
+
+.examples-main__text--special {
+  color: #ffffff;
+  background-color: #000000;
+}
+
+.examples-main__text:before {
+  top: 10px;
+  left: -22px;
+  content: '';
+  width: 20px;
+  height: 4px;
+  background-color: #000000;
+}
+
+.examples-additional__slider {
+  padding: 0;
+  margin: 0;
+}
+
+.examples-additional__slide {
+  display: none;
+  overflow: hidden;
+  max-height: 210px;
+  padding: 16px;
+  box-shadow: 0px 8px 14px rgba(0, 0, 0, 0.15);
+}
+
+.examples-additional__slide--active {
+  display: flex;
+}
+
+.examples-additional__first-part {
+  width: 56px;
+}
+
+.examples-additional__second-part {
+  max-height: 178px;
+  overflow: auto;
+}
+
+.examples-additional__second-part::-webkit-scrollbar {
+  width: 5px;
+}
+
+.examples-additional__second-part::-webkit-scrollbar-thumb {
+  height: 26px;
+  background-color: #000000;
+}
+
+.examples-additional__second-part::-webkit-scrollbar-track {
+  background-color: #000000;
+  border: 2px solid transparent;
+  background-clip: content-box;
+}
+
+.examples-additional__title-name {
+  font-family: "Acrom-ExtraBold", sans-serif;
+  color: #000000;
+  font-size: 0.35rem;
+}
+
+.examples-additional__text {
+  font-size: 0.34375rem;
+  padding: 0;
+  margin: 0;
+}
+
+.examples-pagination__numbers {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.examples-pagination__item {
+  font-family: "Acrom-ExtraBold", sans-serif;
+  color: #000000;
+  font-size: 0.25rem;
+  margin-right: 10px;
+}
+
+.examples-pagination__item:last-child {
+  margin-right: 0px;
+}
+
+.examples-pagination__item--active {
+  font-size: 0.4375rem;
+  position: relative;
+}
+
+.examples-pagination__item--active::before {
+  content: '';
+  width: 14px;
+  height: 2px;
+  top: 4px;
+  background-color: #000000;
+}
+
+.examples-pagination__arrow {
+  width: 15px;
+  height: 15px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #000000;
+}
+
 .warning {
   padding-top: 50px;
 }
@@ -7704,25 +7857,40 @@ h6 {
 }
 
 .simple-steps-main {
+  position: relative;
+}
+
+.simple-steps-main::before {
+  content: 'STEP';
+  position: absolute;
+  display: block;
+  top: 50px;
+  left: 115px;
+  font-family: "Acrom-ExtraBold", sans-serif;
+  color: #f7f7f7;
+  font-size: 3.5rem;
+  line-height: 1.4;
+  transform: rotate(90deg);
+  z-index: -1;
   background-image: url(../images/background-png/stap-mobile.png);
   background-repeat: no-repeat;
   background-position: 20% 0%;
 }
 
-.simple-steps-main__title {
+.simple-steps-main .simple-steps-main__title {
   padding-bottom: 15px;
 }
 
-.simple-steps-main__title--dark {
+.simple-steps-main .simple-steps-main__title--dark {
   color: #ffffff;
   background-color: #000000;
 }
 
-.simple-steps-main__text {
+.simple-steps-main .simple-steps-main__text {
   padding-bottom: 50px;
 }
 
-.simple-steps-main__text::before {
+.simple-steps-main .simple-steps-main__text::before {
   content: '';
   left: -15px;
   top: 8px;
@@ -7731,36 +7899,57 @@ h6 {
   background-color: #000000;
 }
 
-.simple-steps-additional__subtitle::before {
+.simple-steps-main .simple-steps-additional__subtitle::before {
   content: '';
   left: -15px;
-  top: 20px;
+  top: 30px;
   width: 10px;
   height: 10px;
   background-color: #17ecff;
 }
 
-.simple-steps-additional__block {
+.simple-steps-main .simple-steps-additional__block {
   padding-bottom: 30px;
 }
 
-.simple-steps-additional {
-  list-style-type: decimal-leading-zero;
+.simple-steps-main .simple-steps-additional__block {
+  padding-bottom: 30px;
+}
+
+.simple-steps-main .simple-steps-additional__block::before {
+  content: ' ';
+  left: -40px;
+  top: -10px;
+  clip: rect(auto, auto, auto, 9px);
   font-size: 1.5625rem;
-  padding-top: 5px;
-  line-height: 1.16px;
   color: #000000;
   font-family: "Acrom-Bold", sans-serif;
 }
 
-.simple-steps-additional__text-decorative::before {
+.simple-steps-main .simple-steps-additional__block:nth-child(1)::before {
+  content: '01.';
+}
+
+.simple-steps-main .simple-steps-additional__block:nth-child(2)::before {
+  content: '02.';
+}
+
+.simple-steps-main .simple-steps-additional__block:nth-child(3)::before {
+  content: '03.';
+}
+
+.simple-steps-main .simple-steps-additional__block:nth-child(4)::before {
+  content: '04.';
+}
+
+.simple-steps-main .simple-steps-additional__text-decorative::before {
   content: '';
   left: -10px;
   top: 10px;
-  width: 10px;
-  height: 2px;
+  width: 13px;
+  height: 1.562px;
   background-color: #000000;
-  transform: skewY(-45deg);
+  transform: skewY(-56deg);
 }
 
 .presentation-main {
@@ -7768,7 +7957,7 @@ h6 {
 }
 
 .presentation-main__title {
-  padding-bottom: 15px;
+  padding: 40px 0 15px;
 }
 
 .presentation-main__text {
@@ -7777,7 +7966,7 @@ h6 {
 
 .presentation-main__text::before {
   content: '';
-  left: -20px;
+  left: -30px;
   top: 8px;
   width: 20px;
   height: 2px;
@@ -7789,22 +7978,35 @@ h6 {
 }
 
 .presentation-main__subtitle {
-  padding-top: 25px;
+  font: 0.65625rem/1.53 "Acrom-ExtraBold", sans-serif;
+  color: #000000;
+  text-transform: uppercase;
+  padding: 25px 0 40px;
+}
+
+.presentation-additional__block {
+  padding-bottom: 45px;
+}
+
+.presentation-additional__text--decorative {
+  padding-top: 50px;
 }
 
 .presentation-additional__text--decorative::before {
   content: '';
+  position: absolute;
+  display: none;
   left: -15px;
-  top: 7px;
+  top: 10px;
   width: 10px;
-  height: 2px;
+  height: 2.5px;
   background-color: #000000;
-  transform: skewY(-45deg);
+  transform: skewY(-56deg);
 }
 
 .presentation-additional__item::before {
   content: ' ';
-  left: -35px;
+  left: -50px;
   top: 25px;
   width: 50px;
   height: 15px;
@@ -7815,6 +8017,7 @@ h6 {
   font-family: "Acrom-Bold", sans-serif;
   font-size: 0.75rem;
   line-height: 1.45;
+  clip: rect(6px, auto, auto, auto);
 }
 
 .presentation-additional__item:nth-child(1)::before {
@@ -7843,8 +8046,8 @@ h6 {
 
 .presentation-additional__btn {
   margin-top: 40px;
-  font-size: 0.6875rem;
-  line-height: 50px;
+  padding: 14px 30px;
+  font-size: 0.75rem;
 }
 
 .main-contacts {
@@ -7940,13 +8143,16 @@ h6 {
 /* Placeholder for section title */
 
 .facts-main__title,
+.examples-main__title,
 .warning-main__title,
 .career-additional__title,
-.simple-steps-main__title,
+.simple-steps-main .simple-steps-main__title,
 .presentation-main__title,
 .section-university__title--main,
 .section-expert__title,
 .section-help__title,
+.important-additional__title,
+.important-main__title,
 .just-do-it-main__title {
   font-family: "Acrom-Bold", sans-serif;
   font-size: 1.125rem;
@@ -7955,7 +8161,8 @@ h6 {
   color: #000000;
 }
 
-.except-numbers-additional__title {
+.except-numbers-additional__title,
+.get-your-bonus-main__title {
   font-family: "Acrom-Bold", sans-serif;
   font-size: 1.125rem;
   line-height: 1.33;
@@ -7967,8 +8174,9 @@ h6 {
 /* accent orange text */
 
 .start-it-additional__text--decorative,
-.simple-steps-additional__text-decorative,
+.simple-steps-main .simple-steps-additional__text-decorative,
 .presentation-additional__text--decorative,
+.important-main__text-decorative,
 .just-do-it-additional__text--decorative {
   font-family: "Acrom-Medium", sans-serif;
   font-size: 0.9375rem;
@@ -7980,12 +8188,12 @@ h6 {
 
 .warning-main__subtitle,
 .career-main__subtitle,
-.simple-steps-additional__subtitle,
-.presentation-main__subtitle,
+.simple-steps-main .simple-steps-additional__subtitle,
 .section-awards__title,
 .section-university__title,
 .section-expert__item--title,
-.section-help__second-title {
+.section-help__second-title,
+.get-your-bonus-main__subtitle {
   font-family: "Acrom-ExtraBold", sans-serif;
   font-size: 0.9375rem;
   line-height: 1.53;
@@ -7994,12 +8202,15 @@ h6 {
 }
 
 .сareer-main__text--light,
-.simple-steps-additional__text--light,
+.simple-steps-main .simple-steps-additional__text--light,
 .presentation-additional__text--light,
 .section-awards__desc,
 .section-university__desc,
 .section-expert__item--desc,
 .section-help__second-desc,
+.get-your-bonus-main__text--light,
+.get-your-bonus-main__text--special,
+.important-main__text--light,
 .just-do-it-additional__text--light {
   font-family: "Acrom-Regular", sans-serif;
   font-size: 0.875rem;
@@ -8010,14 +8221,19 @@ h6 {
 .start-it-main__text--tablet,
 .facts-main__text,
 .except-numbers-additional__text,
+.examples-main__text,
 .warning-main__text,
 .career-additional__text,
-.simple-steps-main__text,
+.simple-steps-main .simple-steps-main__text,
 .presentation-main__text,
 .section-university__desc--main,
 .education-section__desc--mobile,
 .section-expert__desc,
 .section-help__desc,
+.get-your-bonus-main__text,
+.main-form__input,
+.important-additional__text,
+.important-additional__text--special,
 .just-do-it-main__text {
   font-family: "Acrom-Medium", sans-serif;
   font-size: 0.875rem;
@@ -8026,6 +8242,7 @@ h6 {
 }
 
 .presentation-additional__text--bold,
+.important-main__text--bold,
 .just-do-it-additional__text--bold {
   font-family: "Acrom-Bold", sans-serif;
   font-size: 0.875rem;
@@ -8036,6 +8253,8 @@ h6 {
 /* Placeholder for list */
 
 .social-list,
+.examples-pagination__numbers,
+.simple-steps-main .simple-steps-additional,
 .presentation-additional__block,
 .law-info__list {
   list-style: none;
@@ -8058,19 +8277,26 @@ h6 {
 .facts-main__text:before,
 .facts-additional__item:before,
 .except-numbers-additional__item:before,
+.examples-main__text:before,
+.examples-pagination__item--active::before,
 .warning-main__text:before,
 .warning-main__item:before,
-.simple-steps-main__text::before,
-.simple-steps-additional__subtitle::before,
-.simple-steps-additional__text-decorative::before,
+.simple-steps-main .simple-steps-main__text::before,
+.simple-steps-main .simple-steps-additional__subtitle::before,
+.simple-steps-main .simple-steps-additional__block::before,
+.simple-steps-main .simple-steps-additional__text-decorative::before,
 .presentation-main__text::before,
-.presentation-additional__text--decorative::before,
 .presentation-additional__item::before,
 .section-university__desc--main::before,
 .education-section__desc--mobile::before,
 .section-expert__desc::before,
 .section-expert__item--title::before,
 .section-help__desc::before,
+.get-your-bonus-main__text::before,
+.get-your-bonus-main__block::after,
+.get-your-bonus-main__block::before,
+.important-additional__price::before,
+.important-main__text-decorative::before,
 .just-do-it-main__text::before,
 .just-do-it-additional__block:nth-of-type(1)::before {
   position: absolute;
@@ -8081,7 +8307,9 @@ h6 {
 .start-in-preferences:before,
 .start-it-additional__subtitle,
 .facts-additional__subtitle,
-.except-numbers-additional__subtitle {
+.except-numbers-additional__subtitle,
+.important-additional__price,
+.important-additional__price--currency {
   text-transform: uppercase;
   font-family: "Acrom-ExtraBold", sans-serif;
 }
@@ -8090,6 +8318,11 @@ h6 {
 .main-contacts__button:focus,
 .banner__btn:hover,
 .presentation-additional__btn:hover,
+.presentation-additional__btn:focus,
+.main-form__button:hover,
+.main-form__button:focus,
+.important-main__button:hover,
+.important-main__button:focus,
 .just-do-it-main__button:hover,
 .just-do-it-main__button:focus {
   background-color: #17ecff;
@@ -8100,6 +8333,8 @@ h6 {
 .banner__btn,
 .banner__btn:active,
 .presentation-additional__btn:active,
+.main-form__button:active,
+.important-main__button:active,
 .just-do-it-main__button:active {
   background-color: #06a4b2;
 }
@@ -8145,7 +8380,7 @@ input[type='radio'].visually-hidden {
 }
 
 .section-awards__items--icon {
-  background-image: url("../../../images/main-images/decorative-images/un.png");
+  background-image: url("../images/main-images/decorative-images/un.png");
   background-repeat: no-repeat;
   background-position: 90% 0;
   background-size: 85px 75px;
@@ -8194,13 +8429,16 @@ input[type='radio'].visually-hidden {
 /* Placeholder for section title */
 
 .facts-main__title,
+.examples-main__title,
 .warning-main__title,
 .career-additional__title,
-.simple-steps-main__title,
+.simple-steps-main .simple-steps-main__title,
 .presentation-main__title,
 .section-university__title--main,
 .section-expert__title,
 .section-help__title,
+.important-additional__title,
+.important-main__title,
 .just-do-it-main__title {
   font-family: "Acrom-Bold", sans-serif;
   font-size: 1.125rem;
@@ -8209,7 +8447,8 @@ input[type='radio'].visually-hidden {
   color: #000000;
 }
 
-.except-numbers-additional__title {
+.except-numbers-additional__title,
+.get-your-bonus-main__title {
   font-family: "Acrom-Bold", sans-serif;
   font-size: 1.125rem;
   line-height: 1.33;
@@ -8221,8 +8460,9 @@ input[type='radio'].visually-hidden {
 /* accent orange text */
 
 .start-it-additional__text--decorative,
-.simple-steps-additional__text-decorative,
+.simple-steps-main .simple-steps-additional__text-decorative,
 .presentation-additional__text--decorative,
+.important-main__text-decorative,
 .just-do-it-additional__text--decorative {
   font-family: "Acrom-Medium", sans-serif;
   font-size: 0.9375rem;
@@ -8234,12 +8474,12 @@ input[type='radio'].visually-hidden {
 
 .warning-main__subtitle,
 .career-main__subtitle,
-.simple-steps-additional__subtitle,
-.presentation-main__subtitle,
+.simple-steps-main .simple-steps-additional__subtitle,
 .section-awards__title,
 .section-university__title,
 .section-expert__item--title,
-.section-help__second-title {
+.section-help__second-title,
+.get-your-bonus-main__subtitle {
   font-family: "Acrom-ExtraBold", sans-serif;
   font-size: 0.9375rem;
   line-height: 1.53;
@@ -8248,12 +8488,15 @@ input[type='radio'].visually-hidden {
 }
 
 .сareer-main__text--light,
-.simple-steps-additional__text--light,
+.simple-steps-main .simple-steps-additional__text--light,
 .presentation-additional__text--light,
 .section-awards__desc,
 .section-university__desc,
 .section-expert__item--desc,
 .section-help__second-desc,
+.get-your-bonus-main__text--light,
+.get-your-bonus-main__text--special,
+.important-main__text--light,
 .just-do-it-additional__text--light {
   font-family: "Acrom-Regular", sans-serif;
   font-size: 0.875rem;
@@ -8264,14 +8507,19 @@ input[type='radio'].visually-hidden {
 .start-it-main__text--tablet,
 .facts-main__text,
 .except-numbers-additional__text,
+.examples-main__text,
 .warning-main__text,
 .career-additional__text,
-.simple-steps-main__text,
+.simple-steps-main .simple-steps-main__text,
 .presentation-main__text,
 .section-university__desc--main,
 .education-section__desc--mobile,
 .section-expert__desc,
 .section-help__desc,
+.get-your-bonus-main__text,
+.main-form__input,
+.important-additional__text,
+.important-additional__text--special,
 .just-do-it-main__text {
   font-family: "Acrom-Medium", sans-serif;
   font-size: 0.875rem;
@@ -8280,6 +8528,7 @@ input[type='radio'].visually-hidden {
 }
 
 .presentation-additional__text--bold,
+.important-main__text--bold,
 .just-do-it-additional__text--bold {
   font-family: "Acrom-Bold", sans-serif;
   font-size: 0.875rem;
@@ -8290,6 +8539,8 @@ input[type='radio'].visually-hidden {
 /* Placeholder for list */
 
 .social-list,
+.examples-pagination__numbers,
+.simple-steps-main .simple-steps-additional,
 .presentation-additional__block,
 .law-info__list {
   list-style: none;
@@ -8312,19 +8563,26 @@ input[type='radio'].visually-hidden {
 .facts-main__text:before,
 .facts-additional__item:before,
 .except-numbers-additional__item:before,
+.examples-main__text:before,
+.examples-pagination__item--active::before,
 .warning-main__text:before,
 .warning-main__item:before,
-.simple-steps-main__text::before,
-.simple-steps-additional__subtitle::before,
-.simple-steps-additional__text-decorative::before,
+.simple-steps-main .simple-steps-main__text::before,
+.simple-steps-main .simple-steps-additional__subtitle::before,
+.simple-steps-main .simple-steps-additional__block::before,
+.simple-steps-main .simple-steps-additional__text-decorative::before,
 .presentation-main__text::before,
-.presentation-additional__text--decorative::before,
 .presentation-additional__item::before,
 .section-university__desc--main::before,
 .education-section__desc--mobile::before,
 .section-expert__desc::before,
 .section-expert__item--title::before,
 .section-help__desc::before,
+.get-your-bonus-main__text::before,
+.get-your-bonus-main__block::after,
+.get-your-bonus-main__block::before,
+.important-additional__price::before,
+.important-main__text-decorative::before,
 .just-do-it-main__text::before,
 .just-do-it-additional__block:nth-of-type(1)::before {
   position: absolute;
@@ -8335,7 +8593,9 @@ input[type='radio'].visually-hidden {
 .start-in-preferences:before,
 .start-it-additional__subtitle,
 .facts-additional__subtitle,
-.except-numbers-additional__subtitle {
+.except-numbers-additional__subtitle,
+.important-additional__price,
+.important-additional__price--currency {
   text-transform: uppercase;
   font-family: "Acrom-ExtraBold", sans-serif;
 }
@@ -8344,6 +8604,11 @@ input[type='radio'].visually-hidden {
 .main-contacts__button:focus,
 .banner__btn:hover,
 .presentation-additional__btn:hover,
+.presentation-additional__btn:focus,
+.main-form__button:hover,
+.main-form__button:focus,
+.important-main__button:hover,
+.important-main__button:focus,
 .just-do-it-main__button:hover,
 .just-do-it-main__button:focus {
   background-color: #17ecff;
@@ -8354,6 +8619,8 @@ input[type='radio'].visually-hidden {
 .banner__btn,
 .banner__btn:active,
 .presentation-additional__btn:active,
+.main-form__button:active,
+.important-main__button:active,
 .just-do-it-main__button:active {
   background-color: #06a4b2;
 }
@@ -8442,13 +8709,16 @@ input[type='radio'].visually-hidden {
 /* Placeholder for section title */
 
 .facts-main__title,
+.examples-main__title,
 .warning-main__title,
 .career-additional__title,
-.simple-steps-main__title,
+.simple-steps-main .simple-steps-main__title,
 .presentation-main__title,
 .section-university__title--main,
 .section-expert__title,
 .section-help__title,
+.important-additional__title,
+.important-main__title,
 .just-do-it-main__title {
   font-family: "Acrom-Bold", sans-serif;
   font-size: 1.125rem;
@@ -8457,7 +8727,8 @@ input[type='radio'].visually-hidden {
   color: #000000;
 }
 
-.except-numbers-additional__title {
+.except-numbers-additional__title,
+.get-your-bonus-main__title {
   font-family: "Acrom-Bold", sans-serif;
   font-size: 1.125rem;
   line-height: 1.33;
@@ -8469,8 +8740,9 @@ input[type='radio'].visually-hidden {
 /* accent orange text */
 
 .start-it-additional__text--decorative,
-.simple-steps-additional__text-decorative,
+.simple-steps-main .simple-steps-additional__text-decorative,
 .presentation-additional__text--decorative,
+.important-main__text-decorative,
 .just-do-it-additional__text--decorative {
   font-family: "Acrom-Medium", sans-serif;
   font-size: 0.9375rem;
@@ -8482,12 +8754,12 @@ input[type='radio'].visually-hidden {
 
 .warning-main__subtitle,
 .career-main__subtitle,
-.simple-steps-additional__subtitle,
-.presentation-main__subtitle,
+.simple-steps-main .simple-steps-additional__subtitle,
 .section-awards__title,
 .section-university__title,
 .section-expert__item--title,
-.section-help__second-title {
+.section-help__second-title,
+.get-your-bonus-main__subtitle {
   font-family: "Acrom-ExtraBold", sans-serif;
   font-size: 0.9375rem;
   line-height: 1.53;
@@ -8496,12 +8768,15 @@ input[type='radio'].visually-hidden {
 }
 
 .сareer-main__text--light,
-.simple-steps-additional__text--light,
+.simple-steps-main .simple-steps-additional__text--light,
 .presentation-additional__text--light,
 .section-awards__desc,
 .section-university__desc,
 .section-expert__item--desc,
 .section-help__second-desc,
+.get-your-bonus-main__text--light,
+.get-your-bonus-main__text--special,
+.important-main__text--light,
 .just-do-it-additional__text--light {
   font-family: "Acrom-Regular", sans-serif;
   font-size: 0.875rem;
@@ -8512,14 +8787,19 @@ input[type='radio'].visually-hidden {
 .start-it-main__text--tablet,
 .facts-main__text,
 .except-numbers-additional__text,
+.examples-main__text,
 .warning-main__text,
 .career-additional__text,
-.simple-steps-main__text,
+.simple-steps-main .simple-steps-main__text,
 .presentation-main__text,
 .section-university__desc--main,
 .education-section__desc--mobile,
 .section-expert__desc,
 .section-help__desc,
+.get-your-bonus-main__text,
+.main-form__input,
+.important-additional__text,
+.important-additional__text--special,
 .just-do-it-main__text {
   font-family: "Acrom-Medium", sans-serif;
   font-size: 0.875rem;
@@ -8528,6 +8808,7 @@ input[type='radio'].visually-hidden {
 }
 
 .presentation-additional__text--bold,
+.important-main__text--bold,
 .just-do-it-additional__text--bold {
   font-family: "Acrom-Bold", sans-serif;
   font-size: 0.875rem;
@@ -8538,6 +8819,8 @@ input[type='radio'].visually-hidden {
 /* Placeholder for list */
 
 .social-list,
+.examples-pagination__numbers,
+.simple-steps-main .simple-steps-additional,
 .presentation-additional__block,
 .law-info__list {
   list-style: none;
@@ -8560,19 +8843,26 @@ input[type='radio'].visually-hidden {
 .facts-main__text:before,
 .facts-additional__item:before,
 .except-numbers-additional__item:before,
+.examples-main__text:before,
+.examples-pagination__item--active::before,
 .warning-main__text:before,
 .warning-main__item:before,
-.simple-steps-main__text::before,
-.simple-steps-additional__subtitle::before,
-.simple-steps-additional__text-decorative::before,
+.simple-steps-main .simple-steps-main__text::before,
+.simple-steps-main .simple-steps-additional__subtitle::before,
+.simple-steps-main .simple-steps-additional__block::before,
+.simple-steps-main .simple-steps-additional__text-decorative::before,
 .presentation-main__text::before,
-.presentation-additional__text--decorative::before,
 .presentation-additional__item::before,
 .section-university__desc--main::before,
 .education-section__desc--mobile::before,
 .section-expert__desc::before,
 .section-expert__item--title::before,
 .section-help__desc::before,
+.get-your-bonus-main__text::before,
+.get-your-bonus-main__block::after,
+.get-your-bonus-main__block::before,
+.important-additional__price::before,
+.important-main__text-decorative::before,
 .just-do-it-main__text::before,
 .just-do-it-additional__block:nth-of-type(1)::before {
   position: absolute;
@@ -8583,7 +8873,9 @@ input[type='radio'].visually-hidden {
 .start-in-preferences:before,
 .start-it-additional__subtitle,
 .facts-additional__subtitle,
-.except-numbers-additional__subtitle {
+.except-numbers-additional__subtitle,
+.important-additional__price,
+.important-additional__price--currency {
   text-transform: uppercase;
   font-family: "Acrom-ExtraBold", sans-serif;
 }
@@ -8592,6 +8884,11 @@ input[type='radio'].visually-hidden {
 .main-contacts__button:focus,
 .banner__btn:hover,
 .presentation-additional__btn:hover,
+.presentation-additional__btn:focus,
+.main-form__button:hover,
+.main-form__button:focus,
+.important-main__button:hover,
+.important-main__button:focus,
 .just-do-it-main__button:hover,
 .just-do-it-main__button:focus {
   background-color: #17ecff;
@@ -8602,6 +8899,8 @@ input[type='radio'].visually-hidden {
 .banner__btn,
 .banner__btn:active,
 .presentation-additional__btn:active,
+.main-form__button:active,
+.important-main__button:active,
 .just-do-it-main__button:active {
   background-color: #06a4b2;
 }
@@ -8689,13 +8988,16 @@ input[type='radio'].visually-hidden {
 /* Placeholder for section title */
 
 .facts-main__title,
+.examples-main__title,
 .warning-main__title,
 .career-additional__title,
-.simple-steps-main__title,
+.simple-steps-main .simple-steps-main__title,
 .presentation-main__title,
 .section-university__title--main,
 .section-expert__title,
 .section-help__title,
+.important-additional__title,
+.important-main__title,
 .just-do-it-main__title {
   font-family: "Acrom-Bold", sans-serif;
   font-size: 1.125rem;
@@ -8704,7 +9006,8 @@ input[type='radio'].visually-hidden {
   color: #000000;
 }
 
-.except-numbers-additional__title {
+.except-numbers-additional__title,
+.get-your-bonus-main__title {
   font-family: "Acrom-Bold", sans-serif;
   font-size: 1.125rem;
   line-height: 1.33;
@@ -8716,8 +9019,9 @@ input[type='radio'].visually-hidden {
 /* accent orange text */
 
 .start-it-additional__text--decorative,
-.simple-steps-additional__text-decorative,
+.simple-steps-main .simple-steps-additional__text-decorative,
 .presentation-additional__text--decorative,
+.important-main__text-decorative,
 .just-do-it-additional__text--decorative {
   font-family: "Acrom-Medium", sans-serif;
   font-size: 0.9375rem;
@@ -8729,12 +9033,12 @@ input[type='radio'].visually-hidden {
 
 .warning-main__subtitle,
 .career-main__subtitle,
-.simple-steps-additional__subtitle,
-.presentation-main__subtitle,
+.simple-steps-main .simple-steps-additional__subtitle,
 .section-awards__title,
 .section-university__title,
 .section-expert__item--title,
-.section-help__second-title {
+.section-help__second-title,
+.get-your-bonus-main__subtitle {
   font-family: "Acrom-ExtraBold", sans-serif;
   font-size: 0.9375rem;
   line-height: 1.53;
@@ -8743,12 +9047,15 @@ input[type='radio'].visually-hidden {
 }
 
 .сareer-main__text--light,
-.simple-steps-additional__text--light,
+.simple-steps-main .simple-steps-additional__text--light,
 .presentation-additional__text--light,
 .section-awards__desc,
 .section-university__desc,
 .section-expert__item--desc,
 .section-help__second-desc,
+.get-your-bonus-main__text--light,
+.get-your-bonus-main__text--special,
+.important-main__text--light,
 .just-do-it-additional__text--light {
   font-family: "Acrom-Regular", sans-serif;
   font-size: 0.875rem;
@@ -8759,14 +9066,19 @@ input[type='radio'].visually-hidden {
 .start-it-main__text--tablet,
 .facts-main__text,
 .except-numbers-additional__text,
+.examples-main__text,
 .warning-main__text,
 .career-additional__text,
-.simple-steps-main__text,
+.simple-steps-main .simple-steps-main__text,
 .presentation-main__text,
 .section-university__desc--main,
 .education-section__desc--mobile,
 .section-expert__desc,
 .section-help__desc,
+.get-your-bonus-main__text,
+.main-form__input,
+.important-additional__text,
+.important-additional__text--special,
 .just-do-it-main__text {
   font-family: "Acrom-Medium", sans-serif;
   font-size: 0.875rem;
@@ -8775,6 +9087,7 @@ input[type='radio'].visually-hidden {
 }
 
 .presentation-additional__text--bold,
+.important-main__text--bold,
 .just-do-it-additional__text--bold {
   font-family: "Acrom-Bold", sans-serif;
   font-size: 0.875rem;
@@ -8785,6 +9098,8 @@ input[type='radio'].visually-hidden {
 /* Placeholder for list */
 
 .social-list,
+.examples-pagination__numbers,
+.simple-steps-main .simple-steps-additional,
 .presentation-additional__block,
 .law-info__list {
   list-style: none;
@@ -8807,19 +9122,26 @@ input[type='radio'].visually-hidden {
 .facts-main__text:before,
 .facts-additional__item:before,
 .except-numbers-additional__item:before,
+.examples-main__text:before,
+.examples-pagination__item--active::before,
 .warning-main__text:before,
 .warning-main__item:before,
-.simple-steps-main__text::before,
-.simple-steps-additional__subtitle::before,
-.simple-steps-additional__text-decorative::before,
+.simple-steps-main .simple-steps-main__text::before,
+.simple-steps-main .simple-steps-additional__subtitle::before,
+.simple-steps-main .simple-steps-additional__block::before,
+.simple-steps-main .simple-steps-additional__text-decorative::before,
 .presentation-main__text::before,
-.presentation-additional__text--decorative::before,
 .presentation-additional__item::before,
 .section-university__desc--main::before,
 .education-section__desc--mobile::before,
 .section-expert__desc::before,
 .section-expert__item--title::before,
 .section-help__desc::before,
+.get-your-bonus-main__text::before,
+.get-your-bonus-main__block::after,
+.get-your-bonus-main__block::before,
+.important-additional__price::before,
+.important-main__text-decorative::before,
 .just-do-it-main__text::before,
 .just-do-it-additional__block:nth-of-type(1)::before {
   position: absolute;
@@ -8830,7 +9152,9 @@ input[type='radio'].visually-hidden {
 .start-in-preferences:before,
 .start-it-additional__subtitle,
 .facts-additional__subtitle,
-.except-numbers-additional__subtitle {
+.except-numbers-additional__subtitle,
+.important-additional__price,
+.important-additional__price--currency {
   text-transform: uppercase;
   font-family: "Acrom-ExtraBold", sans-serif;
 }
@@ -8839,6 +9163,11 @@ input[type='radio'].visually-hidden {
 .main-contacts__button:focus,
 .banner__btn:hover,
 .presentation-additional__btn:hover,
+.presentation-additional__btn:focus,
+.main-form__button:hover,
+.main-form__button:focus,
+.important-main__button:hover,
+.important-main__button:focus,
 .just-do-it-main__button:hover,
 .just-do-it-main__button:focus {
   background-color: #17ecff;
@@ -8849,6 +9178,8 @@ input[type='radio'].visually-hidden {
 .banner__btn,
 .banner__btn:active,
 .presentation-additional__btn:active,
+.main-form__button:active,
+.important-main__button:active,
 .just-do-it-main__button:active {
   background-color: #06a4b2;
 }
@@ -9041,6 +9372,243 @@ input[type='radio'].visually-hidden {
   padding-top: 15px;
 }
 
+.get-your-bonus {
+  margin-bottom: 60px;
+}
+
+.get-your-bonus-main__title {
+  display: inline;
+}
+
+.get-your-bonus-main__text {
+  margin-top: 20px;
+  margin-bottom: 56px;
+  margin-left: 10px;
+}
+
+.get-your-bonus-main__text::before {
+  content: '';
+  left: -10px;
+  top: 30px;
+  height: 3px;
+  width: 20px;
+  background-color: #000000;
+}
+
+.get-your-bonus-main__block {
+  margin-bottom: 32px;
+  position: relative;
+}
+
+.get-your-bonus-main__block::after {
+  content: '';
+  left: -30px;
+  top: 30px;
+  width: 10px;
+  height: 10px;
+  background-color: #16ebfe;
+}
+
+.get-your-bonus-main__block::before {
+  left: -60px;
+  top: -4px;
+  font-size: 26px;
+  font-family: "Acrom-ExtraBold", sans-serif;
+  color: #000000;
+}
+
+.get-your-bonus-main__block--first::before {
+  content: '01.';
+}
+
+.get-your-bonus-main__block--second::before {
+  content: '02.';
+}
+
+.get-your-bonus-main__subtitle {
+  margin-bottom: 10px;
+}
+
+.get-your-bonus-main__text--special {
+  color: #ffffff;
+  background-color: #000000;
+}
+
+.main-form {
+  box-shadow: 0px 14px 27px 0px rgba(0, 0, 0, 0.15);
+  display: flex;
+  flex-flow: column nowrap;
+  justify-content: center;
+  padding: 64px;
+}
+
+.main-form__block {
+  display: flex;
+  flex-direction: column-reverse;
+}
+
+.main-form__label {
+  font-family: "Acrom-Bold", sans-serif;
+  font-size: 9px;
+  color: #bfbfbf;
+  transition: all 0.2s linear;
+}
+
+.main-form__input {
+  border: none;
+  border-bottom: 1px solid #eaeaea;
+  padding: 6px 0;
+  margin-bottom: 20px;
+  transition: all 0.2s linear;
+}
+
+.main-form__input:focus {
+  border-bottom: 1px solid #ff6b08;
+}
+
+.main-form__input:focus + .main-form__label {
+  color: #ff6b08;
+}
+
+.main-form__input:required:valid {
+  border-bottom: 3px solid #39e600;
+}
+
+.main-form__input::-webkit-input-placeholder {
+  font-family: "Acrom-Bold", sans-serif;
+  font-size: 12px;
+  color: #000000;
+}
+
+.main-form__input::-moz-placeholder {
+  font-family: "Acrom-Bold", sans-serif;
+  font-size: 12px;
+  color: #000000;
+}
+
+.main-form__input:-ms-input-placeholder {
+  font-family: "Acrom-Bold", sans-serif;
+  font-size: 12px;
+  color: #000000;
+}
+
+.main-form__input::-ms-input-placeholder {
+  font-family: "Acrom-Bold", sans-serif;
+  font-size: 12px;
+  color: #000000;
+}
+
+.main-form__input::placeholder {
+  font-family: "Acrom-Bold", sans-serif;
+  font-size: 12px;
+  color: #000000;
+}
+
+.main-form__button {
+  margin-top: 28px;
+  padding: 14px 20px;
+  font-size: 0.75rem;
+  font-family: "Acrom-ExtraBold", sans-serif;
+}
+
+.important {
+  margin-bottom: 80px;
+}
+
+.important-additional {
+  text-align: start;
+}
+
+.important-additional__title {
+  margin-left: 60%;
+  transform: translateX(-50%);
+  margin-bottom: 20px;
+}
+
+.important-main__title {
+  display: none;
+}
+
+.important-additional__block {
+  background-color: #052139;
+  padding: 80px;
+  margin-bottom: 40px;
+}
+
+.important-additional__subblock {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.important-additional__text {
+  max-width: 95px;
+  color: #ffffff;
+}
+
+.important-additional__price-subblock {
+  max-width: 70px;
+}
+
+.important-additional__text--special {
+  display: inline-block;
+  margin-right: auto;
+  margin-bottom: 4px;
+  line-height: 1.1;
+  background-color: #16ebfe;
+}
+
+.important-additional__price {
+  position: relative;
+  color: #ffffff;
+  margin-left: 50px;
+}
+
+.important-additional__price::before {
+  content: '';
+  height: 1px;
+  width: 36px;
+  left: -50px;
+  top: 10px;
+  background-color: #ffffff;
+}
+
+.important-additional__price--special {
+  margin: 0;
+  font-family: "Acrom-ExtraBold", sans-serif;
+  font-size: 2.5rem;
+  margin-left: 50px;
+  color: #ffffff;
+}
+
+.important-additional__price--currency {
+  margin: 0;
+  color: #ffffff;
+  margin-top: 14px;
+  margin-left: 6px;
+}
+
+.important-main__text-decorative {
+  position: relative;
+  margin-bottom: 30px;
+}
+
+.important-main__text-decorative::before {
+  content: '';
+  height: 2px;
+  width: 36px;
+  transform: rotate(124deg);
+  left: -50px;
+  top: 18px;
+  z-index: 20;
+  background-color: #000000;
+}
+
+.important-main__button {
+  padding: 14px 30px;
+  font-size: 0.75rem;
+}
+
 .just-do-it {
   margin-bottom: 40px;
 }
@@ -9085,7 +9653,7 @@ input[type='radio'].visually-hidden {
   content: 'P.S. :';
   font-size: 1.25rem;
   left: 14;
-  top: -18px;
+  top: -30px;
   font-family: "Acrom-ExtraBold", sans-serif;
 }
 
@@ -11157,46 +11725,54 @@ input[type='radio'].visually-hidden {
 
 @media screen and (min-width: 48em) {
   .facts-main__title,
+  .examples-main__title,
   .warning-main__title,
   .career-additional__title,
-  .simple-steps-main__title,
+  .simple-steps-main .simple-steps-main__title,
   .presentation-main__title,
   .section-university__title--main,
   .section-expert__title,
   .section-help__title,
+  .important-additional__title,
+  .important-main__title,
   .just-do-it-main__title {
     font-size: 1.6875rem;
   }
 
-  .except-numbers-additional__title {
+  .except-numbers-additional__title,
+  .get-your-bonus-main__title {
     font-size: 1.6875rem;
   }
 
   .start-it-additional__text--decorative,
-  .simple-steps-additional__text-decorative,
+  .simple-steps-main .simple-steps-additional__text-decorative,
   .presentation-additional__text--decorative,
+  .important-main__text-decorative,
   .just-do-it-additional__text--decorative {
     font-size: 0.5625rem;
   }
 
   .warning-main__subtitle,
   .career-main__subtitle,
-  .simple-steps-additional__subtitle,
-  .presentation-main__subtitle,
+  .simple-steps-main .simple-steps-additional__subtitle,
   .section-awards__title,
   .section-university__title,
   .section-expert__item--title,
-  .section-help__second-title {
+  .section-help__second-title,
+  .get-your-bonus-main__subtitle {
     font-size: 0.5625rem;
   }
 
   .сareer-main__text--light,
-  .simple-steps-additional__text--light,
+  .simple-steps-main .simple-steps-additional__text--light,
   .presentation-additional__text--light,
   .section-awards__desc,
   .section-university__desc,
   .section-expert__item--desc,
   .section-help__second-desc,
+  .get-your-bonus-main__text--light,
+  .get-your-bonus-main__text--special,
+  .important-main__text--light,
   .just-do-it-additional__text--light {
     font-size: 0.5rem;
   }
@@ -11204,19 +11780,25 @@ input[type='radio'].visually-hidden {
   .start-it-main__text--tablet,
   .facts-main__text,
   .except-numbers-additional__text,
+  .examples-main__text,
   .warning-main__text,
   .career-additional__text,
-  .simple-steps-main__text,
+  .simple-steps-main .simple-steps-main__text,
   .presentation-main__text,
   .section-university__desc--main,
   .education-section__desc--mobile,
   .section-expert__desc,
   .section-help__desc,
+  .get-your-bonus-main__text,
+  .main-form__input,
+  .important-additional__text,
+  .important-additional__text--special,
   .just-do-it-main__text {
     font-size: 0.5625rem;
   }
 
   .presentation-additional__text--bold,
+  .important-main__text--bold,
   .just-do-it-additional__text--bold {
     font-size: 0.5625rem;
   }
@@ -11258,12 +11840,27 @@ input[type='radio'].visually-hidden {
     top: 0px;
   }
 
-  .simple-steps-main {
+  .simple-steps-main::before {
+    font-size: 5.0625rem;
+    left: 315px;
+    background-size: auto 100%;
     background-image: url(../images/background-png/stap.png);
   }
 
-  .simple-steps-additional {
+  .simple-steps-main .simple-steps-additional__subtitle::before {
+    width: 7px;
+    height: 7px;
+    top: 20px;
+  }
+
+  .simple-steps-main .simple-steps-additional__block::before {
     font-size: 1.0625rem;
+    clip: rect(auto, auto, auto, 6px);
+  }
+
+  .simple-steps-main .simple-steps-additional__text-decorative::before {
+    width: 10px;
+    height: 2.5px;
   }
 
   .presentation-main {
@@ -11280,7 +11877,17 @@ input[type='radio'].visually-hidden {
   }
 
   .presentation-main__subtitle {
-    padding-top: 64px;
+    padding-top: 55px;
+    padding-bottom: 0px;
+  }
+
+  .presentation-additional__text--decorative::before {
+    display: block;
+  }
+
+  .presentation-additional__text--decorative {
+    padding-top: 0px;
+    margin-bottom: 0px;
   }
 
   .presentation-additional__item::before {
@@ -11289,11 +11896,12 @@ input[type='radio'].visually-hidden {
     font-size: 0.4375rem;
     top: 10px;
     left: -15px;
+    clip: auto;
   }
 
   .presentation-additional__btn {
-    line-height: 20px;
-    font-size: 0.375rem;
+    font-size: 0.625rem;
+    padding: 14px 10px;
     margin-top: 0px;
   }
 
@@ -11333,46 +11941,54 @@ input[type='radio'].visually-hidden {
   }
 
   .facts-main__title,
+  .examples-main__title,
   .warning-main__title,
   .career-additional__title,
-  .simple-steps-main__title,
+  .simple-steps-main .simple-steps-main__title,
   .presentation-main__title,
   .section-university__title--main,
   .section-expert__title,
   .section-help__title,
+  .important-additional__title,
+  .important-main__title,
   .just-do-it-main__title {
     font-size: 1.6875rem;
   }
 
-  .except-numbers-additional__title {
+  .except-numbers-additional__title,
+  .get-your-bonus-main__title {
     font-size: 1.6875rem;
   }
 
   .start-it-additional__text--decorative,
-  .simple-steps-additional__text-decorative,
+  .simple-steps-main .simple-steps-additional__text-decorative,
   .presentation-additional__text--decorative,
+  .important-main__text-decorative,
   .just-do-it-additional__text--decorative {
     font-size: 0.5625rem;
   }
 
   .warning-main__subtitle,
   .career-main__subtitle,
-  .simple-steps-additional__subtitle,
-  .presentation-main__subtitle,
+  .simple-steps-main .simple-steps-additional__subtitle,
   .section-awards__title,
   .section-university__title,
   .section-expert__item--title,
-  .section-help__second-title {
+  .section-help__second-title,
+  .get-your-bonus-main__subtitle {
     font-size: 0.5625rem;
   }
 
   .сareer-main__text--light,
-  .simple-steps-additional__text--light,
+  .simple-steps-main .simple-steps-additional__text--light,
   .presentation-additional__text--light,
   .section-awards__desc,
   .section-university__desc,
   .section-expert__item--desc,
   .section-help__second-desc,
+  .get-your-bonus-main__text--light,
+  .get-your-bonus-main__text--special,
+  .important-main__text--light,
   .just-do-it-additional__text--light {
     font-size: 0.5rem;
   }
@@ -11380,64 +11996,78 @@ input[type='radio'].visually-hidden {
   .start-it-main__text--tablet,
   .facts-main__text,
   .except-numbers-additional__text,
+  .examples-main__text,
   .warning-main__text,
   .career-additional__text,
-  .simple-steps-main__text,
+  .simple-steps-main .simple-steps-main__text,
   .presentation-main__text,
   .section-university__desc--main,
   .education-section__desc--mobile,
   .section-expert__desc,
   .section-help__desc,
+  .get-your-bonus-main__text,
+  .main-form__input,
+  .important-additional__text,
+  .important-additional__text--special,
   .just-do-it-main__text {
     font-size: 0.5625rem;
   }
 
   .presentation-additional__text--bold,
+  .important-main__text--bold,
   .just-do-it-additional__text--bold {
     font-size: 0.5625rem;
   }
 
   .facts-main__title,
+  .examples-main__title,
   .warning-main__title,
   .career-additional__title,
-  .simple-steps-main__title,
+  .simple-steps-main .simple-steps-main__title,
   .presentation-main__title,
   .section-university__title--main,
   .section-expert__title,
   .section-help__title,
+  .important-additional__title,
+  .important-main__title,
   .just-do-it-main__title {
     font-size: 1.6875rem;
   }
 
-  .except-numbers-additional__title {
+  .except-numbers-additional__title,
+  .get-your-bonus-main__title {
     font-size: 1.6875rem;
   }
 
   .start-it-additional__text--decorative,
-  .simple-steps-additional__text-decorative,
+  .simple-steps-main .simple-steps-additional__text-decorative,
   .presentation-additional__text--decorative,
+  .important-main__text-decorative,
   .just-do-it-additional__text--decorative {
     font-size: 0.5625rem;
   }
 
   .warning-main__subtitle,
   .career-main__subtitle,
-  .simple-steps-additional__subtitle,
-  .presentation-main__subtitle,
+  .simple-steps-main .simple-steps-additional__subtitle,
   .section-awards__title,
   .section-university__title,
   .section-expert__item--title,
-  .section-help__second-title {
+  .section-help__second-title,
+  .get-your-bonus-main__subtitle {
     font-size: 0.5625rem;
   }
 
   .сareer-main__text--light,
-  .simple-steps-additional__text--light,
+  .simple-steps-main .simple-steps-additional__text--light,
   .presentation-additional__text--light,
   .section-awards__desc,
   .section-university__desc,
   .section-expert__item--desc,
   .section-help__second-desc,
+  .get-your-bonus-main__text--light,
+  .get-your-bonus-main__text--special,
+  .important-main__text--light,
   .just-do-it-additional__text--light {
     font-size: 0.5rem;
   }
@@ -11445,64 +12075,78 @@ input[type='radio'].visually-hidden {
   .start-it-main__text--tablet,
   .facts-main__text,
   .except-numbers-additional__text,
+  .examples-main__text,
   .warning-main__text,
   .career-additional__text,
-  .simple-steps-main__text,
+  .simple-steps-main .simple-steps-main__text,
   .presentation-main__text,
   .section-university__desc--main,
   .education-section__desc--mobile,
   .section-expert__desc,
   .section-help__desc,
+  .get-your-bonus-main__text,
+  .main-form__input,
+  .important-additional__text,
+  .important-additional__text--special,
   .just-do-it-main__text {
     font-size: 0.5625rem;
   }
 
   .presentation-additional__text--bold,
+  .important-main__text--bold,
   .just-do-it-additional__text--bold {
     font-size: 0.5625rem;
   }
 
   .facts-main__title,
+  .examples-main__title,
   .warning-main__title,
   .career-additional__title,
-  .simple-steps-main__title,
+  .simple-steps-main .simple-steps-main__title,
   .presentation-main__title,
   .section-university__title--main,
   .section-expert__title,
   .section-help__title,
+  .important-additional__title,
+  .important-main__title,
   .just-do-it-main__title {
     font-size: 1.6875rem;
   }
 
-  .except-numbers-additional__title {
+  .except-numbers-additional__title,
+  .get-your-bonus-main__title {
     font-size: 1.6875rem;
   }
 
   .start-it-additional__text--decorative,
-  .simple-steps-additional__text-decorative,
+  .simple-steps-main .simple-steps-additional__text-decorative,
   .presentation-additional__text--decorative,
+  .important-main__text-decorative,
   .just-do-it-additional__text--decorative {
     font-size: 0.5625rem;
   }
 
   .warning-main__subtitle,
   .career-main__subtitle,
-  .simple-steps-additional__subtitle,
-  .presentation-main__subtitle,
+  .simple-steps-main .simple-steps-additional__subtitle,
   .section-awards__title,
   .section-university__title,
   .section-expert__item--title,
-  .section-help__second-title {
+  .section-help__second-title,
+  .get-your-bonus-main__subtitle {
     font-size: 0.5625rem;
   }
 
   .сareer-main__text--light,
-  .simple-steps-additional__text--light,
+  .simple-steps-main .simple-steps-additional__text--light,
   .presentation-additional__text--light,
   .section-awards__desc,
   .section-university__desc,
   .section-expert__item--desc,
   .section-help__second-desc,
+  .get-your-bonus-main__text--light,
+  .get-your-bonus-main__text--special,
+  .important-main__text--light,
   .just-do-it-additional__text--light {
     font-size: 0.5rem;
   }
@@ -11510,64 +12154,78 @@ input[type='radio'].visually-hidden {
   .start-it-main__text--tablet,
   .facts-main__text,
   .except-numbers-additional__text,
+  .examples-main__text,
   .warning-main__text,
   .career-additional__text,
-  .simple-steps-main__text,
+  .simple-steps-main .simple-steps-main__text,
   .presentation-main__text,
   .section-university__desc--main,
   .education-section__desc--mobile,
   .section-expert__desc,
   .section-help__desc,
+  .get-your-bonus-main__text,
+  .main-form__input,
+  .important-additional__text,
+  .important-additional__text--special,
   .just-do-it-main__text {
     font-size: 0.5625rem;
   }
 
   .presentation-additional__text--bold,
+  .important-main__text--bold,
   .just-do-it-additional__text--bold {
     font-size: 0.5625rem;
   }
 
   .facts-main__title,
+  .examples-main__title,
   .warning-main__title,
   .career-additional__title,
-  .simple-steps-main__title,
+  .simple-steps-main .simple-steps-main__title,
   .presentation-main__title,
   .section-university__title--main,
   .section-expert__title,
   .section-help__title,
+  .important-additional__title,
+  .important-main__title,
   .just-do-it-main__title {
     font-size: 1.6875rem;
   }
 
-  .except-numbers-additional__title {
+  .except-numbers-additional__title,
+  .get-your-bonus-main__title {
     font-size: 1.6875rem;
   }
 
   .start-it-additional__text--decorative,
-  .simple-steps-additional__text-decorative,
+  .simple-steps-main .simple-steps-additional__text-decorative,
   .presentation-additional__text--decorative,
+  .important-main__text-decorative,
   .just-do-it-additional__text--decorative {
     font-size: 0.5625rem;
   }
 
   .warning-main__subtitle,
   .career-main__subtitle,
-  .simple-steps-additional__subtitle,
-  .presentation-main__subtitle,
+  .simple-steps-main .simple-steps-additional__subtitle,
   .section-awards__title,
   .section-university__title,
   .section-expert__item--title,
-  .section-help__second-title {
+  .section-help__second-title,
+  .get-your-bonus-main__subtitle {
     font-size: 0.5625rem;
   }
 
   .сareer-main__text--light,
-  .simple-steps-additional__text--light,
+  .simple-steps-main .simple-steps-additional__text--light,
   .presentation-additional__text--light,
   .section-awards__desc,
   .section-university__desc,
   .section-expert__item--desc,
   .section-help__second-desc,
+  .get-your-bonus-main__text--light,
+  .get-your-bonus-main__text--special,
+  .important-main__text--light,
   .just-do-it-additional__text--light {
     font-size: 0.5rem;
   }
@@ -11575,21 +12233,127 @@ input[type='radio'].visually-hidden {
   .start-it-main__text--tablet,
   .facts-main__text,
   .except-numbers-additional__text,
+  .examples-main__text,
   .warning-main__text,
   .career-additional__text,
-  .simple-steps-main__text,
+  .simple-steps-main .simple-steps-main__text,
   .presentation-main__text,
   .section-university__desc--main,
   .education-section__desc--mobile,
   .section-expert__desc,
   .section-help__desc,
+  .get-your-bonus-main__text,
+  .main-form__input,
+  .important-additional__text,
+  .important-additional__text--special,
   .just-do-it-main__text {
     font-size: 0.5625rem;
   }
 
   .presentation-additional__text--bold,
+  .important-main__text--bold,
   .just-do-it-additional__text--bold {
     font-size: 0.5625rem;
+  }
+
+  .get-your-bonus {
+    margin-bottom: 90px;
+  }
+
+  .get-your-bonus-main__text {
+    margin-bottom: 34px;
+  }
+
+  .get-your-bonus-main__text::before {
+    width: 24px;
+    top: 26px;
+    left: -12px;
+  }
+
+  .get-your-bonus-main__block {
+    margin-bottom: 20px;
+  }
+
+  .get-your-bonus-main__block::after {
+    width: 8px;
+    height: 8px;
+    left: -28px;
+    top: 22px;
+  }
+
+  .get-your-bonus-main__block::after {
+    left: -20px;
+  }
+
+  .get-your-bonus-main__block::before {
+    font-size: 16px;
+    left: -44px;
+    top: -1px;
+  }
+
+  .get-your-bonus-main__block::before {
+    font-size: 18px;
+    left: -40px;
+    top: -3px;
+  }
+
+  .main-form {
+    padding: 44px;
+  }
+
+  .main-form__button {
+    margin-top: 18px;
+  }
+
+  .important {
+    margin-bottom: 100px;
+  }
+
+  .important-additional__title {
+    display: none;
+  }
+
+  .important-main__title {
+    display: block;
+    margin-bottom: 30px;
+  }
+
+  .important-additional__block {
+    padding: 60px;
+    margin-left: 15px;
+    margin-top: 20px;
+  }
+
+  .important-additional__text {
+    max-width: 65px;
+  }
+
+  .important-additional__price {
+    font-size: 0.875rem;
+  }
+
+  .important-additional__price::before {
+    left: -46px;
+  }
+
+  .important-additional__price--special {
+    margin-left: 20px;
+    font-size: 1.875rem;
+  }
+
+  .important-additional__price--currency {
+    margin-top: 10px;
+  }
+
+  .important-main__text-decorative::before {
+    width: 20px;
+    left: -29px;
+    top: 13px;
+  }
+
+  .important-main__button {
+    font-size: 0.625rem;
+    padding: 14px 10px;
   }
 
   .just-do-it {
@@ -11601,8 +12365,12 @@ input[type='radio'].visually-hidden {
     left: 55%;
   }
 
+  .just-do-it-main__text::before {
+    top: -17px;
+  }
+
   .just-do-it-additional__block:nth-of-type(1)::before {
-    top: 4px;
+    top: -3px;
     left: -52px;
   }
 }
@@ -11784,6 +12552,32 @@ input[type='radio'].visually-hidden {
     font-size: 0.5625rem;
   }
 
+  .examples {
+    padding-top: 90px;
+  }
+
+  .examples-main__text:before {
+    width: 30px;
+    top: 2px;
+    left: -28px;
+  }
+
+  .examples-main__text {
+    margin-bottom: 40px;
+  }
+
+  .examples-additional__first-part {
+    width: 80px;
+  }
+
+  .examples-additional__title-name {
+    font-size: 0.5rem;
+  }
+
+  .examples-additional__text {
+    font-size: 0.5rem;
+  }
+
   .warning {
     padding-top: 90px;
   }
@@ -11826,7 +12620,7 @@ input[type='radio'].visually-hidden {
 }
 
 @media screen and (min-width: 48em) and (-webkit-min-device-pixel-ratio: 2), screen and (min-width: 48em) and (min-resolution: 192dpi), screen and (min-width: 48em) and (min-resolution: 2dppx) {
-  .simple-steps-main {
+  .simple-steps-main::before {
     background-image: url(../images/background-png/stap@2x.png);
   }
 }
@@ -11840,7 +12634,15 @@ input[type='radio'].visually-hidden {
     padding: 16px 34px;
   }
 
+  .presentation-additional__btn {
+    font-size: 0.6875rem;
+  }
+
   .law-info__item {
+    font-size: 0.6875rem;
+  }
+
+  .important-main__button {
     font-size: 0.6875rem;
   }
 }
@@ -12730,46 +13532,54 @@ input[type='radio'].visually-hidden {
 
 @media screen and (min-width: 75em) {
   .facts-main__title,
+  .examples-main__title,
   .warning-main__title,
   .career-additional__title,
-  .simple-steps-main__title,
+  .simple-steps-main .simple-steps-main__title,
   .presentation-main__title,
   .section-university__title--main,
   .section-expert__title,
   .section-help__title,
+  .important-additional__title,
+  .important-main__title,
   .just-do-it-main__title {
     font-size: 1.875rem;
   }
 
-  .except-numbers-additional__title {
+  .except-numbers-additional__title,
+  .get-your-bonus-main__title {
     font-size: 1.875rem;
   }
 
   .start-it-additional__text--decorative,
-  .simple-steps-additional__text-decorative,
+  .simple-steps-main .simple-steps-additional__text-decorative,
   .presentation-additional__text--decorative,
+  .important-main__text-decorative,
   .just-do-it-additional__text--decorative {
     font-size: 0.625rem;
   }
 
   .warning-main__subtitle,
   .career-main__subtitle,
-  .simple-steps-additional__subtitle,
-  .presentation-main__subtitle,
+  .simple-steps-main .simple-steps-additional__subtitle,
   .section-awards__title,
   .section-university__title,
   .section-expert__item--title,
-  .section-help__second-title {
+  .section-help__second-title,
+  .get-your-bonus-main__subtitle {
     font-size: 0.625rem;
   }
 
   .сareer-main__text--light,
-  .simple-steps-additional__text--light,
+  .simple-steps-main .simple-steps-additional__text--light,
   .presentation-additional__text--light,
   .section-awards__desc,
   .section-university__desc,
   .section-expert__item--desc,
   .section-help__second-desc,
+  .get-your-bonus-main__text--light,
+  .get-your-bonus-main__text--special,
+  .important-main__text--light,
   .just-do-it-additional__text--light {
     font-size: 0.5625rem;
   }
@@ -12777,19 +13587,25 @@ input[type='radio'].visually-hidden {
   .start-it-main__text--tablet,
   .facts-main__text,
   .except-numbers-additional__text,
+  .examples-main__text,
   .warning-main__text,
   .career-additional__text,
-  .simple-steps-main__text,
+  .simple-steps-main .simple-steps-main__text,
   .presentation-main__text,
   .section-university__desc--main,
   .education-section__desc--mobile,
   .section-expert__desc,
   .section-help__desc,
+  .get-your-bonus-main__text,
+  .main-form__input,
+  .important-additional__text,
+  .important-additional__text--special,
   .just-do-it-main__text {
     font-size: 0.625rem;
   }
 
   .presentation-additional__text--bold,
+  .important-main__text--bold,
   .just-do-it-additional__text--bold {
     font-size: 0.625rem;
   }
@@ -12811,12 +13627,17 @@ input[type='radio'].visually-hidden {
     padding-bottom: 45px;
   }
 
-  .simple-steps-main {
+  .simple-steps-main::before {
     background-image: url(../images/background-png/stap-dectop.png);
   }
 
-  .simple-steps-additional {
+  .simple-steps-main .simple-steps-additional__block::before {
     font-size: 1.1875rem;
+  }
+
+  .simple-steps-main .simple-steps-additional__text-decorative::before {
+    width: 11px;
+    height: 3.125px;
   }
 
   .presentation-main {
@@ -12828,7 +13649,12 @@ input[type='radio'].visually-hidden {
   }
 
   .presentation-main__subtitle {
-    padding-top: 69px;
+    padding-top: 60px;
+  }
+
+  .presentation-additional__text--decorative::before {
+    width: 11px;
+    height: 3.125px;
   }
 
   .presentation-additional__item::before {
@@ -12839,7 +13665,8 @@ input[type='radio'].visually-hidden {
   }
 
   .presentation-additional__btn {
-    font-size: 0.4375rem;
+    font-size: 0.6875rem;
+    padding: 14px 12px;
   }
 
   .main-contacts {
@@ -12878,46 +13705,54 @@ input[type='radio'].visually-hidden {
   }
 
   .facts-main__title,
+  .examples-main__title,
   .warning-main__title,
   .career-additional__title,
-  .simple-steps-main__title,
+  .simple-steps-main .simple-steps-main__title,
   .presentation-main__title,
   .section-university__title--main,
   .section-expert__title,
   .section-help__title,
+  .important-additional__title,
+  .important-main__title,
   .just-do-it-main__title {
     font-size: 1.875rem;
   }
 
-  .except-numbers-additional__title {
+  .except-numbers-additional__title,
+  .get-your-bonus-main__title {
     font-size: 1.875rem;
   }
 
   .start-it-additional__text--decorative,
-  .simple-steps-additional__text-decorative,
+  .simple-steps-main .simple-steps-additional__text-decorative,
   .presentation-additional__text--decorative,
+  .important-main__text-decorative,
   .just-do-it-additional__text--decorative {
     font-size: 0.625rem;
   }
 
   .warning-main__subtitle,
   .career-main__subtitle,
-  .simple-steps-additional__subtitle,
-  .presentation-main__subtitle,
+  .simple-steps-main .simple-steps-additional__subtitle,
   .section-awards__title,
   .section-university__title,
   .section-expert__item--title,
-  .section-help__second-title {
+  .section-help__second-title,
+  .get-your-bonus-main__subtitle {
     font-size: 0.625rem;
   }
 
   .сareer-main__text--light,
-  .simple-steps-additional__text--light,
+  .simple-steps-main .simple-steps-additional__text--light,
   .presentation-additional__text--light,
   .section-awards__desc,
   .section-university__desc,
   .section-expert__item--desc,
   .section-help__second-desc,
+  .get-your-bonus-main__text--light,
+  .get-your-bonus-main__text--special,
+  .important-main__text--light,
   .just-do-it-additional__text--light {
     font-size: 0.5625rem;
   }
@@ -12925,64 +13760,78 @@ input[type='radio'].visually-hidden {
   .start-it-main__text--tablet,
   .facts-main__text,
   .except-numbers-additional__text,
+  .examples-main__text,
   .warning-main__text,
   .career-additional__text,
-  .simple-steps-main__text,
+  .simple-steps-main .simple-steps-main__text,
   .presentation-main__text,
   .section-university__desc--main,
   .education-section__desc--mobile,
   .section-expert__desc,
   .section-help__desc,
+  .get-your-bonus-main__text,
+  .main-form__input,
+  .important-additional__text,
+  .important-additional__text--special,
   .just-do-it-main__text {
     font-size: 0.625rem;
   }
 
   .presentation-additional__text--bold,
+  .important-main__text--bold,
   .just-do-it-additional__text--bold {
     font-size: 0.625rem;
   }
 
   .facts-main__title,
+  .examples-main__title,
   .warning-main__title,
   .career-additional__title,
-  .simple-steps-main__title,
+  .simple-steps-main .simple-steps-main__title,
   .presentation-main__title,
   .section-university__title--main,
   .section-expert__title,
   .section-help__title,
+  .important-additional__title,
+  .important-main__title,
   .just-do-it-main__title {
     font-size: 1.875rem;
   }
 
-  .except-numbers-additional__title {
+  .except-numbers-additional__title,
+  .get-your-bonus-main__title {
     font-size: 1.875rem;
   }
 
   .start-it-additional__text--decorative,
-  .simple-steps-additional__text-decorative,
+  .simple-steps-main .simple-steps-additional__text-decorative,
   .presentation-additional__text--decorative,
+  .important-main__text-decorative,
   .just-do-it-additional__text--decorative {
     font-size: 0.625rem;
   }
 
   .warning-main__subtitle,
   .career-main__subtitle,
-  .simple-steps-additional__subtitle,
-  .presentation-main__subtitle,
+  .simple-steps-main .simple-steps-additional__subtitle,
   .section-awards__title,
   .section-university__title,
   .section-expert__item--title,
-  .section-help__second-title {
+  .section-help__second-title,
+  .get-your-bonus-main__subtitle {
     font-size: 0.625rem;
   }
 
   .сareer-main__text--light,
-  .simple-steps-additional__text--light,
+  .simple-steps-main .simple-steps-additional__text--light,
   .presentation-additional__text--light,
   .section-awards__desc,
   .section-university__desc,
   .section-expert__item--desc,
   .section-help__second-desc,
+  .get-your-bonus-main__text--light,
+  .get-your-bonus-main__text--special,
+  .important-main__text--light,
   .just-do-it-additional__text--light {
     font-size: 0.5625rem;
   }
@@ -12990,64 +13839,78 @@ input[type='radio'].visually-hidden {
   .start-it-main__text--tablet,
   .facts-main__text,
   .except-numbers-additional__text,
+  .examples-main__text,
   .warning-main__text,
   .career-additional__text,
-  .simple-steps-main__text,
+  .simple-steps-main .simple-steps-main__text,
   .presentation-main__text,
   .section-university__desc--main,
   .education-section__desc--mobile,
   .section-expert__desc,
   .section-help__desc,
+  .get-your-bonus-main__text,
+  .main-form__input,
+  .important-additional__text,
+  .important-additional__text--special,
   .just-do-it-main__text {
     font-size: 0.625rem;
   }
 
   .presentation-additional__text--bold,
+  .important-main__text--bold,
   .just-do-it-additional__text--bold {
     font-size: 0.625rem;
   }
 
   .facts-main__title,
+  .examples-main__title,
   .warning-main__title,
   .career-additional__title,
-  .simple-steps-main__title,
+  .simple-steps-main .simple-steps-main__title,
   .presentation-main__title,
   .section-university__title--main,
   .section-expert__title,
   .section-help__title,
+  .important-additional__title,
+  .important-main__title,
   .just-do-it-main__title {
     font-size: 1.875rem;
   }
 
-  .except-numbers-additional__title {
+  .except-numbers-additional__title,
+  .get-your-bonus-main__title {
     font-size: 1.875rem;
   }
 
   .start-it-additional__text--decorative,
-  .simple-steps-additional__text-decorative,
+  .simple-steps-main .simple-steps-additional__text-decorative,
   .presentation-additional__text--decorative,
+  .important-main__text-decorative,
   .just-do-it-additional__text--decorative {
     font-size: 0.625rem;
   }
 
   .warning-main__subtitle,
   .career-main__subtitle,
-  .simple-steps-additional__subtitle,
-  .presentation-main__subtitle,
+  .simple-steps-main .simple-steps-additional__subtitle,
   .section-awards__title,
   .section-university__title,
   .section-expert__item--title,
-  .section-help__second-title {
+  .section-help__second-title,
+  .get-your-bonus-main__subtitle {
     font-size: 0.625rem;
   }
 
   .сareer-main__text--light,
-  .simple-steps-additional__text--light,
+  .simple-steps-main .simple-steps-additional__text--light,
   .presentation-additional__text--light,
   .section-awards__desc,
   .section-university__desc,
   .section-expert__item--desc,
   .section-help__second-desc,
+  .get-your-bonus-main__text--light,
+  .get-your-bonus-main__text--special,
+  .important-main__text--light,
   .just-do-it-additional__text--light {
     font-size: 0.5625rem;
   }
@@ -13055,64 +13918,78 @@ input[type='radio'].visually-hidden {
   .start-it-main__text--tablet,
   .facts-main__text,
   .except-numbers-additional__text,
+  .examples-main__text,
   .warning-main__text,
   .career-additional__text,
-  .simple-steps-main__text,
+  .simple-steps-main .simple-steps-main__text,
   .presentation-main__text,
   .section-university__desc--main,
   .education-section__desc--mobile,
   .section-expert__desc,
   .section-help__desc,
+  .get-your-bonus-main__text,
+  .main-form__input,
+  .important-additional__text,
+  .important-additional__text--special,
   .just-do-it-main__text {
     font-size: 0.625rem;
   }
 
   .presentation-additional__text--bold,
+  .important-main__text--bold,
   .just-do-it-additional__text--bold {
     font-size: 0.625rem;
   }
 
   .facts-main__title,
+  .examples-main__title,
   .warning-main__title,
   .career-additional__title,
-  .simple-steps-main__title,
+  .simple-steps-main .simple-steps-main__title,
   .presentation-main__title,
   .section-university__title--main,
   .section-expert__title,
   .section-help__title,
+  .important-additional__title,
+  .important-main__title,
   .just-do-it-main__title {
     font-size: 1.875rem;
   }
 
-  .except-numbers-additional__title {
+  .except-numbers-additional__title,
+  .get-your-bonus-main__title {
     font-size: 1.875rem;
   }
 
   .start-it-additional__text--decorative,
-  .simple-steps-additional__text-decorative,
+  .simple-steps-main .simple-steps-additional__text-decorative,
   .presentation-additional__text--decorative,
+  .important-main__text-decorative,
   .just-do-it-additional__text--decorative {
     font-size: 0.625rem;
   }
 
   .warning-main__subtitle,
   .career-main__subtitle,
-  .simple-steps-additional__subtitle,
-  .presentation-main__subtitle,
+  .simple-steps-main .simple-steps-additional__subtitle,
   .section-awards__title,
   .section-university__title,
   .section-expert__item--title,
-  .section-help__second-title {
+  .section-help__second-title,
+  .get-your-bonus-main__subtitle {
     font-size: 0.625rem;
   }
 
   .сareer-main__text--light,
-  .simple-steps-additional__text--light,
+  .simple-steps-main .simple-steps-additional__text--light,
   .presentation-additional__text--light,
   .section-awards__desc,
   .section-university__desc,
   .section-expert__item--desc,
   .section-help__second-desc,
+  .get-your-bonus-main__text--light,
+  .get-your-bonus-main__text--special,
+  .important-main__text--light,
   .just-do-it-additional__text--light {
     font-size: 0.5625rem;
   }
@@ -13120,21 +13997,60 @@ input[type='radio'].visually-hidden {
   .start-it-main__text--tablet,
   .facts-main__text,
   .except-numbers-additional__text,
+  .examples-main__text,
   .warning-main__text,
   .career-additional__text,
-  .simple-steps-main__text,
+  .simple-steps-main .simple-steps-main__text,
   .presentation-main__text,
   .section-university__desc--main,
   .education-section__desc--mobile,
   .section-expert__desc,
   .section-help__desc,
+  .get-your-bonus-main__text,
+  .main-form__input,
+  .important-additional__text,
+  .important-additional__text--special,
   .just-do-it-main__text {
     font-size: 0.625rem;
   }
 
   .presentation-additional__text--bold,
+  .important-main__text--bold,
   .just-do-it-additional__text--bold {
     font-size: 0.625rem;
+  }
+
+  .get-your-bonus {
+    margin-bottom: 120px;
+  }
+
+  .get-your-bonus-main__text::before {
+    width: 26px;
+  }
+
+  .important {
+    margin-bottom: 120px;
+  }
+
+  .important-main__title {
+    margin-bottom: 34px;
+  }
+
+  .important-additional__block {
+    padding: 60px;
+  }
+
+  .important-additional__text {
+    max-width: 70px;
+  }
+
+  .important-main__text-decorative::before {
+    width: 24px;
+  }
+
+  .important-main__button {
+    font-size: 0.6875rem;
+    padding: 14px 12px;
   }
 
   .just-do-it {
@@ -14030,7 +14946,7 @@ input[type='radio'].visually-hidden {
 }
 
 @media screen and (min-width: 75em) and (-webkit-min-device-pixel-ratio: 2), screen and (min-width: 75em) and (min-resolution: 192dpi), screen and (min-width: 75em) and (min-resolution: 2dppx) {
-  .simple-steps-main {
+  .simple-steps-main::before {
     background-image: url(../images/background-png/stap-dectop@2x.png);
   }
 }
@@ -14120,6 +15036,22 @@ input[type='radio'].visually-hidden {
 
   .except-numbers {
     padding-top: 115px;
+  }
+
+  .examples {
+    padding-top: 115px;
+  }
+
+  .examples-additional__first-part {
+    width: 88px;
+  }
+
+  .examples-additional__title-name {
+    font-size: 0.55rem;
+  }
+
+  .examples-additional__text {
+    font-size: 0.55rem;
   }
 
   .warning {
@@ -14489,11 +15421,11 @@ input[type='radio'].visually-hidden {
 }
 
 @media (-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi), (min-resolution: 2dppx) {
-  .simple-steps-main {
+  .simple-steps-main::before {
     background-image: url(../images/background-png/stap-mobile@2x.png);
   }
 
   .section-awards__items--icon {
-    background-image: url("../../../images/main-images/decorative-images/un@2x.png");
+    background-image: url("../images/main-images/decorative-images/un@2x.png");
   }
 }

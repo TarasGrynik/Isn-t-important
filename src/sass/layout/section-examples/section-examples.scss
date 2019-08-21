@@ -1,0 +1,168 @@
+.examples {
+    padding-top: 50px;
+
+    @media (min-width: 48em) {
+        padding-top: 90px;
+    }
+
+    @media (min-width: 75em) {
+        padding-top: 115px;
+    }
+}
+
+.examples-main__title {
+    @extend %sec-title-style;
+    margin-bottom: 6px;
+    padding: 0;
+}
+
+.examples-main__text {
+    @extend %sec-title-text-style;
+    margin-bottom: 40px;
+    position: relative;
+    padding-left: 10px;
+
+    &--special {
+        color: $banner-title-text-color;
+        background-color: $title-text-color;
+    }
+
+    &:before {
+        @extend %pseudos;
+        top: 10px;
+        left: -22px;
+        content: '';
+        width: 20px;
+        height: 4px;
+        background-color: $title-text-color;
+
+        @media (min-width: 48em) {
+            width: 30px;
+            top: 2px;
+            left: -28px;
+        }
+    }
+
+    @media (min-width: 48em) {
+        margin-bottom: 40px;
+    }
+}
+
+
+.examples-additional__slider {
+    padding: 0;
+    margin: 0;
+} 
+
+.examples-additional__slide {
+    display: none;
+    overflow: hidden;
+    max-height: 210px;
+    padding: 16px;
+    box-shadow: 0px 8px 14px rgba($color: #000000, $alpha: 0.15);
+
+    &--active {
+        display: flex;
+    }
+}
+
+.examples-additional__first-part {
+    width: 56px;
+
+    @media (min-width:48em) {
+        width: 80px;
+    }
+
+    @media (min-width:75em) {
+        width: 88px;
+    }
+}
+
+
+.examples-additional__second-part {
+    max-height: 178px;
+    overflow: auto;
+
+    &::-webkit-scrollbar {
+        width: 5px;
+    }
+
+&::-webkit-scrollbar-thumb {
+    height: 26px;
+    background-color: $title-text-color;
+}
+
+    &::-webkit-scrollbar-track {
+background-color: $title-text-color;
+border: 2px solid transparent;
+    background-clip: content-box;
+    }
+
+}
+
+.examples-additional__title-name {
+    // display: block;
+    font-family: $special-font;
+    color: $title-text-color;
+    font-size: remy(5.6);
+    
+    @media (min-width: 48em) {
+        font-size: remy(8);
+    }
+
+    @media (min-width: 75em) {
+        font-size: remy(8.8);
+    }
+}
+
+.examples-additional__text {
+    font-size: remy(5.5);
+    padding: 0;
+    margin: 0;
+        
+    @media (min-width: 48em) {
+        font-size: remy(8);
+    }
+
+    @media (min-width: 75em) {
+        font-size: remy(8.8);
+    }
+}
+
+.examples-pagination__numbers {
+    @extend %list;
+    @include flex-center ('all');
+}
+
+.examples-pagination__item {
+    font-family: $special-font;
+    color: $title-text-color;
+    font-size: remy(4);
+    margin-right: 10px;
+
+    &:last-child {
+        margin-right: 0px;
+    }
+
+    &--active {
+        font-size: remy(7);
+        position: relative;
+
+        &::before {
+            @extend %pseudos;
+            content: '';
+            width: 14px;
+            height: 2px;
+            top: 4px;
+            background-color: $title-text-color;
+        }
+    }
+}
+
+
+.examples-pagination__arrow {
+    width: 15px;
+    height: 15px;
+    @include flex-center('all');
+    background-color: $title-text-color;
+}
