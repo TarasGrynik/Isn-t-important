@@ -1,0 +1,207 @@
+.important {
+  margin-bottom: 80px;
+
+  @media screen and (min-width: 48em) {
+    margin-bottom: 100px;
+  }
+
+  @media screen and (min-width: 75em) {
+    margin-bottom: 120px;
+  }
+}
+
+.important-additional {
+  text-align: start;
+}
+
+.important-additional__title,
+.important-main__title {
+  @extend %sec-title-style;
+}
+
+.important-additional__title {
+  margin-left: 60%;
+  transform: translateX(-50%);
+  margin-bottom: 20px;
+
+  @media screen and (min-width: 48em) {
+    display: none;
+  }
+}
+
+.important-main__title {
+  display: none;
+
+  @media screen and (min-width: 48em) {
+    display: block;
+    margin-bottom: 30px;
+  }
+
+  @media screen and (min-width: 75em) {
+    margin-bottom: 34px;
+  }
+}
+
+.important-additional__block {
+  background-color: #052139;
+  padding: 80px;
+  margin-bottom: 40px;
+
+  @media screen and (min-width: 48em) {
+    padding: 60px;
+    margin-left: 15px;
+    margin-top: 20px;
+  }
+
+  @media screen and (min-width: 75em) {
+    padding: 60px;
+  }
+}
+
+.important-additional__subblock {
+  @include flex-center('sp-between');
+}
+
+.important-additional__text,
+.important-additional__text--special {
+  @extend %sec-title-text-style;
+}
+
+.important-additional__text {
+  max-width: 95px;
+  color: $banner-title-text-color;
+
+  @media screen and (min-width: 48em) {
+    max-width: 65px;
+  }
+
+  @media screen and (min-width: 75em) {
+    max-width: 70px;
+  }
+}
+
+.important-additional__price-subblock {
+  max-width: 70px;
+}
+
+.important-additional__text--special {
+  display: inline-block;
+  margin-right: auto;
+  margin-bottom: 4px;
+  line-height: 1.1;
+  background-color: $addition-style-color;
+}
+
+.important-additional__price {
+  position: relative;
+  @extend %article-title-style;
+  color: $banner-title-text-color;
+  margin-left: 50px;
+
+  @media screen and (min-width: 48em) {
+    font-size: remy(14);
+  }
+
+  &::before {
+    @extend %pseudos;
+    content: '';
+    height: 1px;
+    width: 36px;
+    left: -50px;
+    top: 10px;
+    background-color: $banner-title-text-color;
+
+    @media screen and (min-width: 48em) {
+      left: -46px;
+    }
+  }
+}
+
+.important-additional__price--special {
+  margin: 0;
+  font-family: $special-font;
+  font-size: remy(40);
+  margin-left: 50px;
+  color: $banner-title-text-color;
+
+  @media screen and (min-width: 48em) {
+    margin-left: 20px;
+    font-size: remy(30);
+  }
+}
+
+.important-additional__price--currency {
+  margin: 0;
+  @extend %article-title-style;
+  color: $banner-title-text-color;
+  margin-top: 14px;
+  margin-left: 6px;
+
+  @media screen and (min-width: 48em) {
+    margin-top: 10px;
+  }
+}
+
+.important-main__text--bold {
+  @extend %bold-text-style;
+}
+
+.important-main__text--light {
+  @extend %main-page-font;
+}
+
+.important-main__text-decorative {
+  @extend %accent-text;
+  position: relative;
+  margin-bottom: 30px;
+
+  &::before {
+    @extend %pseudos;
+    content: '';
+    height: 2px;
+    width: 36px;
+    transform: rotate(124deg);
+    left: -50px;
+    top: 18px;
+    z-index: 20;
+    background-color: $title-text-color;
+
+    @media screen and (min-width: 48em) {
+      width: 20px;
+      left: -29px;
+      top: 13px;
+    }
+
+    @media screen and (min-width: 75em) {
+      width: 24px;
+    }
+  }
+}
+
+.important-main__button {
+  padding: 14px 30px;
+  font-size: remy(12);
+
+  @media screen and (min-width: 48em) {
+    font-size: remy(10);
+    padding: 14px 10px;
+  }
+
+  @media screen and (min-width: 62em) {
+    font-size: remy(11);
+  }
+
+  @media screen and (min-width: 75em) {
+    font-size: remy(11);
+    padding: 14px 12px;
+  }
+
+  &:hover,
+  &:focus {
+    @extend %btn-hover;
+  }
+
+  &:active {
+    @extend %btn-active;
+  }
+}

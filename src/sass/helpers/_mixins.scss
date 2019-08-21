@@ -23,3 +23,11 @@
   }
 }
 
+// mixin for @media font-size
+
+@mixin media-font($font-size, $line-height: 1.44, $min-width: 48em) {
+  @media(min-width: $min-width) {
+    font-size: $font-size;
+    line-height: $line-height;
+  }
+}
