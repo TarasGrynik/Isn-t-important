@@ -16,6 +16,7 @@
 .presentation-main__text {
   @extend %sec-title-text-style;
   position: relative;
+
   &::before {
     @extend %pseudos;
     content: '';
@@ -42,9 +43,11 @@
 }
 
 .presentation-main__subtitle {
-  @extend %third-title-style;
+  font: remy(10.5)/1.53 $special-font;
+  color: $title-text-color;
+  text-transform: uppercase;
+
   padding: 25px 0 40px;
-  font-size: remy(11);
   @media screen and (min-width: 48em) {
     padding-top: 55px;
     padding-bottom: 0px;

@@ -6636,7 +6636,6 @@ a.text-dark:focus {
 .warning-main__subtitle,
 .career-main__subtitle,
 .simple-steps-additional__subtitle,
-.presentation-main__subtitle,
 .section-awards__title,
 .section-university__title,
 .section-expert__item--title,
@@ -7838,8 +7837,10 @@ h6 {
 }
 
 .presentation-main__subtitle {
+  font: 0.65625rem/1.53 "Acrom-ExtraBold", sans-serif;
+  color: #000000;
+  text-transform: uppercase;
   padding: 25px 0 40px;
-  font-size: 0.6875rem;
 }
 
 .presentation-additional__block {
@@ -8046,7 +8047,6 @@ h6 {
 .warning-main__subtitle,
 .career-main__subtitle,
 .simple-steps-additional__subtitle,
-.presentation-main__subtitle,
 .section-awards__title,
 .section-university__title,
 .section-expert__item--title,
@@ -8328,7 +8328,6 @@ input[type='radio'].visually-hidden {
 .warning-main__subtitle,
 .career-main__subtitle,
 .simple-steps-additional__subtitle,
-.presentation-main__subtitle,
 .section-awards__title,
 .section-university__title,
 .section-expert__item--title,
@@ -8604,7 +8603,6 @@ input[type='radio'].visually-hidden {
 .warning-main__subtitle,
 .career-main__subtitle,
 .simple-steps-additional__subtitle,
-.presentation-main__subtitle,
 .section-awards__title,
 .section-university__title,
 .section-expert__item--title,
@@ -8879,7 +8877,6 @@ input[type='radio'].visually-hidden {
 .warning-main__subtitle,
 .career-main__subtitle,
 .simple-steps-additional__subtitle,
-.presentation-main__subtitle,
 .section-awards__title,
 .section-university__title,
 .section-expert__item--title,
@@ -11596,7 +11593,6 @@ input[type='radio'].visually-hidden {
   .warning-main__subtitle,
   .career-main__subtitle,
   .simple-steps-additional__subtitle,
-  .presentation-main__subtitle,
   .section-awards__title,
   .section-university__title,
   .section-expert__item--title,
@@ -11809,7 +11805,6 @@ input[type='radio'].visually-hidden {
   .warning-main__subtitle,
   .career-main__subtitle,
   .simple-steps-additional__subtitle,
-  .presentation-main__subtitle,
   .section-awards__title,
   .section-university__title,
   .section-expert__item--title,
@@ -11887,7 +11882,6 @@ input[type='radio'].visually-hidden {
   .warning-main__subtitle,
   .career-main__subtitle,
   .simple-steps-additional__subtitle,
-  .presentation-main__subtitle,
   .section-awards__title,
   .section-university__title,
   .section-expert__item--title,
@@ -11965,7 +11959,6 @@ input[type='radio'].visually-hidden {
   .warning-main__subtitle,
   .career-main__subtitle,
   .simple-steps-additional__subtitle,
-  .presentation-main__subtitle,
   .section-awards__title,
   .section-university__title,
   .section-expert__item--title,
@@ -12043,7 +12036,6 @@ input[type='radio'].visually-hidden {
   .warning-main__subtitle,
   .career-main__subtitle,
   .simple-steps-additional__subtitle,
-  .presentation-main__subtitle,
   .section-awards__title,
   .section-university__title,
   .section-expert__item--title,
@@ -13370,7 +13362,6 @@ input[type='radio'].visually-hidden {
   .warning-main__subtitle,
   .career-main__subtitle,
   .simple-steps-additional__subtitle,
-  .presentation-main__subtitle,
   .section-awards__title,
   .section-university__title,
   .section-expert__item--title,
@@ -13542,7 +13533,6 @@ input[type='radio'].visually-hidden {
   .warning-main__subtitle,
   .career-main__subtitle,
   .simple-steps-additional__subtitle,
-  .presentation-main__subtitle,
   .section-awards__title,
   .section-university__title,
   .section-expert__item--title,
@@ -13620,7 +13610,6 @@ input[type='radio'].visually-hidden {
   .warning-main__subtitle,
   .career-main__subtitle,
   .simple-steps-additional__subtitle,
-  .presentation-main__subtitle,
   .section-awards__title,
   .section-university__title,
   .section-expert__item--title,
@@ -13698,7 +13687,6 @@ input[type='radio'].visually-hidden {
   .warning-main__subtitle,
   .career-main__subtitle,
   .simple-steps-additional__subtitle,
-  .presentation-main__subtitle,
   .section-awards__title,
   .section-university__title,
   .section-expert__item--title,
@@ -13776,7 +13764,6 @@ input[type='radio'].visually-hidden {
   .warning-main__subtitle,
   .career-main__subtitle,
   .simple-steps-additional__subtitle,
-  .presentation-main__subtitle,
   .section-awards__title,
   .section-university__title,
   .section-expert__item--title,
