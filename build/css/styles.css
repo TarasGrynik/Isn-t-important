@@ -6728,7 +6728,6 @@ a.text-dark:focus {
 .simple-steps-additional__subtitle::before,
 .simple-steps-additional__text-decorative::before,
 .presentation-main__text::before,
-.presentation-additional__text--decorative::before,
 .presentation-additional__item::before,
 .section-university__desc--main::before,
 .education-section__desc--mobile::before,
@@ -6761,6 +6760,7 @@ a.text-dark:focus {
 .main-contacts__button:focus,
 .banner__btn:hover,
 .presentation-additional__btn:hover,
+.presentation-additional__btn:focus,
 .main-form__button:hover,
 .main-form__button:focus,
 .important-main__button:hover,
@@ -7794,7 +7794,7 @@ h6 {
 }
 
 .presentation-main__title {
-  padding-bottom: 15px;
+  padding: 40px 0 15px;
 }
 
 .presentation-main__text {
@@ -7803,7 +7803,7 @@ h6 {
 
 .presentation-main__text::before {
   content: '';
-  left: -20px;
+  left: -30px;
   top: 8px;
   width: 20px;
   height: 2px;
@@ -7815,22 +7815,33 @@ h6 {
 }
 
 .presentation-main__subtitle {
-  padding-top: 25px;
+  padding: 25px 0 40px;
+  font-size: 0.6875rem;
+}
+
+.presentation-additional__block {
+  padding-bottom: 45px;
+}
+
+.presentation-additional__text--decorative {
+  padding-top: 50px;
 }
 
 .presentation-additional__text--decorative::before {
   content: '';
+  position: absolute;
+  display: none;
   left: -15px;
-  top: 7px;
+  top: 10px;
   width: 10px;
-  height: 2px;
+  height: 2.5px;
   background-color: #000000;
-  transform: skewY(-45deg);
+  transform: skewY(-56deg);
 }
 
 .presentation-additional__item::before {
   content: ' ';
-  left: -35px;
+  left: -50px;
   top: 25px;
   width: 50px;
   height: 15px;
@@ -7841,6 +7852,7 @@ h6 {
   font-family: "Acrom-Bold", sans-serif;
   font-size: 0.75rem;
   line-height: 1.45;
+  clip: rect(6px, auto, auto, auto);
 }
 
 .presentation-additional__item:nth-child(1)::before {
@@ -7869,8 +7881,8 @@ h6 {
 
 .presentation-additional__btn {
   margin-top: 40px;
-  font-size: 0.6875rem;
-  line-height: 50px;
+  padding: 14px 30px;
+  font-size: 0.75rem;
 }
 
 .main-contacts {
@@ -8103,7 +8115,6 @@ h6 {
 .simple-steps-additional__subtitle::before,
 .simple-steps-additional__text-decorative::before,
 .presentation-main__text::before,
-.presentation-additional__text--decorative::before,
 .presentation-additional__item::before,
 .section-university__desc--main::before,
 .education-section__desc--mobile::before,
@@ -8136,6 +8147,7 @@ h6 {
 .main-contacts__button:focus,
 .banner__btn:hover,
 .presentation-additional__btn:hover,
+.presentation-additional__btn:focus,
 .main-form__button:hover,
 .main-form__button:focus,
 .important-main__button:hover,
@@ -8383,7 +8395,6 @@ input[type='radio'].visually-hidden {
 .simple-steps-additional__subtitle::before,
 .simple-steps-additional__text-decorative::before,
 .presentation-main__text::before,
-.presentation-additional__text--decorative::before,
 .presentation-additional__item::before,
 .section-university__desc--main::before,
 .education-section__desc--mobile::before,
@@ -8416,6 +8427,7 @@ input[type='radio'].visually-hidden {
 .main-contacts__button:focus,
 .banner__btn:hover,
 .presentation-additional__btn:hover,
+.presentation-additional__btn:focus,
 .main-form__button:hover,
 .main-form__button:focus,
 .important-main__button:hover,
@@ -8657,7 +8669,6 @@ input[type='radio'].visually-hidden {
 .simple-steps-additional__subtitle::before,
 .simple-steps-additional__text-decorative::before,
 .presentation-main__text::before,
-.presentation-additional__text--decorative::before,
 .presentation-additional__item::before,
 .section-university__desc--main::before,
 .education-section__desc--mobile::before,
@@ -8690,6 +8701,7 @@ input[type='radio'].visually-hidden {
 .main-contacts__button:focus,
 .banner__btn:hover,
 .presentation-additional__btn:hover,
+.presentation-additional__btn:focus,
 .main-form__button:hover,
 .main-form__button:focus,
 .important-main__button:hover,
@@ -8930,7 +8942,6 @@ input[type='radio'].visually-hidden {
 .simple-steps-additional__subtitle::before,
 .simple-steps-additional__text-decorative::before,
 .presentation-main__text::before,
-.presentation-additional__text--decorative::before,
 .presentation-additional__item::before,
 .section-university__desc--main::before,
 .education-section__desc--mobile::before,
@@ -8963,6 +8974,7 @@ input[type='radio'].visually-hidden {
 .main-contacts__button:focus,
 .banner__btn:hover,
 .presentation-additional__btn:hover,
+.presentation-additional__btn:focus,
 .main-form__button:hover,
 .main-form__button:focus,
 .important-main__button:hover,
@@ -11660,7 +11672,17 @@ input[type='radio'].visually-hidden {
   }
 
   .presentation-main__subtitle {
-    padding-top: 64px;
+    padding-top: 55px;
+    padding-bottom: 0px;
+  }
+
+  .presentation-additional__text--decorative::before {
+    display: block;
+  }
+
+  .presentation-additional__text--decorative {
+    padding-top: 0px;
+    margin-bottom: 0px;
   }
 
   .presentation-additional__item::before {
@@ -11669,11 +11691,12 @@ input[type='radio'].visually-hidden {
     font-size: 0.4375rem;
     top: 10px;
     left: -15px;
+    clip: auto;
   }
 
   .presentation-additional__btn {
-    line-height: 20px;
-    font-size: 0.375rem;
+    font-size: 0.625rem;
+    padding: 14px 10px;
     margin-top: 0px;
   }
 
@@ -12374,6 +12397,10 @@ input[type='radio'].visually-hidden {
 
   .main-contacts__button {
     padding: 16px 34px;
+  }
+
+  .presentation-additional__btn {
+    font-size: 0.6875rem;
   }
 
   .law-info__item {
@@ -13381,7 +13408,12 @@ input[type='radio'].visually-hidden {
   }
 
   .presentation-main__subtitle {
-    padding-top: 69px;
+    padding-top: 60px;
+  }
+
+  .presentation-additional__text--decorative::before {
+    width: 11px;
+    height: 3.125px;
   }
 
   .presentation-additional__item::before {
@@ -13392,7 +13424,8 @@ input[type='radio'].visually-hidden {
   }
 
   .presentation-additional__btn {
-    font-size: 0.4375rem;
+    font-size: 0.6875rem;
+    padding: 14px 12px;
   }
 
   .main-contacts {
