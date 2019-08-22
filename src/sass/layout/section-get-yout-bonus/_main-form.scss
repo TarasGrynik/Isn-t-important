@@ -50,20 +50,8 @@
 
 .main-form__button {
   margin-top: 28px;
-  padding: 14px 20px;
-  font-size: remy(12);
-  font-family: $special-font;
 
   @media screen and (min-width: 48em) {
     margin-top: 18px;
-  }
-
-  &:hover,
-  &:focus {
-    @extend %btn-hover;
-  }
-
-  &:active {
-    @extend %btn-active;
   }
 }
