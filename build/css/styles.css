@@ -6591,9 +6591,10 @@ a.text-dark:focus {
 /* Placeholder for section title */
 
 .facts-main__title,
+.examples-main__title,
 .warning-main__title,
 .career-additional__title,
-.simple-steps-main__title,
+.simple-steps-main .simple-steps-main__title,
 .presentation-main__title,
 .section-university__title--main,
 .section-expert__title,
@@ -6621,7 +6622,7 @@ a.text-dark:focus {
 /* accent orange text */
 
 .start-it-additional__text--decorative,
-.simple-steps-additional__text-decorative,
+.simple-steps-main .simple-steps-additional__text-decorative,
 .presentation-additional__text--decorative,
 .important-main__text-decorative,
 .just-do-it-additional__text--decorative {
@@ -6635,8 +6636,7 @@ a.text-dark:focus {
 
 .warning-main__subtitle,
 .career-main__subtitle,
-.simple-steps-additional__subtitle,
-.presentation-main__subtitle,
+.simple-steps-main .simple-steps-additional__subtitle,
 .section-awards__title,
 .section-university__title,
 .section-expert__item--title,
@@ -6650,7 +6650,7 @@ a.text-dark:focus {
 }
 
 .сareer-main__text--light,
-.simple-steps-additional__text--light,
+.simple-steps-main .simple-steps-additional__text--light,
 .presentation-additional__text--light,
 .section-awards__desc,
 .section-university__desc,
@@ -6669,9 +6669,10 @@ a.text-dark:focus {
 .start-it-main__text--tablet,
 .facts-main__text,
 .except-numbers-additional__text,
+.examples-main__text,
 .warning-main__text,
 .career-additional__text,
-.simple-steps-main__text,
+.simple-steps-main .simple-steps-main__text,
 .presentation-main__text,
 .section-university__desc--main,
 .education-section__desc--mobile,
@@ -6700,6 +6701,8 @@ a.text-dark:focus {
 /* Placeholder for list */
 
 .social-list,
+.examples-pagination__numbers,
+.simple-steps-main .simple-steps-additional,
 .presentation-additional__block,
 .law-info__list {
   list-style: none;
@@ -6722,28 +6725,47 @@ a.text-dark:focus {
 .facts-main__text:before,
 .facts-additional__item:before,
 .except-numbers-additional__item:before,
+.examples-main__text:before,
+.examples-pagination__item--active::before,
 .warning-main__text:before,
 .warning-main__item:before,
-.simple-steps-main__text::before,
-.simple-steps-additional__subtitle::before,
-.simple-steps-additional__text-decorative::before,
+.simple-steps-main .simple-steps-main__text::before,
+.simple-steps-main .simple-steps-additional__subtitle::before,
+.simple-steps-main .simple-steps-additional__block::before,
+.simple-steps-main .simple-steps-additional__text-decorative::before,
 .presentation-main__text::before,
-.presentation-additional__text--decorative::before,
 .presentation-additional__item::before,
 .section-university__desc--main::before,
 .education-section__desc--mobile::before,
 .section-expert__desc::before,
 .section-expert__item--title::before,
 .section-help__desc::before,
-.get-your-bonus-main__text::before,
 .get-your-bonus-main__block::after,
 .get-your-bonus-main__block::before,
 .important-additional__price::before,
-.important-main__text-decorative::before,
-.just-do-it-main__text::before,
 .just-do-it-additional__block:nth-of-type(1)::before {
   position: absolute;
   display: block;
+}
+
+.get-your-bonus-main__text::before,
+.just-do-it-main__text::before {
+  position: absolute;
+  display: block;
+  content: '';
+  height: 3px;
+  width: 20px;
+  background-color: #000000;
+}
+
+.important-main__text-decorative::before {
+  position: absolute;
+  display: block;
+  content: '';
+  height: 2px;
+  width: 32px;
+  transform: rotate(122deg);
+  background-color: #000000;
 }
 
 .start-it-main__special-text,
@@ -6757,27 +6779,25 @@ a.text-dark:focus {
   font-family: "Acrom-ExtraBold", sans-serif;
 }
 
+.btn:hover,
+.btn:focus,
+.btn-wide:hover,
+.btn-wide:focus,
 .main-contacts__button:hover,
 .main-contacts__button:focus,
 .banner__btn:hover,
 .presentation-additional__btn:hover,
-.main-form__button:hover,
-.main-form__button:focus,
-.important-main__button:hover,
-.important-main__button:focus,
-.just-do-it-main__button:hover,
-.just-do-it-main__button:focus {
+.presentation-additional__btn:focus {
   background-color: #17ecff;
   color: #ffffff;
 }
 
+.btn:active,
+.btn-wide:active,
 .main-contacts__button:active,
 .banner__btn,
 .banner__btn:active,
-.presentation-additional__btn:active,
-.main-form__button:active,
-.important-main__button:active,
-.just-do-it-main__button:active {
+.presentation-additional__btn:active {
   background-color: #06a4b2;
 }
 
@@ -6793,6 +6813,24 @@ a.text-dark:focus {
   border: none;
   box-shadow: 0px 5px 6px rgba(196, 87, 15, 0.26);
   transition: all 0.2s linear;
+  padding: 14px 26px;
+  font-size: 0.6875rem;
+}
+
+.btn-wide {
+  border-radius: 0;
+  font-family: "Acrom-ExtraBold", sans-serif;
+  text-transform: uppercase;
+  cursor: pointer;
+  display: inline-block;
+  color: #ffffff;
+  background-color: #ff6b08;
+  text-align: center;
+  border: none;
+  box-shadow: 0px 5px 6px rgba(196, 87, 15, 0.26);
+  transition: all 0.2s linear;
+  padding: 14px 40px;
+  font-size: 0.6875rem;
 }
 
 /* VISUALLY HIDDEN HELPER CLASS */
@@ -7315,6 +7353,7 @@ h6 {
 }
 
 .banner__desc {
+  padding: 0 25px;
   z-index: 1;
   font-family: "Acrom-Bold", sans-serif;
 }
@@ -7328,14 +7367,14 @@ h6 {
 .banner__desc:before {
   line-height: 0;
   content: "<";
-  left: -11px;
+  left: 0;
   top: 8px;
 }
 
 .banner__desc:after {
   line-height: 0;
   content: "/>";
-  right: 0;
+  right: 5px;
 }
 
 .banner__company {
@@ -7625,6 +7664,127 @@ h6 {
   margin-bottom: 22px;
 }
 
+.examples {
+  padding-top: 50px;
+}
+
+.examples-main__title {
+  margin-bottom: 6px;
+  padding: 0;
+}
+
+.examples-main__text {
+  margin-bottom: 40px;
+  position: relative;
+  padding-left: 10px;
+}
+
+.examples-main__text--special {
+  color: #ffffff;
+  background-color: #000000;
+}
+
+.examples-main__text:before {
+  top: 10px;
+  left: -22px;
+  content: '';
+  width: 20px;
+  height: 4px;
+  background-color: #000000;
+}
+
+.examples-additional__slider {
+  padding: 0;
+  margin: 0;
+}
+
+.examples-additional__slide {
+  display: none;
+  overflow: hidden;
+  max-height: 210px;
+  padding: 16px;
+  box-shadow: 0px 8px 14px rgba(0, 0, 0, 0.15);
+}
+
+.examples-additional__slide--active {
+  display: flex;
+}
+
+.examples-additional__first-part {
+  width: 56px;
+}
+
+.examples-additional__second-part {
+  max-height: 178px;
+  overflow: auto;
+}
+
+.examples-additional__second-part::-webkit-scrollbar {
+  width: 5px;
+}
+
+.examples-additional__second-part::-webkit-scrollbar-thumb {
+  height: 26px;
+  background-color: #000000;
+}
+
+.examples-additional__second-part::-webkit-scrollbar-track {
+  background-color: #000000;
+  border: 2px solid transparent;
+  background-clip: content-box;
+}
+
+.examples-additional__title-name {
+  font-family: "Acrom-ExtraBold", sans-serif;
+  color: #000000;
+  font-size: 0.35rem;
+}
+
+.examples-additional__text {
+  font-size: 0.34375rem;
+  padding: 0;
+  margin: 0;
+}
+
+.examples-pagination__numbers {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.examples-pagination__item {
+  font-family: "Acrom-ExtraBold", sans-serif;
+  color: #000000;
+  font-size: 0.25rem;
+  margin-right: 10px;
+}
+
+.examples-pagination__item:last-child {
+  margin-right: 0px;
+}
+
+.examples-pagination__item--active {
+  font-size: 0.4375rem;
+  position: relative;
+}
+
+.examples-pagination__item--active::before {
+  content: '';
+  width: 14px;
+  height: 2px;
+  top: 4px;
+  background-color: #000000;
+}
+
+.examples-pagination__arrow {
+  width: 15px;
+  height: 15px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #000000;
+}
+
 .warning {
   padding-top: 50px;
 }
@@ -7730,25 +7890,34 @@ h6 {
 }
 
 .simple-steps-main {
-  background-image: url(../images/background-png/stap-mobile.png);
-  background-repeat: no-repeat;
-  background-position: 20% 0%;
+  position: relative;
 }
 
-.simple-steps-main__title {
+.simple-steps-main::before {
+  content: "";
+  position: absolute;
+  left: 60px;
+  display: block;
+  z-index: -1;
+  height: 146px;
+  width: 147px;
+  background: url(../images/background-png/stap-mobile.png) no-repeat;
+}
+
+.simple-steps-main .simple-steps-main__title {
   padding-bottom: 15px;
 }
 
-.simple-steps-main__title--dark {
+.simple-steps-main .simple-steps-main__title--dark {
   color: #ffffff;
   background-color: #000000;
 }
 
-.simple-steps-main__text {
+.simple-steps-main .simple-steps-main__text {
   padding-bottom: 50px;
 }
 
-.simple-steps-main__text::before {
+.simple-steps-main .simple-steps-main__text::before {
   content: '';
   left: -15px;
   top: 8px;
@@ -7757,44 +7926,78 @@ h6 {
   background-color: #000000;
 }
 
-.simple-steps-additional__subtitle::before {
+.simple-steps-main .simple-steps-additional__subtitle::before {
   content: '';
   left: -15px;
-  top: 20px;
+  top: 30px;
   width: 10px;
   height: 10px;
   background-color: #17ecff;
 }
 
-.simple-steps-additional__block {
+.simple-steps-main .simple-steps-additional__block {
   padding-bottom: 30px;
 }
 
-.simple-steps-additional {
-  list-style-type: decimal-leading-zero;
+.simple-steps-main .simple-steps-additional__block {
+  padding-bottom: 30px;
+}
+
+.simple-steps-main .simple-steps-additional__block::before {
+  content: ' ';
+  left: -40px;
+  top: -10px;
+  clip: rect(auto, auto, auto, 9px);
   font-size: 1.5625rem;
-  padding-top: 5px;
-  line-height: 1.16px;
   color: #000000;
   font-family: "Acrom-Bold", sans-serif;
 }
 
-.simple-steps-additional__text-decorative::before {
+.simple-steps-main .simple-steps-additional__block:nth-child(1)::before {
+  content: '01.';
+}
+
+.simple-steps-main .simple-steps-additional__block:nth-child(2)::before {
+  content: '02.';
+}
+
+.simple-steps-main .simple-steps-additional__block:nth-child(3)::before {
+  content: '03.';
+}
+
+.simple-steps-main .simple-steps-additional__block:nth-child(4)::before {
+  content: '04.';
+}
+
+.simple-steps-main .simple-steps-additional__text-decorative::before {
   content: '';
   left: -10px;
   top: 10px;
-  width: 10px;
-  height: 2px;
+  width: 13px;
+  height: 1.562px;
   background-color: #000000;
-  transform: skewY(-45deg);
+  transform: skewY(-56deg);
 }
+
+/* 
+
+
+
+
+@media screen and (min-width: 75em) {
+  background-image: url(../images/background-png/stap-dectop.png);
+
+  @media (min-resolution: 192dpi), (min-resolution: 2dppx) {
+    background-image: url(../images/background-png/stap-dectop@2x.png);
+  }
+} */
 
 .presentation-main {
   padding: 20px 0 45px;
 }
 
 .presentation-main__title {
-  padding-bottom: 15px;
+  padding: 40px 0 15px;
 }
 
 .presentation-main__text {
@@ -7803,7 +8006,7 @@ h6 {
 
 .presentation-main__text::before {
   content: '';
-  left: -20px;
+  left: -30px;
   top: 8px;
   width: 20px;
   height: 2px;
@@ -7815,22 +8018,35 @@ h6 {
 }
 
 .presentation-main__subtitle {
-  padding-top: 25px;
+  font: 0.65625rem/1.53 "Acrom-ExtraBold", sans-serif;
+  color: #000000;
+  text-transform: uppercase;
+  padding: 25px 0 40px;
+}
+
+.presentation-additional__block {
+  padding-bottom: 45px;
+}
+
+.presentation-additional__text--decorative {
+  padding-top: 50px;
 }
 
 .presentation-additional__text--decorative::before {
   content: '';
+  position: absolute;
+  display: none;
   left: -15px;
-  top: 7px;
+  top: 10px;
   width: 10px;
-  height: 2px;
+  height: 2.5px;
   background-color: #000000;
-  transform: skewY(-45deg);
+  transform: skewY(-56deg);
 }
 
 .presentation-additional__item::before {
   content: ' ';
-  left: -35px;
+  left: -50px;
   top: 25px;
   width: 50px;
   height: 15px;
@@ -7841,6 +8057,7 @@ h6 {
   font-family: "Acrom-Bold", sans-serif;
   font-size: 0.75rem;
   line-height: 1.45;
+  clip: rect(6px, auto, auto, auto);
 }
 
 .presentation-additional__item:nth-child(1)::before {
@@ -7869,8 +8086,8 @@ h6 {
 
 .presentation-additional__btn {
   margin-top: 40px;
-  font-size: 0.6875rem;
-  line-height: 50px;
+  padding: 14px 30px;
+  font-size: 0.75rem;
 }
 
 .main-contacts {
@@ -7966,9 +8183,10 @@ h6 {
 /* Placeholder for section title */
 
 .facts-main__title,
+.examples-main__title,
 .warning-main__title,
 .career-additional__title,
-.simple-steps-main__title,
+.simple-steps-main .simple-steps-main__title,
 .presentation-main__title,
 .section-university__title--main,
 .section-expert__title,
@@ -7996,7 +8214,7 @@ h6 {
 /* accent orange text */
 
 .start-it-additional__text--decorative,
-.simple-steps-additional__text-decorative,
+.simple-steps-main .simple-steps-additional__text-decorative,
 .presentation-additional__text--decorative,
 .important-main__text-decorative,
 .just-do-it-additional__text--decorative {
@@ -8010,8 +8228,7 @@ h6 {
 
 .warning-main__subtitle,
 .career-main__subtitle,
-.simple-steps-additional__subtitle,
-.presentation-main__subtitle,
+.simple-steps-main .simple-steps-additional__subtitle,
 .section-awards__title,
 .section-university__title,
 .section-expert__item--title,
@@ -8025,7 +8242,7 @@ h6 {
 }
 
 .сareer-main__text--light,
-.simple-steps-additional__text--light,
+.simple-steps-main .simple-steps-additional__text--light,
 .presentation-additional__text--light,
 .section-awards__desc,
 .section-university__desc,
@@ -8044,9 +8261,10 @@ h6 {
 .start-it-main__text--tablet,
 .facts-main__text,
 .except-numbers-additional__text,
+.examples-main__text,
 .warning-main__text,
 .career-additional__text,
-.simple-steps-main__text,
+.simple-steps-main .simple-steps-main__text,
 .presentation-main__text,
 .section-university__desc--main,
 .education-section__desc--mobile,
@@ -8075,6 +8293,8 @@ h6 {
 /* Placeholder for list */
 
 .social-list,
+.examples-pagination__numbers,
+.simple-steps-main .simple-steps-additional,
 .presentation-additional__block,
 .law-info__list {
   list-style: none;
@@ -8097,28 +8317,47 @@ h6 {
 .facts-main__text:before,
 .facts-additional__item:before,
 .except-numbers-additional__item:before,
+.examples-main__text:before,
+.examples-pagination__item--active::before,
 .warning-main__text:before,
 .warning-main__item:before,
-.simple-steps-main__text::before,
-.simple-steps-additional__subtitle::before,
-.simple-steps-additional__text-decorative::before,
+.simple-steps-main .simple-steps-main__text::before,
+.simple-steps-main .simple-steps-additional__subtitle::before,
+.simple-steps-main .simple-steps-additional__block::before,
+.simple-steps-main .simple-steps-additional__text-decorative::before,
 .presentation-main__text::before,
-.presentation-additional__text--decorative::before,
 .presentation-additional__item::before,
 .section-university__desc--main::before,
 .education-section__desc--mobile::before,
 .section-expert__desc::before,
 .section-expert__item--title::before,
 .section-help__desc::before,
-.get-your-bonus-main__text::before,
 .get-your-bonus-main__block::after,
 .get-your-bonus-main__block::before,
 .important-additional__price::before,
-.important-main__text-decorative::before,
-.just-do-it-main__text::before,
 .just-do-it-additional__block:nth-of-type(1)::before {
   position: absolute;
   display: block;
+}
+
+.get-your-bonus-main__text::before,
+.just-do-it-main__text::before {
+  position: absolute;
+  display: block;
+  content: '';
+  height: 3px;
+  width: 20px;
+  background-color: #000000;
+}
+
+.important-main__text-decorative::before {
+  position: absolute;
+  display: block;
+  content: '';
+  height: 2px;
+  width: 32px;
+  transform: rotate(122deg);
+  background-color: #000000;
 }
 
 .start-it-main__special-text,
@@ -8132,27 +8371,25 @@ h6 {
   font-family: "Acrom-ExtraBold", sans-serif;
 }
 
+.btn:hover,
+.btn:focus,
+.btn-wide:hover,
+.btn-wide:focus,
 .main-contacts__button:hover,
 .main-contacts__button:focus,
 .banner__btn:hover,
 .presentation-additional__btn:hover,
-.main-form__button:hover,
-.main-form__button:focus,
-.important-main__button:hover,
-.important-main__button:focus,
-.just-do-it-main__button:hover,
-.just-do-it-main__button:focus {
+.presentation-additional__btn:focus {
   background-color: #17ecff;
   color: #ffffff;
 }
 
+.btn:active,
+.btn-wide:active,
 .main-contacts__button:active,
 .banner__btn,
 .banner__btn:active,
-.presentation-additional__btn:active,
-.main-form__button:active,
-.important-main__button:active,
-.just-do-it-main__button:active {
+.presentation-additional__btn:active {
   background-color: #06a4b2;
 }
 
@@ -8168,6 +8405,24 @@ h6 {
   border: none;
   box-shadow: 0px 5px 6px rgba(196, 87, 15, 0.26);
   transition: all 0.2s linear;
+  padding: 14px 26px;
+  font-size: 0.6875rem;
+}
+
+.btn-wide {
+  border-radius: 0;
+  font-family: "Acrom-ExtraBold", sans-serif;
+  text-transform: uppercase;
+  cursor: pointer;
+  display: inline-block;
+  color: #ffffff;
+  background-color: #ff6b08;
+  text-align: center;
+  border: none;
+  box-shadow: 0px 5px 6px rgba(196, 87, 15, 0.26);
+  transition: all 0.2s linear;
+  padding: 14px 40px;
+  font-size: 0.6875rem;
 }
 
 /* VISUALLY HIDDEN HELPER CLASS */
@@ -8246,9 +8501,10 @@ input[type='radio'].visually-hidden {
 /* Placeholder for section title */
 
 .facts-main__title,
+.examples-main__title,
 .warning-main__title,
 .career-additional__title,
-.simple-steps-main__title,
+.simple-steps-main .simple-steps-main__title,
 .presentation-main__title,
 .section-university__title--main,
 .section-expert__title,
@@ -8276,7 +8532,7 @@ input[type='radio'].visually-hidden {
 /* accent orange text */
 
 .start-it-additional__text--decorative,
-.simple-steps-additional__text-decorative,
+.simple-steps-main .simple-steps-additional__text-decorative,
 .presentation-additional__text--decorative,
 .important-main__text-decorative,
 .just-do-it-additional__text--decorative {
@@ -8290,8 +8546,7 @@ input[type='radio'].visually-hidden {
 
 .warning-main__subtitle,
 .career-main__subtitle,
-.simple-steps-additional__subtitle,
-.presentation-main__subtitle,
+.simple-steps-main .simple-steps-additional__subtitle,
 .section-awards__title,
 .section-university__title,
 .section-expert__item--title,
@@ -8305,7 +8560,7 @@ input[type='radio'].visually-hidden {
 }
 
 .сareer-main__text--light,
-.simple-steps-additional__text--light,
+.simple-steps-main .simple-steps-additional__text--light,
 .presentation-additional__text--light,
 .section-awards__desc,
 .section-university__desc,
@@ -8324,9 +8579,10 @@ input[type='radio'].visually-hidden {
 .start-it-main__text--tablet,
 .facts-main__text,
 .except-numbers-additional__text,
+.examples-main__text,
 .warning-main__text,
 .career-additional__text,
-.simple-steps-main__text,
+.simple-steps-main .simple-steps-main__text,
 .presentation-main__text,
 .section-university__desc--main,
 .education-section__desc--mobile,
@@ -8355,6 +8611,8 @@ input[type='radio'].visually-hidden {
 /* Placeholder for list */
 
 .social-list,
+.examples-pagination__numbers,
+.simple-steps-main .simple-steps-additional,
 .presentation-additional__block,
 .law-info__list {
   list-style: none;
@@ -8377,28 +8635,47 @@ input[type='radio'].visually-hidden {
 .facts-main__text:before,
 .facts-additional__item:before,
 .except-numbers-additional__item:before,
+.examples-main__text:before,
+.examples-pagination__item--active::before,
 .warning-main__text:before,
 .warning-main__item:before,
-.simple-steps-main__text::before,
-.simple-steps-additional__subtitle::before,
-.simple-steps-additional__text-decorative::before,
+.simple-steps-main .simple-steps-main__text::before,
+.simple-steps-main .simple-steps-additional__subtitle::before,
+.simple-steps-main .simple-steps-additional__block::before,
+.simple-steps-main .simple-steps-additional__text-decorative::before,
 .presentation-main__text::before,
-.presentation-additional__text--decorative::before,
 .presentation-additional__item::before,
 .section-university__desc--main::before,
 .education-section__desc--mobile::before,
 .section-expert__desc::before,
 .section-expert__item--title::before,
 .section-help__desc::before,
-.get-your-bonus-main__text::before,
 .get-your-bonus-main__block::after,
 .get-your-bonus-main__block::before,
 .important-additional__price::before,
-.important-main__text-decorative::before,
-.just-do-it-main__text::before,
 .just-do-it-additional__block:nth-of-type(1)::before {
   position: absolute;
   display: block;
+}
+
+.get-your-bonus-main__text::before,
+.just-do-it-main__text::before {
+  position: absolute;
+  display: block;
+  content: '';
+  height: 3px;
+  width: 20px;
+  background-color: #000000;
+}
+
+.important-main__text-decorative::before {
+  position: absolute;
+  display: block;
+  content: '';
+  height: 2px;
+  width: 32px;
+  transform: rotate(122deg);
+  background-color: #000000;
 }
 
 .start-it-main__special-text,
@@ -8412,27 +8689,25 @@ input[type='radio'].visually-hidden {
   font-family: "Acrom-ExtraBold", sans-serif;
 }
 
+.btn:hover,
+.btn:focus,
+.btn-wide:hover,
+.btn-wide:focus,
 .main-contacts__button:hover,
 .main-contacts__button:focus,
 .banner__btn:hover,
 .presentation-additional__btn:hover,
-.main-form__button:hover,
-.main-form__button:focus,
-.important-main__button:hover,
-.important-main__button:focus,
-.just-do-it-main__button:hover,
-.just-do-it-main__button:focus {
+.presentation-additional__btn:focus {
   background-color: #17ecff;
   color: #ffffff;
 }
 
+.btn:active,
+.btn-wide:active,
 .main-contacts__button:active,
 .banner__btn,
 .banner__btn:active,
-.presentation-additional__btn:active,
-.main-form__button:active,
-.important-main__button:active,
-.just-do-it-main__button:active {
+.presentation-additional__btn:active {
   background-color: #06a4b2;
 }
 
@@ -8448,6 +8723,24 @@ input[type='radio'].visually-hidden {
   border: none;
   box-shadow: 0px 5px 6px rgba(196, 87, 15, 0.26);
   transition: all 0.2s linear;
+  padding: 14px 26px;
+  font-size: 0.6875rem;
+}
+
+.btn-wide {
+  border-radius: 0;
+  font-family: "Acrom-ExtraBold", sans-serif;
+  text-transform: uppercase;
+  cursor: pointer;
+  display: inline-block;
+  color: #ffffff;
+  background-color: #ff6b08;
+  text-align: center;
+  border: none;
+  box-shadow: 0px 5px 6px rgba(196, 87, 15, 0.26);
+  transition: all 0.2s linear;
+  padding: 14px 40px;
+  font-size: 0.6875rem;
 }
 
 /* VISUALLY HIDDEN HELPER CLASS */
@@ -8520,9 +8813,10 @@ input[type='radio'].visually-hidden {
 /* Placeholder for section title */
 
 .facts-main__title,
+.examples-main__title,
 .warning-main__title,
 .career-additional__title,
-.simple-steps-main__title,
+.simple-steps-main .simple-steps-main__title,
 .presentation-main__title,
 .section-university__title--main,
 .section-expert__title,
@@ -8550,7 +8844,7 @@ input[type='radio'].visually-hidden {
 /* accent orange text */
 
 .start-it-additional__text--decorative,
-.simple-steps-additional__text-decorative,
+.simple-steps-main .simple-steps-additional__text-decorative,
 .presentation-additional__text--decorative,
 .important-main__text-decorative,
 .just-do-it-additional__text--decorative {
@@ -8564,8 +8858,7 @@ input[type='radio'].visually-hidden {
 
 .warning-main__subtitle,
 .career-main__subtitle,
-.simple-steps-additional__subtitle,
-.presentation-main__subtitle,
+.simple-steps-main .simple-steps-additional__subtitle,
 .section-awards__title,
 .section-university__title,
 .section-expert__item--title,
@@ -8579,7 +8872,7 @@ input[type='radio'].visually-hidden {
 }
 
 .сareer-main__text--light,
-.simple-steps-additional__text--light,
+.simple-steps-main .simple-steps-additional__text--light,
 .presentation-additional__text--light,
 .section-awards__desc,
 .section-university__desc,
@@ -8598,9 +8891,10 @@ input[type='radio'].visually-hidden {
 .start-it-main__text--tablet,
 .facts-main__text,
 .except-numbers-additional__text,
+.examples-main__text,
 .warning-main__text,
 .career-additional__text,
-.simple-steps-main__text,
+.simple-steps-main .simple-steps-main__text,
 .presentation-main__text,
 .section-university__desc--main,
 .education-section__desc--mobile,
@@ -8629,6 +8923,8 @@ input[type='radio'].visually-hidden {
 /* Placeholder for list */
 
 .social-list,
+.examples-pagination__numbers,
+.simple-steps-main .simple-steps-additional,
 .presentation-additional__block,
 .law-info__list {
   list-style: none;
@@ -8651,28 +8947,47 @@ input[type='radio'].visually-hidden {
 .facts-main__text:before,
 .facts-additional__item:before,
 .except-numbers-additional__item:before,
+.examples-main__text:before,
+.examples-pagination__item--active::before,
 .warning-main__text:before,
 .warning-main__item:before,
-.simple-steps-main__text::before,
-.simple-steps-additional__subtitle::before,
-.simple-steps-additional__text-decorative::before,
+.simple-steps-main .simple-steps-main__text::before,
+.simple-steps-main .simple-steps-additional__subtitle::before,
+.simple-steps-main .simple-steps-additional__block::before,
+.simple-steps-main .simple-steps-additional__text-decorative::before,
 .presentation-main__text::before,
-.presentation-additional__text--decorative::before,
 .presentation-additional__item::before,
 .section-university__desc--main::before,
 .education-section__desc--mobile::before,
 .section-expert__desc::before,
 .section-expert__item--title::before,
 .section-help__desc::before,
-.get-your-bonus-main__text::before,
 .get-your-bonus-main__block::after,
 .get-your-bonus-main__block::before,
 .important-additional__price::before,
-.important-main__text-decorative::before,
-.just-do-it-main__text::before,
 .just-do-it-additional__block:nth-of-type(1)::before {
   position: absolute;
   display: block;
+}
+
+.get-your-bonus-main__text::before,
+.just-do-it-main__text::before {
+  position: absolute;
+  display: block;
+  content: '';
+  height: 3px;
+  width: 20px;
+  background-color: #000000;
+}
+
+.important-main__text-decorative::before {
+  position: absolute;
+  display: block;
+  content: '';
+  height: 2px;
+  width: 32px;
+  transform: rotate(122deg);
+  background-color: #000000;
 }
 
 .start-it-main__special-text,
@@ -8686,27 +9001,25 @@ input[type='radio'].visually-hidden {
   font-family: "Acrom-ExtraBold", sans-serif;
 }
 
+.btn:hover,
+.btn:focus,
+.btn-wide:hover,
+.btn-wide:focus,
 .main-contacts__button:hover,
 .main-contacts__button:focus,
 .banner__btn:hover,
 .presentation-additional__btn:hover,
-.main-form__button:hover,
-.main-form__button:focus,
-.important-main__button:hover,
-.important-main__button:focus,
-.just-do-it-main__button:hover,
-.just-do-it-main__button:focus {
+.presentation-additional__btn:focus {
   background-color: #17ecff;
   color: #ffffff;
 }
 
+.btn:active,
+.btn-wide:active,
 .main-contacts__button:active,
 .banner__btn,
 .banner__btn:active,
-.presentation-additional__btn:active,
-.main-form__button:active,
-.important-main__button:active,
-.just-do-it-main__button:active {
+.presentation-additional__btn:active {
   background-color: #06a4b2;
 }
 
@@ -8722,6 +9035,24 @@ input[type='radio'].visually-hidden {
   border: none;
   box-shadow: 0px 5px 6px rgba(196, 87, 15, 0.26);
   transition: all 0.2s linear;
+  padding: 14px 26px;
+  font-size: 0.6875rem;
+}
+
+.btn-wide {
+  border-radius: 0;
+  font-family: "Acrom-ExtraBold", sans-serif;
+  text-transform: uppercase;
+  cursor: pointer;
+  display: inline-block;
+  color: #ffffff;
+  background-color: #ff6b08;
+  text-align: center;
+  border: none;
+  box-shadow: 0px 5px 6px rgba(196, 87, 15, 0.26);
+  transition: all 0.2s linear;
+  padding: 14px 40px;
+  font-size: 0.6875rem;
 }
 
 /* VISUALLY HIDDEN HELPER CLASS */
@@ -8793,9 +9124,10 @@ input[type='radio'].visually-hidden {
 /* Placeholder for section title */
 
 .facts-main__title,
+.examples-main__title,
 .warning-main__title,
 .career-additional__title,
-.simple-steps-main__title,
+.simple-steps-main .simple-steps-main__title,
 .presentation-main__title,
 .section-university__title--main,
 .section-expert__title,
@@ -8823,7 +9155,7 @@ input[type='radio'].visually-hidden {
 /* accent orange text */
 
 .start-it-additional__text--decorative,
-.simple-steps-additional__text-decorative,
+.simple-steps-main .simple-steps-additional__text-decorative,
 .presentation-additional__text--decorative,
 .important-main__text-decorative,
 .just-do-it-additional__text--decorative {
@@ -8837,8 +9169,7 @@ input[type='radio'].visually-hidden {
 
 .warning-main__subtitle,
 .career-main__subtitle,
-.simple-steps-additional__subtitle,
-.presentation-main__subtitle,
+.simple-steps-main .simple-steps-additional__subtitle,
 .section-awards__title,
 .section-university__title,
 .section-expert__item--title,
@@ -8852,7 +9183,7 @@ input[type='radio'].visually-hidden {
 }
 
 .сareer-main__text--light,
-.simple-steps-additional__text--light,
+.simple-steps-main .simple-steps-additional__text--light,
 .presentation-additional__text--light,
 .section-awards__desc,
 .section-university__desc,
@@ -8871,9 +9202,10 @@ input[type='radio'].visually-hidden {
 .start-it-main__text--tablet,
 .facts-main__text,
 .except-numbers-additional__text,
+.examples-main__text,
 .warning-main__text,
 .career-additional__text,
-.simple-steps-main__text,
+.simple-steps-main .simple-steps-main__text,
 .presentation-main__text,
 .section-university__desc--main,
 .education-section__desc--mobile,
@@ -8902,6 +9234,8 @@ input[type='radio'].visually-hidden {
 /* Placeholder for list */
 
 .social-list,
+.examples-pagination__numbers,
+.simple-steps-main .simple-steps-additional,
 .presentation-additional__block,
 .law-info__list {
   list-style: none;
@@ -8924,28 +9258,47 @@ input[type='radio'].visually-hidden {
 .facts-main__text:before,
 .facts-additional__item:before,
 .except-numbers-additional__item:before,
+.examples-main__text:before,
+.examples-pagination__item--active::before,
 .warning-main__text:before,
 .warning-main__item:before,
-.simple-steps-main__text::before,
-.simple-steps-additional__subtitle::before,
-.simple-steps-additional__text-decorative::before,
+.simple-steps-main .simple-steps-main__text::before,
+.simple-steps-main .simple-steps-additional__subtitle::before,
+.simple-steps-main .simple-steps-additional__block::before,
+.simple-steps-main .simple-steps-additional__text-decorative::before,
 .presentation-main__text::before,
-.presentation-additional__text--decorative::before,
 .presentation-additional__item::before,
 .section-university__desc--main::before,
 .education-section__desc--mobile::before,
 .section-expert__desc::before,
 .section-expert__item--title::before,
 .section-help__desc::before,
-.get-your-bonus-main__text::before,
 .get-your-bonus-main__block::after,
 .get-your-bonus-main__block::before,
 .important-additional__price::before,
-.important-main__text-decorative::before,
-.just-do-it-main__text::before,
 .just-do-it-additional__block:nth-of-type(1)::before {
   position: absolute;
   display: block;
+}
+
+.get-your-bonus-main__text::before,
+.just-do-it-main__text::before {
+  position: absolute;
+  display: block;
+  content: '';
+  height: 3px;
+  width: 20px;
+  background-color: #000000;
+}
+
+.important-main__text-decorative::before {
+  position: absolute;
+  display: block;
+  content: '';
+  height: 2px;
+  width: 32px;
+  transform: rotate(122deg);
+  background-color: #000000;
 }
 
 .start-it-main__special-text,
@@ -8959,27 +9312,25 @@ input[type='radio'].visually-hidden {
   font-family: "Acrom-ExtraBold", sans-serif;
 }
 
+.btn:hover,
+.btn:focus,
+.btn-wide:hover,
+.btn-wide:focus,
 .main-contacts__button:hover,
 .main-contacts__button:focus,
 .banner__btn:hover,
 .presentation-additional__btn:hover,
-.main-form__button:hover,
-.main-form__button:focus,
-.important-main__button:hover,
-.important-main__button:focus,
-.just-do-it-main__button:hover,
-.just-do-it-main__button:focus {
+.presentation-additional__btn:focus {
   background-color: #17ecff;
   color: #ffffff;
 }
 
+.btn:active,
+.btn-wide:active,
 .main-contacts__button:active,
 .banner__btn,
 .banner__btn:active,
-.presentation-additional__btn:active,
-.main-form__button:active,
-.important-main__button:active,
-.just-do-it-main__button:active {
+.presentation-additional__btn:active {
   background-color: #06a4b2;
 }
 
@@ -8995,6 +9346,24 @@ input[type='radio'].visually-hidden {
   border: none;
   box-shadow: 0px 5px 6px rgba(196, 87, 15, 0.26);
   transition: all 0.2s linear;
+  padding: 14px 26px;
+  font-size: 0.6875rem;
+}
+
+.btn-wide {
+  border-radius: 0;
+  font-family: "Acrom-ExtraBold", sans-serif;
+  text-transform: uppercase;
+  cursor: pointer;
+  display: inline-block;
+  color: #ffffff;
+  background-color: #ff6b08;
+  text-align: center;
+  border: none;
+  box-shadow: 0px 5px 6px rgba(196, 87, 15, 0.26);
+  transition: all 0.2s linear;
+  padding: 14px 40px;
+  font-size: 0.6875rem;
 }
 
 /* VISUALLY HIDDEN HELPER CLASS */
@@ -9186,12 +9555,8 @@ input[type='radio'].visually-hidden {
 }
 
 .get-your-bonus-main__text::before {
-  content: '';
-  left: -10px;
+  left: -14px;
   top: 30px;
-  height: 3px;
-  width: 20px;
-  background-color: #000000;
 }
 
 .get-your-bonus-main__block {
@@ -9305,9 +9670,6 @@ input[type='radio'].visually-hidden {
 
 .main-form__button {
   margin-top: 28px;
-  padding: 14px 20px;
-  font-size: 0.75rem;
-  font-family: "Acrom-ExtraBold", sans-serif;
 }
 
 .important {
@@ -9393,19 +9755,8 @@ input[type='radio'].visually-hidden {
 }
 
 .important-main__text-decorative::before {
-  content: '';
-  height: 2px;
-  width: 36px;
-  transform: rotate(124deg);
   left: -50px;
   top: 18px;
-  z-index: 20;
-  background-color: #000000;
-}
-
-.important-main__button {
-  padding: 14px 30px;
-  font-size: 0.75rem;
 }
 
 .just-do-it {
@@ -9418,7 +9769,7 @@ input[type='radio'].visually-hidden {
 
 .just-do-it-main::before {
   content: 'GO';
-  font-size: 110px;
+  font-size: 100px;
   transform: rotate(90deg);
   font-family: "Acrom-ExtraBold", sans-serif;
   color: rgba(0, 0, 0, 0.04);
@@ -9428,6 +9779,10 @@ input[type='radio'].visually-hidden {
   z-index: -1;
 }
 
+.just-do-it-main__title {
+  margin-bottom: 16px;
+}
+
 .just-do-it-main__text {
   position: relative;
   padding-left: 20px;
@@ -9435,16 +9790,11 @@ input[type='radio'].visually-hidden {
 }
 
 .just-do-it-main__text::before {
-  content: '—';
-  font-size: 1.875rem;
-  left: -8px;
-  top: -14px;
-  font-family: "Acrom-ExtraBold", sans-serif;
+  top: 9px;
+  left: -14px;
 }
 
 .just-do-it-main__button {
-  padding: 14px 30px;
-  font-size: 0.75rem;
   margin-bottom: 64px;
 }
 
@@ -10520,6 +10870,12 @@ input[type='radio'].visually-hidden {
   }
 }
 
+@media screen and (min-width: 48em) and (-webkit-min-device-pixel-ratio: 2), screen and (min-width: 48em) and (min-resolution: 192dpi), screen and (min-width: 48em) and (min-resolution: 2dppx) {
+  .simple-steps-main::before {
+    background-image: url(../images/background-png/stap@2x.png);
+  }
+}
+
 @media (min-width: 768px) {
   .container {
     max-width: 720px;
@@ -11524,9 +11880,10 @@ input[type='radio'].visually-hidden {
 
 @media screen and (min-width: 48em) {
   .facts-main__title,
+  .examples-main__title,
   .warning-main__title,
   .career-additional__title,
-  .simple-steps-main__title,
+  .simple-steps-main .simple-steps-main__title,
   .presentation-main__title,
   .section-university__title--main,
   .section-expert__title,
@@ -11543,7 +11900,7 @@ input[type='radio'].visually-hidden {
   }
 
   .start-it-additional__text--decorative,
-  .simple-steps-additional__text-decorative,
+  .simple-steps-main .simple-steps-additional__text-decorative,
   .presentation-additional__text--decorative,
   .important-main__text-decorative,
   .just-do-it-additional__text--decorative {
@@ -11552,8 +11909,7 @@ input[type='radio'].visually-hidden {
 
   .warning-main__subtitle,
   .career-main__subtitle,
-  .simple-steps-additional__subtitle,
-  .presentation-main__subtitle,
+  .simple-steps-main .simple-steps-additional__subtitle,
   .section-awards__title,
   .section-university__title,
   .section-expert__item--title,
@@ -11563,7 +11919,7 @@ input[type='radio'].visually-hidden {
   }
 
   .сareer-main__text--light,
-  .simple-steps-additional__text--light,
+  .simple-steps-main .simple-steps-additional__text--light,
   .presentation-additional__text--light,
   .section-awards__desc,
   .section-university__desc,
@@ -11579,9 +11935,10 @@ input[type='radio'].visually-hidden {
   .start-it-main__text--tablet,
   .facts-main__text,
   .except-numbers-additional__text,
+  .examples-main__text,
   .warning-main__text,
   .career-additional__text,
-  .simple-steps-main__text,
+  .simple-steps-main .simple-steps-main__text,
   .presentation-main__text,
   .section-university__desc--main,
   .education-section__desc--mobile,
@@ -11598,6 +11955,27 @@ input[type='radio'].visually-hidden {
   .presentation-additional__text--bold,
   .important-main__text--bold,
   .just-do-it-additional__text--bold {
+    font-size: 0.5625rem;
+  }
+
+  .get-your-bonus-main__text::before,
+  .just-do-it-main__text::before {
+    height: 4px;
+    width: 28px;
+  }
+
+  .important-main__text-decorative::before {
+    height: 3px;
+    width: 18px;
+  }
+
+  .btn {
+    padding: 12px 20px;
+    font-size: 0.5625rem;
+  }
+
+  .btn-wide {
+    padding: 12px 28px;
     font-size: 0.5625rem;
   }
 
@@ -11638,12 +12016,27 @@ input[type='radio'].visually-hidden {
     top: 0px;
   }
 
-  .simple-steps-main {
-    background-image: url(../images/background-png/stap.png);
+  .simple-steps-main::before {
+    left: 115px;
+    height: 210px;
+    width: 210px;
+    background: url(../images/background-png/stap.png) no-repeat;
   }
 
-  .simple-steps-additional {
+  .simple-steps-main .simple-steps-additional__subtitle::before {
+    width: 7px;
+    height: 7px;
+    top: 20px;
+  }
+
+  .simple-steps-main .simple-steps-additional__block::before {
     font-size: 1.0625rem;
+    clip: rect(auto, auto, auto, 6px);
+  }
+
+  .simple-steps-main .simple-steps-additional__text-decorative::before {
+    width: 10px;
+    height: 2.5px;
   }
 
   .presentation-main {
@@ -11660,7 +12053,17 @@ input[type='radio'].visually-hidden {
   }
 
   .presentation-main__subtitle {
-    padding-top: 64px;
+    padding-top: 55px;
+    padding-bottom: 0px;
+  }
+
+  .presentation-additional__text--decorative::before {
+    display: block;
+  }
+
+  .presentation-additional__text--decorative {
+    padding-top: 0px;
+    margin-bottom: 0px;
   }
 
   .presentation-additional__item::before {
@@ -11669,11 +12072,12 @@ input[type='radio'].visually-hidden {
     font-size: 0.4375rem;
     top: 10px;
     left: -15px;
+    clip: auto;
   }
 
   .presentation-additional__btn {
-    line-height: 20px;
-    font-size: 0.375rem;
+    font-size: 0.625rem;
+    padding: 14px 10px;
     margin-top: 0px;
   }
 
@@ -11713,9 +12117,10 @@ input[type='radio'].visually-hidden {
   }
 
   .facts-main__title,
+  .examples-main__title,
   .warning-main__title,
   .career-additional__title,
-  .simple-steps-main__title,
+  .simple-steps-main .simple-steps-main__title,
   .presentation-main__title,
   .section-university__title--main,
   .section-expert__title,
@@ -11732,7 +12137,7 @@ input[type='radio'].visually-hidden {
   }
 
   .start-it-additional__text--decorative,
-  .simple-steps-additional__text-decorative,
+  .simple-steps-main .simple-steps-additional__text-decorative,
   .presentation-additional__text--decorative,
   .important-main__text-decorative,
   .just-do-it-additional__text--decorative {
@@ -11741,8 +12146,7 @@ input[type='radio'].visually-hidden {
 
   .warning-main__subtitle,
   .career-main__subtitle,
-  .simple-steps-additional__subtitle,
-  .presentation-main__subtitle,
+  .simple-steps-main .simple-steps-additional__subtitle,
   .section-awards__title,
   .section-university__title,
   .section-expert__item--title,
@@ -11752,7 +12156,7 @@ input[type='radio'].visually-hidden {
   }
 
   .сareer-main__text--light,
-  .simple-steps-additional__text--light,
+  .simple-steps-main .simple-steps-additional__text--light,
   .presentation-additional__text--light,
   .section-awards__desc,
   .section-university__desc,
@@ -11768,9 +12172,10 @@ input[type='radio'].visually-hidden {
   .start-it-main__text--tablet,
   .facts-main__text,
   .except-numbers-additional__text,
+  .examples-main__text,
   .warning-main__text,
   .career-additional__text,
-  .simple-steps-main__text,
+  .simple-steps-main .simple-steps-main__text,
   .presentation-main__text,
   .section-university__desc--main,
   .education-section__desc--mobile,
@@ -11787,13 +12192,35 @@ input[type='radio'].visually-hidden {
   .presentation-additional__text--bold,
   .important-main__text--bold,
   .just-do-it-additional__text--bold {
+    font-size: 0.5625rem;
+  }
+
+  .get-your-bonus-main__text::before,
+  .just-do-it-main__text::before {
+    height: 4px;
+    width: 28px;
+  }
+
+  .important-main__text-decorative::before {
+    height: 3px;
+    width: 18px;
+  }
+
+  .btn {
+    padding: 12px 20px;
+    font-size: 0.5625rem;
+  }
+
+  .btn-wide {
+    padding: 12px 28px;
     font-size: 0.5625rem;
   }
 
   .facts-main__title,
+  .examples-main__title,
   .warning-main__title,
   .career-additional__title,
-  .simple-steps-main__title,
+  .simple-steps-main .simple-steps-main__title,
   .presentation-main__title,
   .section-university__title--main,
   .section-expert__title,
@@ -11810,7 +12237,7 @@ input[type='radio'].visually-hidden {
   }
 
   .start-it-additional__text--decorative,
-  .simple-steps-additional__text-decorative,
+  .simple-steps-main .simple-steps-additional__text-decorative,
   .presentation-additional__text--decorative,
   .important-main__text-decorative,
   .just-do-it-additional__text--decorative {
@@ -11819,8 +12246,7 @@ input[type='radio'].visually-hidden {
 
   .warning-main__subtitle,
   .career-main__subtitle,
-  .simple-steps-additional__subtitle,
-  .presentation-main__subtitle,
+  .simple-steps-main .simple-steps-additional__subtitle,
   .section-awards__title,
   .section-university__title,
   .section-expert__item--title,
@@ -11830,7 +12256,7 @@ input[type='radio'].visually-hidden {
   }
 
   .сareer-main__text--light,
-  .simple-steps-additional__text--light,
+  .simple-steps-main .simple-steps-additional__text--light,
   .presentation-additional__text--light,
   .section-awards__desc,
   .section-university__desc,
@@ -11846,9 +12272,10 @@ input[type='radio'].visually-hidden {
   .start-it-main__text--tablet,
   .facts-main__text,
   .except-numbers-additional__text,
+  .examples-main__text,
   .warning-main__text,
   .career-additional__text,
-  .simple-steps-main__text,
+  .simple-steps-main .simple-steps-main__text,
   .presentation-main__text,
   .section-university__desc--main,
   .education-section__desc--mobile,
@@ -11865,13 +12292,35 @@ input[type='radio'].visually-hidden {
   .presentation-additional__text--bold,
   .important-main__text--bold,
   .just-do-it-additional__text--bold {
+    font-size: 0.5625rem;
+  }
+
+  .get-your-bonus-main__text::before,
+  .just-do-it-main__text::before {
+    height: 4px;
+    width: 28px;
+  }
+
+  .important-main__text-decorative::before {
+    height: 3px;
+    width: 18px;
+  }
+
+  .btn {
+    padding: 12px 20px;
+    font-size: 0.5625rem;
+  }
+
+  .btn-wide {
+    padding: 12px 28px;
     font-size: 0.5625rem;
   }
 
   .facts-main__title,
+  .examples-main__title,
   .warning-main__title,
   .career-additional__title,
-  .simple-steps-main__title,
+  .simple-steps-main .simple-steps-main__title,
   .presentation-main__title,
   .section-university__title--main,
   .section-expert__title,
@@ -11888,7 +12337,7 @@ input[type='radio'].visually-hidden {
   }
 
   .start-it-additional__text--decorative,
-  .simple-steps-additional__text-decorative,
+  .simple-steps-main .simple-steps-additional__text-decorative,
   .presentation-additional__text--decorative,
   .important-main__text-decorative,
   .just-do-it-additional__text--decorative {
@@ -11897,8 +12346,7 @@ input[type='radio'].visually-hidden {
 
   .warning-main__subtitle,
   .career-main__subtitle,
-  .simple-steps-additional__subtitle,
-  .presentation-main__subtitle,
+  .simple-steps-main .simple-steps-additional__subtitle,
   .section-awards__title,
   .section-university__title,
   .section-expert__item--title,
@@ -11908,7 +12356,7 @@ input[type='radio'].visually-hidden {
   }
 
   .сareer-main__text--light,
-  .simple-steps-additional__text--light,
+  .simple-steps-main .simple-steps-additional__text--light,
   .presentation-additional__text--light,
   .section-awards__desc,
   .section-university__desc,
@@ -11924,9 +12372,10 @@ input[type='radio'].visually-hidden {
   .start-it-main__text--tablet,
   .facts-main__text,
   .except-numbers-additional__text,
+  .examples-main__text,
   .warning-main__text,
   .career-additional__text,
-  .simple-steps-main__text,
+  .simple-steps-main .simple-steps-main__text,
   .presentation-main__text,
   .section-university__desc--main,
   .education-section__desc--mobile,
@@ -11943,13 +12392,35 @@ input[type='radio'].visually-hidden {
   .presentation-additional__text--bold,
   .important-main__text--bold,
   .just-do-it-additional__text--bold {
+    font-size: 0.5625rem;
+  }
+
+  .get-your-bonus-main__text::before,
+  .just-do-it-main__text::before {
+    height: 4px;
+    width: 28px;
+  }
+
+  .important-main__text-decorative::before {
+    height: 3px;
+    width: 18px;
+  }
+
+  .btn {
+    padding: 12px 20px;
+    font-size: 0.5625rem;
+  }
+
+  .btn-wide {
+    padding: 12px 28px;
     font-size: 0.5625rem;
   }
 
   .facts-main__title,
+  .examples-main__title,
   .warning-main__title,
   .career-additional__title,
-  .simple-steps-main__title,
+  .simple-steps-main .simple-steps-main__title,
   .presentation-main__title,
   .section-university__title--main,
   .section-expert__title,
@@ -11966,7 +12437,7 @@ input[type='radio'].visually-hidden {
   }
 
   .start-it-additional__text--decorative,
-  .simple-steps-additional__text-decorative,
+  .simple-steps-main .simple-steps-additional__text-decorative,
   .presentation-additional__text--decorative,
   .important-main__text-decorative,
   .just-do-it-additional__text--decorative {
@@ -11975,8 +12446,7 @@ input[type='radio'].visually-hidden {
 
   .warning-main__subtitle,
   .career-main__subtitle,
-  .simple-steps-additional__subtitle,
-  .presentation-main__subtitle,
+  .simple-steps-main .simple-steps-additional__subtitle,
   .section-awards__title,
   .section-university__title,
   .section-expert__item--title,
@@ -11986,7 +12456,7 @@ input[type='radio'].visually-hidden {
   }
 
   .сareer-main__text--light,
-  .simple-steps-additional__text--light,
+  .simple-steps-main .simple-steps-additional__text--light,
   .presentation-additional__text--light,
   .section-awards__desc,
   .section-university__desc,
@@ -12002,9 +12472,10 @@ input[type='radio'].visually-hidden {
   .start-it-main__text--tablet,
   .facts-main__text,
   .except-numbers-additional__text,
+  .examples-main__text,
   .warning-main__text,
   .career-additional__text,
-  .simple-steps-main__text,
+  .simple-steps-main .simple-steps-main__text,
   .presentation-main__text,
   .section-university__desc--main,
   .education-section__desc--mobile,
@@ -12021,6 +12492,27 @@ input[type='radio'].visually-hidden {
   .presentation-additional__text--bold,
   .important-main__text--bold,
   .just-do-it-additional__text--bold {
+    font-size: 0.5625rem;
+  }
+
+  .get-your-bonus-main__text::before,
+  .just-do-it-main__text::before {
+    height: 4px;
+    width: 28px;
+  }
+
+  .important-main__text-decorative::before {
+    height: 3px;
+    width: 18px;
+  }
+
+  .btn {
+    padding: 12px 20px;
+    font-size: 0.5625rem;
+  }
+
+  .btn-wide {
+    padding: 12px 28px;
     font-size: 0.5625rem;
   }
 
@@ -12033,9 +12525,8 @@ input[type='radio'].visually-hidden {
   }
 
   .get-your-bonus-main__text::before {
-    width: 24px;
-    top: 26px;
-    left: -12px;
+    top: 25px;
+    left: -20px;
   }
 
   .get-your-bonus-main__block {
@@ -12114,14 +12605,8 @@ input[type='radio'].visually-hidden {
   }
 
   .important-main__text-decorative::before {
-    width: 20px;
-    left: -29px;
-    top: 13px;
-  }
-
-  .important-main__button {
-    font-size: 0.625rem;
-    padding: 14px 10px;
+    left: -30px;
+    top: 12px;
   }
 
   .just-do-it {
@@ -12134,12 +12619,19 @@ input[type='radio'].visually-hidden {
   }
 
   .just-do-it-main__text::before {
-    top: -17px;
+    top: 5px;
+    left: -26px;
   }
 
   .just-do-it-additional__block:nth-of-type(1)::before {
     top: -3px;
     left: -52px;
+  }
+}
+
+@media (min-width: 48em) and (-webkit-min-device-pixel-ratio: 2), (min-width: 48em) and (min-resolution: 192dpi) {
+  .banner {
+    background: url("../images/banner-bg/devs-work@2x.png") bottom 0 right 22% no-repeat, url("../images/Banner-background/banner-shadow@2x.png") no-repeat center, #181c27;
   }
 }
 
@@ -12320,6 +12812,32 @@ input[type='radio'].visually-hidden {
     font-size: 0.5625rem;
   }
 
+  .examples {
+    padding-top: 90px;
+  }
+
+  .examples-main__text:before {
+    width: 30px;
+    top: 2px;
+    left: -28px;
+  }
+
+  .examples-main__text {
+    margin-bottom: 40px;
+  }
+
+  .examples-additional__first-part {
+    width: 80px;
+  }
+
+  .examples-additional__title-name {
+    font-size: 0.5rem;
+  }
+
+  .examples-additional__text {
+    font-size: 0.5rem;
+  }
+
   .warning {
     padding-top: 90px;
   }
@@ -12352,36 +12870,6 @@ input[type='radio'].visually-hidden {
 
   .warning-main__text--light {
     margin-top: 8px;
-  }
-}
-
-@media (min-width: 48em) and (-webkit-min-device-pixel-ratio: 2), (min-width: 48em) and (min-resolution: 192dpi) {
-  .banner {
-    background: url("../images/banner-bg/devs-work@2x.png") bottom 0 right 22% no-repeat, url("../images/Banner-background/banner-shadow@2x.png") no-repeat center, #181c27;
-  }
-}
-
-@media screen and (min-width: 48em) and (-webkit-min-device-pixel-ratio: 2), screen and (min-width: 48em) and (min-resolution: 192dpi), screen and (min-width: 48em) and (min-resolution: 2dppx) {
-  .simple-steps-main {
-    background-image: url(../images/background-png/stap@2x.png);
-  }
-}
-
-@media screen and (min-width: 62em) {
-  .social-list__item {
-    font-size: 0.75rem;
-  }
-
-  .main-contacts__button {
-    padding: 16px 34px;
-  }
-
-  .law-info__item {
-    font-size: 0.6875rem;
-  }
-
-  .important-main__button {
-    font-size: 0.6875rem;
   }
 }
 
@@ -13268,11 +13756,142 @@ input[type='radio'].visually-hidden {
   }
 }
 
+@media screen and (min-width: 62em) {
+  .social-list__item {
+    font-size: 0.75rem;
+  }
+
+  .main-contacts__button {
+    padding: 16px 34px;
+  }
+
+  .presentation-additional__btn {
+    font-size: 0.6875rem;
+  }
+
+  .law-info__item {
+    font-size: 0.6875rem;
+  }
+}
+
+@media (min-width: 75em) {
+  .header__wrapper {
+    max-width: 100%;
+  }
+
+  .header-logo__link {
+    position: absolute;
+    left: 20px;
+  }
+
+  .banner__title {
+    font-size: 3.125rem;
+    line-height: 1.25;
+  }
+
+  .banner__desc {
+    font-size: 0.5625rem;
+    line-height: 1.7;
+  }
+
+  .banner__company {
+    font-size: 16.4375rem;
+    line-height: 1.2;
+  }
+
+  .article-career__title {
+    font-size: 0.70625rem;
+    line-height: 1.6;
+  }
+
+  .article-career__desc {
+    font-size: 0.625rem;
+    line-height: 1.5;
+  }
+
+  .start-it-main__offer {
+    font-size: 0.6875rem;
+  }
+
+  .start-it-main__title {
+    font-size: 1.875rem;
+  }
+
+  .start-in-preferences:before {
+    font-size: 9.75rem;
+    top: -35px;
+    left: -310px;
+  }
+
+  .start-it-additional__subtitle {
+    font-size: 1.1875rem;
+  }
+
+  .start-in-preferences__item:nth-last-child(-n+4) {
+    margin-bottom: 20px;
+  }
+
+  .start-in-preferences__item {
+    margin-bottom: 20px;
+  }
+
+  .start-in-preferences__item {
+    font-size: 0.625rem;
+  }
+
+  .start-it-additional__text--decorative {
+    position: relative;
+    top: -80px;
+  }
+
+  .facts-main__title {
+    text-align: left;
+  }
+
+  .facts-additional__item {
+    width: 165px;
+    font-size: 0.5625rem;
+  }
+
+  .facts-additional__subtitle {
+    font-size: 1.1875rem;
+  }
+
+  .except-numbers {
+    padding-top: 115px;
+  }
+
+  .examples {
+    padding-top: 115px;
+  }
+
+  .examples-additional__first-part {
+    width: 88px;
+  }
+
+  .examples-additional__title-name {
+    font-size: 0.55rem;
+  }
+
+  .examples-additional__text {
+    font-size: 0.55rem;
+  }
+
+  .warning {
+    padding-top: 115px;
+  }
+
+  .warning-main__item:before {
+    left: -24px;
+  }
+}
+
 @media screen and (min-width: 75em) {
   .facts-main__title,
+  .examples-main__title,
   .warning-main__title,
   .career-additional__title,
-  .simple-steps-main__title,
+  .simple-steps-main .simple-steps-main__title,
   .presentation-main__title,
   .section-university__title--main,
   .section-expert__title,
@@ -13289,7 +13908,7 @@ input[type='radio'].visually-hidden {
   }
 
   .start-it-additional__text--decorative,
-  .simple-steps-additional__text-decorative,
+  .simple-steps-main .simple-steps-additional__text-decorative,
   .presentation-additional__text--decorative,
   .important-main__text-decorative,
   .just-do-it-additional__text--decorative {
@@ -13298,8 +13917,7 @@ input[type='radio'].visually-hidden {
 
   .warning-main__subtitle,
   .career-main__subtitle,
-  .simple-steps-additional__subtitle,
-  .presentation-main__subtitle,
+  .simple-steps-main .simple-steps-additional__subtitle,
   .section-awards__title,
   .section-university__title,
   .section-expert__item--title,
@@ -13309,7 +13927,7 @@ input[type='radio'].visually-hidden {
   }
 
   .сareer-main__text--light,
-  .simple-steps-additional__text--light,
+  .simple-steps-main .simple-steps-additional__text--light,
   .presentation-additional__text--light,
   .section-awards__desc,
   .section-university__desc,
@@ -13325,9 +13943,10 @@ input[type='radio'].visually-hidden {
   .start-it-main__text--tablet,
   .facts-main__text,
   .except-numbers-additional__text,
+  .examples-main__text,
   .warning-main__text,
   .career-additional__text,
-  .simple-steps-main__text,
+  .simple-steps-main .simple-steps-main__text,
   .presentation-main__text,
   .section-university__desc--main,
   .education-section__desc--mobile,
@@ -13344,6 +13963,25 @@ input[type='radio'].visually-hidden {
   .presentation-additional__text--bold,
   .important-main__text--bold,
   .just-do-it-additional__text--bold {
+    font-size: 0.625rem;
+  }
+
+  .get-your-bonus-main__text::before,
+  .just-do-it-main__text::before {
+    width: 32px;
+  }
+
+  .important-main__text-decorative::before {
+    width: 20px;
+  }
+
+  .btn {
+    padding: 14px 22px;
+    font-size: 0.625rem;
+  }
+
+  .btn-wide {
+    padding: 12px 30px;
     font-size: 0.625rem;
   }
 
@@ -13364,12 +14002,13 @@ input[type='radio'].visually-hidden {
     padding-bottom: 45px;
   }
 
-  .simple-steps-main {
-    background-image: url(../images/background-png/stap-dectop.png);
+  .simple-steps-main .simple-steps-additional__block::before {
+    font-size: 1.1875rem;
   }
 
-  .simple-steps-additional {
-    font-size: 1.1875rem;
+  .simple-steps-main .simple-steps-additional__text-decorative::before {
+    width: 11px;
+    height: 3.125px;
   }
 
   .presentation-main {
@@ -13381,7 +14020,12 @@ input[type='radio'].visually-hidden {
   }
 
   .presentation-main__subtitle {
-    padding-top: 69px;
+    padding-top: 60px;
+  }
+
+  .presentation-additional__text--decorative::before {
+    width: 11px;
+    height: 3.125px;
   }
 
   .presentation-additional__item::before {
@@ -13392,7 +14036,8 @@ input[type='radio'].visually-hidden {
   }
 
   .presentation-additional__btn {
-    font-size: 0.4375rem;
+    font-size: 0.6875rem;
+    padding: 14px 12px;
   }
 
   .main-contacts {
@@ -13431,9 +14076,10 @@ input[type='radio'].visually-hidden {
   }
 
   .facts-main__title,
+  .examples-main__title,
   .warning-main__title,
   .career-additional__title,
-  .simple-steps-main__title,
+  .simple-steps-main .simple-steps-main__title,
   .presentation-main__title,
   .section-university__title--main,
   .section-expert__title,
@@ -13450,7 +14096,7 @@ input[type='radio'].visually-hidden {
   }
 
   .start-it-additional__text--decorative,
-  .simple-steps-additional__text-decorative,
+  .simple-steps-main .simple-steps-additional__text-decorative,
   .presentation-additional__text--decorative,
   .important-main__text-decorative,
   .just-do-it-additional__text--decorative {
@@ -13459,8 +14105,7 @@ input[type='radio'].visually-hidden {
 
   .warning-main__subtitle,
   .career-main__subtitle,
-  .simple-steps-additional__subtitle,
-  .presentation-main__subtitle,
+  .simple-steps-main .simple-steps-additional__subtitle,
   .section-awards__title,
   .section-university__title,
   .section-expert__item--title,
@@ -13470,7 +14115,7 @@ input[type='radio'].visually-hidden {
   }
 
   .сareer-main__text--light,
-  .simple-steps-additional__text--light,
+  .simple-steps-main .simple-steps-additional__text--light,
   .presentation-additional__text--light,
   .section-awards__desc,
   .section-university__desc,
@@ -13486,9 +14131,10 @@ input[type='radio'].visually-hidden {
   .start-it-main__text--tablet,
   .facts-main__text,
   .except-numbers-additional__text,
+  .examples-main__text,
   .warning-main__text,
   .career-additional__text,
-  .simple-steps-main__text,
+  .simple-steps-main .simple-steps-main__text,
   .presentation-main__text,
   .section-university__desc--main,
   .education-section__desc--mobile,
@@ -13505,13 +14151,33 @@ input[type='radio'].visually-hidden {
   .presentation-additional__text--bold,
   .important-main__text--bold,
   .just-do-it-additional__text--bold {
+    font-size: 0.625rem;
+  }
+
+  .get-your-bonus-main__text::before,
+  .just-do-it-main__text::before {
+    width: 32px;
+  }
+
+  .important-main__text-decorative::before {
+    width: 20px;
+  }
+
+  .btn {
+    padding: 14px 22px;
+    font-size: 0.625rem;
+  }
+
+  .btn-wide {
+    padding: 12px 30px;
     font-size: 0.625rem;
   }
 
   .facts-main__title,
+  .examples-main__title,
   .warning-main__title,
   .career-additional__title,
-  .simple-steps-main__title,
+  .simple-steps-main .simple-steps-main__title,
   .presentation-main__title,
   .section-university__title--main,
   .section-expert__title,
@@ -13528,7 +14194,7 @@ input[type='radio'].visually-hidden {
   }
 
   .start-it-additional__text--decorative,
-  .simple-steps-additional__text-decorative,
+  .simple-steps-main .simple-steps-additional__text-decorative,
   .presentation-additional__text--decorative,
   .important-main__text-decorative,
   .just-do-it-additional__text--decorative {
@@ -13537,8 +14203,7 @@ input[type='radio'].visually-hidden {
 
   .warning-main__subtitle,
   .career-main__subtitle,
-  .simple-steps-additional__subtitle,
-  .presentation-main__subtitle,
+  .simple-steps-main .simple-steps-additional__subtitle,
   .section-awards__title,
   .section-university__title,
   .section-expert__item--title,
@@ -13548,7 +14213,7 @@ input[type='radio'].visually-hidden {
   }
 
   .сareer-main__text--light,
-  .simple-steps-additional__text--light,
+  .simple-steps-main .simple-steps-additional__text--light,
   .presentation-additional__text--light,
   .section-awards__desc,
   .section-university__desc,
@@ -13564,9 +14229,10 @@ input[type='radio'].visually-hidden {
   .start-it-main__text--tablet,
   .facts-main__text,
   .except-numbers-additional__text,
+  .examples-main__text,
   .warning-main__text,
   .career-additional__text,
-  .simple-steps-main__text,
+  .simple-steps-main .simple-steps-main__text,
   .presentation-main__text,
   .section-university__desc--main,
   .education-section__desc--mobile,
@@ -13583,13 +14249,33 @@ input[type='radio'].visually-hidden {
   .presentation-additional__text--bold,
   .important-main__text--bold,
   .just-do-it-additional__text--bold {
+    font-size: 0.625rem;
+  }
+
+  .get-your-bonus-main__text::before,
+  .just-do-it-main__text::before {
+    width: 32px;
+  }
+
+  .important-main__text-decorative::before {
+    width: 20px;
+  }
+
+  .btn {
+    padding: 14px 22px;
+    font-size: 0.625rem;
+  }
+
+  .btn-wide {
+    padding: 12px 30px;
     font-size: 0.625rem;
   }
 
   .facts-main__title,
+  .examples-main__title,
   .warning-main__title,
   .career-additional__title,
-  .simple-steps-main__title,
+  .simple-steps-main .simple-steps-main__title,
   .presentation-main__title,
   .section-university__title--main,
   .section-expert__title,
@@ -13606,7 +14292,7 @@ input[type='radio'].visually-hidden {
   }
 
   .start-it-additional__text--decorative,
-  .simple-steps-additional__text-decorative,
+  .simple-steps-main .simple-steps-additional__text-decorative,
   .presentation-additional__text--decorative,
   .important-main__text-decorative,
   .just-do-it-additional__text--decorative {
@@ -13615,8 +14301,7 @@ input[type='radio'].visually-hidden {
 
   .warning-main__subtitle,
   .career-main__subtitle,
-  .simple-steps-additional__subtitle,
-  .presentation-main__subtitle,
+  .simple-steps-main .simple-steps-additional__subtitle,
   .section-awards__title,
   .section-university__title,
   .section-expert__item--title,
@@ -13626,7 +14311,7 @@ input[type='radio'].visually-hidden {
   }
 
   .сareer-main__text--light,
-  .simple-steps-additional__text--light,
+  .simple-steps-main .simple-steps-additional__text--light,
   .presentation-additional__text--light,
   .section-awards__desc,
   .section-university__desc,
@@ -13642,9 +14327,10 @@ input[type='radio'].visually-hidden {
   .start-it-main__text--tablet,
   .facts-main__text,
   .except-numbers-additional__text,
+  .examples-main__text,
   .warning-main__text,
   .career-additional__text,
-  .simple-steps-main__text,
+  .simple-steps-main .simple-steps-main__text,
   .presentation-main__text,
   .section-university__desc--main,
   .education-section__desc--mobile,
@@ -13661,13 +14347,33 @@ input[type='radio'].visually-hidden {
   .presentation-additional__text--bold,
   .important-main__text--bold,
   .just-do-it-additional__text--bold {
+    font-size: 0.625rem;
+  }
+
+  .get-your-bonus-main__text::before,
+  .just-do-it-main__text::before {
+    width: 32px;
+  }
+
+  .important-main__text-decorative::before {
+    width: 20px;
+  }
+
+  .btn {
+    padding: 14px 22px;
+    font-size: 0.625rem;
+  }
+
+  .btn-wide {
+    padding: 12px 30px;
     font-size: 0.625rem;
   }
 
   .facts-main__title,
+  .examples-main__title,
   .warning-main__title,
   .career-additional__title,
-  .simple-steps-main__title,
+  .simple-steps-main .simple-steps-main__title,
   .presentation-main__title,
   .section-university__title--main,
   .section-expert__title,
@@ -13684,7 +14390,7 @@ input[type='radio'].visually-hidden {
   }
 
   .start-it-additional__text--decorative,
-  .simple-steps-additional__text-decorative,
+  .simple-steps-main .simple-steps-additional__text-decorative,
   .presentation-additional__text--decorative,
   .important-main__text-decorative,
   .just-do-it-additional__text--decorative {
@@ -13693,8 +14399,7 @@ input[type='radio'].visually-hidden {
 
   .warning-main__subtitle,
   .career-main__subtitle,
-  .simple-steps-additional__subtitle,
-  .presentation-main__subtitle,
+  .simple-steps-main .simple-steps-additional__subtitle,
   .section-awards__title,
   .section-university__title,
   .section-expert__item--title,
@@ -13704,7 +14409,7 @@ input[type='radio'].visually-hidden {
   }
 
   .сareer-main__text--light,
-  .simple-steps-additional__text--light,
+  .simple-steps-main .simple-steps-additional__text--light,
   .presentation-additional__text--light,
   .section-awards__desc,
   .section-university__desc,
@@ -13720,9 +14425,10 @@ input[type='radio'].visually-hidden {
   .start-it-main__text--tablet,
   .facts-main__text,
   .except-numbers-additional__text,
+  .examples-main__text,
   .warning-main__text,
   .career-additional__text,
-  .simple-steps-main__text,
+  .simple-steps-main .simple-steps-main__text,
   .presentation-main__text,
   .section-university__desc--main,
   .education-section__desc--mobile,
@@ -13739,15 +14445,30 @@ input[type='radio'].visually-hidden {
   .presentation-additional__text--bold,
   .important-main__text--bold,
   .just-do-it-additional__text--bold {
+    font-size: 0.625rem;
+  }
+
+  .get-your-bonus-main__text::before,
+  .just-do-it-main__text::before {
+    width: 32px;
+  }
+
+  .important-main__text-decorative::before {
+    width: 20px;
+  }
+
+  .btn {
+    padding: 14px 22px;
+    font-size: 0.625rem;
+  }
+
+  .btn-wide {
+    padding: 12px 30px;
     font-size: 0.625rem;
   }
 
   .get-your-bonus {
     margin-bottom: 120px;
-  }
-
-  .get-your-bonus-main__text::before {
-    width: 26px;
   }
 
   .important {
@@ -13764,15 +14485,6 @@ input[type='radio'].visually-hidden {
 
   .important-additional__text {
     max-width: 70px;
-  }
-
-  .important-main__text-decorative::before {
-    width: 24px;
-  }
-
-  .important-main__button {
-    font-size: 0.6875rem;
-    padding: 14px 12px;
   }
 
   .just-do-it {
@@ -14667,108 +15379,6 @@ input[type='radio'].visually-hidden {
   }
 }
 
-@media screen and (min-width: 75em) and (-webkit-min-device-pixel-ratio: 2), screen and (min-width: 75em) and (min-resolution: 192dpi), screen and (min-width: 75em) and (min-resolution: 2dppx) {
-  .simple-steps-main {
-    background-image: url(../images/background-png/stap-dectop@2x.png);
-  }
-}
-
-@media (min-width: 75em) {
-  .header__wrapper {
-    max-width: 100%;
-  }
-
-  .header-logo__link {
-    position: absolute;
-    left: 20px;
-  }
-
-  .banner__title {
-    font-size: 3.125rem;
-    line-height: 1.25;
-  }
-
-  .banner__desc {
-    font-size: 0.5625rem;
-    line-height: 1.7;
-  }
-
-  .banner__company {
-    font-size: 16.4375rem;
-    line-height: 1.2;
-  }
-
-  .article-career__title {
-    font-size: 0.70625rem;
-    line-height: 1.6;
-  }
-
-  .article-career__desc {
-    font-size: 0.625rem;
-    line-height: 1.5;
-  }
-
-  .start-it-main__offer {
-    font-size: 0.6875rem;
-  }
-
-  .start-it-main__title {
-    font-size: 1.875rem;
-  }
-
-  .start-in-preferences:before {
-    font-size: 9.75rem;
-    top: -35px;
-    left: -310px;
-  }
-
-  .start-it-additional__subtitle {
-    font-size: 1.1875rem;
-  }
-
-  .start-in-preferences__item:nth-last-child(-n+4) {
-    margin-bottom: 20px;
-  }
-
-  .start-in-preferences__item {
-    margin-bottom: 20px;
-  }
-
-  .start-in-preferences__item {
-    font-size: 0.625rem;
-  }
-
-  .start-it-additional__text--decorative {
-    position: relative;
-    top: -80px;
-  }
-
-  .facts-main__title {
-    text-align: left;
-  }
-
-  .facts-additional__item {
-    width: 165px;
-    font-size: 0.5625rem;
-  }
-
-  .facts-additional__subtitle {
-    font-size: 1.1875rem;
-  }
-
-  .except-numbers {
-    padding-top: 115px;
-  }
-
-  .warning {
-    padding-top: 115px;
-  }
-
-  .warning-main__item:before {
-    left: -24px;
-  }
-}
-
 @media (max-width: 1199.98px) {
   .table-responsive-xl {
     display: block;
@@ -15127,7 +15737,7 @@ input[type='radio'].visually-hidden {
 }
 
 @media (-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi), (min-resolution: 2dppx) {
-  .simple-steps-main {
+  .simple-steps-main::before {
     background-image: url(../images/background-png/stap-mobile@2x.png);
   }
 

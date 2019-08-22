@@ -156,52 +156,13 @@
   margin-bottom: 30px;
 
   &::before {
-    @extend %pseudos;
-    content: '';
-    height: 2px;
-    width: 36px;
-    transform: rotate(124deg);
+    @extend %pseudo-slash;
     left: -50px;
     top: 18px;
-    z-index: 20;
-    background-color: $title-text-color;
 
     @media screen and (min-width: 48em) {
-      width: 20px;
-      left: -29px;
-      top: 13px;
+      left: -30px;
+      top: 12px;
     }
-
-    @media screen and (min-width: 75em) {
-      width: 24px;
-    }
-  }
-}
-
-.important-main__button {
-  padding: 14px 30px;
-  font-size: remy(12);
-
-  @media screen and (min-width: 48em) {
-    font-size: remy(10);
-    padding: 14px 10px;
-  }
-
-  @media screen and (min-width: 62em) {
-    font-size: remy(11);
-  }
-
-  @media screen and (min-width: 75em) {
-    font-size: remy(11);
-    padding: 14px 12px;
-  }
-
-  &:hover,
-  &:focus {
-    @extend %btn-hover;
-  }
-
-  &:active {
-    @extend %btn-active;
   }
 }
