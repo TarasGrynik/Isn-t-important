@@ -29,6 +29,7 @@
 }
 
 .banner__desc {
+  padding: 0 25px;
   z-index: 1;
   font-family: $section-title-font;
   @include media-font(remy(8), 1.7);
@@ -44,14 +45,14 @@
   &:before {
     line-height: 0;
     content: "<";
-    left: -11px;
+    left: 0;
     top: 8px;
   }
 
   &:after {
     line-height: 0;
     content: "/>";
-    right: 0;
+    right: 5px;
   }
 }
 
