@@ -11,7 +11,6 @@
     background-size: cover;
   }
 
-  // fixed pixel ratio bg!!!!
   @media (min-width: 48em) {
     padding-top: 85px;
     background: url('../images/banner-bg/devs-work.png') bottom 0 right 22% no-repeat, url('../images/Banner-background/banner-shadow.png') no-repeat center, $banner-bg-color;
@@ -20,9 +19,6 @@
       background: url('../images/banner-bg/devs-work@2x.png') bottom 0 right 22% no-repeat, url('../images/Banner-background/banner-shadow@2x.png') no-repeat center, $banner-bg-color;
     }
   }
-
-  
-
 }
 
 .banner__title {
