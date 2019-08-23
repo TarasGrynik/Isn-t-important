@@ -6713,10 +6713,6 @@ a.text-dark:focus {
 
 /* Placeholder for list */
 
-.list-square,
-.list-number,
-.list-rotate,
-.list-square--diff,
 .social-list,
 .examples-pagination__numbers,
 .simple-steps-main .simple-steps-additional,
@@ -7262,14 +7258,15 @@ h6 {
 
 /* Components */
 
-.list-square,
-.list-number,
-.list-rotate,
-.list-square--diff {
+.list--square,
+.list--number,
+.list--rotate,
+.list--square-diff {
+  list-style: none;
   position: relative;
 }
 
-.list-square:before {
+.list--square:before {
   content: "";
   display: block;
   position: absolute;
@@ -7280,7 +7277,7 @@ h6 {
   background-color: #000000;
 }
 
-.list-square--diff:before {
+.list--square-diff:before {
   content: "";
   display: block;
   position: absolute;
@@ -7291,7 +7288,7 @@ h6 {
   background-color: #ff6b08;
 }
 
-.list-number:before {
+.list--number:before {
   position: absolute;
   display: block;
   left: -28px;
@@ -7303,7 +7300,7 @@ h6 {
   text-align: center;
 }
 
-.list-number:after {
+.list--number:after {
   position: absolute;
   left: -18px;
   top: 22px;
@@ -7314,9 +7311,8 @@ h6 {
   background-color: #16ebfe;
 }
 
-.list-rotate:before {
+.list--rotate:before {
   position: absolute;
-  top: 18px;
   left: -40px;
   display: inline-block;
   width: 45px;
@@ -7325,9 +7321,10 @@ h6 {
   text-align: center;
   counter-increment: rotated;
   content: "[00" counter(rotated) "]";
-  transform: rotate(-90deg);
+  transform: rotate(-90deg) translateX(-50%);
   background: #ff6b08;
   clip: rect(3px auto auto auto);
+  color: #ffffff;
 }
 
 .advertising__image {
@@ -8403,10 +8400,6 @@ h6 {
 
 /* Placeholder for list */
 
-.list-square,
-.list-number,
-.list-rotate,
-.list-square--diff,
 .social-list,
 .examples-pagination__numbers,
 .simple-steps-main .simple-steps-additional,
@@ -8720,10 +8713,6 @@ input[type='radio'].visually-hidden {
 
 /* Placeholder for list */
 
-.list-square,
-.list-number,
-.list-rotate,
-.list-square--diff,
 .social-list,
 .examples-pagination__numbers,
 .simple-steps-main .simple-steps-additional,
@@ -9031,10 +9020,6 @@ input[type='radio'].visually-hidden {
 
 /* Placeholder for list */
 
-.list-square,
-.list-number,
-.list-rotate,
-.list-square--diff,
 .social-list,
 .examples-pagination__numbers,
 .simple-steps-main .simple-steps-additional,
@@ -9341,10 +9326,6 @@ input[type='radio'].visually-hidden {
 
 /* Placeholder for list */
 
-.list-square,
-.list-number,
-.list-rotate,
-.list-square--diff,
 .social-list,
 .examples-pagination__numbers,
 .simple-steps-main .simple-steps-additional,
@@ -11053,7 +11034,10 @@ input[type='radio'].visually-hidden {
     font-size: 0.5625rem;
   }
 
+<<<<<<< HEAD
   .explain-main__text::before,
+=======
+>>>>>>> dd8f735ce0fc6826e43d16a0eea79a88da494d58
   .get-your-bonus-main__text::before,
   .just-do-it-main__text::before {
     height: 4px;
@@ -11316,7 +11300,10 @@ input[type='radio'].visually-hidden {
     font-size: 0.5625rem;
   }
 
+<<<<<<< HEAD
   .explain-main__text::before,
+=======
+>>>>>>> dd8f735ce0fc6826e43d16a0eea79a88da494d58
   .get-your-bonus-main__text::before,
   .just-do-it-main__text::before {
     height: 4px;
@@ -11421,7 +11408,10 @@ input[type='radio'].visually-hidden {
     font-size: 0.5625rem;
   }
 
+<<<<<<< HEAD
   .explain-main__text::before,
+=======
+>>>>>>> dd8f735ce0fc6826e43d16a0eea79a88da494d58
   .get-your-bonus-main__text::before,
   .just-do-it-main__text::before {
     height: 4px;
@@ -11526,7 +11516,10 @@ input[type='radio'].visually-hidden {
     font-size: 0.5625rem;
   }
 
+<<<<<<< HEAD
   .explain-main__text::before,
+=======
+>>>>>>> dd8f735ce0fc6826e43d16a0eea79a88da494d58
   .get-your-bonus-main__text::before,
   .just-do-it-main__text::before {
     height: 4px;
@@ -11631,7 +11624,10 @@ input[type='radio'].visually-hidden {
     font-size: 0.5625rem;
   }
 
+<<<<<<< HEAD
   .explain-main__text::before,
+=======
+>>>>>>> dd8f735ce0fc6826e43d16a0eea79a88da494d58
   .get-your-bonus-main__text::before,
   .just-do-it-main__text::before {
     height: 4px;
@@ -11762,7 +11758,7 @@ input[type='radio'].visually-hidden {
 }
 
 @media (min-width: 48em) {
-  .list-rotate:before {
+  .list--rotate:before {
     width: 22px;
     font-size: 0.5rem;
   }
@@ -13034,10 +13030,13 @@ input[type='radio'].visually-hidden {
   .presentation-additional__btn {
     font-size: 0.6875rem;
   }
+<<<<<<< HEAD
 
   .law-info__item {
     font-size: 0.6875rem;
   }
+=======
+>>>>>>> dd8f735ce0fc6826e43d16a0eea79a88da494d58
 }
 
 @media (min-width: 992px) {
@@ -15441,7 +15440,7 @@ input[type='radio'].visually-hidden {
 }
 
 @media (min-width: 75em) {
-  .list-rotate:before {
+  .list--rotate:before {
     width: 25px;
     font-size: 0.5625rem;
   }

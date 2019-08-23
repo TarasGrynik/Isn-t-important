@@ -1,13 +1,13 @@
-.list-square,
-.list-number,
-.list-rotate,
-.list-square--diff {
-  @extend %list;
+.list--square,
+.list--number,
+.list--rotate,
+.list--square-diff {
+  list-style: none;
   position: relative;
 }
 
 
-.list-square {
+.list--square {
   &:before {
     content: "";
     display: block;
@@ -21,7 +21,7 @@
 }
 
 
-.list-square--diff {
+.list--square-diff {
   &:before {
     content: "";
     display: block;
@@ -34,7 +34,7 @@
   }
 }
 
-.list-number {
+.list--number {
   &:before {
     position: absolute;
     display: block;
@@ -59,10 +59,9 @@
   }
 }
 
-.list-rotate {
+.list--rotate {
   &:before {
     position: absolute;
-    top: 18px;
     left: -40px;
 
     display: inline-block;
@@ -73,9 +72,10 @@
 
     counter-increment: rotated;
     content: "[00" counter(rotated) "]";
-    transform: rotate(-90deg);
+    transform: rotate(-90deg) translateX(-50%);
     background: $main-style-color;
     clip: rect(3px auto auto auto);
+    color: $banner-title-text-color;
 
     @media (min-width: 48em) {
       width: 22px;
