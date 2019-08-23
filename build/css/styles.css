@@ -6700,10 +6700,6 @@ a.text-dark:focus {
 
 /* Placeholder for list */
 
-.list--square,
-.list--number,
-.list--rotate,
-.list--square-diff,
 .social-list,
 .examples-pagination__numbers,
 .simple-steps-main .simple-steps-additional,
@@ -7252,6 +7248,7 @@ h6 {
 .list--number,
 .list--rotate,
 .list--square-diff {
+  list-style: none;
   position: relative;
 }
 
@@ -8349,10 +8346,6 @@ h6 {
 
 /* Placeholder for list */
 
-.list--square,
-.list--number,
-.list--rotate,
-.list--square-diff,
 .social-list,
 .examples-pagination__numbers,
 .simple-steps-main .simple-steps-additional,
@@ -8652,10 +8645,6 @@ input[type='radio'].visually-hidden {
 
 /* Placeholder for list */
 
-.list--square,
-.list--number,
-.list--rotate,
-.list--square-diff,
 .social-list,
 .examples-pagination__numbers,
 .simple-steps-main .simple-steps-additional,
@@ -8949,10 +8938,6 @@ input[type='radio'].visually-hidden {
 
 /* Placeholder for list */
 
-.list--square,
-.list--number,
-.list--rotate,
-.list--square-diff,
 .social-list,
 .examples-pagination__numbers,
 .simple-steps-main .simple-steps-additional,
@@ -9245,10 +9230,6 @@ input[type='radio'].visually-hidden {
 
 /* Placeholder for list */
 
-.list--square,
-.list--number,
-.list--rotate,
-.list--square-diff,
 .social-list,
 .examples-pagination__numbers,
 .simple-steps-main .simple-steps-additional,
