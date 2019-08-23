@@ -119,12 +119,14 @@
 .banner__img {
   fill: $banner-title-text-color;
   width: 14px;
+  height: 11px;
 
   &:hover {
     fill: $main-style-color;
   }
 
   &--facebook {
+    height: 14px;
     margin-right: 8px;
   }
 }
