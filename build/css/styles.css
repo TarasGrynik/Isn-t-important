@@ -6700,6 +6700,10 @@ a.text-dark:focus {
 
 /* Placeholder for list */
 
+.list-square,
+.list-number,
+.list-rotate,
+.list-square--diff,
 .social-list,
 .examples-pagination__numbers,
 .simple-steps-main .simple-steps-additional,
@@ -6741,15 +6745,33 @@ a.text-dark:focus {
 .section-expert__item--title::before,
 .section-help__desc::before,
 .only-now-main::before,
-.get-your-bonus-main__text::before,
 .get-your-bonus-main__block::after,
 .get-your-bonus-main__block::before,
 .important-additional__price::before,
-.important-main__text-decorative::before,
-.just-do-it-main__text::before,
 .just-do-it-additional__block:nth-of-type(1)::before {
   position: absolute;
   display: block;
+}
+
+.get-your-bonus-main__text::before,
+.just-do-it-main__text::before {
+  position: absolute;
+  display: block;
+  content: '';
+  height: 3px;
+  width: 20px;
+  background-color: #000000;
+}
+
+.only-now-main__text--decorative::before,
+.important-main__text-decorative::before {
+  position: absolute;
+  display: block;
+  content: '';
+  height: 2px;
+  width: 32px;
+  transform: rotate(122deg);
+  background-color: #000000;
 }
 
 .start-it-main__special-text,
@@ -6763,28 +6785,22 @@ a.text-dark:focus {
   font-family: "Acrom-ExtraBold", sans-serif;
 }
 
+.btn:hover,
+.btn:focus,
 .main-contacts__button:hover,
 .main-contacts__button:focus,
 .banner__btn:hover,
 .presentation-additional__btn:hover,
-.presentation-additional__btn:focus,
-.main-form__button:hover,
-.main-form__button:focus,
-.important-main__button:hover,
-.important-main__button:focus,
-.just-do-it-main__button:hover,
-.just-do-it-main__button:focus {
+.presentation-additional__btn:focus {
   background-color: #17ecff;
   color: #ffffff;
 }
 
+.btn:active,
 .main-contacts__button:active,
 .banner__btn,
 .banner__btn:active,
-.presentation-additional__btn:active,
-.main-form__button:active,
-.important-main__button:active,
-.just-do-it-main__button:active {
+.presentation-additional__btn:active {
   background-color: #06a4b2;
 }
 
@@ -6800,6 +6816,8 @@ a.text-dark:focus {
   border: none;
   box-shadow: 0px 5px 6px rgba(196, 87, 15, 0.26);
   transition: all 0.2s linear;
+  padding: 14px 26px;
+  font-size: 0.6875rem;
 }
 
 /* VISUALLY HIDDEN HELPER CLASS */
@@ -7216,6 +7234,8 @@ body {
   color: #3f4144;
   font-size: 0.84375rem;
   line-height: 1.44;
+  counter-reset: number;
+  counter-reset: rotated;
 }
 
 h1,
@@ -7229,6 +7249,74 @@ h6 {
 }
 
 /* Components */
+
+.list-square,
+.list-number,
+.list-rotate,
+.list-square--diff {
+  position: relative;
+}
+
+.list-square:before {
+  content: "";
+  display: block;
+  position: absolute;
+  top: 5px;
+  left: -20px;
+  width: 7px;
+  height: 7px;
+  background-color: #000000;
+}
+
+.list-square--diff:before {
+  content: "";
+  display: block;
+  position: absolute;
+  top: 5px;
+  left: -20px;
+  width: 7px;
+  height: 7px;
+  background-color: #ff6b08;
+}
+
+.list-number:before {
+  position: absolute;
+  display: block;
+  left: -28px;
+  counter-increment: number;
+  content: "0" counter(number) ".";
+  clip: rect(auto auto auto 5px);
+  font-family: "Acrom-ExtraBold", sans-serif;
+  color: #000000;
+  text-align: center;
+}
+
+.list-number:after {
+  position: absolute;
+  left: -18px;
+  top: 22px;
+  display: block;
+  content: "";
+  width: 10px;
+  height: 10px;
+  background-color: #16ebfe;
+}
+
+.list-rotate:before {
+  position: absolute;
+  top: 18px;
+  left: -40px;
+  display: inline-block;
+  width: 45px;
+  height: 13px;
+  line-height: 13px;
+  text-align: center;
+  counter-increment: rotated;
+  content: "[00" counter(rotated) "]";
+  transform: rotate(-90deg);
+  background: #ff6b08;
+  clip: rect(3px auto auto auto);
+}
 
 .advertising__image {
   width: 16px;
@@ -7322,6 +7410,7 @@ h6 {
 }
 
 .banner__desc {
+  padding: 0 25px;
   z-index: 1;
   font-family: "Acrom-Bold", sans-serif;
 }
@@ -7335,14 +7424,14 @@ h6 {
 .banner__desc:before {
   line-height: 0;
   content: "<";
-  left: -11px;
+  left: 0;
   top: 8px;
 }
 
 .banner__desc:after {
   line-height: 0;
   content: "/>";
-  right: 0;
+  right: 5px;
 }
 
 .banner__company {
@@ -7379,6 +7468,7 @@ h6 {
 .banner__img {
   fill: #ffffff;
   width: 14px;
+  height: 11px;
 }
 
 .banner__img:hover {
@@ -7386,6 +7476,7 @@ h6 {
 }
 
 .banner__img--facebook {
+  height: 14px;
   margin-right: 8px;
 }
 
@@ -7862,20 +7953,14 @@ h6 {
 }
 
 .simple-steps-main::before {
-  content: 'STEP';
+  content: "";
   position: absolute;
+  left: 60px;
   display: block;
-  top: 50px;
-  left: 115px;
-  font-family: "Acrom-ExtraBold", sans-serif;
-  color: #f7f7f7;
-  font-size: 3.5rem;
-  line-height: 1.4;
-  transform: rotate(90deg);
   z-index: -1;
-  background-image: url(../images/background-png/stap-mobile.png);
-  background-repeat: no-repeat;
-  background-position: 20% 0%;
+  height: 146px;
+  width: 147px;
+  background: url(../images/background-png/stap-mobile.png) no-repeat;
 }
 
 .simple-steps-main .simple-steps-main__title {
@@ -7952,6 +8037,19 @@ h6 {
   background-color: #000000;
   transform: skewY(-56deg);
 }
+
+/* 
+
+
+
+
+@media screen and (min-width: 75em) {
+  background-image: url(../images/background-png/stap-dectop.png);
+
+  @media (min-resolution: 192dpi), (min-resolution: 2dppx) {
+    background-image: url(../images/background-png/stap-dectop@2x.png);
+  }
+} */
 
 .presentation-main {
   padding: 20px 0 45px;
@@ -8253,6 +8351,10 @@ h6 {
 
 /* Placeholder for list */
 
+.list-square,
+.list-number,
+.list-rotate,
+.list-square--diff,
 .social-list,
 .examples-pagination__numbers,
 .simple-steps-main .simple-steps-additional,
@@ -8294,15 +8396,33 @@ h6 {
 .section-expert__item--title::before,
 .section-help__desc::before,
 .only-now-main::before,
-.get-your-bonus-main__text::before,
 .get-your-bonus-main__block::after,
 .get-your-bonus-main__block::before,
 .important-additional__price::before,
-.important-main__text-decorative::before,
-.just-do-it-main__text::before,
 .just-do-it-additional__block:nth-of-type(1)::before {
   position: absolute;
   display: block;
+}
+
+.get-your-bonus-main__text::before,
+.just-do-it-main__text::before {
+  position: absolute;
+  display: block;
+  content: '';
+  height: 3px;
+  width: 20px;
+  background-color: #000000;
+}
+
+.only-now-main__text--decorative::before,
+.important-main__text-decorative::before {
+  position: absolute;
+  display: block;
+  content: '';
+  height: 2px;
+  width: 32px;
+  transform: rotate(122deg);
+  background-color: #000000;
 }
 
 .start-it-main__special-text,
@@ -8316,28 +8436,22 @@ h6 {
   font-family: "Acrom-ExtraBold", sans-serif;
 }
 
+.btn:hover,
+.btn:focus,
 .main-contacts__button:hover,
 .main-contacts__button:focus,
 .banner__btn:hover,
 .presentation-additional__btn:hover,
-.presentation-additional__btn:focus,
-.main-form__button:hover,
-.main-form__button:focus,
-.important-main__button:hover,
-.important-main__button:focus,
-.just-do-it-main__button:hover,
-.just-do-it-main__button:focus {
+.presentation-additional__btn:focus {
   background-color: #17ecff;
   color: #ffffff;
 }
 
+.btn:active,
 .main-contacts__button:active,
 .banner__btn,
 .banner__btn:active,
-.presentation-additional__btn:active,
-.main-form__button:active,
-.important-main__button:active,
-.just-do-it-main__button:active {
+.presentation-additional__btn:active {
   background-color: #06a4b2;
 }
 
@@ -8353,6 +8467,8 @@ h6 {
   border: none;
   box-shadow: 0px 5px 6px rgba(196, 87, 15, 0.26);
   transition: all 0.2s linear;
+  padding: 14px 26px;
+  font-size: 0.6875rem;
 }
 
 /* VISUALLY HIDDEN HELPER CLASS */
@@ -8540,6 +8656,10 @@ input[type='radio'].visually-hidden {
 
 /* Placeholder for list */
 
+.list-square,
+.list-number,
+.list-rotate,
+.list-square--diff,
 .social-list,
 .examples-pagination__numbers,
 .simple-steps-main .simple-steps-additional,
@@ -8581,15 +8701,33 @@ input[type='radio'].visually-hidden {
 .section-expert__item--title::before,
 .section-help__desc::before,
 .only-now-main::before,
-.get-your-bonus-main__text::before,
 .get-your-bonus-main__block::after,
 .get-your-bonus-main__block::before,
 .important-additional__price::before,
-.important-main__text-decorative::before,
-.just-do-it-main__text::before,
 .just-do-it-additional__block:nth-of-type(1)::before {
   position: absolute;
   display: block;
+}
+
+.get-your-bonus-main__text::before,
+.just-do-it-main__text::before {
+  position: absolute;
+  display: block;
+  content: '';
+  height: 3px;
+  width: 20px;
+  background-color: #000000;
+}
+
+.only-now-main__text--decorative::before,
+.important-main__text-decorative::before {
+  position: absolute;
+  display: block;
+  content: '';
+  height: 2px;
+  width: 32px;
+  transform: rotate(122deg);
+  background-color: #000000;
 }
 
 .start-it-main__special-text,
@@ -8603,28 +8741,22 @@ input[type='radio'].visually-hidden {
   font-family: "Acrom-ExtraBold", sans-serif;
 }
 
+.btn:hover,
+.btn:focus,
 .main-contacts__button:hover,
 .main-contacts__button:focus,
 .banner__btn:hover,
 .presentation-additional__btn:hover,
-.presentation-additional__btn:focus,
-.main-form__button:hover,
-.main-form__button:focus,
-.important-main__button:hover,
-.important-main__button:focus,
-.just-do-it-main__button:hover,
-.just-do-it-main__button:focus {
+.presentation-additional__btn:focus {
   background-color: #17ecff;
   color: #ffffff;
 }
 
+.btn:active,
 .main-contacts__button:active,
 .banner__btn,
 .banner__btn:active,
-.presentation-additional__btn:active,
-.main-form__button:active,
-.important-main__button:active,
-.just-do-it-main__button:active {
+.presentation-additional__btn:active {
   background-color: #06a4b2;
 }
 
@@ -8640,6 +8772,8 @@ input[type='radio'].visually-hidden {
   border: none;
   box-shadow: 0px 5px 6px rgba(196, 87, 15, 0.26);
   transition: all 0.2s linear;
+  padding: 14px 26px;
+  font-size: 0.6875rem;
 }
 
 /* VISUALLY HIDDEN HELPER CLASS */
@@ -8821,6 +8955,10 @@ input[type='radio'].visually-hidden {
 
 /* Placeholder for list */
 
+.list-square,
+.list-number,
+.list-rotate,
+.list-square--diff,
 .social-list,
 .examples-pagination__numbers,
 .simple-steps-main .simple-steps-additional,
@@ -8862,15 +9000,33 @@ input[type='radio'].visually-hidden {
 .section-expert__item--title::before,
 .section-help__desc::before,
 .only-now-main::before,
-.get-your-bonus-main__text::before,
 .get-your-bonus-main__block::after,
 .get-your-bonus-main__block::before,
 .important-additional__price::before,
-.important-main__text-decorative::before,
-.just-do-it-main__text::before,
 .just-do-it-additional__block:nth-of-type(1)::before {
   position: absolute;
   display: block;
+}
+
+.get-your-bonus-main__text::before,
+.just-do-it-main__text::before {
+  position: absolute;
+  display: block;
+  content: '';
+  height: 3px;
+  width: 20px;
+  background-color: #000000;
+}
+
+.only-now-main__text--decorative::before,
+.important-main__text-decorative::before {
+  position: absolute;
+  display: block;
+  content: '';
+  height: 2px;
+  width: 32px;
+  transform: rotate(122deg);
+  background-color: #000000;
 }
 
 .start-it-main__special-text,
@@ -8884,28 +9040,22 @@ input[type='radio'].visually-hidden {
   font-family: "Acrom-ExtraBold", sans-serif;
 }
 
+.btn:hover,
+.btn:focus,
 .main-contacts__button:hover,
 .main-contacts__button:focus,
 .banner__btn:hover,
 .presentation-additional__btn:hover,
-.presentation-additional__btn:focus,
-.main-form__button:hover,
-.main-form__button:focus,
-.important-main__button:hover,
-.important-main__button:focus,
-.just-do-it-main__button:hover,
-.just-do-it-main__button:focus {
+.presentation-additional__btn:focus {
   background-color: #17ecff;
   color: #ffffff;
 }
 
+.btn:active,
 .main-contacts__button:active,
 .banner__btn,
 .banner__btn:active,
-.presentation-additional__btn:active,
-.main-form__button:active,
-.important-main__button:active,
-.just-do-it-main__button:active {
+.presentation-additional__btn:active {
   background-color: #06a4b2;
 }
 
@@ -8921,6 +9071,8 @@ input[type='radio'].visually-hidden {
   border: none;
   box-shadow: 0px 5px 6px rgba(196, 87, 15, 0.26);
   transition: all 0.2s linear;
+  padding: 14px 26px;
+  font-size: 0.6875rem;
 }
 
 /* VISUALLY HIDDEN HELPER CLASS */
@@ -9101,6 +9253,10 @@ input[type='radio'].visually-hidden {
 
 /* Placeholder for list */
 
+.list-square,
+.list-number,
+.list-rotate,
+.list-square--diff,
 .social-list,
 .examples-pagination__numbers,
 .simple-steps-main .simple-steps-additional,
@@ -9142,15 +9298,33 @@ input[type='radio'].visually-hidden {
 .section-expert__item--title::before,
 .section-help__desc::before,
 .only-now-main::before,
-.get-your-bonus-main__text::before,
 .get-your-bonus-main__block::after,
 .get-your-bonus-main__block::before,
 .important-additional__price::before,
-.important-main__text-decorative::before,
-.just-do-it-main__text::before,
 .just-do-it-additional__block:nth-of-type(1)::before {
   position: absolute;
   display: block;
+}
+
+.get-your-bonus-main__text::before,
+.just-do-it-main__text::before {
+  position: absolute;
+  display: block;
+  content: '';
+  height: 3px;
+  width: 20px;
+  background-color: #000000;
+}
+
+.only-now-main__text--decorative::before,
+.important-main__text-decorative::before {
+  position: absolute;
+  display: block;
+  content: '';
+  height: 2px;
+  width: 32px;
+  transform: rotate(122deg);
+  background-color: #000000;
 }
 
 .start-it-main__special-text,
@@ -9164,28 +9338,22 @@ input[type='radio'].visually-hidden {
   font-family: "Acrom-ExtraBold", sans-serif;
 }
 
+.btn:hover,
+.btn:focus,
 .main-contacts__button:hover,
 .main-contacts__button:focus,
 .banner__btn:hover,
 .presentation-additional__btn:hover,
-.presentation-additional__btn:focus,
-.main-form__button:hover,
-.main-form__button:focus,
-.important-main__button:hover,
-.important-main__button:focus,
-.just-do-it-main__button:hover,
-.just-do-it-main__button:focus {
+.presentation-additional__btn:focus {
   background-color: #17ecff;
   color: #ffffff;
 }
 
+.btn:active,
 .main-contacts__button:active,
 .banner__btn,
 .banner__btn:active,
-.presentation-additional__btn:active,
-.main-form__button:active,
-.important-main__button:active,
-.just-do-it-main__button:active {
+.presentation-additional__btn:active {
   background-color: #06a4b2;
 }
 
@@ -9201,6 +9369,8 @@ input[type='radio'].visually-hidden {
   border: none;
   box-shadow: 0px 5px 6px rgba(196, 87, 15, 0.26);
   transition: all 0.2s linear;
+  padding: 14px 26px;
+  font-size: 0.6875rem;
 }
 
 /* VISUALLY HIDDEN HELPER CLASS */
@@ -9267,8 +9437,8 @@ input[type='radio'].visually-hidden {
 
 .only-now-main::before {
   content: 'IT';
-  top: 0px;
-  left: 50%;
+  top: -30px;
+  left: 40%;
   transform: rotate(90deg);
   z-index: -1;
   color: #f7f7f7;
@@ -9296,12 +9466,8 @@ input[type='radio'].visually-hidden {
 }
 
 .get-your-bonus-main__text::before {
-  content: '';
-  left: -10px;
+  left: -14px;
   top: 30px;
-  height: 3px;
-  width: 20px;
-  background-color: #000000;
 }
 
 .get-your-bonus-main__block {
@@ -9415,9 +9581,6 @@ input[type='radio'].visually-hidden {
 
 .main-form__button {
   margin-top: 28px;
-  padding: 14px 20px;
-  font-size: 0.75rem;
-  font-family: "Acrom-ExtraBold", sans-serif;
 }
 
 .important {
@@ -9503,19 +9666,8 @@ input[type='radio'].visually-hidden {
 }
 
 .important-main__text-decorative::before {
-  content: '';
-  height: 2px;
-  width: 36px;
-  transform: rotate(124deg);
   left: -50px;
   top: 18px;
-  z-index: 20;
-  background-color: #000000;
-}
-
-.important-main__button {
-  padding: 14px 30px;
-  font-size: 0.75rem;
 }
 
 .just-do-it {
@@ -9528,7 +9680,7 @@ input[type='radio'].visually-hidden {
 
 .just-do-it-main::before {
   content: 'GO';
-  font-size: 110px;
+  font-size: 100px;
   transform: rotate(90deg);
   font-family: "Acrom-ExtraBold", sans-serif;
   color: rgba(0, 0, 0, 0.04);
@@ -9538,6 +9690,10 @@ input[type='radio'].visually-hidden {
   z-index: -1;
 }
 
+.just-do-it-main__title {
+  margin-bottom: 16px;
+}
+
 .just-do-it-main__text {
   position: relative;
   padding-left: 20px;
@@ -9545,16 +9701,11 @@ input[type='radio'].visually-hidden {
 }
 
 .just-do-it-main__text::before {
-  content: '—';
-  font-size: 1.875rem;
-  left: -8px;
-  top: -14px;
-  font-family: "Acrom-ExtraBold", sans-serif;
+  top: 9px;
+  left: -14px;
 }
 
 .just-do-it-main__button {
-  padding: 14px 30px;
-  font-size: 0.75rem;
   margin-bottom: 64px;
 }
 
@@ -10630,6 +10781,984 @@ input[type='radio'].visually-hidden {
   }
 }
 
+@media screen and (min-width: 48em) {
+  .facts-main__title,
+  .examples-main__title,
+  .warning-main__title,
+  .career-additional__title,
+  .simple-steps-main .simple-steps-main__title,
+  .presentation-main__title,
+  .section-university__title--main,
+  .section-expert__title,
+  .section-help__title,
+  .important-additional__title,
+  .important-main__title,
+  .just-do-it-main__title {
+    font-size: 1.6875rem;
+  }
+
+  .except-numbers-additional__title,
+  .get-your-bonus-main__title {
+    font-size: 1.6875rem;
+  }
+
+  .start-it-additional__text--decorative,
+  .simple-steps-main .simple-steps-additional__text-decorative,
+  .presentation-additional__text--decorative,
+  .important-main__text-decorative,
+  .just-do-it-additional__text--decorative {
+    font-size: 0.5625rem;
+  }
+
+  .warning-main__subtitle,
+  .career-main__subtitle,
+  .simple-steps-main .simple-steps-additional__subtitle,
+  .section-awards__title,
+  .section-university__title,
+  .section-expert__item--title,
+  .section-help__second-title,
+  .get-your-bonus-main__subtitle {
+    font-size: 0.5625rem;
+  }
+
+  .сareer-main__text--light,
+  .simple-steps-main .simple-steps-additional__text--light,
+  .presentation-additional__text--light,
+  .section-awards__desc,
+  .section-university__desc,
+  .section-expert__item--desc,
+  .section-help__second-desc,
+  .get-your-bonus-main__text--light,
+  .get-your-bonus-main__text--special,
+  .important-main__text--light,
+  .just-do-it-additional__text--light {
+    font-size: 0.5rem;
+  }
+
+  .start-it-main__text--tablet,
+  .facts-main__text,
+  .except-numbers-additional__text,
+  .examples-main__text,
+  .warning-main__text,
+  .career-additional__text,
+  .simple-steps-main .simple-steps-main__text,
+  .presentation-main__text,
+  .section-university__desc--main,
+  .education-section__desc--mobile,
+  .section-expert__desc,
+  .section-help__desc,
+  .get-your-bonus-main__text,
+  .main-form__input,
+  .important-additional__text,
+  .important-additional__text--special,
+  .just-do-it-main__text {
+    font-size: 0.5625rem;
+  }
+
+  .presentation-additional__text--bold,
+  .important-main__text--bold,
+  .just-do-it-additional__text--bold {
+    font-size: 0.5625rem;
+  }
+
+  .get-your-bonus-main__text::before,
+  .just-do-it-main__text::before {
+    height: 4px;
+    width: 28px;
+  }
+
+  .only-now-main__text--decorative::before,
+  .important-main__text-decorative::before {
+    height: 3px;
+    width: 18px;
+  }
+
+  .btn {
+    padding: 12px 20px;
+    font-size: 0.5625rem;
+  }
+
+  .advertising__image {
+    width: 20px;
+    height: 12px;
+  }
+
+  .social-list {
+    display: block;
+    display: flex;
+    flex-flow: column nowrap;
+  }
+
+  .main-contacts__button {
+    padding: 14px 30px;
+    font-size: 0.625rem;
+  }
+
+  .career-main {
+    padding: 30px 0 55px;
+  }
+
+  .career-additional__title {
+    padding-bottom: 25px;
+  }
+
+  .career-additional__text {
+    padding-bottom: 40px;
+  }
+
+  .career-main__subtitle {
+    padding-bottom: 15px;
+  }
+
+  .career-main__subtitle::before {
+    left: 15px;
+    top: 0px;
+  }
+
+  .simple-steps-main::before {
+    left: 115px;
+    height: 210px;
+    width: 210px;
+    background: url(../images/background-png/stap.png) no-repeat;
+  }
+
+  .simple-steps-main .simple-steps-additional__subtitle::before {
+    width: 7px;
+    height: 7px;
+    top: 20px;
+  }
+
+  .simple-steps-main .simple-steps-additional__block::before {
+    font-size: 1.0625rem;
+    clip: rect(auto, auto, auto, 6px);
+  }
+
+  .simple-steps-main .simple-steps-additional__text-decorative::before {
+    width: 10px;
+    height: 2.5px;
+  }
+
+  .presentation-main {
+    padding: 30px 0 50px;
+  }
+
+  .presentation-main__text::before {
+    width: 26px;
+    height: 4px;
+  }
+
+  .presentation-additional__block {
+    padding: 55px 0 20px;
+  }
+
+  .presentation-main__subtitle {
+    padding-top: 55px;
+    padding-bottom: 0px;
+  }
+
+  .presentation-additional__text--decorative::before {
+    display: block;
+  }
+
+  .presentation-additional__text--decorative {
+    padding-top: 0px;
+    margin-bottom: 0px;
+  }
+
+  .presentation-additional__item::before {
+    width: 20px;
+    height: 10px;
+    font-size: 0.4375rem;
+    top: 10px;
+    left: -15px;
+    clip: auto;
+  }
+
+  .presentation-additional__btn {
+    font-size: 0.625rem;
+    padding: 14px 10px;
+    margin-top: 0px;
+  }
+
+  .main-contacts {
+    padding: 50px 0;
+  }
+
+  .page-footer__logo {
+    width: 64px;
+    height: 20px;
+  }
+
+  .main-contacts__title {
+    font-size: 0.75rem;
+    margin-bottom: 6px;
+  }
+
+  .main-contacts__text,
+  .main-contacts__link {
+    font-size: 0.625rem;
+  }
+
+  .page-footer__bottom {
+    height: 34px;
+  }
+
+  .law-info {
+    height: 34px;
+  }
+
+  .law-info__item {
+    font-size: 0.625rem;
+  }
+
+  .law-info__item:not(:nth-of-type(1)) {
+    margin-left: 14px;
+  }
+
+  .facts-main__title,
+  .examples-main__title,
+  .warning-main__title,
+  .career-additional__title,
+  .simple-steps-main .simple-steps-main__title,
+  .presentation-main__title,
+  .section-university__title--main,
+  .section-expert__title,
+  .section-help__title,
+  .important-additional__title,
+  .important-main__title,
+  .just-do-it-main__title {
+    font-size: 1.6875rem;
+  }
+
+  .except-numbers-additional__title,
+  .get-your-bonus-main__title {
+    font-size: 1.6875rem;
+  }
+
+  .start-it-additional__text--decorative,
+  .simple-steps-main .simple-steps-additional__text-decorative,
+  .presentation-additional__text--decorative,
+  .important-main__text-decorative,
+  .just-do-it-additional__text--decorative {
+    font-size: 0.5625rem;
+  }
+
+  .warning-main__subtitle,
+  .career-main__subtitle,
+  .simple-steps-main .simple-steps-additional__subtitle,
+  .section-awards__title,
+  .section-university__title,
+  .section-expert__item--title,
+  .section-help__second-title,
+  .get-your-bonus-main__subtitle {
+    font-size: 0.5625rem;
+  }
+
+  .сareer-main__text--light,
+  .simple-steps-main .simple-steps-additional__text--light,
+  .presentation-additional__text--light,
+  .section-awards__desc,
+  .section-university__desc,
+  .section-expert__item--desc,
+  .section-help__second-desc,
+  .get-your-bonus-main__text--light,
+  .get-your-bonus-main__text--special,
+  .important-main__text--light,
+  .just-do-it-additional__text--light {
+    font-size: 0.5rem;
+  }
+
+  .start-it-main__text--tablet,
+  .facts-main__text,
+  .except-numbers-additional__text,
+  .examples-main__text,
+  .warning-main__text,
+  .career-additional__text,
+  .simple-steps-main .simple-steps-main__text,
+  .presentation-main__text,
+  .section-university__desc--main,
+  .education-section__desc--mobile,
+  .section-expert__desc,
+  .section-help__desc,
+  .get-your-bonus-main__text,
+  .main-form__input,
+  .important-additional__text,
+  .important-additional__text--special,
+  .just-do-it-main__text {
+    font-size: 0.5625rem;
+  }
+
+  .presentation-additional__text--bold,
+  .important-main__text--bold,
+  .just-do-it-additional__text--bold {
+    font-size: 0.5625rem;
+  }
+
+  .get-your-bonus-main__text::before,
+  .just-do-it-main__text::before {
+    height: 4px;
+    width: 28px;
+  }
+
+  .only-now-main__text--decorative::before,
+  .important-main__text-decorative::before {
+    height: 3px;
+    width: 18px;
+  }
+
+  .btn {
+    padding: 12px 20px;
+    font-size: 0.5625rem;
+  }
+
+  .facts-main__title,
+  .examples-main__title,
+  .warning-main__title,
+  .career-additional__title,
+  .simple-steps-main .simple-steps-main__title,
+  .presentation-main__title,
+  .section-university__title--main,
+  .section-expert__title,
+  .section-help__title,
+  .important-additional__title,
+  .important-main__title,
+  .just-do-it-main__title {
+    font-size: 1.6875rem;
+  }
+
+  .except-numbers-additional__title,
+  .get-your-bonus-main__title {
+    font-size: 1.6875rem;
+  }
+
+  .start-it-additional__text--decorative,
+  .simple-steps-main .simple-steps-additional__text-decorative,
+  .presentation-additional__text--decorative,
+  .important-main__text-decorative,
+  .just-do-it-additional__text--decorative {
+    font-size: 0.5625rem;
+  }
+
+  .warning-main__subtitle,
+  .career-main__subtitle,
+  .simple-steps-main .simple-steps-additional__subtitle,
+  .section-awards__title,
+  .section-university__title,
+  .section-expert__item--title,
+  .section-help__second-title,
+  .get-your-bonus-main__subtitle {
+    font-size: 0.5625rem;
+  }
+
+  .сareer-main__text--light,
+  .simple-steps-main .simple-steps-additional__text--light,
+  .presentation-additional__text--light,
+  .section-awards__desc,
+  .section-university__desc,
+  .section-expert__item--desc,
+  .section-help__second-desc,
+  .get-your-bonus-main__text--light,
+  .get-your-bonus-main__text--special,
+  .important-main__text--light,
+  .just-do-it-additional__text--light {
+    font-size: 0.5rem;
+  }
+
+  .start-it-main__text--tablet,
+  .facts-main__text,
+  .except-numbers-additional__text,
+  .examples-main__text,
+  .warning-main__text,
+  .career-additional__text,
+  .simple-steps-main .simple-steps-main__text,
+  .presentation-main__text,
+  .section-university__desc--main,
+  .education-section__desc--mobile,
+  .section-expert__desc,
+  .section-help__desc,
+  .get-your-bonus-main__text,
+  .main-form__input,
+  .important-additional__text,
+  .important-additional__text--special,
+  .just-do-it-main__text {
+    font-size: 0.5625rem;
+  }
+
+  .presentation-additional__text--bold,
+  .important-main__text--bold,
+  .just-do-it-additional__text--bold {
+    font-size: 0.5625rem;
+  }
+
+  .get-your-bonus-main__text::before,
+  .just-do-it-main__text::before {
+    height: 4px;
+    width: 28px;
+  }
+
+  .only-now-main__text--decorative::before,
+  .important-main__text-decorative::before {
+    height: 3px;
+    width: 18px;
+  }
+
+  .btn {
+    padding: 12px 20px;
+    font-size: 0.5625rem;
+  }
+
+  .facts-main__title,
+  .examples-main__title,
+  .warning-main__title,
+  .career-additional__title,
+  .simple-steps-main .simple-steps-main__title,
+  .presentation-main__title,
+  .section-university__title--main,
+  .section-expert__title,
+  .section-help__title,
+  .important-additional__title,
+  .important-main__title,
+  .just-do-it-main__title {
+    font-size: 1.6875rem;
+  }
+
+  .except-numbers-additional__title,
+  .get-your-bonus-main__title {
+    font-size: 1.6875rem;
+  }
+
+  .start-it-additional__text--decorative,
+  .simple-steps-main .simple-steps-additional__text-decorative,
+  .presentation-additional__text--decorative,
+  .important-main__text-decorative,
+  .just-do-it-additional__text--decorative {
+    font-size: 0.5625rem;
+  }
+
+  .warning-main__subtitle,
+  .career-main__subtitle,
+  .simple-steps-main .simple-steps-additional__subtitle,
+  .section-awards__title,
+  .section-university__title,
+  .section-expert__item--title,
+  .section-help__second-title,
+  .get-your-bonus-main__subtitle {
+    font-size: 0.5625rem;
+  }
+
+  .сareer-main__text--light,
+  .simple-steps-main .simple-steps-additional__text--light,
+  .presentation-additional__text--light,
+  .section-awards__desc,
+  .section-university__desc,
+  .section-expert__item--desc,
+  .section-help__second-desc,
+  .get-your-bonus-main__text--light,
+  .get-your-bonus-main__text--special,
+  .important-main__text--light,
+  .just-do-it-additional__text--light {
+    font-size: 0.5rem;
+  }
+
+  .start-it-main__text--tablet,
+  .facts-main__text,
+  .except-numbers-additional__text,
+  .examples-main__text,
+  .warning-main__text,
+  .career-additional__text,
+  .simple-steps-main .simple-steps-main__text,
+  .presentation-main__text,
+  .section-university__desc--main,
+  .education-section__desc--mobile,
+  .section-expert__desc,
+  .section-help__desc,
+  .get-your-bonus-main__text,
+  .main-form__input,
+  .important-additional__text,
+  .important-additional__text--special,
+  .just-do-it-main__text {
+    font-size: 0.5625rem;
+  }
+
+  .presentation-additional__text--bold,
+  .important-main__text--bold,
+  .just-do-it-additional__text--bold {
+    font-size: 0.5625rem;
+  }
+
+  .get-your-bonus-main__text::before,
+  .just-do-it-main__text::before {
+    height: 4px;
+    width: 28px;
+  }
+
+  .only-now-main__text--decorative::before,
+  .important-main__text-decorative::before {
+    height: 3px;
+    width: 18px;
+  }
+
+  .btn {
+    padding: 12px 20px;
+    font-size: 0.5625rem;
+  }
+
+  .facts-main__title,
+  .examples-main__title,
+  .warning-main__title,
+  .career-additional__title,
+  .simple-steps-main .simple-steps-main__title,
+  .presentation-main__title,
+  .section-university__title--main,
+  .section-expert__title,
+  .section-help__title,
+  .important-additional__title,
+  .important-main__title,
+  .just-do-it-main__title {
+    font-size: 1.6875rem;
+  }
+
+  .except-numbers-additional__title,
+  .get-your-bonus-main__title {
+    font-size: 1.6875rem;
+  }
+
+  .start-it-additional__text--decorative,
+  .simple-steps-main .simple-steps-additional__text-decorative,
+  .presentation-additional__text--decorative,
+  .important-main__text-decorative,
+  .just-do-it-additional__text--decorative {
+    font-size: 0.5625rem;
+  }
+
+  .warning-main__subtitle,
+  .career-main__subtitle,
+  .simple-steps-main .simple-steps-additional__subtitle,
+  .section-awards__title,
+  .section-university__title,
+  .section-expert__item--title,
+  .section-help__second-title,
+  .get-your-bonus-main__subtitle {
+    font-size: 0.5625rem;
+  }
+
+  .сareer-main__text--light,
+  .simple-steps-main .simple-steps-additional__text--light,
+  .presentation-additional__text--light,
+  .section-awards__desc,
+  .section-university__desc,
+  .section-expert__item--desc,
+  .section-help__second-desc,
+  .get-your-bonus-main__text--light,
+  .get-your-bonus-main__text--special,
+  .important-main__text--light,
+  .just-do-it-additional__text--light {
+    font-size: 0.5rem;
+  }
+
+  .start-it-main__text--tablet,
+  .facts-main__text,
+  .except-numbers-additional__text,
+  .examples-main__text,
+  .warning-main__text,
+  .career-additional__text,
+  .simple-steps-main .simple-steps-main__text,
+  .presentation-main__text,
+  .section-university__desc--main,
+  .education-section__desc--mobile,
+  .section-expert__desc,
+  .section-help__desc,
+  .get-your-bonus-main__text,
+  .main-form__input,
+  .important-additional__text,
+  .important-additional__text--special,
+  .just-do-it-main__text {
+    font-size: 0.5625rem;
+  }
+
+  .presentation-additional__text--bold,
+  .important-main__text--bold,
+  .just-do-it-additional__text--bold {
+    font-size: 0.5625rem;
+  }
+
+  .get-your-bonus-main__text::before,
+  .just-do-it-main__text::before {
+    height: 4px;
+    width: 28px;
+  }
+
+  .only-now-main__text--decorative::before,
+  .important-main__text-decorative::before {
+    height: 3px;
+    width: 18px;
+  }
+
+  .btn {
+    padding: 12px 20px;
+    font-size: 0.5625rem;
+  }
+
+  .only-now-main {
+    padding: 30px 0 50px;
+  }
+
+  .get-your-bonus {
+    margin-bottom: 90px;
+  }
+
+  .get-your-bonus-main__text {
+    margin-bottom: 34px;
+  }
+
+  .get-your-bonus-main__text::before {
+    top: 25px;
+    left: -20px;
+  }
+
+  .get-your-bonus-main__block {
+    margin-bottom: 20px;
+  }
+
+  .get-your-bonus-main__block::after {
+    width: 8px;
+    height: 8px;
+    left: -28px;
+    top: 22px;
+  }
+
+  .get-your-bonus-main__block::after {
+    left: -20px;
+  }
+
+  .get-your-bonus-main__block::before {
+    font-size: 16px;
+    left: -44px;
+    top: -1px;
+  }
+
+  .get-your-bonus-main__block::before {
+    font-size: 18px;
+    left: -40px;
+    top: -3px;
+  }
+
+  .main-form {
+    padding: 44px;
+  }
+
+  .main-form__button {
+    margin-top: 18px;
+  }
+
+  .important {
+    margin-bottom: 100px;
+  }
+
+  .important-additional__title {
+    display: none;
+  }
+
+  .important-main__title {
+    display: block;
+    margin-bottom: 30px;
+  }
+
+  .important-additional__block {
+    padding: 60px;
+    margin-left: 15px;
+    margin-top: 20px;
+  }
+
+  .important-additional__text {
+    max-width: 65px;
+  }
+
+  .important-additional__price {
+    font-size: 0.875rem;
+  }
+
+  .important-additional__price::before {
+    left: -46px;
+  }
+
+  .important-additional__price--special {
+    margin-left: 20px;
+    font-size: 1.875rem;
+  }
+
+  .important-additional__price--currency {
+    margin-top: 10px;
+  }
+
+  .important-main__text-decorative::before {
+    left: -30px;
+    top: 12px;
+  }
+
+  .just-do-it {
+    margin-bottom: 60px;
+  }
+
+  .just-do-it-main::before {
+    font-size: 160px;
+    left: 55%;
+  }
+
+  .just-do-it-main__text::before {
+    top: 5px;
+    left: -26px;
+  }
+
+  .just-do-it-additional__block:nth-of-type(1)::before {
+    top: -3px;
+    left: -52px;
+  }
+}
+
+@media (min-width: 48em) {
+  .list-rotate:before {
+    width: 22px;
+    font-size: 0.5rem;
+  }
+
+  .banner {
+    padding-top: 85px;
+    background: url("../images/banner-bg/devs-work.png") bottom 0 right 22% no-repeat, url("../images/Banner-background/banner-shadow.png") no-repeat center, #181c27;
+  }
+
+  .banner__title {
+    font-size: 2.8125rem;
+    line-height: 1.25;
+  }
+
+  .banner__desc {
+    font-size: 0.5rem;
+    line-height: 1.7;
+  }
+
+  .banner__company {
+    font-size: 14.75rem;
+    line-height: 1.2;
+  }
+
+  .banner__company {
+    position: absolute;
+    z-index: 0;
+    top: 50%;
+    left: 50%;
+    right: 50%;
+    transform: translate(-50%, -75%);
+  }
+
+  .article-career__title {
+    font-size: 0.65625rem;
+    line-height: 1.6;
+  }
+
+  .article-career__desc {
+    font-size: 0.625rem;
+    line-height: 1.35;
+  }
+
+  .banner__btn {
+    font-size: 0.4375rem;
+    line-height: 1.44;
+  }
+
+  .banner__btn {
+    margin-bottom: 66px;
+  }
+
+  .start-it {
+    padding-top: 112px;
+  }
+
+  .start-it-main__text--mobile {
+    display: none;
+  }
+
+  .start-it-main__text--tablet {
+    display: block;
+  }
+
+  .start-it-main__img {
+    margin-bottom: 66px;
+  }
+
+  .start-it-main__offer:before {
+    top: 2px;
+  }
+
+  .start-it-main__offer {
+    font-size: 0.625rem;
+  }
+
+  .start-it-main__title {
+    font-size: 1.6875rem;
+  }
+
+  .start-in-preferences:before {
+    font-size: 8.75rem;
+    top: -80px;
+    left: -75px;
+  }
+
+  .start-in-preferences {
+    margin-bottom: 15px;
+  }
+
+  .start-it-additional__subtitle {
+    font-size: 1.05rem;
+  }
+
+  .start-in-preferences__item:nth-last-child(-n+4) {
+    margin-bottom: 0;
+  }
+
+  .start-in-preferences__item:before {
+    display: none;
+    margin-bottom: 20px;
+  }
+
+  .start-in-preferences__item {
+    font-size: 0.5625rem;
+  }
+
+  .facts {
+    padding-top: 58px;
+  }
+
+  .facts {
+    padding-top: 0;
+  }
+
+  .facts-main__title {
+    text-align: left;
+  }
+
+  .facts-additional__list {
+    background: url(../../../images/main-images/decorative-images/schedule.png) bottom right/auto no-repeat;
+  }
+
+  .facts-additional__item:last-child {
+    margin-bottom: 12px;
+  }
+
+  .facts-additional__item:before {
+    display: none;
+  }
+
+  .facts-additional__item {
+    font-size: 0.5rem;
+  }
+
+  .facts-additional__subtitle__span {
+    font-size: 0.5625rem;
+  }
+
+  .facts-additional__subtitle {
+    font-size: 1rem;
+  }
+
+  .except-numbers {
+    padding-top: 90px;
+  }
+
+  .except-numbers-main__text {
+    font-size: 0.5625rem;
+  }
+
+  .except-numbers-main__text--bold {
+    font-size: 0.5625rem;
+  }
+
+  .except-numbers-main__text--light {
+    font-size: 0.5625rem;
+  }
+
+  .except-numbers-additional__text {
+    margin-bottom: 40px;
+  }
+
+  .except-numbers-additional__item:before {
+    top: 2px;
+  }
+
+  .except-numbers-additional__item {
+    margin-bottom: 20px;
+  }
+
+  .except-numbers-additional__subtitle {
+    font-size: 0.5625rem;
+    margin-bottom: 8px;
+  }
+
+  .except-numbers-additional__text {
+    font-size: 0.5625rem;
+  }
+
+  .examples {
+    padding-top: 90px;
+  }
+
+  .examples-main__text:before {
+    width: 30px;
+    top: 2px;
+    left: -28px;
+  }
+
+  .examples-main__text {
+    margin-bottom: 40px;
+  }
+
+  .examples-additional__first-part {
+    width: 80px;
+  }
+
+  .examples-additional__title-name {
+    font-size: 0.5rem;
+  }
+
+  .examples-additional__text {
+    font-size: 0.5rem;
+  }
+
+  .warning {
+    padding-top: 90px;
+  }
+
+  .warning-additional__img:before {
+    display: block;
+  }
+
+  .warning-additional__img {
+    display: block;
+  }
+
+  .warning-main__text:before {
+    width: 30px;
+    top: 2px;
+    left: -28px;
+  }
+
+  .warning-main__text {
+    margin-bottom: 40px;
+  }
+
+  .warning-main__item:before {
+    top: 2px;
+  }
+
+  .warning-main__item {
+    margin-bottom: 20px;
+  }
+
+  .warning-main__text--light {
+    margin-top: 8px;
+  }
+}
+
 @media (min-width: 768px) {
   .container {
     max-width: 720px;
@@ -11616,900 +12745,6 @@ input[type='radio'].visually-hidden {
   }
 }
 
-@media screen and (min-width: 48em) {
-  .facts-main__title,
-  .examples-main__title,
-  .warning-main__title,
-  .career-additional__title,
-  .simple-steps-main .simple-steps-main__title,
-  .presentation-main__title,
-  .section-university__title--main,
-  .section-expert__title,
-  .section-help__title,
-  .important-additional__title,
-  .important-main__title,
-  .just-do-it-main__title {
-    font-size: 1.6875rem;
-  }
-
-  .except-numbers-additional__title,
-  .get-your-bonus-main__title {
-    font-size: 1.6875rem;
-  }
-
-  .start-it-additional__text--decorative,
-  .simple-steps-main .simple-steps-additional__text-decorative,
-  .presentation-additional__text--decorative,
-  .important-main__text-decorative,
-  .just-do-it-additional__text--decorative {
-    font-size: 0.5625rem;
-  }
-
-  .warning-main__subtitle,
-  .career-main__subtitle,
-  .simple-steps-main .simple-steps-additional__subtitle,
-  .section-awards__title,
-  .section-university__title,
-  .section-expert__item--title,
-  .section-help__second-title,
-  .get-your-bonus-main__subtitle {
-    font-size: 0.5625rem;
-  }
-
-  .сareer-main__text--light,
-  .simple-steps-main .simple-steps-additional__text--light,
-  .presentation-additional__text--light,
-  .section-awards__desc,
-  .section-university__desc,
-  .section-expert__item--desc,
-  .section-help__second-desc,
-  .get-your-bonus-main__text--light,
-  .get-your-bonus-main__text--special,
-  .important-main__text--light,
-  .just-do-it-additional__text--light {
-    font-size: 0.5rem;
-  }
-
-  .start-it-main__text--tablet,
-  .facts-main__text,
-  .except-numbers-additional__text,
-  .examples-main__text,
-  .warning-main__text,
-  .career-additional__text,
-  .simple-steps-main .simple-steps-main__text,
-  .presentation-main__text,
-  .section-university__desc--main,
-  .education-section__desc--mobile,
-  .section-expert__desc,
-  .section-help__desc,
-  .get-your-bonus-main__text,
-  .main-form__input,
-  .important-additional__text,
-  .important-additional__text--special,
-  .just-do-it-main__text {
-    font-size: 0.5625rem;
-  }
-
-  .presentation-additional__text--bold,
-  .important-main__text--bold,
-  .just-do-it-additional__text--bold {
-    font-size: 0.5625rem;
-  }
-
-  .advertising__image {
-    width: 20px;
-    height: 12px;
-  }
-
-  .social-list {
-    display: block;
-    display: flex;
-    flex-flow: column nowrap;
-  }
-
-  .main-contacts__button {
-    padding: 14px 30px;
-    font-size: 0.625rem;
-  }
-
-  .career-main {
-    padding: 30px 0 55px;
-  }
-
-  .career-additional__title {
-    padding-bottom: 25px;
-  }
-
-  .career-additional__text {
-    padding-bottom: 40px;
-  }
-
-  .career-main__subtitle {
-    padding-bottom: 15px;
-  }
-
-  .career-main__subtitle::before {
-    left: 15px;
-    top: 0px;
-  }
-
-  .simple-steps-main::before {
-    font-size: 5.0625rem;
-    left: 315px;
-    background-size: auto 100%;
-    background-image: url(../images/background-png/stap.png);
-  }
-
-  .simple-steps-main .simple-steps-additional__subtitle::before {
-    width: 7px;
-    height: 7px;
-    top: 20px;
-  }
-
-  .simple-steps-main .simple-steps-additional__block::before {
-    font-size: 1.0625rem;
-    clip: rect(auto, auto, auto, 6px);
-  }
-
-  .simple-steps-main .simple-steps-additional__text-decorative::before {
-    width: 10px;
-    height: 2.5px;
-  }
-
-  .presentation-main {
-    padding: 30px 0 50px;
-  }
-
-  .presentation-main__text::before {
-    width: 26px;
-    height: 4px;
-  }
-
-  .presentation-additional__block {
-    padding: 55px 0 20px;
-  }
-
-  .presentation-main__subtitle {
-    padding-top: 55px;
-    padding-bottom: 0px;
-  }
-
-  .presentation-additional__text--decorative::before {
-    display: block;
-  }
-
-  .presentation-additional__text--decorative {
-    padding-top: 0px;
-    margin-bottom: 0px;
-  }
-
-  .presentation-additional__item::before {
-    width: 20px;
-    height: 10px;
-    font-size: 0.4375rem;
-    top: 10px;
-    left: -15px;
-    clip: auto;
-  }
-
-  .presentation-additional__btn {
-    font-size: 0.625rem;
-    padding: 14px 10px;
-    margin-top: 0px;
-  }
-
-  .main-contacts {
-    padding: 50px 0;
-  }
-
-  .page-footer__logo {
-    width: 64px;
-    height: 20px;
-  }
-
-  .main-contacts__title {
-    font-size: 0.75rem;
-    margin-bottom: 6px;
-  }
-
-  .main-contacts__text,
-  .main-contacts__link {
-    font-size: 0.625rem;
-  }
-
-  .page-footer__bottom {
-    height: 34px;
-  }
-
-  .law-info {
-    height: 34px;
-  }
-
-  .law-info__item {
-    font-size: 0.625rem;
-  }
-
-  .law-info__item:not(:nth-of-type(1)) {
-    margin-left: 14px;
-  }
-
-  .facts-main__title,
-  .examples-main__title,
-  .warning-main__title,
-  .career-additional__title,
-  .simple-steps-main .simple-steps-main__title,
-  .presentation-main__title,
-  .section-university__title--main,
-  .section-expert__title,
-  .section-help__title,
-  .important-additional__title,
-  .important-main__title,
-  .just-do-it-main__title {
-    font-size: 1.6875rem;
-  }
-
-  .except-numbers-additional__title,
-  .get-your-bonus-main__title {
-    font-size: 1.6875rem;
-  }
-
-  .start-it-additional__text--decorative,
-  .simple-steps-main .simple-steps-additional__text-decorative,
-  .presentation-additional__text--decorative,
-  .important-main__text-decorative,
-  .just-do-it-additional__text--decorative {
-    font-size: 0.5625rem;
-  }
-
-  .warning-main__subtitle,
-  .career-main__subtitle,
-  .simple-steps-main .simple-steps-additional__subtitle,
-  .section-awards__title,
-  .section-university__title,
-  .section-expert__item--title,
-  .section-help__second-title,
-  .get-your-bonus-main__subtitle {
-    font-size: 0.5625rem;
-  }
-
-  .сareer-main__text--light,
-  .simple-steps-main .simple-steps-additional__text--light,
-  .presentation-additional__text--light,
-  .section-awards__desc,
-  .section-university__desc,
-  .section-expert__item--desc,
-  .section-help__second-desc,
-  .get-your-bonus-main__text--light,
-  .get-your-bonus-main__text--special,
-  .important-main__text--light,
-  .just-do-it-additional__text--light {
-    font-size: 0.5rem;
-  }
-
-  .start-it-main__text--tablet,
-  .facts-main__text,
-  .except-numbers-additional__text,
-  .examples-main__text,
-  .warning-main__text,
-  .career-additional__text,
-  .simple-steps-main .simple-steps-main__text,
-  .presentation-main__text,
-  .section-university__desc--main,
-  .education-section__desc--mobile,
-  .section-expert__desc,
-  .section-help__desc,
-  .get-your-bonus-main__text,
-  .main-form__input,
-  .important-additional__text,
-  .important-additional__text--special,
-  .just-do-it-main__text {
-    font-size: 0.5625rem;
-  }
-
-  .presentation-additional__text--bold,
-  .important-main__text--bold,
-  .just-do-it-additional__text--bold {
-    font-size: 0.5625rem;
-  }
-
-  .facts-main__title,
-  .examples-main__title,
-  .warning-main__title,
-  .career-additional__title,
-  .simple-steps-main .simple-steps-main__title,
-  .presentation-main__title,
-  .section-university__title--main,
-  .section-expert__title,
-  .section-help__title,
-  .important-additional__title,
-  .important-main__title,
-  .just-do-it-main__title {
-    font-size: 1.6875rem;
-  }
-
-  .except-numbers-additional__title,
-  .get-your-bonus-main__title {
-    font-size: 1.6875rem;
-  }
-
-  .start-it-additional__text--decorative,
-  .simple-steps-main .simple-steps-additional__text-decorative,
-  .presentation-additional__text--decorative,
-  .important-main__text-decorative,
-  .just-do-it-additional__text--decorative {
-    font-size: 0.5625rem;
-  }
-
-  .warning-main__subtitle,
-  .career-main__subtitle,
-  .simple-steps-main .simple-steps-additional__subtitle,
-  .section-awards__title,
-  .section-university__title,
-  .section-expert__item--title,
-  .section-help__second-title,
-  .get-your-bonus-main__subtitle {
-    font-size: 0.5625rem;
-  }
-
-  .сareer-main__text--light,
-  .simple-steps-main .simple-steps-additional__text--light,
-  .presentation-additional__text--light,
-  .section-awards__desc,
-  .section-university__desc,
-  .section-expert__item--desc,
-  .section-help__second-desc,
-  .get-your-bonus-main__text--light,
-  .get-your-bonus-main__text--special,
-  .important-main__text--light,
-  .just-do-it-additional__text--light {
-    font-size: 0.5rem;
-  }
-
-  .start-it-main__text--tablet,
-  .facts-main__text,
-  .except-numbers-additional__text,
-  .examples-main__text,
-  .warning-main__text,
-  .career-additional__text,
-  .simple-steps-main .simple-steps-main__text,
-  .presentation-main__text,
-  .section-university__desc--main,
-  .education-section__desc--mobile,
-  .section-expert__desc,
-  .section-help__desc,
-  .get-your-bonus-main__text,
-  .main-form__input,
-  .important-additional__text,
-  .important-additional__text--special,
-  .just-do-it-main__text {
-    font-size: 0.5625rem;
-  }
-
-  .presentation-additional__text--bold,
-  .important-main__text--bold,
-  .just-do-it-additional__text--bold {
-    font-size: 0.5625rem;
-  }
-
-  .facts-main__title,
-  .examples-main__title,
-  .warning-main__title,
-  .career-additional__title,
-  .simple-steps-main .simple-steps-main__title,
-  .presentation-main__title,
-  .section-university__title--main,
-  .section-expert__title,
-  .section-help__title,
-  .important-additional__title,
-  .important-main__title,
-  .just-do-it-main__title {
-    font-size: 1.6875rem;
-  }
-
-  .except-numbers-additional__title,
-  .get-your-bonus-main__title {
-    font-size: 1.6875rem;
-  }
-
-  .start-it-additional__text--decorative,
-  .simple-steps-main .simple-steps-additional__text-decorative,
-  .presentation-additional__text--decorative,
-  .important-main__text-decorative,
-  .just-do-it-additional__text--decorative {
-    font-size: 0.5625rem;
-  }
-
-  .warning-main__subtitle,
-  .career-main__subtitle,
-  .simple-steps-main .simple-steps-additional__subtitle,
-  .section-awards__title,
-  .section-university__title,
-  .section-expert__item--title,
-  .section-help__second-title,
-  .get-your-bonus-main__subtitle {
-    font-size: 0.5625rem;
-  }
-
-  .сareer-main__text--light,
-  .simple-steps-main .simple-steps-additional__text--light,
-  .presentation-additional__text--light,
-  .section-awards__desc,
-  .section-university__desc,
-  .section-expert__item--desc,
-  .section-help__second-desc,
-  .get-your-bonus-main__text--light,
-  .get-your-bonus-main__text--special,
-  .important-main__text--light,
-  .just-do-it-additional__text--light {
-    font-size: 0.5rem;
-  }
-
-  .start-it-main__text--tablet,
-  .facts-main__text,
-  .except-numbers-additional__text,
-  .examples-main__text,
-  .warning-main__text,
-  .career-additional__text,
-  .simple-steps-main .simple-steps-main__text,
-  .presentation-main__text,
-  .section-university__desc--main,
-  .education-section__desc--mobile,
-  .section-expert__desc,
-  .section-help__desc,
-  .get-your-bonus-main__text,
-  .main-form__input,
-  .important-additional__text,
-  .important-additional__text--special,
-  .just-do-it-main__text {
-    font-size: 0.5625rem;
-  }
-
-  .presentation-additional__text--bold,
-  .important-main__text--bold,
-  .just-do-it-additional__text--bold {
-    font-size: 0.5625rem;
-  }
-
-  .facts-main__title,
-  .examples-main__title,
-  .warning-main__title,
-  .career-additional__title,
-  .simple-steps-main .simple-steps-main__title,
-  .presentation-main__title,
-  .section-university__title--main,
-  .section-expert__title,
-  .section-help__title,
-  .important-additional__title,
-  .important-main__title,
-  .just-do-it-main__title {
-    font-size: 1.6875rem;
-  }
-
-  .except-numbers-additional__title,
-  .get-your-bonus-main__title {
-    font-size: 1.6875rem;
-  }
-
-  .start-it-additional__text--decorative,
-  .simple-steps-main .simple-steps-additional__text-decorative,
-  .presentation-additional__text--decorative,
-  .important-main__text-decorative,
-  .just-do-it-additional__text--decorative {
-    font-size: 0.5625rem;
-  }
-
-  .warning-main__subtitle,
-  .career-main__subtitle,
-  .simple-steps-main .simple-steps-additional__subtitle,
-  .section-awards__title,
-  .section-university__title,
-  .section-expert__item--title,
-  .section-help__second-title,
-  .get-your-bonus-main__subtitle {
-    font-size: 0.5625rem;
-  }
-
-  .сareer-main__text--light,
-  .simple-steps-main .simple-steps-additional__text--light,
-  .presentation-additional__text--light,
-  .section-awards__desc,
-  .section-university__desc,
-  .section-expert__item--desc,
-  .section-help__second-desc,
-  .get-your-bonus-main__text--light,
-  .get-your-bonus-main__text--special,
-  .important-main__text--light,
-  .just-do-it-additional__text--light {
-    font-size: 0.5rem;
-  }
-
-  .start-it-main__text--tablet,
-  .facts-main__text,
-  .except-numbers-additional__text,
-  .examples-main__text,
-  .warning-main__text,
-  .career-additional__text,
-  .simple-steps-main .simple-steps-main__text,
-  .presentation-main__text,
-  .section-university__desc--main,
-  .education-section__desc--mobile,
-  .section-expert__desc,
-  .section-help__desc,
-  .get-your-bonus-main__text,
-  .main-form__input,
-  .important-additional__text,
-  .important-additional__text--special,
-  .just-do-it-main__text {
-    font-size: 0.5625rem;
-  }
-
-  .presentation-additional__text--bold,
-  .important-main__text--bold,
-  .just-do-it-additional__text--bold {
-    font-size: 0.5625rem;
-  }
-
-  .only-now-main {
-    padding: 30px 0 50px;
-  }
-
-  .get-your-bonus {
-    margin-bottom: 90px;
-  }
-
-  .get-your-bonus-main__text {
-    margin-bottom: 34px;
-  }
-
-  .get-your-bonus-main__text::before {
-    width: 24px;
-    top: 26px;
-    left: -12px;
-  }
-
-  .get-your-bonus-main__block {
-    margin-bottom: 20px;
-  }
-
-  .get-your-bonus-main__block::after {
-    width: 8px;
-    height: 8px;
-    left: -28px;
-    top: 22px;
-  }
-
-  .get-your-bonus-main__block::after {
-    left: -20px;
-  }
-
-  .get-your-bonus-main__block::before {
-    font-size: 16px;
-    left: -44px;
-    top: -1px;
-  }
-
-  .get-your-bonus-main__block::before {
-    font-size: 18px;
-    left: -40px;
-    top: -3px;
-  }
-
-  .main-form {
-    padding: 44px;
-  }
-
-  .main-form__button {
-    margin-top: 18px;
-  }
-
-  .important {
-    margin-bottom: 100px;
-  }
-
-  .important-additional__title {
-    display: none;
-  }
-
-  .important-main__title {
-    display: block;
-    margin-bottom: 30px;
-  }
-
-  .important-additional__block {
-    padding: 60px;
-    margin-left: 15px;
-    margin-top: 20px;
-  }
-
-  .important-additional__text {
-    max-width: 65px;
-  }
-
-  .important-additional__price {
-    font-size: 0.875rem;
-  }
-
-  .important-additional__price::before {
-    left: -46px;
-  }
-
-  .important-additional__price--special {
-    margin-left: 20px;
-    font-size: 1.875rem;
-  }
-
-  .important-additional__price--currency {
-    margin-top: 10px;
-  }
-
-  .important-main__text-decorative::before {
-    width: 20px;
-    left: -29px;
-    top: 13px;
-  }
-
-  .important-main__button {
-    font-size: 0.625rem;
-    padding: 14px 10px;
-  }
-
-  .just-do-it {
-    margin-bottom: 60px;
-  }
-
-  .just-do-it-main::before {
-    font-size: 160px;
-    left: 55%;
-  }
-
-  .just-do-it-main__text::before {
-    top: -17px;
-  }
-
-  .just-do-it-additional__block:nth-of-type(1)::before {
-    top: -3px;
-    left: -52px;
-  }
-}
-
-@media (min-width: 48em) {
-  .banner {
-    padding-top: 85px;
-    background: url("../images/banner-bg/devs-work.png") bottom 0 right 22% no-repeat, url("../images/Banner-background/banner-shadow.png") no-repeat center, #181c27;
-  }
-
-  .banner__title {
-    font-size: 2.8125rem;
-    line-height: 1.25;
-  }
-
-  .banner__desc {
-    font-size: 0.5rem;
-    line-height: 1.7;
-  }
-
-  .banner__company {
-    font-size: 14.75rem;
-    line-height: 1.2;
-  }
-
-  .banner__company {
-    position: absolute;
-    z-index: 0;
-    top: 50%;
-    left: 50%;
-    right: 50%;
-    transform: translate(-50%, -75%);
-  }
-
-  .article-career__title {
-    font-size: 0.65625rem;
-    line-height: 1.6;
-  }
-
-  .article-career__desc {
-    font-size: 0.625rem;
-    line-height: 1.35;
-  }
-
-  .banner__btn {
-    font-size: 0.4375rem;
-    line-height: 1.44;
-  }
-
-  .banner__btn {
-    margin-bottom: 66px;
-  }
-
-  .start-it {
-    padding-top: 112px;
-  }
-
-  .start-it-main__text--mobile {
-    display: none;
-  }
-
-  .start-it-main__text--tablet {
-    display: block;
-  }
-
-  .start-it-main__img {
-    margin-bottom: 66px;
-  }
-
-  .start-it-main__offer:before {
-    top: 2px;
-  }
-
-  .start-it-main__offer {
-    font-size: 0.625rem;
-  }
-
-  .start-it-main__title {
-    font-size: 1.6875rem;
-  }
-
-  .start-in-preferences:before {
-    font-size: 8.75rem;
-    top: -80px;
-    left: -75px;
-  }
-
-  .start-in-preferences {
-    margin-bottom: 15px;
-  }
-
-  .start-it-additional__subtitle {
-    font-size: 1.05rem;
-  }
-
-  .start-in-preferences__item:nth-last-child(-n+4) {
-    margin-bottom: 0;
-  }
-
-  .start-in-preferences__item:before {
-    display: none;
-    margin-bottom: 20px;
-  }
-
-  .start-in-preferences__item {
-    font-size: 0.5625rem;
-  }
-
-  .facts {
-    padding-top: 58px;
-  }
-
-  .facts {
-    padding-top: 0;
-  }
-
-  .facts-main__title {
-    text-align: left;
-  }
-
-  .facts-additional__list {
-    background: url(../../../images/main-images/decorative-images/schedule.png) bottom right/auto no-repeat;
-  }
-
-  .facts-additional__item:last-child {
-    margin-bottom: 12px;
-  }
-
-  .facts-additional__item:before {
-    display: none;
-  }
-
-  .facts-additional__item {
-    font-size: 0.5rem;
-  }
-
-  .facts-additional__subtitle__span {
-    font-size: 0.5625rem;
-  }
-
-  .facts-additional__subtitle {
-    font-size: 1rem;
-  }
-
-  .except-numbers {
-    padding-top: 90px;
-  }
-
-  .except-numbers-main__text {
-    font-size: 0.5625rem;
-  }
-
-  .except-numbers-main__text--bold {
-    font-size: 0.5625rem;
-  }
-
-  .except-numbers-main__text--light {
-    font-size: 0.5625rem;
-  }
-
-  .except-numbers-additional__text {
-    margin-bottom: 40px;
-  }
-
-  .except-numbers-additional__item:before {
-    top: 2px;
-  }
-
-  .except-numbers-additional__item {
-    margin-bottom: 20px;
-  }
-
-  .except-numbers-additional__subtitle {
-    font-size: 0.5625rem;
-    margin-bottom: 8px;
-  }
-
-  .except-numbers-additional__text {
-    font-size: 0.5625rem;
-  }
-
-  .examples {
-    padding-top: 90px;
-  }
-
-  .examples-main__text:before {
-    width: 30px;
-    top: 2px;
-    left: -28px;
-  }
-
-  .examples-main__text {
-    margin-bottom: 40px;
-  }
-
-  .examples-additional__first-part {
-    width: 80px;
-  }
-
-  .examples-additional__title-name {
-    font-size: 0.5rem;
-  }
-
-  .examples-additional__text {
-    font-size: 0.5rem;
-  }
-
-  .warning {
-    padding-top: 90px;
-  }
-
-  .warning-additional__img:before {
-    display: block;
-  }
-
-  .warning-additional__img {
-    display: block;
-  }
-
-  .warning-main__text:before {
-    width: 30px;
-    top: 2px;
-    left: -28px;
-  }
-
-  .warning-main__text {
-    margin-bottom: 40px;
-  }
-
-  .warning-main__item:before {
-    top: 2px;
-  }
-
-  .warning-main__item {
-    margin-bottom: 20px;
-  }
-
-  .warning-main__text--light {
-    margin-top: 8px;
-  }
-}
-
 @media (min-width: 48em) and (-webkit-min-device-pixel-ratio: 2), (min-width: 48em) and (min-resolution: 192dpi) {
   .banner {
     background: url("../images/banner-bg/devs-work@2x.png") bottom 0 right 22% no-repeat, url("../images/Banner-background/banner-shadow@2x.png") no-repeat center, #181c27;
@@ -12536,10 +12771,6 @@ input[type='radio'].visually-hidden {
   }
 
   .law-info__item {
-    font-size: 0.6875rem;
-  }
-
-  .important-main__button {
     font-size: 0.6875rem;
   }
 }
@@ -13507,6 +13738,21 @@ input[type='radio'].visually-hidden {
     font-size: 0.625rem;
   }
 
+  .get-your-bonus-main__text::before,
+  .just-do-it-main__text::before {
+    width: 32px;
+  }
+
+  .only-now-main__text--decorative::before,
+  .important-main__text-decorative::before {
+    width: 20px;
+  }
+
+  .btn {
+    padding: 14px 22px;
+    font-size: 0.625rem;
+  }
+
   .advertising__image {
     width: 24px;
     height: 14px;
@@ -13522,10 +13768,6 @@ input[type='radio'].visually-hidden {
 
   .career-additional__text {
     padding-bottom: 45px;
-  }
-
-  .simple-steps-main::before {
-    background-image: url(../images/background-png/stap-dectop.png);
   }
 
   .simple-steps-main .simple-steps-additional__block::before {
@@ -13680,82 +13922,18 @@ input[type='radio'].visually-hidden {
     font-size: 0.625rem;
   }
 
-  .facts-main__title,
-  .examples-main__title,
-  .warning-main__title,
-  .career-additional__title,
-  .simple-steps-main .simple-steps-main__title,
-  .presentation-main__title,
-  .section-university__title--main,
-  .section-expert__title,
-  .section-help__title,
-  .important-additional__title,
-  .important-main__title,
-  .just-do-it-main__title {
-    font-size: 1.875rem;
+  .get-your-bonus-main__text::before,
+  .just-do-it-main__text::before {
+    width: 32px;
   }
 
-  .except-numbers-additional__title,
-  .get-your-bonus-main__title {
-    font-size: 1.875rem;
+  .only-now-main__text--decorative::before,
+  .important-main__text-decorative::before {
+    width: 20px;
   }
 
-  .start-it-additional__text--decorative,
-  .simple-steps-main .simple-steps-additional__text-decorative,
-  .presentation-additional__text--decorative,
-  .important-main__text-decorative,
-  .just-do-it-additional__text--decorative {
-    font-size: 0.625rem;
-  }
-
-  .warning-main__subtitle,
-  .career-main__subtitle,
-  .simple-steps-main .simple-steps-additional__subtitle,
-  .section-awards__title,
-  .section-university__title,
-  .section-expert__item--title,
-  .section-help__second-title,
-  .get-your-bonus-main__subtitle {
-    font-size: 0.625rem;
-  }
-
-  .сareer-main__text--light,
-  .simple-steps-main .simple-steps-additional__text--light,
-  .presentation-additional__text--light,
-  .section-awards__desc,
-  .section-university__desc,
-  .section-expert__item--desc,
-  .section-help__second-desc,
-  .get-your-bonus-main__text--light,
-  .get-your-bonus-main__text--special,
-  .important-main__text--light,
-  .just-do-it-additional__text--light {
-    font-size: 0.5625rem;
-  }
-
-  .start-it-main__text--tablet,
-  .facts-main__text,
-  .except-numbers-additional__text,
-  .examples-main__text,
-  .warning-main__text,
-  .career-additional__text,
-  .simple-steps-main .simple-steps-main__text,
-  .presentation-main__text,
-  .section-university__desc--main,
-  .education-section__desc--mobile,
-  .section-expert__desc,
-  .section-help__desc,
-  .get-your-bonus-main__text,
-  .main-form__input,
-  .important-additional__text,
-  .important-additional__text--special,
-  .just-do-it-main__text {
-    font-size: 0.625rem;
-  }
-
-  .presentation-additional__text--bold,
-  .important-main__text--bold,
-  .just-do-it-additional__text--bold {
+  .btn {
+    padding: 14px 22px;
     font-size: 0.625rem;
   }
 
@@ -13838,6 +14016,21 @@ input[type='radio'].visually-hidden {
     font-size: 0.625rem;
   }
 
+  .get-your-bonus-main__text::before,
+  .just-do-it-main__text::before {
+    width: 32px;
+  }
+
+  .only-now-main__text--decorative::before,
+  .important-main__text-decorative::before {
+    width: 20px;
+  }
+
+  .btn {
+    padding: 14px 22px;
+    font-size: 0.625rem;
+  }
+
   .facts-main__title,
   .examples-main__title,
   .warning-main__title,
@@ -13914,6 +14107,115 @@ input[type='radio'].visually-hidden {
   .presentation-additional__text--bold,
   .important-main__text--bold,
   .just-do-it-additional__text--bold {
+    font-size: 0.625rem;
+  }
+
+  .get-your-bonus-main__text::before,
+  .just-do-it-main__text::before {
+    width: 32px;
+  }
+
+  .only-now-main__text--decorative::before,
+  .important-main__text-decorative::before {
+    width: 20px;
+  }
+
+  .btn {
+    padding: 14px 22px;
+    font-size: 0.625rem;
+  }
+
+  .facts-main__title,
+  .examples-main__title,
+  .warning-main__title,
+  .career-additional__title,
+  .simple-steps-main .simple-steps-main__title,
+  .presentation-main__title,
+  .section-university__title--main,
+  .section-expert__title,
+  .section-help__title,
+  .important-additional__title,
+  .important-main__title,
+  .just-do-it-main__title {
+    font-size: 1.875rem;
+  }
+
+  .except-numbers-additional__title,
+  .get-your-bonus-main__title {
+    font-size: 1.875rem;
+  }
+
+  .start-it-additional__text--decorative,
+  .simple-steps-main .simple-steps-additional__text-decorative,
+  .presentation-additional__text--decorative,
+  .important-main__text-decorative,
+  .just-do-it-additional__text--decorative {
+    font-size: 0.625rem;
+  }
+
+  .warning-main__subtitle,
+  .career-main__subtitle,
+  .simple-steps-main .simple-steps-additional__subtitle,
+  .section-awards__title,
+  .section-university__title,
+  .section-expert__item--title,
+  .section-help__second-title,
+  .get-your-bonus-main__subtitle {
+    font-size: 0.625rem;
+  }
+
+  .сareer-main__text--light,
+  .simple-steps-main .simple-steps-additional__text--light,
+  .presentation-additional__text--light,
+  .section-awards__desc,
+  .section-university__desc,
+  .section-expert__item--desc,
+  .section-help__second-desc,
+  .get-your-bonus-main__text--light,
+  .get-your-bonus-main__text--special,
+  .important-main__text--light,
+  .just-do-it-additional__text--light {
+    font-size: 0.5625rem;
+  }
+
+  .start-it-main__text--tablet,
+  .facts-main__text,
+  .except-numbers-additional__text,
+  .examples-main__text,
+  .warning-main__text,
+  .career-additional__text,
+  .simple-steps-main .simple-steps-main__text,
+  .presentation-main__text,
+  .section-university__desc--main,
+  .education-section__desc--mobile,
+  .section-expert__desc,
+  .section-help__desc,
+  .get-your-bonus-main__text,
+  .main-form__input,
+  .important-additional__text,
+  .important-additional__text--special,
+  .just-do-it-main__text {
+    font-size: 0.625rem;
+  }
+
+  .presentation-additional__text--bold,
+  .important-main__text--bold,
+  .just-do-it-additional__text--bold {
+    font-size: 0.625rem;
+  }
+
+  .get-your-bonus-main__text::before,
+  .just-do-it-main__text::before {
+    width: 32px;
+  }
+
+  .only-now-main__text--decorative::before,
+  .important-main__text-decorative::before {
+    width: 20px;
+  }
+
+  .btn {
+    padding: 14px 22px;
     font-size: 0.625rem;
   }
 
@@ -13925,10 +14227,6 @@ input[type='radio'].visually-hidden {
     margin-bottom: 120px;
   }
 
-  .get-your-bonus-main__text::before {
-    width: 26px;
-  }
-
   .important {
     margin-bottom: 120px;
   }
@@ -13938,20 +14236,11 @@ input[type='radio'].visually-hidden {
   }
 
   .important-additional__block {
-    padding: 60px;
+    padding: 70px;
   }
 
   .important-additional__text {
     max-width: 70px;
-  }
-
-  .important-main__text-decorative::before {
-    width: 24px;
-  }
-
-  .important-main__button {
-    font-size: 0.6875rem;
-    padding: 14px 12px;
   }
 
   .just-do-it {
@@ -14846,13 +15135,12 @@ input[type='radio'].visually-hidden {
   }
 }
 
-@media screen and (min-width: 75em) and (-webkit-min-device-pixel-ratio: 2), screen and (min-width: 75em) and (min-resolution: 192dpi), screen and (min-width: 75em) and (min-resolution: 2dppx) {
-  .simple-steps-main::before {
-    background-image: url(../images/background-png/stap-dectop@2x.png);
-  }
-}
-
 @media (min-width: 75em) {
+  .list-rotate:before {
+    width: 25px;
+    font-size: 0.5625rem;
+  }
+
   .header__wrapper {
     max-width: 100%;
   }
