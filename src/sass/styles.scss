@@ -13,6 +13,7 @@
 @import './base/base'; // base style for elements
 
 /* Components */
+@import './components/list-style/list-style';
 @import './component/page-footer/advertising.scss';
 @import './component/page-footer/social-list';
 @import './component/page-footer/main-contacts__button';
