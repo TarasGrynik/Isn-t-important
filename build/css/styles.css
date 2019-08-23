@@ -6700,10 +6700,10 @@ a.text-dark:focus {
 
 /* Placeholder for list */
 
-.list-square,
-.list-number,
-.list-rotate,
-.list-square--diff,
+.list--square,
+.list--number,
+.list--rotate,
+.list--square-diff,
 .social-list,
 .examples-pagination__numbers,
 .simple-steps-main .simple-steps-additional,
@@ -7250,14 +7250,14 @@ h6 {
 
 /* Components */
 
-.list-square,
-.list-number,
-.list-rotate,
-.list-square--diff {
+.list--square,
+.list--number,
+.list--rotate,
+.list--square-diff {
   position: relative;
 }
 
-.list-square:before {
+.list--square:before {
   content: "";
   display: block;
   position: absolute;
@@ -7268,7 +7268,7 @@ h6 {
   background-color: #000000;
 }
 
-.list-square--diff:before {
+.list--square-diff:before {
   content: "";
   display: block;
   position: absolute;
@@ -7279,7 +7279,7 @@ h6 {
   background-color: #ff6b08;
 }
 
-.list-number:before {
+.list--number:before {
   position: absolute;
   display: block;
   left: -28px;
@@ -7291,7 +7291,7 @@ h6 {
   text-align: center;
 }
 
-.list-number:after {
+.list--number:after {
   position: absolute;
   left: -18px;
   top: 22px;
@@ -7302,9 +7302,8 @@ h6 {
   background-color: #16ebfe;
 }
 
-.list-rotate:before {
+.list--rotate:before {
   position: absolute;
-  top: 18px;
   left: -40px;
   display: inline-block;
   width: 45px;
@@ -7313,9 +7312,10 @@ h6 {
   text-align: center;
   counter-increment: rotated;
   content: "[00" counter(rotated) "]";
-  transform: rotate(-90deg);
+  transform: rotate(-90deg) translateX(-50%);
   background: #ff6b08;
   clip: rect(3px auto auto auto);
+  color: #ffffff;
 }
 
 .advertising__image {
@@ -8351,10 +8351,10 @@ h6 {
 
 /* Placeholder for list */
 
-.list-square,
-.list-number,
-.list-rotate,
-.list-square--diff,
+.list--square,
+.list--number,
+.list--rotate,
+.list--square-diff,
 .social-list,
 .examples-pagination__numbers,
 .simple-steps-main .simple-steps-additional,
@@ -8656,10 +8656,10 @@ input[type='radio'].visually-hidden {
 
 /* Placeholder for list */
 
-.list-square,
-.list-number,
-.list-rotate,
-.list-square--diff,
+.list--square,
+.list--number,
+.list--rotate,
+.list--square-diff,
 .social-list,
 .examples-pagination__numbers,
 .simple-steps-main .simple-steps-additional,
@@ -8955,10 +8955,10 @@ input[type='radio'].visually-hidden {
 
 /* Placeholder for list */
 
-.list-square,
-.list-number,
-.list-rotate,
-.list-square--diff,
+.list--square,
+.list--number,
+.list--rotate,
+.list--square-diff,
 .social-list,
 .examples-pagination__numbers,
 .simple-steps-main .simple-steps-additional,
@@ -9253,10 +9253,10 @@ input[type='radio'].visually-hidden {
 
 /* Placeholder for list */
 
-.list-square,
-.list-number,
-.list-rotate,
-.list-square--diff,
+.list--square,
+.list--number,
+.list--rotate,
+.list--square-diff,
 .social-list,
 .examples-pagination__numbers,
 .simple-steps-main .simple-steps-additional,
@@ -9449,6 +9449,20 @@ input[type='radio'].visually-hidden {
 .only-now-main__title {
   padding-top: 30px;
   padding-bottom: 20px;
+}
+
+.only-now__subtitle {
+  padding-top: 50px;
+  padding-bottom: 50px;
+}
+
+.only-now-main__text--decorative {
+  padding: 30px 0 25px;
+}
+
+.only-now-main__text--decorative::before {
+  top: 50px;
+  left: -20px;
 }
 
 .get-your-bonus {
@@ -11403,6 +11417,25 @@ input[type='radio'].visually-hidden {
     padding: 30px 0 50px;
   }
 
+  .only-now-main::before {
+    font-size: 12.375rem;
+    left: 20%;
+  }
+
+  .only-now__subtitle {
+    padding-top: 0px;
+    padding-bottom: 0px;
+  }
+
+  .only-now-main__text--decorative::before {
+    top: 25px;
+    left: -25px;
+  }
+
+  .only-now-main__text--decorative {
+    padding-top: 0px;
+  }
+
   .get-your-bonus {
     margin-bottom: 90px;
   }
@@ -11517,7 +11550,7 @@ input[type='radio'].visually-hidden {
 }
 
 @media (min-width: 48em) {
-  .list-rotate:before {
+  .list--rotate:before {
     width: 22px;
     font-size: 0.5rem;
   }
@@ -14223,6 +14256,11 @@ input[type='radio'].visually-hidden {
     padding: 40px 0 65px;
   }
 
+  .only-now-main::before {
+    font-size: 13.8125rem;
+    left: 10%;
+  }
+
   .get-your-bonus {
     margin-bottom: 120px;
   }
@@ -15136,7 +15174,7 @@ input[type='radio'].visually-hidden {
 }
 
 @media (min-width: 75em) {
-  .list-rotate:before {
+  .list--rotate:before {
     width: 25px;
     font-size: 0.5625rem;
   }

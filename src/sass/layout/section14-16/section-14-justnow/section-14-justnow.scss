@@ -17,6 +17,14 @@
     color: $rotate-elem-text-color;
     font-family: $special-font;
     font-size: remy(226);
+    @media screen and (min-width: 48em) {
+      font-size: remy(198);
+      left: 20%;
+    }
+    @media screen and (min-width: 75em) {
+      font-size: remy(221);
+      left: 10%;
+    }
   }
 }
 
@@ -25,10 +33,27 @@
   padding-bottom: 20px;
 }
 
+.only-now__subtitle {
+  padding-top: 50px;
+  padding-bottom: 50px;
+  @media screen and (min-width: 48em) {
+    padding-top: 0px;
+    padding-bottom: 0px;
+  }
+}
+
 .only-now-main__text--decorative {
+  padding: 30px 0 25px;
   &::before {
     @extend %pseudo-slash;
+    top: 50px;
+    left: -20px;
+    @media screen and (min-width: 48em) {
+      top: 25px;
+      left: -25px;
+    }
   }
-
-
+  @media screen and (min-width: 48em) {
+    padding-top: 0px;
+  }
 }
