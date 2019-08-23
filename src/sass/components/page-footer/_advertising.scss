@@ -1,0 +1,14 @@
+.advertising__image {
+  width: 16px;
+  height: 10px;
+
+  @media screen and (min-width: 48em) {
+    width: 20px;
+    height: 12px;
+  }
+
+  @media screen and (min-width: 75em) {
+    width: 24px;
+    height: 14px;
+  }
+}

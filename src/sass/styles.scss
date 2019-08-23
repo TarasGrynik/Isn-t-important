@@ -14,9 +14,9 @@
 
 /* Components */
 @import './components/list-style/list-style';
-@import './component/page-footer/advertising.scss';
-@import './component/page-footer/social-list';
-@import './component/page-footer/main-contacts__button';
+@import './components/page-footer/advertising';
+@import './components/page-footer/social-list';
+@import './components/page-footer/main-contacts__button';
 
 /* Layout */
 @import './layout/page-header/page-header.scss';
@@ -26,6 +26,7 @@
 @import './layout/section-except-numbers/section-except-numbers.scss';
 @import './layout/section-examples/section-examples.scss';
 @import './layout/section-warning/section-warning.scss';
+@import './layout/section-explain/section-explain.scss';
 @import './layout/section8/section8.scss';
 @import './layout/section9/section9.scss';
 @import './layout/section10-presentation/presentation.scss';
