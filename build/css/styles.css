@@ -6700,10 +6700,10 @@ a.text-dark:focus {
 
 /* Placeholder for list */
 
-.list-square,
-.list-number,
-.list-rotate,
-.list-square--diff,
+.list--square,
+.list--number,
+.list--rotate,
+.list--square-diff,
 .social-list,
 .examples-pagination__numbers,
 .simple-steps-main .simple-steps-additional,
@@ -7248,14 +7248,14 @@ h6 {
 
 /* Components */
 
-.list-square,
-.list-number,
-.list-rotate,
-.list-square--diff {
+.list--square,
+.list--number,
+.list--rotate,
+.list--square-diff {
   position: relative;
 }
 
-.list-square:before {
+.list--square:before {
   content: "";
   display: block;
   position: absolute;
@@ -7266,7 +7266,7 @@ h6 {
   background-color: #000000;
 }
 
-.list-square--diff:before {
+.list--square-diff:before {
   content: "";
   display: block;
   position: absolute;
@@ -7277,7 +7277,7 @@ h6 {
   background-color: #ff6b08;
 }
 
-.list-number:before {
+.list--number:before {
   position: absolute;
   display: block;
   left: -28px;
@@ -7289,7 +7289,7 @@ h6 {
   text-align: center;
 }
 
-.list-number:after {
+.list--number:after {
   position: absolute;
   left: -18px;
   top: 22px;
@@ -7300,9 +7300,8 @@ h6 {
   background-color: #16ebfe;
 }
 
-.list-rotate:before {
+.list--rotate:before {
   position: absolute;
-  top: 18px;
   left: -40px;
   display: inline-block;
   width: 45px;
@@ -7311,9 +7310,10 @@ h6 {
   text-align: center;
   counter-increment: rotated;
   content: "[00" counter(rotated) "]";
-  transform: rotate(-90deg);
+  transform: rotate(-90deg) translateX(-50%);
   background: #ff6b08;
   clip: rect(3px auto auto auto);
+  color: #ffffff;
 }
 
 .advertising__image {
@@ -8349,10 +8349,10 @@ h6 {
 
 /* Placeholder for list */
 
-.list-square,
-.list-number,
-.list-rotate,
-.list-square--diff,
+.list--square,
+.list--number,
+.list--rotate,
+.list--square-diff,
 .social-list,
 .examples-pagination__numbers,
 .simple-steps-main .simple-steps-additional,
@@ -8652,10 +8652,10 @@ input[type='radio'].visually-hidden {
 
 /* Placeholder for list */
 
-.list-square,
-.list-number,
-.list-rotate,
-.list-square--diff,
+.list--square,
+.list--number,
+.list--rotate,
+.list--square-diff,
 .social-list,
 .examples-pagination__numbers,
 .simple-steps-main .simple-steps-additional,
@@ -8949,10 +8949,10 @@ input[type='radio'].visually-hidden {
 
 /* Placeholder for list */
 
-.list-square,
-.list-number,
-.list-rotate,
-.list-square--diff,
+.list--square,
+.list--number,
+.list--rotate,
+.list--square-diff,
 .social-list,
 .examples-pagination__numbers,
 .simple-steps-main .simple-steps-additional,
@@ -9245,10 +9245,10 @@ input[type='radio'].visually-hidden {
 
 /* Placeholder for list */
 
-.list-square,
-.list-number,
-.list-rotate,
-.list-square--diff,
+.list--square,
+.list--number,
+.list--rotate,
+.list--square-diff,
 .social-list,
 .examples-pagination__numbers,
 .simple-steps-main .simple-steps-additional,
@@ -10947,6 +10947,22 @@ input[type='radio'].visually-hidden {
     font-size: 0.5625rem;
   }
 
+  .get-your-bonus-main__text::before,
+  .just-do-it-main__text::before {
+    height: 4px;
+    width: 28px;
+  }
+
+  .important-main__text-decorative::before {
+    height: 3px;
+    width: 18px;
+  }
+
+  .btn {
+    padding: 12px 20px;
+    font-size: 0.5625rem;
+  }
+
   .advertising__image {
     width: 20px;
     height: 12px;
@@ -11163,82 +11179,19 @@ input[type='radio'].visually-hidden {
     font-size: 0.5625rem;
   }
 
-  .facts-main__title,
-  .examples-main__title,
-  .warning-main__title,
-  .career-additional__title,
-  .simple-steps-main .simple-steps-main__title,
-  .presentation-main__title,
-  .section-university__title--main,
-  .section-expert__title,
-  .section-help__title,
-  .important-additional__title,
-  .important-main__title,
-  .just-do-it-main__title {
-    font-size: 1.6875rem;
+  .get-your-bonus-main__text::before,
+  .just-do-it-main__text::before {
+    height: 4px;
+    width: 28px;
   }
 
-  .except-numbers-additional__title,
-  .get-your-bonus-main__title {
-    font-size: 1.6875rem;
+  .important-main__text-decorative::before {
+    height: 3px;
+    width: 18px;
   }
 
-  .start-it-additional__text--decorative,
-  .simple-steps-main .simple-steps-additional__text-decorative,
-  .presentation-additional__text--decorative,
-  .important-main__text-decorative,
-  .just-do-it-additional__text--decorative {
-    font-size: 0.5625rem;
-  }
-
-  .warning-main__subtitle,
-  .career-main__subtitle,
-  .simple-steps-main .simple-steps-additional__subtitle,
-  .section-awards__title,
-  .section-university__title,
-  .section-expert__item--title,
-  .section-help__second-title,
-  .get-your-bonus-main__subtitle {
-    font-size: 0.5625rem;
-  }
-
-  .сareer-main__text--light,
-  .simple-steps-main .simple-steps-additional__text--light,
-  .presentation-additional__text--light,
-  .section-awards__desc,
-  .section-university__desc,
-  .section-expert__item--desc,
-  .section-help__second-desc,
-  .get-your-bonus-main__text--light,
-  .get-your-bonus-main__text--special,
-  .important-main__text--light,
-  .just-do-it-additional__text--light {
-    font-size: 0.5rem;
-  }
-
-  .start-it-main__text--tablet,
-  .facts-main__text,
-  .except-numbers-additional__text,
-  .examples-main__text,
-  .warning-main__text,
-  .career-additional__text,
-  .simple-steps-main .simple-steps-main__text,
-  .presentation-main__text,
-  .section-university__desc--main,
-  .education-section__desc--mobile,
-  .section-expert__desc,
-  .section-help__desc,
-  .get-your-bonus-main__text,
-  .main-form__input,
-  .important-additional__text,
-  .important-additional__text--special,
-  .just-do-it-main__text {
-    font-size: 0.5625rem;
-  }
-
-  .presentation-additional__text--bold,
-  .important-main__text--bold,
-  .just-do-it-additional__text--bold {
+  .btn {
+    padding: 12px 20px;
     font-size: 0.5625rem;
   }
 
@@ -11321,6 +11274,22 @@ input[type='radio'].visually-hidden {
     font-size: 0.5625rem;
   }
 
+  .get-your-bonus-main__text::before,
+  .just-do-it-main__text::before {
+    height: 4px;
+    width: 28px;
+  }
+
+  .important-main__text-decorative::before {
+    height: 3px;
+    width: 18px;
+  }
+
+  .btn {
+    padding: 12px 20px;
+    font-size: 0.5625rem;
+  }
+
   .facts-main__title,
   .examples-main__title,
   .warning-main__title,
@@ -11397,6 +11366,117 @@ input[type='radio'].visually-hidden {
   .presentation-additional__text--bold,
   .important-main__text--bold,
   .just-do-it-additional__text--bold {
+    font-size: 0.5625rem;
+  }
+
+  .get-your-bonus-main__text::before,
+  .just-do-it-main__text::before {
+    height: 4px;
+    width: 28px;
+  }
+
+  .important-main__text-decorative::before {
+    height: 3px;
+    width: 18px;
+  }
+
+  .btn {
+    padding: 12px 20px;
+    font-size: 0.5625rem;
+  }
+
+  .facts-main__title,
+  .examples-main__title,
+  .warning-main__title,
+  .career-additional__title,
+  .simple-steps-main .simple-steps-main__title,
+  .presentation-main__title,
+  .section-university__title--main,
+  .section-expert__title,
+  .section-help__title,
+  .important-additional__title,
+  .important-main__title,
+  .just-do-it-main__title {
+    font-size: 1.6875rem;
+  }
+
+  .except-numbers-additional__title,
+  .get-your-bonus-main__title {
+    font-size: 1.6875rem;
+  }
+
+  .start-it-additional__text--decorative,
+  .simple-steps-main .simple-steps-additional__text-decorative,
+  .presentation-additional__text--decorative,
+  .important-main__text-decorative,
+  .just-do-it-additional__text--decorative {
+    font-size: 0.5625rem;
+  }
+
+  .warning-main__subtitle,
+  .career-main__subtitle,
+  .simple-steps-main .simple-steps-additional__subtitle,
+  .section-awards__title,
+  .section-university__title,
+  .section-expert__item--title,
+  .section-help__second-title,
+  .get-your-bonus-main__subtitle {
+    font-size: 0.5625rem;
+  }
+
+  .сareer-main__text--light,
+  .simple-steps-main .simple-steps-additional__text--light,
+  .presentation-additional__text--light,
+  .section-awards__desc,
+  .section-university__desc,
+  .section-expert__item--desc,
+  .section-help__second-desc,
+  .get-your-bonus-main__text--light,
+  .get-your-bonus-main__text--special,
+  .important-main__text--light,
+  .just-do-it-additional__text--light {
+    font-size: 0.5rem;
+  }
+
+  .start-it-main__text--tablet,
+  .facts-main__text,
+  .except-numbers-additional__text,
+  .examples-main__text,
+  .warning-main__text,
+  .career-additional__text,
+  .simple-steps-main .simple-steps-main__text,
+  .presentation-main__text,
+  .section-university__desc--main,
+  .education-section__desc--mobile,
+  .section-expert__desc,
+  .section-help__desc,
+  .get-your-bonus-main__text,
+  .main-form__input,
+  .important-additional__text,
+  .important-additional__text--special,
+  .just-do-it-main__text {
+    font-size: 0.5625rem;
+  }
+
+  .presentation-additional__text--bold,
+  .important-main__text--bold,
+  .just-do-it-additional__text--bold {
+    font-size: 0.5625rem;
+  }
+
+  .get-your-bonus-main__text::before,
+  .just-do-it-main__text::before {
+    height: 4px;
+    width: 28px;
+  }
+
+  .important-main__text-decorative::before {
+    height: 3px;
+    width: 18px;
+  }
+
+  .btn {
+    padding: 12px 20px;
     font-size: 0.5625rem;
   }
 
@@ -11409,9 +11489,8 @@ input[type='radio'].visually-hidden {
   }
 
   .get-your-bonus-main__text::before {
-    width: 24px;
-    top: 26px;
-    left: -12px;
+    top: 25px;
+    left: -20px;
   }
 
   .get-your-bonus-main__block {
@@ -11490,14 +11569,8 @@ input[type='radio'].visually-hidden {
   }
 
   .important-main__text-decorative::before {
-    width: 20px;
-    left: -29px;
-    top: 13px;
-  }
-
-  .important-main__button {
-    font-size: 0.625rem;
-    padding: 14px 10px;
+    left: -30px;
+    top: 12px;
   }
 
   .just-do-it {
@@ -11510,7 +11583,8 @@ input[type='radio'].visually-hidden {
   }
 
   .just-do-it-main__text::before {
-    top: -17px;
+    top: 5px;
+    left: -26px;
   }
 
   .just-do-it-additional__block:nth-of-type(1)::before {
@@ -11520,7 +11594,7 @@ input[type='radio'].visually-hidden {
 }
 
 @media (min-width: 48em) {
-  .list-rotate:before {
+  .list--rotate:before {
     width: 22px;
     font-size: 0.5rem;
   }
@@ -12125,26 +12199,6 @@ input[type='radio'].visually-hidden {
 
   .align-items-md-center {
     align-items: center !important;
-  .get-your-bonus-main__text::before,
-  .just-do-it-main__text::before {
-    height: 4px;
-    width: 28px;
-  }
-
-  .important-main__text-decorative::before {
-    height: 3px;
-    width: 18px;
-  }
-
-  .btn {
-    padding: 12px 20px;
-    font-size: 0.5625rem;
-  }
-
-  .advertising__image {
-    width: 20px;
-    height: 12px;
-
   }
 
   .align-items-md-baseline {
@@ -12299,36 +12353,6 @@ input[type='radio'].visually-hidden {
   .mr-md-3,
   .mx-md-3 {
     margin-right: 1rem !important;
-
-  .get-your-bonus-main__text::before,
-  .just-do-it-main__text::before {
-    height: 4px;
-    width: 28px;
-  }
-
-  .important-main__text-decorative::before {
-    height: 3px;
-    width: 18px;
-  }
-
-  .btn {
-    padding: 12px 20px;
-    font-size: 0.5625rem;
-  }
-
-  .facts-main__title,
-  .examples-main__title,
-  .warning-main__title,
-  .career-additional__title,
-  .simple-steps-main .simple-steps-main__title,
-  .presentation-main__title,
-  .section-university__title--main,
-  .section-expert__title,
-  .section-help__title,
-  .important-additional__title,
-  .important-main__title,
-  .just-do-it-main__title {
-    font-size: 1.6875rem;
   }
 
   .mb-md-3,
@@ -12360,41 +12384,9 @@ input[type='radio'].visually-hidden {
     margin-bottom: 1.5rem !important;
   }
 
-
   .ml-md-4,
   .mx-md-4 {
     margin-left: 1.5rem !important;
-
-  .get-your-bonus-main__text::before,
-  .just-do-it-main__text::before {
-    height: 4px;
-    width: 28px;
-  }
-
-  .important-main__text-decorative::before {
-    height: 3px;
-    width: 18px;
-  }
-
-  .btn {
-    padding: 12px 20px;
-    font-size: 0.5625rem;
-  }
-
-  .facts-main__title,
-  .examples-main__title,
-  .warning-main__title,
-  .career-additional__title,
-  .simple-steps-main .simple-steps-main__title,
-  .presentation-main__title,
-  .section-university__title--main,
-  .section-expert__title,
-  .section-help__title,
-  .important-additional__title,
-  .important-main__title,
-  .just-do-it-main__title {
-    font-size: 1.6875rem;
-
   }
 
   .m-md-5 {
@@ -12462,35 +12454,6 @@ input[type='radio'].visually-hidden {
   .pb-md-1,
   .py-md-1 {
     padding-bottom: 0.25rem !important;
-  .get-your-bonus-main__text::before,
-  .just-do-it-main__text::before {
-    height: 4px;
-    width: 28px;
-  }
-
-  .important-main__text-decorative::before {
-    height: 3px;
-    width: 18px;
-  }
-
-  .btn {
-    padding: 12px 20px;
-    font-size: 0.5625rem;
-  }
-
-  .facts-main__title,
-  .examples-main__title,
-  .warning-main__title,
-  .career-additional__title,
-  .simple-steps-main .simple-steps-main__title,
-  .presentation-main__title,
-  .section-university__title--main,
-  .section-expert__title,
-  .section-help__title,
-  .important-additional__title,
-  .important-main__title,
-  .just-do-it-main__title {
-    font-size: 1.6875rem;
   }
 
   .pl-md-1,
@@ -12524,24 +12487,6 @@ input[type='radio'].visually-hidden {
 
   .p-md-3 {
     padding: 1rem !important;
-  .get-your-bonus-main__text::before,
-  .just-do-it-main__text::before {
-    height: 4px;
-    width: 28px;
-  }
-
-  .important-main__text-decorative::before {
-    height: 3px;
-    width: 18px;
-  }
-
-  .btn {
-    padding: 12px 20px;
-    font-size: 0.5625rem;
-  }
-
-  .get-your-bonus {
-    margin-bottom: 90px;
   }
 
   .pt-md-3,
@@ -12552,9 +12497,6 @@ input[type='radio'].visually-hidden {
   .pr-md-3,
   .px-md-3 {
     padding-right: 1rem !important;
-  .get-your-bonus-main__text::before {
-    top: 25px;
-    left: -20px;
   }
 
   .pb-md-3,
@@ -12641,9 +12583,6 @@ input[type='radio'].visually-hidden {
 
   .m-md-n2 {
     margin: -0.5rem !important;
-  .important-main__text-decorative::before {
-    left: -30px;
-    top: 12px;
   }
 
   .mt-md-n2,
@@ -12659,9 +12598,6 @@ input[type='radio'].visually-hidden {
   .mb-md-n2,
   .my-md-n2 {
     margin-bottom: -0.5rem !important;
-  .just-do-it-main__text::before {
-    top: 5px;
-    left: -26px;
   }
 
   .ml-md-n2,
@@ -12928,10 +12864,6 @@ input[type='radio'].visually-hidden {
   }
 
   .law-info__item {
-    font-size: 0.6875rem;
-  }
-
-  .important-main__button {
     font-size: 0.6875rem;
   }
 }
@@ -13816,136 +13748,6 @@ input[type='radio'].visually-hidden {
 
   .text-lg-center {
     text-align: center !important;
-  }
-}
-
-@media screen and (min-width: 62em) {
-  .social-list__item {
-    font-size: 0.75rem;
-  }
-
-  .main-contacts__button {
-    padding: 16px 34px;
-  }
-
-  .presentation-additional__btn {
-    font-size: 0.6875rem;
-  }
-
-  .law-info__item {
-    font-size: 0.6875rem;
-  }
-}
-
-@media (min-width: 75em) {
-  .header__wrapper {
-    max-width: 100%;
-  }
-
-  .header-logo__link {
-    position: absolute;
-    left: 20px;
-  }
-
-  .banner__title {
-    font-size: 3.125rem;
-    line-height: 1.25;
-  }
-
-  .banner__desc {
-    font-size: 0.5625rem;
-    line-height: 1.7;
-  }
-
-  .banner__company {
-    font-size: 16.4375rem;
-    line-height: 1.2;
-  }
-
-  .article-career__title {
-    font-size: 0.70625rem;
-    line-height: 1.6;
-  }
-
-  .article-career__desc {
-    font-size: 0.625rem;
-    line-height: 1.5;
-  }
-
-  .start-it-main__offer {
-    font-size: 0.6875rem;
-  }
-
-  .start-it-main__title {
-    font-size: 1.875rem;
-  }
-
-  .start-in-preferences:before {
-    font-size: 9.75rem;
-    top: -35px;
-    left: -310px;
-  }
-
-  .start-it-additional__subtitle {
-    font-size: 1.1875rem;
-  }
-
-  .start-in-preferences__item:nth-last-child(-n+4) {
-    margin-bottom: 20px;
-  }
-
-  .start-in-preferences__item {
-    margin-bottom: 20px;
-  }
-
-  .start-in-preferences__item {
-    font-size: 0.625rem;
-  }
-
-  .start-it-additional__text--decorative {
-    position: relative;
-    top: -80px;
-  }
-
-  .facts-main__title {
-    text-align: left;
-  }
-
-  .facts-additional__item {
-    width: 165px;
-    font-size: 0.5625rem;
-  }
-
-  .facts-additional__subtitle {
-    font-size: 1.1875rem;
-  }
-
-  .except-numbers {
-    padding-top: 115px;
-  }
-
-  .examples {
-    padding-top: 115px;
-  }
-
-  .examples-additional__first-part {
-    width: 88px;
-  }
-
-  .examples-additional__title-name {
-    font-size: 0.55rem;
-  }
-
-  .examples-additional__text {
-    font-size: 0.55rem;
-  }
-
-  .warning {
-    padding-top: 115px;
-  }
-
-  .warning-main__item:before {
-    left: -24px;
   }
 }
 
@@ -15418,7 +15220,7 @@ input[type='radio'].visually-hidden {
 }
 
 @media (min-width: 75em) {
-  .list-rotate:before {
+  .list--rotate:before {
     width: 25px;
     font-size: 0.5625rem;
   }
