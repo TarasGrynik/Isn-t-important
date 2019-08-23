@@ -6593,6 +6593,7 @@ a.text-dark:focus {
 .facts-main__title,
 .examples-main__title,
 .warning-main__title,
+.explain-main__title,
 .career-additional__title,
 .simple-steps-main .simple-steps-main__title,
 .presentation-main__title,
@@ -6649,6 +6650,16 @@ a.text-dark:focus {
   text-transform: uppercase;
 }
 
+.explain-additional__subtitle {
+  font-family: "Acrom-Bold", sans-serif;
+  font-size: 0.9375rem;
+  line-height: 1.53;
+  color: #ffffff;
+  background-color: #000000;
+  text-transform: uppercase;
+}
+
+.explain-additional__text--light,
 .сareer-main__text--light,
 .simple-steps-main .simple-steps-additional__text--light,
 .presentation-additional__text--light,
@@ -6671,6 +6682,7 @@ a.text-dark:focus {
 .except-numbers-additional__text,
 .examples-main__text,
 .warning-main__text,
+.explain-main__text,
 .career-additional__text,
 .simple-steps-main .simple-steps-main__text,
 .presentation-main__text,
@@ -6689,6 +6701,7 @@ a.text-dark:focus {
   color: #000000;
 }
 
+.explain-additional__text--bold,
 .presentation-additional__text--bold,
 .important-main__text--bold,
 .just-do-it-additional__text--bold {
@@ -6748,6 +6761,7 @@ a.text-dark:focus {
   display: block;
 }
 
+.explain-main__text::before,
 .get-your-bonus-main__text::before,
 .just-do-it-main__text::before {
   position: absolute;
@@ -7905,6 +7919,33 @@ h6 {
   background-color: #000000;
 }
 
+.explain-main__title {
+  margin-bottom: 12px;
+}
+
+.explain-main__text {
+  margin-bottom: 30px;
+}
+
+.explain-main__text::before {
+  left: -20px;
+  top: 8px;
+}
+
+.explain-main__image,
+.explain-additional__image {
+  width: 100%;
+  margin-bottom: 16px;
+}
+
+.explain-additional__subtitle-block {
+  margin-bottom: 16px;
+}
+
+.explain-additional__subtitle {
+  display: inline;
+}
+
 .career-main {
   padding: 20px 0 20px;
 }
@@ -8239,6 +8280,7 @@ h6 {
 .facts-main__title,
 .examples-main__title,
 .warning-main__title,
+.explain-main__title,
 .career-additional__title,
 .simple-steps-main .simple-steps-main__title,
 .presentation-main__title,
@@ -8295,6 +8337,16 @@ h6 {
   text-transform: uppercase;
 }
 
+.explain-additional__subtitle {
+  font-family: "Acrom-Bold", sans-serif;
+  font-size: 0.9375rem;
+  line-height: 1.53;
+  color: #ffffff;
+  background-color: #000000;
+  text-transform: uppercase;
+}
+
+.explain-additional__text--light,
 .сareer-main__text--light,
 .simple-steps-main .simple-steps-additional__text--light,
 .presentation-additional__text--light,
@@ -8317,6 +8369,7 @@ h6 {
 .except-numbers-additional__text,
 .examples-main__text,
 .warning-main__text,
+.explain-main__text,
 .career-additional__text,
 .simple-steps-main .simple-steps-main__text,
 .presentation-main__text,
@@ -8335,6 +8388,7 @@ h6 {
   color: #000000;
 }
 
+.explain-additional__text--bold,
 .presentation-additional__text--bold,
 .important-main__text--bold,
 .just-do-it-additional__text--bold {
@@ -8394,6 +8448,7 @@ h6 {
   display: block;
 }
 
+.explain-main__text::before,
 .get-your-bonus-main__text::before,
 .just-do-it-main__text::before {
   position: absolute;
@@ -8538,6 +8593,7 @@ input[type='radio'].visually-hidden {
 .facts-main__title,
 .examples-main__title,
 .warning-main__title,
+.explain-main__title,
 .career-additional__title,
 .simple-steps-main .simple-steps-main__title,
 .presentation-main__title,
@@ -8594,6 +8650,16 @@ input[type='radio'].visually-hidden {
   text-transform: uppercase;
 }
 
+.explain-additional__subtitle {
+  font-family: "Acrom-Bold", sans-serif;
+  font-size: 0.9375rem;
+  line-height: 1.53;
+  color: #ffffff;
+  background-color: #000000;
+  text-transform: uppercase;
+}
+
+.explain-additional__text--light,
 .сareer-main__text--light,
 .simple-steps-main .simple-steps-additional__text--light,
 .presentation-additional__text--light,
@@ -8616,6 +8682,7 @@ input[type='radio'].visually-hidden {
 .except-numbers-additional__text,
 .examples-main__text,
 .warning-main__text,
+.explain-main__text,
 .career-additional__text,
 .simple-steps-main .simple-steps-main__text,
 .presentation-main__text,
@@ -8634,6 +8701,7 @@ input[type='radio'].visually-hidden {
   color: #000000;
 }
 
+.explain-additional__text--bold,
 .presentation-additional__text--bold,
 .important-main__text--bold,
 .just-do-it-additional__text--bold {
@@ -8693,6 +8761,7 @@ input[type='radio'].visually-hidden {
   display: block;
 }
 
+.explain-main__text::before,
 .get-your-bonus-main__text::before,
 .just-do-it-main__text::before {
   position: absolute;
@@ -8831,6 +8900,7 @@ input[type='radio'].visually-hidden {
 .facts-main__title,
 .examples-main__title,
 .warning-main__title,
+.explain-main__title,
 .career-additional__title,
 .simple-steps-main .simple-steps-main__title,
 .presentation-main__title,
@@ -8887,6 +8957,16 @@ input[type='radio'].visually-hidden {
   text-transform: uppercase;
 }
 
+.explain-additional__subtitle {
+  font-family: "Acrom-Bold", sans-serif;
+  font-size: 0.9375rem;
+  line-height: 1.53;
+  color: #ffffff;
+  background-color: #000000;
+  text-transform: uppercase;
+}
+
+.explain-additional__text--light,
 .сareer-main__text--light,
 .simple-steps-main .simple-steps-additional__text--light,
 .presentation-additional__text--light,
@@ -8909,6 +8989,7 @@ input[type='radio'].visually-hidden {
 .except-numbers-additional__text,
 .examples-main__text,
 .warning-main__text,
+.explain-main__text,
 .career-additional__text,
 .simple-steps-main .simple-steps-main__text,
 .presentation-main__text,
@@ -8927,6 +9008,7 @@ input[type='radio'].visually-hidden {
   color: #000000;
 }
 
+.explain-additional__text--bold,
 .presentation-additional__text--bold,
 .important-main__text--bold,
 .just-do-it-additional__text--bold {
@@ -8986,6 +9068,7 @@ input[type='radio'].visually-hidden {
   display: block;
 }
 
+.explain-main__text::before,
 .get-your-bonus-main__text::before,
 .just-do-it-main__text::before {
   position: absolute;
@@ -9123,6 +9206,7 @@ input[type='radio'].visually-hidden {
 .facts-main__title,
 .examples-main__title,
 .warning-main__title,
+.explain-main__title,
 .career-additional__title,
 .simple-steps-main .simple-steps-main__title,
 .presentation-main__title,
@@ -9179,6 +9263,16 @@ input[type='radio'].visually-hidden {
   text-transform: uppercase;
 }
 
+.explain-additional__subtitle {
+  font-family: "Acrom-Bold", sans-serif;
+  font-size: 0.9375rem;
+  line-height: 1.53;
+  color: #ffffff;
+  background-color: #000000;
+  text-transform: uppercase;
+}
+
+.explain-additional__text--light,
 .сareer-main__text--light,
 .simple-steps-main .simple-steps-additional__text--light,
 .presentation-additional__text--light,
@@ -9201,6 +9295,7 @@ input[type='radio'].visually-hidden {
 .except-numbers-additional__text,
 .examples-main__text,
 .warning-main__text,
+.explain-main__text,
 .career-additional__text,
 .simple-steps-main .simple-steps-main__text,
 .presentation-main__text,
@@ -9219,6 +9314,7 @@ input[type='radio'].visually-hidden {
   color: #000000;
 }
 
+.explain-additional__text--bold,
 .presentation-additional__text--bold,
 .important-main__text--bold,
 .just-do-it-additional__text--bold {
@@ -9278,6 +9374,7 @@ input[type='radio'].visually-hidden {
   display: block;
 }
 
+.explain-main__text::before,
 .get-your-bonus-main__text::before,
 .just-do-it-main__text::before {
   position: absolute;
@@ -10852,6 +10949,7 @@ input[type='radio'].visually-hidden {
   .facts-main__title,
   .examples-main__title,
   .warning-main__title,
+  .explain-main__title,
   .career-additional__title,
   .simple-steps-main .simple-steps-main__title,
   .presentation-main__title,
@@ -10888,6 +10986,12 @@ input[type='radio'].visually-hidden {
     font-size: 0.5625rem;
   }
 
+  .explain-additional__subtitle {
+    font-family: "Acrom-ExtraBold", sans-serif;
+    font-size: 0.5625rem;
+  }
+
+  .explain-additional__text--light,
   .сareer-main__text--light,
   .simple-steps-main .simple-steps-additional__text--light,
   .presentation-additional__text--light,
@@ -10907,6 +11011,7 @@ input[type='radio'].visually-hidden {
   .except-numbers-additional__text,
   .examples-main__text,
   .warning-main__text,
+  .explain-main__text,
   .career-additional__text,
   .simple-steps-main .simple-steps-main__text,
   .presentation-main__text,
@@ -10922,12 +11027,17 @@ input[type='radio'].visually-hidden {
     font-size: 0.5625rem;
   }
 
+  .explain-additional__text--bold,
   .presentation-additional__text--bold,
   .important-main__text--bold,
   .just-do-it-additional__text--bold {
     font-size: 0.5625rem;
   }
 
+<<<<<<< HEAD
+  .explain-main__text::before,
+=======
+>>>>>>> dd8f735ce0fc6826e43d16a0eea79a88da494d58
   .get-your-bonus-main__text::before,
   .just-do-it-main__text::before {
     height: 4px;
@@ -10958,6 +11068,27 @@ input[type='radio'].visually-hidden {
   .main-contacts__button {
     padding: 14px 30px;
     font-size: 0.625rem;
+  }
+
+  .explain-main__title {
+    margin-bottom: 16px;
+  }
+
+  .explain-main__text::before {
+    top: 6px;
+    left: -32px;
+  }
+
+  .explain-additional__block {
+    margin-top: -20px;
+  }
+
+  .explain-additional__block--dismargin {
+    margin-top: -120px;
+  }
+
+  .explain-additional__text--dismargin {
+    margin-top: -50px;
   }
 
   .career-main {
@@ -11084,6 +11215,7 @@ input[type='radio'].visually-hidden {
   .facts-main__title,
   .examples-main__title,
   .warning-main__title,
+  .explain-main__title,
   .career-additional__title,
   .simple-steps-main .simple-steps-main__title,
   .presentation-main__title,
@@ -11120,6 +11252,12 @@ input[type='radio'].visually-hidden {
     font-size: 0.5625rem;
   }
 
+  .explain-additional__subtitle {
+    font-family: "Acrom-ExtraBold", sans-serif;
+    font-size: 0.5625rem;
+  }
+
+  .explain-additional__text--light,
   .сareer-main__text--light,
   .simple-steps-main .simple-steps-additional__text--light,
   .presentation-additional__text--light,
@@ -11139,6 +11277,7 @@ input[type='radio'].visually-hidden {
   .except-numbers-additional__text,
   .examples-main__text,
   .warning-main__text,
+  .explain-main__text,
   .career-additional__text,
   .simple-steps-main .simple-steps-main__text,
   .presentation-main__text,
@@ -11154,12 +11293,17 @@ input[type='radio'].visually-hidden {
     font-size: 0.5625rem;
   }
 
+  .explain-additional__text--bold,
   .presentation-additional__text--bold,
   .important-main__text--bold,
   .just-do-it-additional__text--bold {
     font-size: 0.5625rem;
   }
 
+<<<<<<< HEAD
+  .explain-main__text::before,
+=======
+>>>>>>> dd8f735ce0fc6826e43d16a0eea79a88da494d58
   .get-your-bonus-main__text::before,
   .just-do-it-main__text::before {
     height: 4px;
@@ -11179,6 +11323,7 @@ input[type='radio'].visually-hidden {
   .facts-main__title,
   .examples-main__title,
   .warning-main__title,
+  .explain-main__title,
   .career-additional__title,
   .simple-steps-main .simple-steps-main__title,
   .presentation-main__title,
@@ -11215,6 +11360,12 @@ input[type='radio'].visually-hidden {
     font-size: 0.5625rem;
   }
 
+  .explain-additional__subtitle {
+    font-family: "Acrom-ExtraBold", sans-serif;
+    font-size: 0.5625rem;
+  }
+
+  .explain-additional__text--light,
   .сareer-main__text--light,
   .simple-steps-main .simple-steps-additional__text--light,
   .presentation-additional__text--light,
@@ -11234,6 +11385,7 @@ input[type='radio'].visually-hidden {
   .except-numbers-additional__text,
   .examples-main__text,
   .warning-main__text,
+  .explain-main__text,
   .career-additional__text,
   .simple-steps-main .simple-steps-main__text,
   .presentation-main__text,
@@ -11249,12 +11401,17 @@ input[type='radio'].visually-hidden {
     font-size: 0.5625rem;
   }
 
+  .explain-additional__text--bold,
   .presentation-additional__text--bold,
   .important-main__text--bold,
   .just-do-it-additional__text--bold {
     font-size: 0.5625rem;
   }
 
+<<<<<<< HEAD
+  .explain-main__text::before,
+=======
+>>>>>>> dd8f735ce0fc6826e43d16a0eea79a88da494d58
   .get-your-bonus-main__text::before,
   .just-do-it-main__text::before {
     height: 4px;
@@ -11274,6 +11431,7 @@ input[type='radio'].visually-hidden {
   .facts-main__title,
   .examples-main__title,
   .warning-main__title,
+  .explain-main__title,
   .career-additional__title,
   .simple-steps-main .simple-steps-main__title,
   .presentation-main__title,
@@ -11310,6 +11468,12 @@ input[type='radio'].visually-hidden {
     font-size: 0.5625rem;
   }
 
+  .explain-additional__subtitle {
+    font-family: "Acrom-ExtraBold", sans-serif;
+    font-size: 0.5625rem;
+  }
+
+  .explain-additional__text--light,
   .сareer-main__text--light,
   .simple-steps-main .simple-steps-additional__text--light,
   .presentation-additional__text--light,
@@ -11329,6 +11493,7 @@ input[type='radio'].visually-hidden {
   .except-numbers-additional__text,
   .examples-main__text,
   .warning-main__text,
+  .explain-main__text,
   .career-additional__text,
   .simple-steps-main .simple-steps-main__text,
   .presentation-main__text,
@@ -11344,12 +11509,17 @@ input[type='radio'].visually-hidden {
     font-size: 0.5625rem;
   }
 
+  .explain-additional__text--bold,
   .presentation-additional__text--bold,
   .important-main__text--bold,
   .just-do-it-additional__text--bold {
     font-size: 0.5625rem;
   }
 
+<<<<<<< HEAD
+  .explain-main__text::before,
+=======
+>>>>>>> dd8f735ce0fc6826e43d16a0eea79a88da494d58
   .get-your-bonus-main__text::before,
   .just-do-it-main__text::before {
     height: 4px;
@@ -11369,6 +11539,7 @@ input[type='radio'].visually-hidden {
   .facts-main__title,
   .examples-main__title,
   .warning-main__title,
+  .explain-main__title,
   .career-additional__title,
   .simple-steps-main .simple-steps-main__title,
   .presentation-main__title,
@@ -11405,6 +11576,12 @@ input[type='radio'].visually-hidden {
     font-size: 0.5625rem;
   }
 
+  .explain-additional__subtitle {
+    font-family: "Acrom-ExtraBold", sans-serif;
+    font-size: 0.5625rem;
+  }
+
+  .explain-additional__text--light,
   .сareer-main__text--light,
   .simple-steps-main .simple-steps-additional__text--light,
   .presentation-additional__text--light,
@@ -11424,6 +11601,7 @@ input[type='radio'].visually-hidden {
   .except-numbers-additional__text,
   .examples-main__text,
   .warning-main__text,
+  .explain-main__text,
   .career-additional__text,
   .simple-steps-main .simple-steps-main__text,
   .presentation-main__text,
@@ -11439,12 +11617,17 @@ input[type='radio'].visually-hidden {
     font-size: 0.5625rem;
   }
 
+  .explain-additional__text--bold,
   .presentation-additional__text--bold,
   .important-main__text--bold,
   .just-do-it-additional__text--bold {
     font-size: 0.5625rem;
   }
 
+<<<<<<< HEAD
+  .explain-main__text::before,
+=======
+>>>>>>> dd8f735ce0fc6826e43d16a0eea79a88da494d58
   .get-your-bonus-main__text::before,
   .just-do-it-main__text::before {
     height: 4px;
@@ -12840,13 +13023,20 @@ input[type='radio'].visually-hidden {
     padding: 16px 34px;
   }
 
+  .explain-additional__block--dismargin {
+    margin-top: -140px;
+  }
+
   .presentation-additional__btn {
     font-size: 0.6875rem;
   }
+<<<<<<< HEAD
 
   .law-info__item {
     font-size: 0.6875rem;
   }
+=======
+>>>>>>> dd8f735ce0fc6826e43d16a0eea79a88da494d58
 }
 
 @media (min-width: 992px) {
@@ -13736,6 +13926,7 @@ input[type='radio'].visually-hidden {
   .facts-main__title,
   .examples-main__title,
   .warning-main__title,
+  .explain-main__title,
   .career-additional__title,
   .simple-steps-main .simple-steps-main__title,
   .presentation-main__title,
@@ -13772,6 +13963,11 @@ input[type='radio'].visually-hidden {
     font-size: 0.625rem;
   }
 
+  .explain-additional__subtitle {
+    font-size: 0.625rem;
+  }
+
+  .explain-additional__text--light,
   .сareer-main__text--light,
   .simple-steps-main .simple-steps-additional__text--light,
   .presentation-additional__text--light,
@@ -13791,6 +13987,7 @@ input[type='radio'].visually-hidden {
   .except-numbers-additional__text,
   .examples-main__text,
   .warning-main__text,
+  .explain-main__text,
   .career-additional__text,
   .simple-steps-main .simple-steps-main__text,
   .presentation-main__text,
@@ -13806,12 +14003,14 @@ input[type='radio'].visually-hidden {
     font-size: 0.625rem;
   }
 
+  .explain-additional__text--bold,
   .presentation-additional__text--bold,
   .important-main__text--bold,
   .just-do-it-additional__text--bold {
     font-size: 0.625rem;
   }
 
+  .explain-main__text::before,
   .get-your-bonus-main__text::before,
   .just-do-it-main__text::before {
     width: 32px;
@@ -13833,6 +14032,10 @@ input[type='radio'].visually-hidden {
 
   .social-list__item {
     font-size: 0.8125rem;
+  }
+
+  .explain-additional__block--dismargin {
+    margin-top: -120px;
   }
 
   .career-main {
@@ -13919,6 +14122,7 @@ input[type='radio'].visually-hidden {
   .facts-main__title,
   .examples-main__title,
   .warning-main__title,
+  .explain-main__title,
   .career-additional__title,
   .simple-steps-main .simple-steps-main__title,
   .presentation-main__title,
@@ -13955,6 +14159,11 @@ input[type='radio'].visually-hidden {
     font-size: 0.625rem;
   }
 
+  .explain-additional__subtitle {
+    font-size: 0.625rem;
+  }
+
+  .explain-additional__text--light,
   .сareer-main__text--light,
   .simple-steps-main .simple-steps-additional__text--light,
   .presentation-additional__text--light,
@@ -13974,6 +14183,7 @@ input[type='radio'].visually-hidden {
   .except-numbers-additional__text,
   .examples-main__text,
   .warning-main__text,
+  .explain-main__text,
   .career-additional__text,
   .simple-steps-main .simple-steps-main__text,
   .presentation-main__text,
@@ -13989,12 +14199,14 @@ input[type='radio'].visually-hidden {
     font-size: 0.625rem;
   }
 
+  .explain-additional__text--bold,
   .presentation-additional__text--bold,
   .important-main__text--bold,
   .just-do-it-additional__text--bold {
     font-size: 0.625rem;
   }
 
+  .explain-main__text::before,
   .get-your-bonus-main__text::before,
   .just-do-it-main__text::before {
     width: 32px;
@@ -14012,6 +14224,7 @@ input[type='radio'].visually-hidden {
   .facts-main__title,
   .examples-main__title,
   .warning-main__title,
+  .explain-main__title,
   .career-additional__title,
   .simple-steps-main .simple-steps-main__title,
   .presentation-main__title,
@@ -14048,6 +14261,11 @@ input[type='radio'].visually-hidden {
     font-size: 0.625rem;
   }
 
+  .explain-additional__subtitle {
+    font-size: 0.625rem;
+  }
+
+  .explain-additional__text--light,
   .сareer-main__text--light,
   .simple-steps-main .simple-steps-additional__text--light,
   .presentation-additional__text--light,
@@ -14067,6 +14285,7 @@ input[type='radio'].visually-hidden {
   .except-numbers-additional__text,
   .examples-main__text,
   .warning-main__text,
+  .explain-main__text,
   .career-additional__text,
   .simple-steps-main .simple-steps-main__text,
   .presentation-main__text,
@@ -14082,12 +14301,14 @@ input[type='radio'].visually-hidden {
     font-size: 0.625rem;
   }
 
+  .explain-additional__text--bold,
   .presentation-additional__text--bold,
   .important-main__text--bold,
   .just-do-it-additional__text--bold {
     font-size: 0.625rem;
   }
 
+  .explain-main__text::before,
   .get-your-bonus-main__text::before,
   .just-do-it-main__text::before {
     width: 32px;
@@ -14105,6 +14326,7 @@ input[type='radio'].visually-hidden {
   .facts-main__title,
   .examples-main__title,
   .warning-main__title,
+  .explain-main__title,
   .career-additional__title,
   .simple-steps-main .simple-steps-main__title,
   .presentation-main__title,
@@ -14141,6 +14363,11 @@ input[type='radio'].visually-hidden {
     font-size: 0.625rem;
   }
 
+  .explain-additional__subtitle {
+    font-size: 0.625rem;
+  }
+
+  .explain-additional__text--light,
   .сareer-main__text--light,
   .simple-steps-main .simple-steps-additional__text--light,
   .presentation-additional__text--light,
@@ -14160,6 +14387,7 @@ input[type='radio'].visually-hidden {
   .except-numbers-additional__text,
   .examples-main__text,
   .warning-main__text,
+  .explain-main__text,
   .career-additional__text,
   .simple-steps-main .simple-steps-main__text,
   .presentation-main__text,
@@ -14175,12 +14403,14 @@ input[type='radio'].visually-hidden {
     font-size: 0.625rem;
   }
 
+  .explain-additional__text--bold,
   .presentation-additional__text--bold,
   .important-main__text--bold,
   .just-do-it-additional__text--bold {
     font-size: 0.625rem;
   }
 
+  .explain-main__text::before,
   .get-your-bonus-main__text::before,
   .just-do-it-main__text::before {
     width: 32px;
@@ -14198,6 +14428,7 @@ input[type='radio'].visually-hidden {
   .facts-main__title,
   .examples-main__title,
   .warning-main__title,
+  .explain-main__title,
   .career-additional__title,
   .simple-steps-main .simple-steps-main__title,
   .presentation-main__title,
@@ -14234,6 +14465,11 @@ input[type='radio'].visually-hidden {
     font-size: 0.625rem;
   }
 
+  .explain-additional__subtitle {
+    font-size: 0.625rem;
+  }
+
+  .explain-additional__text--light,
   .сareer-main__text--light,
   .simple-steps-main .simple-steps-additional__text--light,
   .presentation-additional__text--light,
@@ -14253,6 +14489,7 @@ input[type='radio'].visually-hidden {
   .except-numbers-additional__text,
   .examples-main__text,
   .warning-main__text,
+  .explain-main__text,
   .career-additional__text,
   .simple-steps-main .simple-steps-main__text,
   .presentation-main__text,
@@ -14268,12 +14505,14 @@ input[type='radio'].visually-hidden {
     font-size: 0.625rem;
   }
 
+  .explain-additional__text--bold,
   .presentation-additional__text--bold,
   .important-main__text--bold,
   .just-do-it-additional__text--bold {
     font-size: 0.625rem;
   }
 
+  .explain-main__text::before,
   .get-your-bonus-main__text::before,
   .just-do-it-main__text::before {
     width: 32px;
