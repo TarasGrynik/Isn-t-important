@@ -1,0 +1,73 @@
+.explain-main__title {
+  @extend %sec-title-style;
+  margin-bottom: 12px;
+
+  @media screen and (min-width: 48em) {
+    margin-bottom: 16px;
+  }
+}
+
+.explain-main__text {
+  @extend %sec-title-text-style;
+  margin-bottom: 30px;
+
+  &::before {
+    @extend %pseudo-dash;
+    left: -20px;
+    top: 8px;
+
+    @media screen and (min-width: 48em) {
+      top: 6px;
+      left: -32px;
+    }
+  }
+}
+
+.explain-main__image,
+.explain-additional__image {
+  width: 100%;
+  margin-bottom: 16px;
+}
+
+.explain-additional__subtitle-block {
+  margin-bottom: 16px;
+}
+
+.explain-additional__subtitle {
+  @extend %third-title-style--reverse;
+  display: inline;
+}
+
+.explain-additional__text--bold {
+  @extend %bold-text-style;
+}
+
+.explain-additional__text--light {
+  @extend %main-page-font;
+}
+
+.explain-additional__block {
+  @media screen and (min-width: 48em) {
+    margin-top: -20px;
+  }
+}
+
+.explain-additional__block--dismargin {
+  @media screen and (min-width: 48em) {
+    margin-top: -120px;
+  }
+
+  @media screen and (min-width: 62em) {
+    margin-top: -140px;
+  }
+
+  @media screen and (min-width: 75em) {
+    margin-top: -120px;
+  }
+}
+
+.explain-additional__text--dismargin {
+  @media screen and (min-width: 48em) {
+    margin-top: -50px;
+  }
+}

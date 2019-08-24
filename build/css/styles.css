@@ -6593,6 +6593,7 @@ a.text-dark:focus {
 .facts-main__title,
 .examples-main__title,
 .warning-main__title,
+.explain-main__title,
 .career-additional__title,
 .simple-steps-main .simple-steps-main__title,
 .presentation-main__title,
@@ -6649,6 +6650,16 @@ a.text-dark:focus {
   text-transform: uppercase;
 }
 
+.explain-additional__subtitle {
+  font-family: "Acrom-Bold", sans-serif;
+  font-size: 0.9375rem;
+  line-height: 1.53;
+  color: #ffffff;
+  background-color: #000000;
+  text-transform: uppercase;
+}
+
+.explain-additional__text--light,
 .сareer-main__text--light,
 .simple-steps-main .simple-steps-additional__text--light,
 .presentation-additional__text--light,
@@ -6671,6 +6682,7 @@ a.text-dark:focus {
 .except-numbers-additional__text,
 .examples-main__text,
 .warning-main__text,
+.explain-main__text,
 .career-additional__text,
 .simple-steps-main .simple-steps-main__text,
 .presentation-main__text,
@@ -6689,6 +6701,7 @@ a.text-dark:focus {
   color: #000000;
 }
 
+.explain-additional__text--bold,
 .presentation-additional__text--bold,
 .important-main__text--bold,
 .just-do-it-additional__text--bold {
@@ -6700,10 +6713,6 @@ a.text-dark:focus {
 
 /* Placeholder for list */
 
-.list--square,
-.list--number,
-.list--rotate,
-.list--square-diff,
 .social-list,
 .examples-pagination__numbers,
 .simple-steps-main .simple-steps-additional,
@@ -6753,6 +6762,7 @@ a.text-dark:focus {
   display: block;
 }
 
+.explain-main__text::before,
 .get-your-bonus-main__text::before,
 .just-do-it-main__text::before {
   position: absolute;
@@ -6764,6 +6774,7 @@ a.text-dark:focus {
 }
 
 .only-now-main__text--decorative::before,
+.course-results-main__text--decorative::before,
 .important-main__text-decorative::before {
   position: absolute;
   display: block;
@@ -7254,6 +7265,7 @@ h6 {
 .list--number,
 .list--rotate,
 .list--square-diff {
+  list-style: none;
   position: relative;
 }
 
@@ -7910,6 +7922,33 @@ h6 {
   background-color: #000000;
 }
 
+.explain-main__title {
+  margin-bottom: 12px;
+}
+
+.explain-main__text {
+  margin-bottom: 30px;
+}
+
+.explain-main__text::before {
+  left: -20px;
+  top: 8px;
+}
+
+.explain-main__image,
+.explain-additional__image {
+  width: 100%;
+  margin-bottom: 16px;
+}
+
+.explain-additional__subtitle-block {
+  margin-bottom: 16px;
+}
+
+.explain-additional__subtitle {
+  display: inline;
+}
+
 .career-main {
   padding: 20px 0 20px;
 }
@@ -8244,6 +8283,7 @@ h6 {
 .facts-main__title,
 .examples-main__title,
 .warning-main__title,
+.explain-main__title,
 .career-additional__title,
 .simple-steps-main .simple-steps-main__title,
 .presentation-main__title,
@@ -8300,6 +8340,16 @@ h6 {
   text-transform: uppercase;
 }
 
+.explain-additional__subtitle {
+  font-family: "Acrom-Bold", sans-serif;
+  font-size: 0.9375rem;
+  line-height: 1.53;
+  color: #ffffff;
+  background-color: #000000;
+  text-transform: uppercase;
+}
+
+.explain-additional__text--light,
 .сareer-main__text--light,
 .simple-steps-main .simple-steps-additional__text--light,
 .presentation-additional__text--light,
@@ -8322,6 +8372,7 @@ h6 {
 .except-numbers-additional__text,
 .examples-main__text,
 .warning-main__text,
+.explain-main__text,
 .career-additional__text,
 .simple-steps-main .simple-steps-main__text,
 .presentation-main__text,
@@ -8340,6 +8391,7 @@ h6 {
   color: #000000;
 }
 
+.explain-additional__text--bold,
 .presentation-additional__text--bold,
 .important-main__text--bold,
 .just-do-it-additional__text--bold {
@@ -8351,10 +8403,6 @@ h6 {
 
 /* Placeholder for list */
 
-.list--square,
-.list--number,
-.list--rotate,
-.list--square-diff,
 .social-list,
 .examples-pagination__numbers,
 .simple-steps-main .simple-steps-additional,
@@ -8404,6 +8452,7 @@ h6 {
   display: block;
 }
 
+.explain-main__text::before,
 .get-your-bonus-main__text::before,
 .just-do-it-main__text::before {
   position: absolute;
@@ -8415,6 +8464,7 @@ h6 {
 }
 
 .only-now-main__text--decorative::before,
+.course-results-main__text--decorative::before,
 .important-main__text-decorative::before {
   position: absolute;
   display: block;
@@ -8549,6 +8599,7 @@ input[type='radio'].visually-hidden {
 .facts-main__title,
 .examples-main__title,
 .warning-main__title,
+.explain-main__title,
 .career-additional__title,
 .simple-steps-main .simple-steps-main__title,
 .presentation-main__title,
@@ -8605,6 +8656,16 @@ input[type='radio'].visually-hidden {
   text-transform: uppercase;
 }
 
+.explain-additional__subtitle {
+  font-family: "Acrom-Bold", sans-serif;
+  font-size: 0.9375rem;
+  line-height: 1.53;
+  color: #ffffff;
+  background-color: #000000;
+  text-transform: uppercase;
+}
+
+.explain-additional__text--light,
 .сareer-main__text--light,
 .simple-steps-main .simple-steps-additional__text--light,
 .presentation-additional__text--light,
@@ -8627,6 +8688,7 @@ input[type='radio'].visually-hidden {
 .except-numbers-additional__text,
 .examples-main__text,
 .warning-main__text,
+.explain-main__text,
 .career-additional__text,
 .simple-steps-main .simple-steps-main__text,
 .presentation-main__text,
@@ -8645,6 +8707,7 @@ input[type='radio'].visually-hidden {
   color: #000000;
 }
 
+.explain-additional__text--bold,
 .presentation-additional__text--bold,
 .important-main__text--bold,
 .just-do-it-additional__text--bold {
@@ -8656,10 +8719,6 @@ input[type='radio'].visually-hidden {
 
 /* Placeholder for list */
 
-.list--square,
-.list--number,
-.list--rotate,
-.list--square-diff,
 .social-list,
 .examples-pagination__numbers,
 .simple-steps-main .simple-steps-additional,
@@ -8709,6 +8768,7 @@ input[type='radio'].visually-hidden {
   display: block;
 }
 
+.explain-main__text::before,
 .get-your-bonus-main__text::before,
 .just-do-it-main__text::before {
   position: absolute;
@@ -8720,6 +8780,7 @@ input[type='radio'].visually-hidden {
 }
 
 .only-now-main__text--decorative::before,
+.course-results-main__text--decorative::before,
 .important-main__text-decorative::before {
   position: absolute;
   display: block;
@@ -8848,6 +8909,7 @@ input[type='radio'].visually-hidden {
 .facts-main__title,
 .examples-main__title,
 .warning-main__title,
+.explain-main__title,
 .career-additional__title,
 .simple-steps-main .simple-steps-main__title,
 .presentation-main__title,
@@ -8904,6 +8966,16 @@ input[type='radio'].visually-hidden {
   text-transform: uppercase;
 }
 
+.explain-additional__subtitle {
+  font-family: "Acrom-Bold", sans-serif;
+  font-size: 0.9375rem;
+  line-height: 1.53;
+  color: #ffffff;
+  background-color: #000000;
+  text-transform: uppercase;
+}
+
+.explain-additional__text--light,
 .сareer-main__text--light,
 .simple-steps-main .simple-steps-additional__text--light,
 .presentation-additional__text--light,
@@ -8926,6 +8998,7 @@ input[type='radio'].visually-hidden {
 .except-numbers-additional__text,
 .examples-main__text,
 .warning-main__text,
+.explain-main__text,
 .career-additional__text,
 .simple-steps-main .simple-steps-main__text,
 .presentation-main__text,
@@ -8944,6 +9017,7 @@ input[type='radio'].visually-hidden {
   color: #000000;
 }
 
+.explain-additional__text--bold,
 .presentation-additional__text--bold,
 .important-main__text--bold,
 .just-do-it-additional__text--bold {
@@ -8955,10 +9029,6 @@ input[type='radio'].visually-hidden {
 
 /* Placeholder for list */
 
-.list--square,
-.list--number,
-.list--rotate,
-.list--square-diff,
 .social-list,
 .examples-pagination__numbers,
 .simple-steps-main .simple-steps-additional,
@@ -9008,6 +9078,7 @@ input[type='radio'].visually-hidden {
   display: block;
 }
 
+.explain-main__text::before,
 .get-your-bonus-main__text::before,
 .just-do-it-main__text::before {
   position: absolute;
@@ -9019,6 +9090,7 @@ input[type='radio'].visually-hidden {
 }
 
 .only-now-main__text--decorative::before,
+.course-results-main__text--decorative::before,
 .important-main__text-decorative::before {
   position: absolute;
   display: block;
@@ -9146,6 +9218,7 @@ input[type='radio'].visually-hidden {
 .facts-main__title,
 .examples-main__title,
 .warning-main__title,
+.explain-main__title,
 .career-additional__title,
 .simple-steps-main .simple-steps-main__title,
 .presentation-main__title,
@@ -9202,6 +9275,16 @@ input[type='radio'].visually-hidden {
   text-transform: uppercase;
 }
 
+.explain-additional__subtitle {
+  font-family: "Acrom-Bold", sans-serif;
+  font-size: 0.9375rem;
+  line-height: 1.53;
+  color: #ffffff;
+  background-color: #000000;
+  text-transform: uppercase;
+}
+
+.explain-additional__text--light,
 .сareer-main__text--light,
 .simple-steps-main .simple-steps-additional__text--light,
 .presentation-additional__text--light,
@@ -9224,6 +9307,7 @@ input[type='radio'].visually-hidden {
 .except-numbers-additional__text,
 .examples-main__text,
 .warning-main__text,
+.explain-main__text,
 .career-additional__text,
 .simple-steps-main .simple-steps-main__text,
 .presentation-main__text,
@@ -9242,6 +9326,7 @@ input[type='radio'].visually-hidden {
   color: #000000;
 }
 
+.explain-additional__text--bold,
 .presentation-additional__text--bold,
 .important-main__text--bold,
 .just-do-it-additional__text--bold {
@@ -9253,10 +9338,6 @@ input[type='radio'].visually-hidden {
 
 /* Placeholder for list */
 
-.list--square,
-.list--number,
-.list--rotate,
-.list--square-diff,
 .social-list,
 .examples-pagination__numbers,
 .simple-steps-main .simple-steps-additional,
@@ -9306,6 +9387,7 @@ input[type='radio'].visually-hidden {
   display: block;
 }
 
+.explain-main__text::before,
 .get-your-bonus-main__text::before,
 .just-do-it-main__text::before {
   position: absolute;
@@ -9317,6 +9399,7 @@ input[type='radio'].visually-hidden {
 }
 
 .only-now-main__text--decorative::before,
+.course-results-main__text--decorative::before,
 .important-main__text-decorative::before {
   position: absolute;
   display: block;
@@ -9462,7 +9545,20 @@ input[type='radio'].visually-hidden {
 
 .only-now-main__text--decorative::before {
   top: 50px;
-  left: -20px;
+  left: -30px;
+}
+
+.course-results-main {
+  padding: 20px 0 45px;
+}
+
+.course-results-main__text--decorative {
+  padding: 30px 0 25px;
+}
+
+.course-results-main__text--decorative::before {
+  top: 50px;
+  left: -30px;
 }
 
 .get-your-bonus {
@@ -10799,6 +10895,7 @@ input[type='radio'].visually-hidden {
   .facts-main__title,
   .examples-main__title,
   .warning-main__title,
+  .explain-main__title,
   .career-additional__title,
   .simple-steps-main .simple-steps-main__title,
   .presentation-main__title,
@@ -10835,6 +10932,12 @@ input[type='radio'].visually-hidden {
     font-size: 0.5625rem;
   }
 
+  .explain-additional__subtitle {
+    font-family: "Acrom-ExtraBold", sans-serif;
+    font-size: 0.5625rem;
+  }
+
+  .explain-additional__text--light,
   .сareer-main__text--light,
   .simple-steps-main .simple-steps-additional__text--light,
   .presentation-additional__text--light,
@@ -10854,6 +10957,7 @@ input[type='radio'].visually-hidden {
   .except-numbers-additional__text,
   .examples-main__text,
   .warning-main__text,
+  .explain-main__text,
   .career-additional__text,
   .simple-steps-main .simple-steps-main__text,
   .presentation-main__text,
@@ -10869,12 +10973,14 @@ input[type='radio'].visually-hidden {
     font-size: 0.5625rem;
   }
 
+  .explain-additional__text--bold,
   .presentation-additional__text--bold,
   .important-main__text--bold,
   .just-do-it-additional__text--bold {
     font-size: 0.5625rem;
   }
 
+  .explain-main__text::before,
   .get-your-bonus-main__text::before,
   .just-do-it-main__text::before {
     height: 4px;
@@ -10882,6 +10988,7 @@ input[type='radio'].visually-hidden {
   }
 
   .only-now-main__text--decorative::before,
+  .course-results-main__text--decorative::before,
   .important-main__text-decorative::before {
     height: 3px;
     width: 18px;
@@ -10906,6 +11013,27 @@ input[type='radio'].visually-hidden {
   .main-contacts__button {
     padding: 14px 30px;
     font-size: 0.625rem;
+  }
+
+  .explain-main__title {
+    margin-bottom: 16px;
+  }
+
+  .explain-main__text::before {
+    top: 6px;
+    left: -32px;
+  }
+
+  .explain-additional__block {
+    margin-top: -20px;
+  }
+
+  .explain-additional__block--dismargin {
+    margin-top: -120px;
+  }
+
+  .explain-additional__text--dismargin {
+    margin-top: -50px;
   }
 
   .career-main {
@@ -11032,6 +11160,7 @@ input[type='radio'].visually-hidden {
   .facts-main__title,
   .examples-main__title,
   .warning-main__title,
+  .explain-main__title,
   .career-additional__title,
   .simple-steps-main .simple-steps-main__title,
   .presentation-main__title,
@@ -11068,6 +11197,12 @@ input[type='radio'].visually-hidden {
     font-size: 0.5625rem;
   }
 
+  .explain-additional__subtitle {
+    font-family: "Acrom-ExtraBold", sans-serif;
+    font-size: 0.5625rem;
+  }
+
+  .explain-additional__text--light,
   .сareer-main__text--light,
   .simple-steps-main .simple-steps-additional__text--light,
   .presentation-additional__text--light,
@@ -11087,6 +11222,7 @@ input[type='radio'].visually-hidden {
   .except-numbers-additional__text,
   .examples-main__text,
   .warning-main__text,
+  .explain-main__text,
   .career-additional__text,
   .simple-steps-main .simple-steps-main__text,
   .presentation-main__text,
@@ -11102,12 +11238,14 @@ input[type='radio'].visually-hidden {
     font-size: 0.5625rem;
   }
 
+  .explain-additional__text--bold,
   .presentation-additional__text--bold,
   .important-main__text--bold,
   .just-do-it-additional__text--bold {
     font-size: 0.5625rem;
   }
 
+  .explain-main__text::before,
   .get-your-bonus-main__text::before,
   .just-do-it-main__text::before {
     height: 4px;
@@ -11115,6 +11253,7 @@ input[type='radio'].visually-hidden {
   }
 
   .only-now-main__text--decorative::before,
+  .course-results-main__text--decorative::before,
   .important-main__text-decorative::before {
     height: 3px;
     width: 18px;
@@ -11128,6 +11267,7 @@ input[type='radio'].visually-hidden {
   .facts-main__title,
   .examples-main__title,
   .warning-main__title,
+  .explain-main__title,
   .career-additional__title,
   .simple-steps-main .simple-steps-main__title,
   .presentation-main__title,
@@ -11164,6 +11304,12 @@ input[type='radio'].visually-hidden {
     font-size: 0.5625rem;
   }
 
+  .explain-additional__subtitle {
+    font-family: "Acrom-ExtraBold", sans-serif;
+    font-size: 0.5625rem;
+  }
+
+  .explain-additional__text--light,
   .сareer-main__text--light,
   .simple-steps-main .simple-steps-additional__text--light,
   .presentation-additional__text--light,
@@ -11183,6 +11329,7 @@ input[type='radio'].visually-hidden {
   .except-numbers-additional__text,
   .examples-main__text,
   .warning-main__text,
+  .explain-main__text,
   .career-additional__text,
   .simple-steps-main .simple-steps-main__text,
   .presentation-main__text,
@@ -11198,12 +11345,14 @@ input[type='radio'].visually-hidden {
     font-size: 0.5625rem;
   }
 
+  .explain-additional__text--bold,
   .presentation-additional__text--bold,
   .important-main__text--bold,
   .just-do-it-additional__text--bold {
     font-size: 0.5625rem;
   }
 
+  .explain-main__text::before,
   .get-your-bonus-main__text::before,
   .just-do-it-main__text::before {
     height: 4px;
@@ -11211,6 +11360,7 @@ input[type='radio'].visually-hidden {
   }
 
   .only-now-main__text--decorative::before,
+  .course-results-main__text--decorative::before,
   .important-main__text-decorative::before {
     height: 3px;
     width: 18px;
@@ -11224,6 +11374,7 @@ input[type='radio'].visually-hidden {
   .facts-main__title,
   .examples-main__title,
   .warning-main__title,
+  .explain-main__title,
   .career-additional__title,
   .simple-steps-main .simple-steps-main__title,
   .presentation-main__title,
@@ -11260,6 +11411,12 @@ input[type='radio'].visually-hidden {
     font-size: 0.5625rem;
   }
 
+  .explain-additional__subtitle {
+    font-family: "Acrom-ExtraBold", sans-serif;
+    font-size: 0.5625rem;
+  }
+
+  .explain-additional__text--light,
   .сareer-main__text--light,
   .simple-steps-main .simple-steps-additional__text--light,
   .presentation-additional__text--light,
@@ -11279,6 +11436,7 @@ input[type='radio'].visually-hidden {
   .except-numbers-additional__text,
   .examples-main__text,
   .warning-main__text,
+  .explain-main__text,
   .career-additional__text,
   .simple-steps-main .simple-steps-main__text,
   .presentation-main__text,
@@ -11294,12 +11452,14 @@ input[type='radio'].visually-hidden {
     font-size: 0.5625rem;
   }
 
+  .explain-additional__text--bold,
   .presentation-additional__text--bold,
   .important-main__text--bold,
   .just-do-it-additional__text--bold {
     font-size: 0.5625rem;
   }
 
+  .explain-main__text::before,
   .get-your-bonus-main__text::before,
   .just-do-it-main__text::before {
     height: 4px;
@@ -11307,6 +11467,7 @@ input[type='radio'].visually-hidden {
   }
 
   .only-now-main__text--decorative::before,
+  .course-results-main__text--decorative::before,
   .important-main__text-decorative::before {
     height: 3px;
     width: 18px;
@@ -11320,6 +11481,7 @@ input[type='radio'].visually-hidden {
   .facts-main__title,
   .examples-main__title,
   .warning-main__title,
+  .explain-main__title,
   .career-additional__title,
   .simple-steps-main .simple-steps-main__title,
   .presentation-main__title,
@@ -11356,6 +11518,12 @@ input[type='radio'].visually-hidden {
     font-size: 0.5625rem;
   }
 
+  .explain-additional__subtitle {
+    font-family: "Acrom-ExtraBold", sans-serif;
+    font-size: 0.5625rem;
+  }
+
+  .explain-additional__text--light,
   .сareer-main__text--light,
   .simple-steps-main .simple-steps-additional__text--light,
   .presentation-additional__text--light,
@@ -11375,6 +11543,7 @@ input[type='radio'].visually-hidden {
   .except-numbers-additional__text,
   .examples-main__text,
   .warning-main__text,
+  .explain-main__text,
   .career-additional__text,
   .simple-steps-main .simple-steps-main__text,
   .presentation-main__text,
@@ -11390,12 +11559,14 @@ input[type='radio'].visually-hidden {
     font-size: 0.5625rem;
   }
 
+  .explain-additional__text--bold,
   .presentation-additional__text--bold,
   .important-main__text--bold,
   .just-do-it-additional__text--bold {
     font-size: 0.5625rem;
   }
 
+  .explain-main__text::before,
   .get-your-bonus-main__text::before,
   .just-do-it-main__text::before {
     height: 4px;
@@ -11403,6 +11574,7 @@ input[type='radio'].visually-hidden {
   }
 
   .only-now-main__text--decorative::before,
+  .course-results-main__text--decorative::before,
   .important-main__text-decorative::before {
     height: 3px;
     width: 18px;
@@ -11433,6 +11605,19 @@ input[type='radio'].visually-hidden {
   }
 
   .only-now-main__text--decorative {
+    padding-top: 0px;
+  }
+
+  .course-results-main {
+    padding: 30px 0 50px;
+  }
+
+  .course-results-main__text--decorative::before {
+    top: 25px;
+    left: -25px;
+  }
+
+  .course-results-main__text--decorative {
     padding-top: 0px;
   }
 
@@ -12799,6 +12984,10 @@ input[type='radio'].visually-hidden {
     padding: 16px 34px;
   }
 
+  .explain-additional__block--dismargin {
+    margin-top: -140px;
+  }
+
   .presentation-additional__btn {
     font-size: 0.6875rem;
   }
@@ -13695,6 +13884,7 @@ input[type='radio'].visually-hidden {
   .facts-main__title,
   .examples-main__title,
   .warning-main__title,
+  .explain-main__title,
   .career-additional__title,
   .simple-steps-main .simple-steps-main__title,
   .presentation-main__title,
@@ -13731,6 +13921,11 @@ input[type='radio'].visually-hidden {
     font-size: 0.625rem;
   }
 
+  .explain-additional__subtitle {
+    font-size: 0.625rem;
+  }
+
+  .explain-additional__text--light,
   .сareer-main__text--light,
   .simple-steps-main .simple-steps-additional__text--light,
   .presentation-additional__text--light,
@@ -13750,6 +13945,7 @@ input[type='radio'].visually-hidden {
   .except-numbers-additional__text,
   .examples-main__text,
   .warning-main__text,
+  .explain-main__text,
   .career-additional__text,
   .simple-steps-main .simple-steps-main__text,
   .presentation-main__text,
@@ -13765,18 +13961,21 @@ input[type='radio'].visually-hidden {
     font-size: 0.625rem;
   }
 
+  .explain-additional__text--bold,
   .presentation-additional__text--bold,
   .important-main__text--bold,
   .just-do-it-additional__text--bold {
     font-size: 0.625rem;
   }
 
+  .explain-main__text::before,
   .get-your-bonus-main__text::before,
   .just-do-it-main__text::before {
     width: 32px;
   }
 
   .only-now-main__text--decorative::before,
+  .course-results-main__text--decorative::before,
   .important-main__text-decorative::before {
     width: 20px;
   }
@@ -13793,6 +13992,10 @@ input[type='radio'].visually-hidden {
 
   .social-list__item {
     font-size: 0.8125rem;
+  }
+
+  .explain-additional__block--dismargin {
+    margin-top: -120px;
   }
 
   .career-main {
@@ -13879,6 +14082,7 @@ input[type='radio'].visually-hidden {
   .facts-main__title,
   .examples-main__title,
   .warning-main__title,
+  .explain-main__title,
   .career-additional__title,
   .simple-steps-main .simple-steps-main__title,
   .presentation-main__title,
@@ -13915,6 +14119,11 @@ input[type='radio'].visually-hidden {
     font-size: 0.625rem;
   }
 
+  .explain-additional__subtitle {
+    font-size: 0.625rem;
+  }
+
+  .explain-additional__text--light,
   .сareer-main__text--light,
   .simple-steps-main .simple-steps-additional__text--light,
   .presentation-additional__text--light,
@@ -13934,6 +14143,7 @@ input[type='radio'].visually-hidden {
   .except-numbers-additional__text,
   .examples-main__text,
   .warning-main__text,
+  .explain-main__text,
   .career-additional__text,
   .simple-steps-main .simple-steps-main__text,
   .presentation-main__text,
@@ -13949,18 +14159,21 @@ input[type='radio'].visually-hidden {
     font-size: 0.625rem;
   }
 
+  .explain-additional__text--bold,
   .presentation-additional__text--bold,
   .important-main__text--bold,
   .just-do-it-additional__text--bold {
     font-size: 0.625rem;
   }
 
+  .explain-main__text::before,
   .get-your-bonus-main__text::before,
   .just-do-it-main__text::before {
     width: 32px;
   }
 
   .only-now-main__text--decorative::before,
+  .course-results-main__text--decorative::before,
   .important-main__text-decorative::before {
     width: 20px;
   }
@@ -13973,6 +14186,7 @@ input[type='radio'].visually-hidden {
   .facts-main__title,
   .examples-main__title,
   .warning-main__title,
+  .explain-main__title,
   .career-additional__title,
   .simple-steps-main .simple-steps-main__title,
   .presentation-main__title,
@@ -14009,6 +14223,11 @@ input[type='radio'].visually-hidden {
     font-size: 0.625rem;
   }
 
+  .explain-additional__subtitle {
+    font-size: 0.625rem;
+  }
+
+  .explain-additional__text--light,
   .сareer-main__text--light,
   .simple-steps-main .simple-steps-additional__text--light,
   .presentation-additional__text--light,
@@ -14028,6 +14247,7 @@ input[type='radio'].visually-hidden {
   .except-numbers-additional__text,
   .examples-main__text,
   .warning-main__text,
+  .explain-main__text,
   .career-additional__text,
   .simple-steps-main .simple-steps-main__text,
   .presentation-main__text,
@@ -14043,18 +14263,21 @@ input[type='radio'].visually-hidden {
     font-size: 0.625rem;
   }
 
+  .explain-additional__text--bold,
   .presentation-additional__text--bold,
   .important-main__text--bold,
   .just-do-it-additional__text--bold {
     font-size: 0.625rem;
   }
 
+  .explain-main__text::before,
   .get-your-bonus-main__text::before,
   .just-do-it-main__text::before {
     width: 32px;
   }
 
   .only-now-main__text--decorative::before,
+  .course-results-main__text--decorative::before,
   .important-main__text-decorative::before {
     width: 20px;
   }
@@ -14067,6 +14290,7 @@ input[type='radio'].visually-hidden {
   .facts-main__title,
   .examples-main__title,
   .warning-main__title,
+  .explain-main__title,
   .career-additional__title,
   .simple-steps-main .simple-steps-main__title,
   .presentation-main__title,
@@ -14103,6 +14327,11 @@ input[type='radio'].visually-hidden {
     font-size: 0.625rem;
   }
 
+  .explain-additional__subtitle {
+    font-size: 0.625rem;
+  }
+
+  .explain-additional__text--light,
   .сareer-main__text--light,
   .simple-steps-main .simple-steps-additional__text--light,
   .presentation-additional__text--light,
@@ -14122,6 +14351,7 @@ input[type='radio'].visually-hidden {
   .except-numbers-additional__text,
   .examples-main__text,
   .warning-main__text,
+  .explain-main__text,
   .career-additional__text,
   .simple-steps-main .simple-steps-main__text,
   .presentation-main__text,
@@ -14137,18 +14367,21 @@ input[type='radio'].visually-hidden {
     font-size: 0.625rem;
   }
 
+  .explain-additional__text--bold,
   .presentation-additional__text--bold,
   .important-main__text--bold,
   .just-do-it-additional__text--bold {
     font-size: 0.625rem;
   }
 
+  .explain-main__text::before,
   .get-your-bonus-main__text::before,
   .just-do-it-main__text::before {
     width: 32px;
   }
 
   .only-now-main__text--decorative::before,
+  .course-results-main__text--decorative::before,
   .important-main__text-decorative::before {
     width: 20px;
   }
@@ -14161,6 +14394,7 @@ input[type='radio'].visually-hidden {
   .facts-main__title,
   .examples-main__title,
   .warning-main__title,
+  .explain-main__title,
   .career-additional__title,
   .simple-steps-main .simple-steps-main__title,
   .presentation-main__title,
@@ -14197,6 +14431,11 @@ input[type='radio'].visually-hidden {
     font-size: 0.625rem;
   }
 
+  .explain-additional__subtitle {
+    font-size: 0.625rem;
+  }
+
+  .explain-additional__text--light,
   .сareer-main__text--light,
   .simple-steps-main .simple-steps-additional__text--light,
   .presentation-additional__text--light,
@@ -14216,6 +14455,7 @@ input[type='radio'].visually-hidden {
   .except-numbers-additional__text,
   .examples-main__text,
   .warning-main__text,
+  .explain-main__text,
   .career-additional__text,
   .simple-steps-main .simple-steps-main__text,
   .presentation-main__text,
@@ -14231,18 +14471,21 @@ input[type='radio'].visually-hidden {
     font-size: 0.625rem;
   }
 
+  .explain-additional__text--bold,
   .presentation-additional__text--bold,
   .important-main__text--bold,
   .just-do-it-additional__text--bold {
     font-size: 0.625rem;
   }
 
+  .explain-main__text::before,
   .get-your-bonus-main__text::before,
   .just-do-it-main__text::before {
     width: 32px;
   }
 
   .only-now-main__text--decorative::before,
+  .course-results-main__text--decorative::before,
   .important-main__text-decorative::before {
     width: 20px;
   }
@@ -14259,6 +14502,10 @@ input[type='radio'].visually-hidden {
   .only-now-main::before {
     font-size: 13.8125rem;
     left: 10%;
+  }
+
+  .course-results-main {
+    padding: 40px 0 65px;
   }
 
   .get-your-bonus {

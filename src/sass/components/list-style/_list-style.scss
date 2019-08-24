@@ -2,7 +2,7 @@
 .list--number,
 .list--rotate,
 .list--square-diff {
-  @extend %list;
+  list-style: none;
   position: relative;
 }
 
