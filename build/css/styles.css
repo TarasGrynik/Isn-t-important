@@ -6600,6 +6600,8 @@ a.text-dark:focus {
 .section-university__title--main,
 .section-expert__title,
 .section-help__title,
+.only-now-main__title,
+.course-results-main__title,
 .important-additional__title,
 .important-main__title,
 .just-do-it-main__title {
@@ -6625,6 +6627,8 @@ a.text-dark:focus {
 .start-it-additional__text--decorative,
 .simple-steps-main .simple-steps-additional__text-decorative,
 .presentation-additional__text--decorative,
+.only-now-main__text--decorative,
+.course-results-main__text--decorative,
 .important-main__text-decorative,
 .just-do-it-additional__text--decorative {
   font-family: "Acrom-Medium", sans-serif;
@@ -6642,6 +6646,7 @@ a.text-dark:focus {
 .section-university__title,
 .section-expert__item--title,
 .section-help__second-title,
+.course-results-main__subtitle,
 .get-your-bonus-main__subtitle {
   font-family: "Acrom-ExtraBold", sans-serif;
   font-size: 0.9375rem;
@@ -6667,6 +6672,8 @@ a.text-dark:focus {
 .section-university__desc,
 .section-expert__item--desc,
 .section-help__second-desc,
+.only-now-additional__text--light,
+.course-results-main__text--light,
 .get-your-bonus-main__text--light,
 .get-your-bonus-main__text--special,
 .important-main__text--light,
@@ -6690,6 +6697,7 @@ a.text-dark:focus {
 .education-section__desc--mobile,
 .section-expert__desc,
 .section-help__desc,
+.only-now-main__text,
 .get-your-bonus-main__text,
 .main-form__input,
 .important-additional__text,
@@ -6703,6 +6711,7 @@ a.text-dark:focus {
 
 .explain-additional__text--bold,
 .presentation-additional__text--bold,
+.only-now-additional__text--bold,
 .important-main__text--bold,
 .just-do-it-additional__text--bold {
   font-family: "Acrom-Bold", sans-serif;
@@ -6717,7 +6726,8 @@ a.text-dark:focus {
 .examples-pagination__numbers,
 .simple-steps-main .simple-steps-additional,
 .presentation-additional__block,
-.law-info__list {
+.law-info__list,
+.only-now-additional__block {
   list-style: none;
   margin: 0;
   padding: 0;
@@ -6753,6 +6763,10 @@ a.text-dark:focus {
 .section-expert__desc::before,
 .section-expert__item--title::before,
 .section-help__desc::before,
+.only-now-main::before,
+.only-now-additional_item::before,
+.course-results-main__item::before,
+.course-results-main__item::after,
 .get-your-bonus-main__block::after,
 .get-your-bonus-main__block::before,
 .important-additional__price::before,
@@ -6762,6 +6776,7 @@ a.text-dark:focus {
 }
 
 .explain-main__text::before,
+.only-now-main__text::before,
 .course__desc:before,
 .get-your-bonus-main__text::before,
 .just-do-it-main__text::before {
@@ -6773,6 +6788,8 @@ a.text-dark:focus {
   background-color: #000000;
 }
 
+.only-now-main__text--decorative::before,
+.course-results-main__text--decorative::before,
 .important-main__text-decorative::before {
   position: absolute;
   display: block;
@@ -7259,119 +7276,131 @@ h6 {
 
 /* Components */
 
-.list--square,
-.list--number,
-.list--rotate,
-.list--square-diff {
-  list-style: none;
-  position: relative;
+.list__title {
+  font-family: "Acrom-ExtraBold", sans-serif;
+  font-size: 0.84375rem;
+  line-height: 1.33;
+  text-transform: uppercase;
+  color: #000000;
 }
 
-.list--square:before {
-  content: "";
-  display: block;
-  position: absolute;
-  top: 5px;
-  left: -20px;
-  width: 7px;
-  height: 7px;
-  background-color: #000000;
+.list__title--numbers {
+  font-size: 1.5rem;
 }
 
-.list--square-diff:before {
-  content: "";
-  display: block;
-  position: absolute;
-  top: 5px;
-  left: -20px;
-  width: 7px;
-  height: 7px;
+.list__title--numbers-rotate {
+  font-family: "Acrom-Bold", sans-serif;
+  color: #ffffff;
   background-color: #ff6b08;
 }
 
-.list--number:before {
-  position: absolute;
-  display: block;
-  left: -28px;
-  counter-increment: number;
-  content: "0" counter(number) ".";
-  clip: rect(auto auto auto 5px);
+.section__text {
+  font-family: "Acrom-Regular", sans-serif;
+  font-size: 0.84375rem;
+  line-height: 1.45;
+  color: #3f4144;
+}
+
+.section__text--acented {
+  background-color: #16ebfe;
+}
+
+.section__text--alternate {
+  color: #ffffff;
+  background-color: #000000;
+}
+
+.section__text--big {
+  font-family: "Acrom-ExtraBold", sans-serif;
+  font-size: 0.625rem;
+  text-transform: uppercase;
+}
+
+.section__text--action {
+  font-family: "Acrom-Medium", sans-serif;
+  color: #ff6b08;
+}
+
+.responses__text {
+  font-size: 0.34375rem;
+  padding: 0;
+  margin: 0;
+}
+
+.section__title {
+  font-family: "Acrom-ExtraBold", sans-serif;
+  font-size: 1.125rem;
+  line-height: 1.33;
+  text-transform: uppercase;
+  color: #000000;
+}
+
+.section__title--alternate {
+  color: #ffffff;
+  background-color: #000000;
+}
+
+.section__title--alternate-big {
+  font-size: 30px;
+}
+
+.section__title--additional {
+  font-size: 0.9375rem;
+}
+
+.section__title--decorative {
+  font-size: 6.125rem;
+  opacity: 0.05;
+}
+
+.section__title--acented {
+  font-family: "Acrom-Bold", sans-serif;
+  color: #ffffff;
+  background-color: #000000;
+}
+
+.section__title--secondary {
+  font-family: "Acrom-Medium", sans-serif;
+  font-size: 0.875rem;
+  line-height: 1.45;
+  color: #000000;
+}
+
+.section__title--secondary-alternate {
+  color: #ffffff;
+  background-color: #000000;
+}
+
+.section__title--secondary-acented {
+  background-color: #16ebfe;
+}
+
+.section__title--third {
+  font-family: "Acrom-Bold", sans-serif;
+  font-size: 0.84375rem;
+  line-height: 1.45;
+  color: #000000;
+}
+
+.responses__title {
   font-family: "Acrom-ExtraBold", sans-serif;
   color: #000000;
-  text-align: center;
+  font-size: 0.35rem;
 }
 
-.list--number:after {
-  position: absolute;
-  left: -18px;
-  top: 22px;
-  display: block;
-  content: "";
-  width: 10px;
-  height: 10px;
-  background-color: #16ebfe;
-}
-
-.list--rotate:before {
-  position: absolute;
-  left: -43px;
-  display: inline-block;
-  width: 45px;
-  height: 13px;
-  line-height: 13px;
-  text-align: center;
-  counter-increment: rotated;
-  content: "[00" counter(rotated) "]";
-  transform: rotate(-90deg) translateX(-50%);
-  background: #ff6b08;
-  clip: rect(3px auto auto auto);
-  color: #ffffff;
-}
-
-.section-title,
-.section-title--reverse {
-  font: 1.125rem/1.33 "Acrom-Bold", sans-serif;
-  text-transform: uppercase;
-}
-
-.section-title {
-  color: #000000;
-}
-
-.section-title--reverse {
-  color: #ffffff;
-  background-color: #000000;
-}
-
-.third-title-style,
-.third-title-style--reverse {
-  font: 0.84375rem/1.44 "Acrom-ExtraBold", sans-serif;
-  text-transform: uppercase;
-}
-
-.third-title-style--reverse {
-  background-color: #000000;
-  color: #ffffff;
-}
-
-.rotate-list-title-font {
-  font: 0.84375rem/1.44 "Acrom-Bold", sans-serif;
-  color: #000000;
-}
-
-.important-bg-text,
-.important-bg-text--diff {
-  background-color: #16ebfe;
-  display: inline;
-  color: #000000;
-}
-
-.important-bg-text {
-  font-family: "Acrom-Medium", sans-serif;
-}
-
-.important-bg-text--diff {
+.form__placeholder {
   font-family: "Acrom-Regular", sans-serif;
+  font-size: 0.5625rem;
+  line-height: 1.45;
+  color: #3f4144;
+}
+
+.form__input-name {
+  font-family: "Acrom-Bold", sans-serif;
+  font-size: 0.5rem;
+  line-height: 1.45;
+  color: #000000;
+  opacity: 0.36;
 }
 
 .advertising__image {
@@ -8334,6 +8363,8 @@ h6 {
 .section-university__title--main,
 .section-expert__title,
 .section-help__title,
+.only-now-main__title,
+.course-results-main__title,
 .important-additional__title,
 .important-main__title,
 .just-do-it-main__title {
@@ -8359,6 +8390,8 @@ h6 {
 .start-it-additional__text--decorative,
 .simple-steps-main .simple-steps-additional__text-decorative,
 .presentation-additional__text--decorative,
+.only-now-main__text--decorative,
+.course-results-main__text--decorative,
 .important-main__text-decorative,
 .just-do-it-additional__text--decorative {
   font-family: "Acrom-Medium", sans-serif;
@@ -8376,6 +8409,7 @@ h6 {
 .section-university__title,
 .section-expert__item--title,
 .section-help__second-title,
+.course-results-main__subtitle,
 .get-your-bonus-main__subtitle {
   font-family: "Acrom-ExtraBold", sans-serif;
   font-size: 0.9375rem;
@@ -8401,6 +8435,8 @@ h6 {
 .section-university__desc,
 .section-expert__item--desc,
 .section-help__second-desc,
+.only-now-additional__text--light,
+.course-results-main__text--light,
 .get-your-bonus-main__text--light,
 .get-your-bonus-main__text--special,
 .important-main__text--light,
@@ -8424,6 +8460,7 @@ h6 {
 .education-section__desc--mobile,
 .section-expert__desc,
 .section-help__desc,
+.only-now-main__text,
 .get-your-bonus-main__text,
 .main-form__input,
 .important-additional__text,
@@ -8437,6 +8474,7 @@ h6 {
 
 .explain-additional__text--bold,
 .presentation-additional__text--bold,
+.only-now-additional__text--bold,
 .important-main__text--bold,
 .just-do-it-additional__text--bold {
   font-family: "Acrom-Bold", sans-serif;
@@ -8451,7 +8489,8 @@ h6 {
 .examples-pagination__numbers,
 .simple-steps-main .simple-steps-additional,
 .presentation-additional__block,
-.law-info__list {
+.law-info__list,
+.only-now-additional__block {
   list-style: none;
   margin: 0;
   padding: 0;
@@ -8487,6 +8526,10 @@ h6 {
 .section-expert__desc::before,
 .section-expert__item--title::before,
 .section-help__desc::before,
+.only-now-main::before,
+.only-now-additional_item::before,
+.course-results-main__item::before,
+.course-results-main__item::after,
 .get-your-bonus-main__block::after,
 .get-your-bonus-main__block::before,
 .important-additional__price::before,
@@ -8496,6 +8539,7 @@ h6 {
 }
 
 .explain-main__text::before,
+.only-now-main__text::before,
 .course__desc:before,
 .get-your-bonus-main__text::before,
 .just-do-it-main__text::before {
@@ -8507,6 +8551,8 @@ h6 {
   background-color: #000000;
 }
 
+.only-now-main__text--decorative::before,
+.course-results-main__text--decorative::before,
 .important-main__text-decorative::before {
   position: absolute;
   display: block;
@@ -8648,6 +8694,8 @@ input[type='radio'].visually-hidden {
 .section-university__title--main,
 .section-expert__title,
 .section-help__title,
+.only-now-main__title,
+.course-results-main__title,
 .important-additional__title,
 .important-main__title,
 .just-do-it-main__title {
@@ -8673,6 +8721,8 @@ input[type='radio'].visually-hidden {
 .start-it-additional__text--decorative,
 .simple-steps-main .simple-steps-additional__text-decorative,
 .presentation-additional__text--decorative,
+.only-now-main__text--decorative,
+.course-results-main__text--decorative,
 .important-main__text-decorative,
 .just-do-it-additional__text--decorative {
   font-family: "Acrom-Medium", sans-serif;
@@ -8690,6 +8740,7 @@ input[type='radio'].visually-hidden {
 .section-university__title,
 .section-expert__item--title,
 .section-help__second-title,
+.course-results-main__subtitle,
 .get-your-bonus-main__subtitle {
   font-family: "Acrom-ExtraBold", sans-serif;
   font-size: 0.9375rem;
@@ -8715,6 +8766,8 @@ input[type='radio'].visually-hidden {
 .section-university__desc,
 .section-expert__item--desc,
 .section-help__second-desc,
+.only-now-additional__text--light,
+.course-results-main__text--light,
 .get-your-bonus-main__text--light,
 .get-your-bonus-main__text--special,
 .important-main__text--light,
@@ -8738,6 +8791,7 @@ input[type='radio'].visually-hidden {
 .education-section__desc--mobile,
 .section-expert__desc,
 .section-help__desc,
+.only-now-main__text,
 .get-your-bonus-main__text,
 .main-form__input,
 .important-additional__text,
@@ -8751,6 +8805,7 @@ input[type='radio'].visually-hidden {
 
 .explain-additional__text--bold,
 .presentation-additional__text--bold,
+.only-now-additional__text--bold,
 .important-main__text--bold,
 .just-do-it-additional__text--bold {
   font-family: "Acrom-Bold", sans-serif;
@@ -8765,7 +8820,8 @@ input[type='radio'].visually-hidden {
 .examples-pagination__numbers,
 .simple-steps-main .simple-steps-additional,
 .presentation-additional__block,
-.law-info__list {
+.law-info__list,
+.only-now-additional__block {
   list-style: none;
   margin: 0;
   padding: 0;
@@ -8801,6 +8857,10 @@ input[type='radio'].visually-hidden {
 .section-expert__desc::before,
 .section-expert__item--title::before,
 .section-help__desc::before,
+.only-now-main::before,
+.only-now-additional_item::before,
+.course-results-main__item::before,
+.course-results-main__item::after,
 .get-your-bonus-main__block::after,
 .get-your-bonus-main__block::before,
 .important-additional__price::before,
@@ -8810,6 +8870,7 @@ input[type='radio'].visually-hidden {
 }
 
 .explain-main__text::before,
+.only-now-main__text::before,
 .course__desc:before,
 .get-your-bonus-main__text::before,
 .just-do-it-main__text::before {
@@ -8821,6 +8882,8 @@ input[type='radio'].visually-hidden {
   background-color: #000000;
 }
 
+.only-now-main__text--decorative::before,
+.course-results-main__text--decorative::before,
 .important-main__text-decorative::before {
   position: absolute;
   display: block;
@@ -8956,6 +9019,8 @@ input[type='radio'].visually-hidden {
 .section-university__title--main,
 .section-expert__title,
 .section-help__title,
+.only-now-main__title,
+.course-results-main__title,
 .important-additional__title,
 .important-main__title,
 .just-do-it-main__title {
@@ -8981,6 +9046,8 @@ input[type='radio'].visually-hidden {
 .start-it-additional__text--decorative,
 .simple-steps-main .simple-steps-additional__text-decorative,
 .presentation-additional__text--decorative,
+.only-now-main__text--decorative,
+.course-results-main__text--decorative,
 .important-main__text-decorative,
 .just-do-it-additional__text--decorative {
   font-family: "Acrom-Medium", sans-serif;
@@ -8998,6 +9065,7 @@ input[type='radio'].visually-hidden {
 .section-university__title,
 .section-expert__item--title,
 .section-help__second-title,
+.course-results-main__subtitle,
 .get-your-bonus-main__subtitle {
   font-family: "Acrom-ExtraBold", sans-serif;
   font-size: 0.9375rem;
@@ -9023,6 +9091,8 @@ input[type='radio'].visually-hidden {
 .section-university__desc,
 .section-expert__item--desc,
 .section-help__second-desc,
+.only-now-additional__text--light,
+.course-results-main__text--light,
 .get-your-bonus-main__text--light,
 .get-your-bonus-main__text--special,
 .important-main__text--light,
@@ -9046,6 +9116,7 @@ input[type='radio'].visually-hidden {
 .education-section__desc--mobile,
 .section-expert__desc,
 .section-help__desc,
+.only-now-main__text,
 .get-your-bonus-main__text,
 .main-form__input,
 .important-additional__text,
@@ -9059,6 +9130,7 @@ input[type='radio'].visually-hidden {
 
 .explain-additional__text--bold,
 .presentation-additional__text--bold,
+.only-now-additional__text--bold,
 .important-main__text--bold,
 .just-do-it-additional__text--bold {
   font-family: "Acrom-Bold", sans-serif;
@@ -9073,7 +9145,8 @@ input[type='radio'].visually-hidden {
 .examples-pagination__numbers,
 .simple-steps-main .simple-steps-additional,
 .presentation-additional__block,
-.law-info__list {
+.law-info__list,
+.only-now-additional__block {
   list-style: none;
   margin: 0;
   padding: 0;
@@ -9109,6 +9182,10 @@ input[type='radio'].visually-hidden {
 .section-expert__desc::before,
 .section-expert__item--title::before,
 .section-help__desc::before,
+.only-now-main::before,
+.only-now-additional_item::before,
+.course-results-main__item::before,
+.course-results-main__item::after,
 .get-your-bonus-main__block::after,
 .get-your-bonus-main__block::before,
 .important-additional__price::before,
@@ -9118,6 +9195,7 @@ input[type='radio'].visually-hidden {
 }
 
 .explain-main__text::before,
+.only-now-main__text::before,
 .course__desc:before,
 .get-your-bonus-main__text::before,
 .just-do-it-main__text::before {
@@ -9129,6 +9207,8 @@ input[type='radio'].visually-hidden {
   background-color: #000000;
 }
 
+.only-now-main__text--decorative::before,
+.course-results-main__text--decorative::before,
 .important-main__text-decorative::before {
   position: absolute;
   display: block;
@@ -9263,6 +9343,8 @@ input[type='radio'].visually-hidden {
 .section-university__title--main,
 .section-expert__title,
 .section-help__title,
+.only-now-main__title,
+.course-results-main__title,
 .important-additional__title,
 .important-main__title,
 .just-do-it-main__title {
@@ -9288,6 +9370,8 @@ input[type='radio'].visually-hidden {
 .start-it-additional__text--decorative,
 .simple-steps-main .simple-steps-additional__text-decorative,
 .presentation-additional__text--decorative,
+.only-now-main__text--decorative,
+.course-results-main__text--decorative,
 .important-main__text-decorative,
 .just-do-it-additional__text--decorative {
   font-family: "Acrom-Medium", sans-serif;
@@ -9305,6 +9389,7 @@ input[type='radio'].visually-hidden {
 .section-university__title,
 .section-expert__item--title,
 .section-help__second-title,
+.course-results-main__subtitle,
 .get-your-bonus-main__subtitle {
   font-family: "Acrom-ExtraBold", sans-serif;
   font-size: 0.9375rem;
@@ -9330,6 +9415,8 @@ input[type='radio'].visually-hidden {
 .section-university__desc,
 .section-expert__item--desc,
 .section-help__second-desc,
+.only-now-additional__text--light,
+.course-results-main__text--light,
 .get-your-bonus-main__text--light,
 .get-your-bonus-main__text--special,
 .important-main__text--light,
@@ -9353,6 +9440,7 @@ input[type='radio'].visually-hidden {
 .education-section__desc--mobile,
 .section-expert__desc,
 .section-help__desc,
+.only-now-main__text,
 .get-your-bonus-main__text,
 .main-form__input,
 .important-additional__text,
@@ -9366,6 +9454,7 @@ input[type='radio'].visually-hidden {
 
 .explain-additional__text--bold,
 .presentation-additional__text--bold,
+.only-now-additional__text--bold,
 .important-main__text--bold,
 .just-do-it-additional__text--bold {
   font-family: "Acrom-Bold", sans-serif;
@@ -9380,7 +9469,8 @@ input[type='radio'].visually-hidden {
 .examples-pagination__numbers,
 .simple-steps-main .simple-steps-additional,
 .presentation-additional__block,
-.law-info__list {
+.law-info__list,
+.only-now-additional__block {
   list-style: none;
   margin: 0;
   padding: 0;
@@ -9416,6 +9506,10 @@ input[type='radio'].visually-hidden {
 .section-expert__desc::before,
 .section-expert__item--title::before,
 .section-help__desc::before,
+.only-now-main::before,
+.only-now-additional_item::before,
+.course-results-main__item::before,
+.course-results-main__item::after,
 .get-your-bonus-main__block::after,
 .get-your-bonus-main__block::before,
 .important-additional__price::before,
@@ -9425,6 +9519,7 @@ input[type='radio'].visually-hidden {
 }
 
 .explain-main__text::before,
+.only-now-main__text::before,
 .course__desc:before,
 .get-your-bonus-main__text::before,
 .just-do-it-main__text::before {
@@ -9436,6 +9531,8 @@ input[type='radio'].visually-hidden {
   background-color: #000000;
 }
 
+.only-now-main__text--decorative::before,
+.course-results-main__text--decorative::before,
 .important-main__text-decorative::before {
   position: absolute;
   display: block;
@@ -9549,121 +9646,153 @@ input[type='radio'].visually-hidden {
   margin: 0;
 }
 
-.section__img {
-  margin: 0 auto;
+.only-now-main {
+  position: relative;
+  padding: 20px 0 45px;
 }
 
-.section__title {
-  font-family: "Acrom-Medium", sans-serif;
-  font-size: 14px;
-  color: #ff6b08;
-  line-height: 1.5;
-  text-align: left;
+.only-now-main::before {
+  content: 'IT';
+  top: -30px;
+  left: 40%;
+  transform: rotate(90deg);
+  z-index: -1;
+  color: #f7f7f7;
+  font-family: "Acrom-ExtraBold", sans-serif;
+  font-size: 14.125rem;
+}
+
+.only-now-main__title {
   padding-top: 30px;
   padding-bottom: 20px;
 }
 
-.section__title::before {
-  content: '';
-  position: absolute;
-  left: -15px;
-  top: 35px;
-  width: 10px;
-  height: 10px;
-  background-position: center;
-  background-image: linear-gradient(120deg, transparent 50%, #000, transparent 65%);
-  background-repeat: no-repeat;
-}
-
-.section__reverse {
-  font-family: "Acrom-Bold", sans-serif;
-  font-size: 18px;
-  text-transform: uppercase;
-  background-color: #000000;
+.only-now-main__title----dark {
   color: #ffffff;
-  margin-bottom: 20px;
-}
-
-.section__text {
-  font-family: "Acrom-Medium", sans-serif;
-  font-size: 13.5px;
-  font-weight: 600;
-  margin-bottom: 56px;
-}
-
-.section__text::before {
-  content: '';
-  position: absolute;
-  display: block;
-  left: -15px;
-  top: 10px;
-  width: 18px;
-  height: 2px;
   background-color: #000000;
 }
 
-.info__about {
-  font-family: "Acrom-ExtraBold", sans-serif;
-  font-size: 13.5px;
-  font-weight: 600;
+.only-now-main__text {
+  position: relative;
+}
+
+.only-now-main__text::before {
+  left: -25px;
+  top: 10px;
+}
+
+.only-now__subtitle {
+  font: 0.84375rem/1.53 "Acrom-ExtraBold", sans-serif;
+  color: #000000;
   text-transform: uppercase;
-  line-height: 1.5;
-  margin-bottom: 30px;
+  padding-top: 50px;
+  padding-bottom: 50px;
 }
 
-.list {
-  list-style: none;
+.only-now-main__text--decorative {
+  padding-top: 30px;
 }
 
-.list__main {
-  margin-bottom: 30px;
+.only-now-main__text--decorative::before {
+  top: 45px;
+  left: -45px;
 }
 
-.list__title {
-  font-family: "Acrom-Bold", sans-serif;
-  font-size: 13.5px;
-}
-
-.list__title::before {
-  content: '';
-  display: inline-block;
-  left: -40px;
-  width: 40px;
-  height: 14px;
-  position: absolute;
-  transform: rotate(-90deg) translate(-40%, -40%);
+.only-now-additional_item::before {
+  content: ' ';
+  left: -50px;
+  top: 25px;
+  width: 50px;
+  height: 15px;
+  transform: rotate(-90deg);
   color: #fff;
   background-color: #ff6b08;
   text-align: center;
+  font-family: "Acrom-Bold", sans-serif;
+  font-size: 0.75rem;
+  line-height: 1.45;
+  clip: rect(6px, auto, auto, auto);
 }
 
-.list__title__first::before {
+.only-now-additional_item:nth-child(1)::before {
   content: '[001]';
 }
 
-.list__title__second::before {
+.only-now-additional_item:nth-child(2)::before {
   content: '[002]';
 }
 
-.list__title__third::before {
+.only-now-additional_item:nth-child(3)::before {
   content: '[003]';
 }
 
-.list__title__fourth::before {
+.only-now-additional_item:nth-child(4)::before {
   content: '[004]';
 }
 
-.list__title__fifth::before {
+.only-now-additional_item:nth-child(5)::before {
   content: '[005]';
 }
 
-.list__title__sixth::before {
+.only-now-additional_item:nth-child(6)::before {
   content: '[006]';
 }
 
-.list__text {
-  word-wrap: break-word;
-  padding-top: 15px;
+.course-results-main {
+  padding: 20px 0 45px;
+}
+
+.course-results-main__title {
+  padding-bottom: 40px;
+}
+
+.course-results-main__item::before {
+  content: ' ';
+  left: -40px;
+  top: -10px;
+  clip: rect(auto, auto, auto, 9px);
+  font-size: 1.5625rem;
+  color: #000000;
+  font-family: "Acrom-Bold", sans-serif;
+}
+
+.course-results-main__item {
+  padding-bottom: 10px;
+}
+
+.course-results-main__item::after {
+  content: '';
+  left: -15px;
+  top: 30px;
+  width: 10px;
+  height: 10px;
+  background-color: #17ecff;
+}
+
+.course-results-main__item:nth-child(1)::before {
+  content: '01.';
+}
+
+.course-results-main__item:nth-child(2)::before {
+  content: '02.';
+}
+
+.course-results-main__item:nth-child(3)::before {
+  content: '03.';
+}
+
+.course-results-main__item:nth-child(4)::before {
+  content: '04.';
+}
+
+.course-results-main__text--decorative {
+  padding-top: 30px;
+  padding-bottom: 25px;
+}
+
+.course-results-main__text--decorative::before {
+  top: 40px;
+  left: -30px;
 }
 
 .list-start__item {
@@ -11053,6 +11182,8 @@ input[type='radio'].visually-hidden {
   .section-university__title--main,
   .section-expert__title,
   .section-help__title,
+  .only-now-main__title,
+  .course-results-main__title,
   .important-additional__title,
   .important-main__title,
   .just-do-it-main__title {
@@ -11067,6 +11198,8 @@ input[type='radio'].visually-hidden {
   .start-it-additional__text--decorative,
   .simple-steps-main .simple-steps-additional__text-decorative,
   .presentation-additional__text--decorative,
+  .only-now-main__text--decorative,
+  .course-results-main__text--decorative,
   .important-main__text-decorative,
   .just-do-it-additional__text--decorative {
     font-size: 0.5625rem;
@@ -11079,6 +11212,7 @@ input[type='radio'].visually-hidden {
   .section-university__title,
   .section-expert__item--title,
   .section-help__second-title,
+  .course-results-main__subtitle,
   .get-your-bonus-main__subtitle {
     font-size: 0.5625rem;
   }
@@ -11096,6 +11230,8 @@ input[type='radio'].visually-hidden {
   .section-university__desc,
   .section-expert__item--desc,
   .section-help__second-desc,
+  .only-now-additional__text--light,
+  .course-results-main__text--light,
   .get-your-bonus-main__text--light,
   .get-your-bonus-main__text--special,
   .important-main__text--light,
@@ -11116,6 +11252,7 @@ input[type='radio'].visually-hidden {
   .education-section__desc--mobile,
   .section-expert__desc,
   .section-help__desc,
+  .only-now-main__text,
   .get-your-bonus-main__text,
   .main-form__input,
   .important-additional__text,
@@ -11126,12 +11263,14 @@ input[type='radio'].visually-hidden {
 
   .explain-additional__text--bold,
   .presentation-additional__text--bold,
+  .only-now-additional__text--bold,
   .important-main__text--bold,
   .just-do-it-additional__text--bold {
     font-size: 0.5625rem;
   }
 
   .explain-main__text::before,
+  .only-now-main__text::before,
   .course__desc:before,
   .get-your-bonus-main__text::before,
   .just-do-it-main__text::before {
@@ -11139,6 +11278,8 @@ input[type='radio'].visually-hidden {
     width: 28px;
   }
 
+  .only-now-main__text--decorative::before,
+  .course-results-main__text--decorative::before,
   .important-main__text-decorative::before {
     height: 3px;
     width: 18px;
@@ -11149,14 +11290,44 @@ input[type='radio'].visually-hidden {
     font-size: 0.5625rem;
   }
 
-  .section-title,
-  .section-title--reverse {
+  .section__text {
+    font-size: 0.5rem;
+  }
+
+  .section__title--alternate-big {
+    font-size: 2.8125rem;
+  }
+
+  .section__title--additional {
+    font-size: 0.625rem;
+  }
+
+  .section__title--decorative {
+    font-size: 8.75rem;
+  }
+
+  .section__title--acented {
+    font-size: 0.5rem;
+  }
+
+  .section__title {
     font-size: 1.6875rem;
   }
 
-  .third-title-style,
-  .third-title-style--reverse {
+  .section__title--secondary {
     font-size: 0.5625rem;
+  }
+
+  .section__title--third {
+    font-size: 0.5625rem;
+  }
+
+  .form__placeholder {
+    font-size: 0.5rem;
+  }
+
+  .form__input-name {
+    font-size: 0.4375rem;
   }
 
   .advertising__image {
@@ -11327,6 +11498,8 @@ input[type='radio'].visually-hidden {
   .section-university__title--main,
   .section-expert__title,
   .section-help__title,
+  .only-now-main__title,
+  .course-results-main__title,
   .important-additional__title,
   .important-main__title,
   .just-do-it-main__title {
@@ -11341,6 +11514,8 @@ input[type='radio'].visually-hidden {
   .start-it-additional__text--decorative,
   .simple-steps-main .simple-steps-additional__text-decorative,
   .presentation-additional__text--decorative,
+  .only-now-main__text--decorative,
+  .course-results-main__text--decorative,
   .important-main__text-decorative,
   .just-do-it-additional__text--decorative {
     font-size: 0.5625rem;
@@ -11353,6 +11528,7 @@ input[type='radio'].visually-hidden {
   .section-university__title,
   .section-expert__item--title,
   .section-help__second-title,
+  .course-results-main__subtitle,
   .get-your-bonus-main__subtitle {
     font-size: 0.5625rem;
   }
@@ -11370,6 +11546,8 @@ input[type='radio'].visually-hidden {
   .section-university__desc,
   .section-expert__item--desc,
   .section-help__second-desc,
+  .only-now-additional__text--light,
+  .course-results-main__text--light,
   .get-your-bonus-main__text--light,
   .get-your-bonus-main__text--special,
   .important-main__text--light,
@@ -11390,6 +11568,7 @@ input[type='radio'].visually-hidden {
   .education-section__desc--mobile,
   .section-expert__desc,
   .section-help__desc,
+  .only-now-main__text,
   .get-your-bonus-main__text,
   .main-form__input,
   .important-additional__text,
@@ -11400,12 +11579,14 @@ input[type='radio'].visually-hidden {
 
   .explain-additional__text--bold,
   .presentation-additional__text--bold,
+  .only-now-additional__text--bold,
   .important-main__text--bold,
   .just-do-it-additional__text--bold {
     font-size: 0.5625rem;
   }
 
   .explain-main__text::before,
+  .only-now-main__text::before,
   .course__desc:before,
   .get-your-bonus-main__text::before,
   .just-do-it-main__text::before {
@@ -11413,6 +11594,8 @@ input[type='radio'].visually-hidden {
     width: 28px;
   }
 
+  .only-now-main__text--decorative::before,
+  .course-results-main__text--decorative::before,
   .important-main__text-decorative::before {
     height: 3px;
     width: 18px;
@@ -11433,6 +11616,8 @@ input[type='radio'].visually-hidden {
   .section-university__title--main,
   .section-expert__title,
   .section-help__title,
+  .only-now-main__title,
+  .course-results-main__title,
   .important-additional__title,
   .important-main__title,
   .just-do-it-main__title {
@@ -11447,6 +11632,8 @@ input[type='radio'].visually-hidden {
   .start-it-additional__text--decorative,
   .simple-steps-main .simple-steps-additional__text-decorative,
   .presentation-additional__text--decorative,
+  .only-now-main__text--decorative,
+  .course-results-main__text--decorative,
   .important-main__text-decorative,
   .just-do-it-additional__text--decorative {
     font-size: 0.5625rem;
@@ -11459,6 +11646,7 @@ input[type='radio'].visually-hidden {
   .section-university__title,
   .section-expert__item--title,
   .section-help__second-title,
+  .course-results-main__subtitle,
   .get-your-bonus-main__subtitle {
     font-size: 0.5625rem;
   }
@@ -11476,6 +11664,8 @@ input[type='radio'].visually-hidden {
   .section-university__desc,
   .section-expert__item--desc,
   .section-help__second-desc,
+  .only-now-additional__text--light,
+  .course-results-main__text--light,
   .get-your-bonus-main__text--light,
   .get-your-bonus-main__text--special,
   .important-main__text--light,
@@ -11496,6 +11686,7 @@ input[type='radio'].visually-hidden {
   .education-section__desc--mobile,
   .section-expert__desc,
   .section-help__desc,
+  .only-now-main__text,
   .get-your-bonus-main__text,
   .main-form__input,
   .important-additional__text,
@@ -11506,12 +11697,14 @@ input[type='radio'].visually-hidden {
 
   .explain-additional__text--bold,
   .presentation-additional__text--bold,
+  .only-now-additional__text--bold,
   .important-main__text--bold,
   .just-do-it-additional__text--bold {
     font-size: 0.5625rem;
   }
 
   .explain-main__text::before,
+  .only-now-main__text::before,
   .course__desc:before,
   .get-your-bonus-main__text::before,
   .just-do-it-main__text::before {
@@ -11519,6 +11712,8 @@ input[type='radio'].visually-hidden {
     width: 28px;
   }
 
+  .only-now-main__text--decorative::before,
+  .course-results-main__text--decorative::before,
   .important-main__text-decorative::before {
     height: 3px;
     width: 18px;
@@ -11539,6 +11734,8 @@ input[type='radio'].visually-hidden {
   .section-university__title--main,
   .section-expert__title,
   .section-help__title,
+  .only-now-main__title,
+  .course-results-main__title,
   .important-additional__title,
   .important-main__title,
   .just-do-it-main__title {
@@ -11553,6 +11750,8 @@ input[type='radio'].visually-hidden {
   .start-it-additional__text--decorative,
   .simple-steps-main .simple-steps-additional__text-decorative,
   .presentation-additional__text--decorative,
+  .only-now-main__text--decorative,
+  .course-results-main__text--decorative,
   .important-main__text-decorative,
   .just-do-it-additional__text--decorative {
     font-size: 0.5625rem;
@@ -11565,6 +11764,7 @@ input[type='radio'].visually-hidden {
   .section-university__title,
   .section-expert__item--title,
   .section-help__second-title,
+  .course-results-main__subtitle,
   .get-your-bonus-main__subtitle {
     font-size: 0.5625rem;
   }
@@ -11582,6 +11782,8 @@ input[type='radio'].visually-hidden {
   .section-university__desc,
   .section-expert__item--desc,
   .section-help__second-desc,
+  .only-now-additional__text--light,
+  .course-results-main__text--light,
   .get-your-bonus-main__text--light,
   .get-your-bonus-main__text--special,
   .important-main__text--light,
@@ -11602,6 +11804,7 @@ input[type='radio'].visually-hidden {
   .education-section__desc--mobile,
   .section-expert__desc,
   .section-help__desc,
+  .only-now-main__text,
   .get-your-bonus-main__text,
   .main-form__input,
   .important-additional__text,
@@ -11612,12 +11815,14 @@ input[type='radio'].visually-hidden {
 
   .explain-additional__text--bold,
   .presentation-additional__text--bold,
+  .only-now-additional__text--bold,
   .important-main__text--bold,
   .just-do-it-additional__text--bold {
     font-size: 0.5625rem;
   }
 
   .explain-main__text::before,
+  .only-now-main__text::before,
   .course__desc:before,
   .get-your-bonus-main__text::before,
   .just-do-it-main__text::before {
@@ -11625,6 +11830,8 @@ input[type='radio'].visually-hidden {
     width: 28px;
   }
 
+  .only-now-main__text--decorative::before,
+  .course-results-main__text--decorative::before,
   .important-main__text-decorative::before {
     height: 3px;
     width: 18px;
@@ -11645,6 +11852,8 @@ input[type='radio'].visually-hidden {
   .section-university__title--main,
   .section-expert__title,
   .section-help__title,
+  .only-now-main__title,
+  .course-results-main__title,
   .important-additional__title,
   .important-main__title,
   .just-do-it-main__title {
@@ -11659,6 +11868,8 @@ input[type='radio'].visually-hidden {
   .start-it-additional__text--decorative,
   .simple-steps-main .simple-steps-additional__text-decorative,
   .presentation-additional__text--decorative,
+  .only-now-main__text--decorative,
+  .course-results-main__text--decorative,
   .important-main__text-decorative,
   .just-do-it-additional__text--decorative {
     font-size: 0.5625rem;
@@ -11671,6 +11882,7 @@ input[type='radio'].visually-hidden {
   .section-university__title,
   .section-expert__item--title,
   .section-help__second-title,
+  .course-results-main__subtitle,
   .get-your-bonus-main__subtitle {
     font-size: 0.5625rem;
   }
@@ -11688,6 +11900,8 @@ input[type='radio'].visually-hidden {
   .section-university__desc,
   .section-expert__item--desc,
   .section-help__second-desc,
+  .only-now-additional__text--light,
+  .course-results-main__text--light,
   .get-your-bonus-main__text--light,
   .get-your-bonus-main__text--special,
   .important-main__text--light,
@@ -11708,6 +11922,7 @@ input[type='radio'].visually-hidden {
   .education-section__desc--mobile,
   .section-expert__desc,
   .section-help__desc,
+  .only-now-main__text,
   .get-your-bonus-main__text,
   .main-form__input,
   .important-additional__text,
@@ -11718,12 +11933,14 @@ input[type='radio'].visually-hidden {
 
   .explain-additional__text--bold,
   .presentation-additional__text--bold,
+  .only-now-additional__text--bold,
   .important-main__text--bold,
   .just-do-it-additional__text--bold {
     font-size: 0.5625rem;
   }
 
   .explain-main__text::before,
+  .only-now-main__text::before,
   .course__desc:before,
   .get-your-bonus-main__text::before,
   .just-do-it-main__text::before {
@@ -11731,6 +11948,8 @@ input[type='radio'].visually-hidden {
     width: 28px;
   }
 
+  .only-now-main__text--decorative::before,
+  .course-results-main__text--decorative::before,
   .important-main__text-decorative::before {
     height: 3px;
     width: 18px;
@@ -11739,6 +11958,72 @@ input[type='radio'].visually-hidden {
   .btn {
     padding: 12px 20px;
     font-size: 0.5625rem;
+  }
+
+  .only-now-main {
+    padding: 30px 0 50px;
+  }
+
+  .only-now-main::before {
+    font-size: 12.375rem;
+    left: 20%;
+  }
+
+  .only-now-main__text::before {
+    left: -30px;
+  }
+
+  .only-now__subtitle {
+    padding-top: 0px;
+    padding-bottom: 0px;
+  }
+
+  .only-now-main__text--decorative::before {
+    top: 10px;
+    left: -25px;
+  }
+
+  .only-now-main__text--decorative {
+    padding-top: 0px;
+  }
+
+  .only-now-additional_item::before {
+    width: 20px;
+    height: 10px;
+    font-size: 0.4375rem;
+    top: 10px;
+    left: -15px;
+    clip: auto;
+  }
+
+  .course-results-main {
+    padding: 30px 0 50px;
+  }
+
+  .course-results-main__title {
+    padding-top: 30px;
+    padding-bottom: 50px;
+  }
+
+  .course-results-main__item::before {
+    font-size: 1.0625rem;
+    clip: rect(auto, auto, auto, 6px);
+  }
+
+  .course-results-main__item::after {
+    width: 7px;
+    height: 7px;
+    top: 20px;
+  }
+
+  .course-results-main__text--decorative::before {
+    top: 9px;
+    left: -20px;
+  }
+
+  .course-results-main__text--decorative {
+    padding-top: 0px;
+    padding-bottom: 10px;
   }
 
   .get-your-bonus {
@@ -11855,8 +12140,19 @@ input[type='radio'].visually-hidden {
 }
 
 @media (min-width: 48em) {
-  .list--rotate:before {
-    width: 22px;
+  .list__title {
+    font-size: 1.05rem;
+  }
+
+  .list__title--numbers-rotate {
+    font-size: 0.35rem;
+  }
+
+  .responses__text {
+    font-size: 0.5rem;
+  }
+
+  .responses__title {
     font-size: 0.5rem;
   }
 
@@ -13081,22 +13377,6 @@ input[type='radio'].visually-hidden {
   .section-help__desc::before {
     width: 30px;
   }
-
-  .container {
-    width: 768px;
-  }
-
-  .section__title {
-    font-size: 9px;
-  }
-
-  .section__reverse {
-    font-size: 27px;
-  }
-
-  .section__text {
-    font-size: 9px;
-  }
 }
 
 @media (min-width: 48em) and (-webkit-min-device-pixel-ratio: 2), (min-width: 48em) and (min-resolution: 192dpi) {
@@ -14027,6 +14307,8 @@ input[type='radio'].visually-hidden {
   .section-university__title--main,
   .section-expert__title,
   .section-help__title,
+  .only-now-main__title,
+  .course-results-main__title,
   .important-additional__title,
   .important-main__title,
   .just-do-it-main__title {
@@ -14041,6 +14323,8 @@ input[type='radio'].visually-hidden {
   .start-it-additional__text--decorative,
   .simple-steps-main .simple-steps-additional__text-decorative,
   .presentation-additional__text--decorative,
+  .only-now-main__text--decorative,
+  .course-results-main__text--decorative,
   .important-main__text-decorative,
   .just-do-it-additional__text--decorative {
     font-size: 0.625rem;
@@ -14053,6 +14337,7 @@ input[type='radio'].visually-hidden {
   .section-university__title,
   .section-expert__item--title,
   .section-help__second-title,
+  .course-results-main__subtitle,
   .get-your-bonus-main__subtitle {
     font-size: 0.625rem;
   }
@@ -14069,6 +14354,8 @@ input[type='radio'].visually-hidden {
   .section-university__desc,
   .section-expert__item--desc,
   .section-help__second-desc,
+  .only-now-additional__text--light,
+  .course-results-main__text--light,
   .get-your-bonus-main__text--light,
   .get-your-bonus-main__text--special,
   .important-main__text--light,
@@ -14089,6 +14376,7 @@ input[type='radio'].visually-hidden {
   .education-section__desc--mobile,
   .section-expert__desc,
   .section-help__desc,
+  .only-now-main__text,
   .get-your-bonus-main__text,
   .main-form__input,
   .important-additional__text,
@@ -14099,18 +14387,22 @@ input[type='radio'].visually-hidden {
 
   .explain-additional__text--bold,
   .presentation-additional__text--bold,
+  .only-now-additional__text--bold,
   .important-main__text--bold,
   .just-do-it-additional__text--bold {
     font-size: 0.625rem;
   }
 
   .explain-main__text::before,
+  .only-now-main__text::before,
   .course__desc:before,
   .get-your-bonus-main__text::before,
   .just-do-it-main__text::before {
     width: 32px;
   }
 
+  .only-now-main__text--decorative::before,
+  .course-results-main__text--decorative::before,
   .important-main__text-decorative::before {
     width: 20px;
   }
@@ -14120,14 +14412,44 @@ input[type='radio'].visually-hidden {
     font-size: 0.625rem;
   }
 
-  .section-title,
-  .section-title--reverse {
+  .section__text {
+    font-size: 0.5625rem;
+  }
+
+  .section__title--alternate-big {
+    font-size: 3.125rem;
+  }
+
+  .section__title--additional {
+    font-size: 0.6875rem;
+  }
+
+  .section__title--decorative {
+    font-size: 9.75rem;
+  }
+
+  .section__title--acented {
+    font-size: 0.5625rem;
+  }
+
+  .section__title {
     font-size: 1.875rem;
   }
 
-  .third-title-style,
-  .third-title-style--reverse {
+  .section__title--secondary {
     font-size: 0.625rem;
+  }
+
+  .section__title--third {
+    font-size: 0.625rem;
+  }
+
+  .form__placeholder {
+    font-size: 0.5625rem;
+  }
+
+  .form__input-name {
+    font-size: 0.46875rem;
   }
 
   .advertising__image {
@@ -14234,6 +14556,8 @@ input[type='radio'].visually-hidden {
   .section-university__title--main,
   .section-expert__title,
   .section-help__title,
+  .only-now-main__title,
+  .course-results-main__title,
   .important-additional__title,
   .important-main__title,
   .just-do-it-main__title {
@@ -14248,6 +14572,8 @@ input[type='radio'].visually-hidden {
   .start-it-additional__text--decorative,
   .simple-steps-main .simple-steps-additional__text-decorative,
   .presentation-additional__text--decorative,
+  .only-now-main__text--decorative,
+  .course-results-main__text--decorative,
   .important-main__text-decorative,
   .just-do-it-additional__text--decorative {
     font-size: 0.625rem;
@@ -14260,6 +14586,7 @@ input[type='radio'].visually-hidden {
   .section-university__title,
   .section-expert__item--title,
   .section-help__second-title,
+  .course-results-main__subtitle,
   .get-your-bonus-main__subtitle {
     font-size: 0.625rem;
   }
@@ -14276,6 +14603,8 @@ input[type='radio'].visually-hidden {
   .section-university__desc,
   .section-expert__item--desc,
   .section-help__second-desc,
+  .only-now-additional__text--light,
+  .course-results-main__text--light,
   .get-your-bonus-main__text--light,
   .get-your-bonus-main__text--special,
   .important-main__text--light,
@@ -14296,6 +14625,7 @@ input[type='radio'].visually-hidden {
   .education-section__desc--mobile,
   .section-expert__desc,
   .section-help__desc,
+  .only-now-main__text,
   .get-your-bonus-main__text,
   .main-form__input,
   .important-additional__text,
@@ -14306,18 +14636,22 @@ input[type='radio'].visually-hidden {
 
   .explain-additional__text--bold,
   .presentation-additional__text--bold,
+  .only-now-additional__text--bold,
   .important-main__text--bold,
   .just-do-it-additional__text--bold {
     font-size: 0.625rem;
   }
 
   .explain-main__text::before,
+  .only-now-main__text::before,
   .course__desc:before,
   .get-your-bonus-main__text::before,
   .just-do-it-main__text::before {
     width: 32px;
   }
 
+  .only-now-main__text--decorative::before,
+  .course-results-main__text--decorative::before,
   .important-main__text-decorative::before {
     width: 20px;
   }
@@ -14337,6 +14671,8 @@ input[type='radio'].visually-hidden {
   .section-university__title--main,
   .section-expert__title,
   .section-help__title,
+  .only-now-main__title,
+  .course-results-main__title,
   .important-additional__title,
   .important-main__title,
   .just-do-it-main__title {
@@ -14351,6 +14687,8 @@ input[type='radio'].visually-hidden {
   .start-it-additional__text--decorative,
   .simple-steps-main .simple-steps-additional__text-decorative,
   .presentation-additional__text--decorative,
+  .only-now-main__text--decorative,
+  .course-results-main__text--decorative,
   .important-main__text-decorative,
   .just-do-it-additional__text--decorative {
     font-size: 0.625rem;
@@ -14363,6 +14701,7 @@ input[type='radio'].visually-hidden {
   .section-university__title,
   .section-expert__item--title,
   .section-help__second-title,
+  .course-results-main__subtitle,
   .get-your-bonus-main__subtitle {
     font-size: 0.625rem;
   }
@@ -14379,6 +14718,8 @@ input[type='radio'].visually-hidden {
   .section-university__desc,
   .section-expert__item--desc,
   .section-help__second-desc,
+  .only-now-additional__text--light,
+  .course-results-main__text--light,
   .get-your-bonus-main__text--light,
   .get-your-bonus-main__text--special,
   .important-main__text--light,
@@ -14399,6 +14740,7 @@ input[type='radio'].visually-hidden {
   .education-section__desc--mobile,
   .section-expert__desc,
   .section-help__desc,
+  .only-now-main__text,
   .get-your-bonus-main__text,
   .main-form__input,
   .important-additional__text,
@@ -14409,18 +14751,22 @@ input[type='radio'].visually-hidden {
 
   .explain-additional__text--bold,
   .presentation-additional__text--bold,
+  .only-now-additional__text--bold,
   .important-main__text--bold,
   .just-do-it-additional__text--bold {
     font-size: 0.625rem;
   }
 
   .explain-main__text::before,
+  .only-now-main__text::before,
   .course__desc:before,
   .get-your-bonus-main__text::before,
   .just-do-it-main__text::before {
     width: 32px;
   }
 
+  .only-now-main__text--decorative::before,
+  .course-results-main__text--decorative::before,
   .important-main__text-decorative::before {
     width: 20px;
   }
@@ -14440,6 +14786,8 @@ input[type='radio'].visually-hidden {
   .section-university__title--main,
   .section-expert__title,
   .section-help__title,
+  .only-now-main__title,
+  .course-results-main__title,
   .important-additional__title,
   .important-main__title,
   .just-do-it-main__title {
@@ -14454,6 +14802,8 @@ input[type='radio'].visually-hidden {
   .start-it-additional__text--decorative,
   .simple-steps-main .simple-steps-additional__text-decorative,
   .presentation-additional__text--decorative,
+  .only-now-main__text--decorative,
+  .course-results-main__text--decorative,
   .important-main__text-decorative,
   .just-do-it-additional__text--decorative {
     font-size: 0.625rem;
@@ -14466,6 +14816,7 @@ input[type='radio'].visually-hidden {
   .section-university__title,
   .section-expert__item--title,
   .section-help__second-title,
+  .course-results-main__subtitle,
   .get-your-bonus-main__subtitle {
     font-size: 0.625rem;
   }
@@ -14482,6 +14833,8 @@ input[type='radio'].visually-hidden {
   .section-university__desc,
   .section-expert__item--desc,
   .section-help__second-desc,
+  .only-now-additional__text--light,
+  .course-results-main__text--light,
   .get-your-bonus-main__text--light,
   .get-your-bonus-main__text--special,
   .important-main__text--light,
@@ -14502,6 +14855,7 @@ input[type='radio'].visually-hidden {
   .education-section__desc--mobile,
   .section-expert__desc,
   .section-help__desc,
+  .only-now-main__text,
   .get-your-bonus-main__text,
   .main-form__input,
   .important-additional__text,
@@ -14512,18 +14866,22 @@ input[type='radio'].visually-hidden {
 
   .explain-additional__text--bold,
   .presentation-additional__text--bold,
+  .only-now-additional__text--bold,
   .important-main__text--bold,
   .just-do-it-additional__text--bold {
     font-size: 0.625rem;
   }
 
   .explain-main__text::before,
+  .only-now-main__text::before,
   .course__desc:before,
   .get-your-bonus-main__text::before,
   .just-do-it-main__text::before {
     width: 32px;
   }
 
+  .only-now-main__text--decorative::before,
+  .course-results-main__text--decorative::before,
   .important-main__text-decorative::before {
     width: 20px;
   }
@@ -14543,6 +14901,8 @@ input[type='radio'].visually-hidden {
   .section-university__title--main,
   .section-expert__title,
   .section-help__title,
+  .only-now-main__title,
+  .course-results-main__title,
   .important-additional__title,
   .important-main__title,
   .just-do-it-main__title {
@@ -14557,6 +14917,8 @@ input[type='radio'].visually-hidden {
   .start-it-additional__text--decorative,
   .simple-steps-main .simple-steps-additional__text-decorative,
   .presentation-additional__text--decorative,
+  .only-now-main__text--decorative,
+  .course-results-main__text--decorative,
   .important-main__text-decorative,
   .just-do-it-additional__text--decorative {
     font-size: 0.625rem;
@@ -14569,6 +14931,7 @@ input[type='radio'].visually-hidden {
   .section-university__title,
   .section-expert__item--title,
   .section-help__second-title,
+  .course-results-main__subtitle,
   .get-your-bonus-main__subtitle {
     font-size: 0.625rem;
   }
@@ -14585,6 +14948,8 @@ input[type='radio'].visually-hidden {
   .section-university__desc,
   .section-expert__item--desc,
   .section-help__second-desc,
+  .only-now-additional__text--light,
+  .course-results-main__text--light,
   .get-your-bonus-main__text--light,
   .get-your-bonus-main__text--special,
   .important-main__text--light,
@@ -14605,6 +14970,7 @@ input[type='radio'].visually-hidden {
   .education-section__desc--mobile,
   .section-expert__desc,
   .section-help__desc,
+  .only-now-main__text,
   .get-your-bonus-main__text,
   .main-form__input,
   .important-additional__text,
@@ -14615,18 +14981,22 @@ input[type='radio'].visually-hidden {
 
   .explain-additional__text--bold,
   .presentation-additional__text--bold,
+  .only-now-additional__text--bold,
   .important-main__text--bold,
   .just-do-it-additional__text--bold {
     font-size: 0.625rem;
   }
 
   .explain-main__text::before,
+  .only-now-main__text::before,
   .course__desc:before,
   .get-your-bonus-main__text::before,
   .just-do-it-main__text::before {
     width: 32px;
   }
 
+  .only-now-main__text--decorative::before,
+  .course-results-main__text--decorative::before,
   .important-main__text-decorative::before {
     width: 20px;
   }
@@ -14634,6 +15004,30 @@ input[type='radio'].visually-hidden {
   .btn {
     padding: 14px 22px;
     font-size: 0.625rem;
+  }
+
+  .only-now-main {
+    padding: 40px 0 65px;
+  }
+
+  .only-now-main::before {
+    font-size: 13.8125rem;
+    left: 10%;
+  }
+
+  .only-now-additional_item::before {
+    width: 23px;
+    height: 9px;
+    top: 10px;
+    font-size: 0.375rem;
+  }
+
+  .course-results-main {
+    padding: 40px 0 65px;
+  }
+
+  .course-results-main__item::before {
+    font-size: 1.1875rem;
   }
 
   .get-your-bonus {
@@ -15549,9 +15943,20 @@ input[type='radio'].visually-hidden {
 }
 
 @media (min-width: 75em) {
-  .list--rotate:before {
-    width: 25px;
-    font-size: 0.5625rem;
+  .list__title {
+    font-size: 1.1875rem;
+  }
+
+  .list__title--numbers-rotate {
+    font-size: 0.375rem;
+  }
+
+  .responses__text {
+    font-size: 0.55rem;
+  }
+
+  .responses__title {
+    font-size: 0.55rem;
   }
 
   .header__wrapper {
