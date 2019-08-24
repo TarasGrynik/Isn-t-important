@@ -6761,8 +6761,8 @@ a.text-dark:focus {
   display: block;
 }
 
-.course__desc:before,
 .explain-main__text::before,
+.course__desc:before,
 .get-your-bonus-main__text::before,
 .just-do-it-main__text::before {
   position: absolute;
@@ -8495,8 +8495,8 @@ h6 {
   display: block;
 }
 
-.course__desc:before,
 .explain-main__text::before,
+.course__desc:before,
 .get-your-bonus-main__text::before,
 .just-do-it-main__text::before {
   position: absolute;
@@ -8809,8 +8809,8 @@ input[type='radio'].visually-hidden {
   display: block;
 }
 
-.course__desc:before,
 .explain-main__text::before,
+.course__desc:before,
 .get-your-bonus-main__text::before,
 .just-do-it-main__text::before {
   position: absolute;
@@ -9117,8 +9117,8 @@ input[type='radio'].visually-hidden {
   display: block;
 }
 
-.course__desc:before,
 .explain-main__text::before,
+.course__desc:before,
 .get-your-bonus-main__text::before,
 .just-do-it-main__text::before {
   position: absolute;
@@ -9424,8 +9424,8 @@ input[type='radio'].visually-hidden {
   display: block;
 }
 
-.course__desc:before,
 .explain-main__text::before,
+.course__desc:before,
 .get-your-bonus-main__text::before,
 .just-do-it-main__text::before {
   position: absolute;
@@ -11131,8 +11131,8 @@ input[type='radio'].visually-hidden {
     font-size: 0.5625rem;
   }
 
-  .course__desc:before,
   .explain-main__text::before,
+  .course__desc:before,
   .get-your-bonus-main__text::before,
   .just-do-it-main__text::before {
     height: 4px;
@@ -11405,8 +11405,8 @@ input[type='radio'].visually-hidden {
     font-size: 0.5625rem;
   }
 
-  .course__desc:before,
   .explain-main__text::before,
+  .course__desc:before,
   .get-your-bonus-main__text::before,
   .just-do-it-main__text::before {
     height: 4px;
@@ -11511,114 +11511,8 @@ input[type='radio'].visually-hidden {
     font-size: 0.5625rem;
   }
 
-  .course__desc:before,
   .explain-main__text::before,
-  .get-your-bonus-main__text::before,
-  .just-do-it-main__text::before {
-    height: 4px;
-    width: 28px;
-  }
-
-  .important-main__text-decorative::before {
-    height: 3px;
-    width: 18px;
-  }
-
-  .btn {
-    padding: 12px 20px;
-    font-size: 0.5625rem;
-  }
-
-  .facts-main__title,
-  .examples-main__title,
-  .warning-main__title,
-  .explain-main__title,
-  .career-additional__title,
-  .simple-steps-main .simple-steps-main__title,
-  .presentation-main__title,
-  .section-university__title--main,
-  .section-expert__title,
-  .section-help__title,
-  .important-additional__title,
-  .important-main__title,
-  .just-do-it-main__title {
-    font-size: 1.6875rem;
-  }
-
-  .except-numbers-additional__title,
-  .get-your-bonus-main__title {
-    font-size: 1.6875rem;
-  }
-
-  .start-it-additional__text--decorative,
-  .simple-steps-main .simple-steps-additional__text-decorative,
-  .presentation-additional__text--decorative,
-  .important-main__text-decorative,
-  .just-do-it-additional__text--decorative {
-    font-size: 0.5625rem;
-  }
-
-  .warning-main__subtitle,
-  .career-main__subtitle,
-  .simple-steps-main .simple-steps-additional__subtitle,
-  .section-awards__title,
-  .section-university__title,
-  .section-expert__item--title,
-  .section-help__second-title,
-  .get-your-bonus-main__subtitle {
-    font-size: 0.5625rem;
-  }
-
-  .explain-additional__subtitle {
-    font-family: "Acrom-ExtraBold", sans-serif;
-    font-size: 0.5625rem;
-  }
-
-  .explain-additional__text--light,
-  .сareer-main__text--light,
-  .simple-steps-main .simple-steps-additional__text--light,
-  .presentation-additional__text--light,
-  .section-awards__desc,
-  .section-university__desc,
-  .section-expert__item--desc,
-  .section-help__second-desc,
-  .get-your-bonus-main__text--light,
-  .get-your-bonus-main__text--special,
-  .important-main__text--light,
-  .just-do-it-additional__text--light {
-    font-size: 0.5rem;
-  }
-
-  .start-it-main__text--tablet,
-  .facts-main__text,
-  .except-numbers-additional__text,
-  .examples-main__text,
-  .warning-main__text,
-  .explain-main__text,
-  .career-additional__text,
-  .simple-steps-main .simple-steps-main__text,
-  .presentation-main__text,
-  .section-university__desc--main,
-  .education-section__desc--mobile,
-  .section-expert__desc,
-  .section-help__desc,
-  .get-your-bonus-main__text,
-  .main-form__input,
-  .important-additional__text,
-  .important-additional__text--special,
-  .just-do-it-main__text {
-    font-size: 0.5625rem;
-  }
-
-  .explain-additional__text--bold,
-  .presentation-additional__text--bold,
-  .important-main__text--bold,
-  .just-do-it-additional__text--bold {
-    font-size: 0.5625rem;
-  }
-  
   .course__desc:before,
-  .explain-main__text::before,
   .get-your-bonus-main__text::before,
   .just-do-it-main__text::before {
     height: 4px;
@@ -11723,8 +11617,114 @@ input[type='radio'].visually-hidden {
     font-size: 0.5625rem;
   }
 
-  .course__desc:before,
   .explain-main__text::before,
+  .course__desc:before,
+  .get-your-bonus-main__text::before,
+  .just-do-it-main__text::before {
+    height: 4px;
+    width: 28px;
+  }
+
+  .important-main__text-decorative::before {
+    height: 3px;
+    width: 18px;
+  }
+
+  .btn {
+    padding: 12px 20px;
+    font-size: 0.5625rem;
+  }
+
+  .facts-main__title,
+  .examples-main__title,
+  .warning-main__title,
+  .explain-main__title,
+  .career-additional__title,
+  .simple-steps-main .simple-steps-main__title,
+  .presentation-main__title,
+  .section-university__title--main,
+  .section-expert__title,
+  .section-help__title,
+  .important-additional__title,
+  .important-main__title,
+  .just-do-it-main__title {
+    font-size: 1.6875rem;
+  }
+
+  .except-numbers-additional__title,
+  .get-your-bonus-main__title {
+    font-size: 1.6875rem;
+  }
+
+  .start-it-additional__text--decorative,
+  .simple-steps-main .simple-steps-additional__text-decorative,
+  .presentation-additional__text--decorative,
+  .important-main__text-decorative,
+  .just-do-it-additional__text--decorative {
+    font-size: 0.5625rem;
+  }
+
+  .warning-main__subtitle,
+  .career-main__subtitle,
+  .simple-steps-main .simple-steps-additional__subtitle,
+  .section-awards__title,
+  .section-university__title,
+  .section-expert__item--title,
+  .section-help__second-title,
+  .get-your-bonus-main__subtitle {
+    font-size: 0.5625rem;
+  }
+
+  .explain-additional__subtitle {
+    font-family: "Acrom-ExtraBold", sans-serif;
+    font-size: 0.5625rem;
+  }
+
+  .explain-additional__text--light,
+  .сareer-main__text--light,
+  .simple-steps-main .simple-steps-additional__text--light,
+  .presentation-additional__text--light,
+  .section-awards__desc,
+  .section-university__desc,
+  .section-expert__item--desc,
+  .section-help__second-desc,
+  .get-your-bonus-main__text--light,
+  .get-your-bonus-main__text--special,
+  .important-main__text--light,
+  .just-do-it-additional__text--light {
+    font-size: 0.5rem;
+  }
+
+  .start-it-main__text--tablet,
+  .facts-main__text,
+  .except-numbers-additional__text,
+  .examples-main__text,
+  .warning-main__text,
+  .explain-main__text,
+  .career-additional__text,
+  .simple-steps-main .simple-steps-main__text,
+  .presentation-main__text,
+  .section-university__desc--main,
+  .education-section__desc--mobile,
+  .section-expert__desc,
+  .section-help__desc,
+  .get-your-bonus-main__text,
+  .main-form__input,
+  .important-additional__text,
+  .important-additional__text--special,
+  .just-do-it-main__text {
+    font-size: 0.5625rem;
+  }
+
+  .explain-additional__text--bold,
+  .presentation-additional__text--bold,
+  .important-main__text--bold,
+  .just-do-it-additional__text--bold {
+    font-size: 0.5625rem;
+  }
+
+  .explain-main__text::before,
+  .course__desc:before,
   .get-your-bonus-main__text::before,
   .just-do-it-main__text::before {
     height: 4px;
@@ -14104,8 +14104,8 @@ input[type='radio'].visually-hidden {
     font-size: 0.625rem;
   }
 
-  .course__desc:before,
   .explain-main__text::before,
+  .course__desc:before,
   .get-your-bonus-main__text::before,
   .just-do-it-main__text::before {
     width: 32px;
@@ -14311,8 +14311,8 @@ input[type='radio'].visually-hidden {
     font-size: 0.625rem;
   }
 
-  .course__desc:before,
   .explain-main__text::before,
+  .course__desc:before,
   .get-your-bonus-main__text::before,
   .just-do-it-main__text::before {
     width: 32px;
@@ -14414,8 +14414,8 @@ input[type='radio'].visually-hidden {
     font-size: 0.625rem;
   }
 
-  .course__desc:before,
   .explain-main__text::before,
+  .course__desc:before,
   .get-your-bonus-main__text::before,
   .just-do-it-main__text::before {
     width: 32px;
@@ -14517,8 +14517,8 @@ input[type='radio'].visually-hidden {
     font-size: 0.625rem;
   }
 
-  .course__desc:before,
   .explain-main__text::before,
+  .course__desc:before,
   .get-your-bonus-main__text::before,
   .just-do-it-main__text::before {
     width: 32px;
@@ -14620,8 +14620,8 @@ input[type='radio'].visually-hidden {
     font-size: 0.625rem;
   }
 
-  .course__desc:before,
   .explain-main__text::before,
+  .course__desc:before,
   .get-your-bonus-main__text::before,
   .just-do-it-main__text::before {
     width: 32px;
