@@ -63,6 +63,24 @@
   }
 }
 
+%third-title-style--reverse {
+  font-family: $section-title-font;
+  font-size: remy(15);
+  line-height: 1.53;
+  color: $banner-title-text-color;
+  background-color: $title-text-color;
+  text-transform: uppercase;
+
+  @media screen and (min-width: 48em) {
+    font-family: $special-font;
+    font-size: remy(9);
+  }
+
+  @media screen and (min-width: 75em) {
+    font-size: remy(10);
+  }
+}
+
 %main-page-font {
   font-family: $main-page-font;
   font-size: remy(14);
@@ -107,6 +125,7 @@
     font-size: remy(10);
   }
 }
+
 
 /* Placeholder for list */
 
