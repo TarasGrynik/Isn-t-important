@@ -13,11 +13,13 @@
 @import './base/base'; // base style for elements
 
 /* Components */
-@import './components/list-style/list-style';
-@import './components/title-style/title-style';
-@import './component/page-footer/advertising.scss';
-@import './component/page-footer/social-list';
-@import './component/page-footer/main-contacts__button';
+@import './components/text-style/list-text';
+@import './components/text-style/text-style';
+@import './components/text-style/title-style';
+@import './components/text-style/form-text.scss';
+@import './components/page-footer/advertising';
+@import './components/page-footer/social-list';
+@import './components/page-footer/main-contacts__button';
 
 
 /* Layout */
