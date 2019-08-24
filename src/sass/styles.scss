@@ -13,6 +13,8 @@
 @import './base/base'; // base style for elements
 
 /* Components */
+@import './components/list-style/list-style';
+@import './components/title-style/title-style';
 @import './component/page-footer/advertising.scss';
 @import './component/page-footer/social-list';
 @import './component/page-footer/main-contacts__button';
@@ -40,7 +42,8 @@
 
 @import './layout/section14-16/section-14-justnow/section-14-justnow.scss';
 @import './layout/section14-16/section-15/section-15.scss';
-@import './layout/section-get-yout-bonus/section-get-tour-bonus.scss';
-@import './layout/section-get-yout-bonus/main-form.scss';
+@import './layout/page-video-course/video-course';
+@import './layout/section-get-your-bonus/section-get-your-bonus.scss';
+@import './layout/section-get-your-bonus/main-form.scss';
 @import './layout/section-important/section-important.scss';
 @import './layout/section-just-do-it/section-just-do-it.scss';

@@ -1,0 +1,47 @@
+.list-start__item {
+  list-style: none;
+}
+
+.course {
+  padding: 24px 0 50px;
+}
+
+.course__title {
+  margin-bottom: 15px;
+}
+
+.course__desc {
+  position: relative;
+
+  &:before  {
+    @extend %pseudo-dash;
+    left: -13px;
+    top: 10px;
+  }
+
+  font-family: $style-font;
+  padding-bottom: 35px;
+}
+
+.course__devices-img {
+  margin-bottom: 30px;
+}
+
+.training-instruction__title {
+  font-size: 0;
+  margin-bottom: 12px;
+}
+
+.list-start__strike {
+  font: remy(17) $special-font;
+  color: $price-strike-color;
+}
+
+.list-start__today {
+  font: remy(20)/1.2 $special-font;
+  color: $banner-bg-color;
+}
+
+.list-start__today-price {
+  font-size: remy(36);
+}

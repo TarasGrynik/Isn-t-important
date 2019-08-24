@@ -2,164 +2,173 @@
   position: relative;
 
   &::before {
-    content: 'STEP';
+    content: "";
     position: absolute;
+    left: 60px;
     display: block;
-    top: 50px;
-    left: 115px;
-    font-family: $special-font;
-    color: $rotate-elem-text-color;
-    font-size: remy(56);
-    line-height: 1.4;
-    transform: rotate(90deg);
     z-index: -1;
-  background-image: url(../images/background-png/stap-mobile.png);
-  background-repeat: no-repeat;
-  background-position: 20% 0%;
-  @media (min-resolution: 192dpi), (min-resolution: 2dppx) {
-    background-image: url(../images/background-png/stap-mobile@2x.png);
-  }
-  @media screen and (min-width: 48em) {
-    font-size: remy(81);
-      left: 315px;
-    background-size: auto 100%;
-    background-image: url(../images/background-png/stap.png);
-    @media (min-resolution: 192dpi), (min-resolution: 2dppx) {
-      background-image: url(../images/background-png/stap@2x.png);
+    height: 146px;
+    width: 147px;
+    background: url(../images/background-png/stap-mobile.png) no-repeat;
+
+    @media (min-resolution: 192dpi),(min-resolution: 2dppx) {
+      background-image: url(../images/background-png/stap-mobile@2x.png);
+    }
+
+    @media screen and (min-width: 48em) {
+      left: 115px;
+      height: 210px;
+      width: 210px;
+      background: url(../images/background-png/stap.png) no-repeat;
+    
+      @media (min-resolution: 192dpi), (min-resolution: 2dppx) {
+        background-image: url(../images/background-png/stap@2x.png);
+      }
     }
   }
-  @media screen and (min-width: 75em) {
-    background-image: url(../images/background-png/stap-dectop.png);
 
-    @media (min-resolution: 192dpi), (min-resolution: 2dppx) {
-      background-image: url(../images/background-png/stap-dectop@2x.png);
-    }
-  }
+
+  .simple-steps-main__title {
+    @extend %sec-title-style;
+    padding-bottom: 15px;
   }
 
-
-.simple-steps-main__title {
-  @extend %sec-title-style;
-  padding-bottom: 15px;
-}
-
-.simple-steps-main__title--dark {
-  color: $banner-title-text-color;
-  background-color: $title-text-color;
-}
-
-.simple-steps-main__text {
-  @extend %sec-title-text-style;
-  padding-bottom: 50px;
-
-  &::before {
-    @extend %pseudos;
-    content: '';
-    left: -15px;
-    top: 8px;
-    width: 20px;
-    height: 2px;
+  .simple-steps-main__title--dark {
+    color: $banner-title-text-color;
     background-color: $title-text-color;
   }
-}
 
-.simple-steps-additional__subtitle {
-  @extend %third-title-style;
+  .simple-steps-main__text {
+    @extend %sec-title-text-style;
+    padding-bottom: 50px;
 
-  &::before {
-    content: '';
-    @extend %pseudos;
-    left: -15px;
-    top: 30px;
-    width: 10px;
-    height: 10px;
-    background-color: $btn-hover-bg;
-    @media screen and (min-width: 48em) {
-      width: 7px;
-      height: 7px;
-      top: 20px;
+    &::before {
+      @extend %pseudos;
+      content: '';
+      left: -15px;
+      top: 8px;
+      width: 20px;
+      height: 2px;
+      background-color: $title-text-color;
     }
   }
-}
 
-.simple-steps-additional__text--light {
-  @extend %main-page-font;
-}
+  .simple-steps-additional__subtitle {
+    @extend %third-title-style;
 
-.simple-steps-additional__block {
-  padding-bottom: 30px;
-}
-
-.simple-steps-additional {
-  @extend %list;
-}
-
-.simple-steps-additional__block {
-  padding-bottom: 30px;
-  
-  &::before {
-    content: ' ';
-    @extend %pseudos;
-    left: -40px;
-    top: -10px;
-    clip: rect(auto, auto, auto, 9px);
-    font-size: remy(25);
-    color: $title-text-color;
-    font-family: $section-title-font;
-    @media screen and (min-width: 48em) {
-      font-size: remy(17);
-      clip: rect(auto, auto, auto, 6px);
-    }
-    @media screen and (min-width: 75em) {
-      font-size: remy(19);
-    }
-  }
-}
-
-.simple-steps-additional__block:nth-child(1) {
-  &::before {
-    content: '01.';
-  }
-}
-
-.simple-steps-additional__block:nth-child(2) {
-  &::before {
-    content: '02.';
-  }
-}
-
-.simple-steps-additional__block:nth-child(3) {
-  &::before {
-    content: '03.';
-  }
-}
-
-.simple-steps-additional__block:nth-child(4) {
-  &::before {
-    content: '04.';
-  }
-}
-
-.simple-steps-additional__text-decorative {
-  @extend %accent-text;
-
-  &::before {
-    content: '';
-    @extend %pseudos;
-    left: -10px;
-    top: 10px;
-    width: 13px;
-    height: 1.562px;
-    background-color: $title-text-color;
-    transform: skewY(-56deg);
-    @media screen and (min-width: 48em) {
+    &::before {
+      content: '';
+      @extend %pseudos;
+      left: -15px;
+      top: 30px;
       width: 10px;
-      height: 2.5px;
+      height: 10px;
+      background-color: $btn-hover-bg;
+
+      @media screen and (min-width: 48em) {
+        width: 7px;
+        height: 7px;
+        top: 20px;
+      }
     }
-    @media screen and (min-width: 75em) {
-      width: 11px;
-      height: 3.125px;
+  }
+
+  .simple-steps-additional__text--light {
+    @extend %main-page-font;
+  }
+
+  .simple-steps-additional__block {
+    padding-bottom: 30px;
+  }
+
+  .simple-steps-additional {
+    @extend %list;
+  }
+
+  .simple-steps-additional__block {
+    padding-bottom: 30px;
+
+    &::before {
+      content: ' ';
+      @extend %pseudos;
+      left: -40px;
+      top: -10px;
+      clip: rect(auto, auto, auto, 9px);
+      font-size: remy(25);
+      color: $title-text-color;
+      font-family: $section-title-font;
+
+      @media screen and (min-width: 48em) {
+        font-size: remy(17);
+        clip: rect(auto, auto, auto, 6px);
+      }
+
+      @media screen and (min-width: 75em) {
+        font-size: remy(19);
+      }
+    }
+  }
+
+  .simple-steps-additional__block:nth-child(1) {
+    &::before {
+      content: '01.';
+    }
+  }
+
+  .simple-steps-additional__block:nth-child(2) {
+    &::before {
+      content: '02.';
+    }
+  }
+
+  .simple-steps-additional__block:nth-child(3) {
+    &::before {
+      content: '03.';
+    }
+  }
+
+  .simple-steps-additional__block:nth-child(4) {
+    &::before {
+      content: '04.';
+    }
+  }
+
+  .simple-steps-additional__text-decorative {
+    @extend %accent-text;
+
+    &::before {
+      content: '';
+      @extend %pseudos;
+      left: -10px;
+      top: 10px;
+      width: 13px;
+      height: 1.562px;
+      background-color: $title-text-color;
+      transform: skewY(-56deg);
+
+      @media screen and (min-width: 48em) {
+        width: 10px;
+        height: 2.5px;
+      }
+
+      @media screen and (min-width: 75em) {
+        width: 11px;
+        height: 3.125px;
+      }
     }
   }
 }
-}
+
+
+/* 
+
+
+
+
+@media screen and (min-width: 75em) {
+  background-image: url(../images/background-png/stap-dectop.png);
+
+  @media (min-resolution: 192dpi), (min-resolution: 2dppx) {
+    background-image: url(../images/background-png/stap-dectop@2x.png);
+  }
+} */
