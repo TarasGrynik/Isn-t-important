@@ -13,6 +13,8 @@
 @import './base/base'; // base style for elements
 
 /* Components */
+@import './components/list-style/list-style';
+@import './components/title-style/title-style';
 @import './components/text-style/list-text';
 @import './components/text-style/text-style';
 @import './components/text-style/title-style';
@@ -44,8 +46,8 @@
 @import './layout/section12/section12.scss';
 @import './layout/section13/section13.scss';
 
-@import './layout/section14-16/section-14-justnow/section-14-justnow.scss';
-@import './layout/section14-16/section-15/section-15.scss';
+@import './layout/section-14-justnow/section-14-justnow.scss';
+@import './layout/section-15/section-15.scss';
 @import './layout/page-video-course/video-course';
 @import './layout/section-get-your-bonus/section-get-your-bonus.scss';
 @import './layout/section-get-your-bonus/main-form.scss';
