@@ -7395,133 +7395,6 @@ h6 {
   font-family: "Acrom-Regular", sans-serif;
 }
 
-.list__title {
-  font-family: "Acrom-ExtraBold", sans-serif;
-  font-size: 0.84375rem;
-  line-height: 1.33;
-  text-transform: uppercase;
-  color: #000000;
-}
-
-.list__title--numbers {
-  font-size: 1.5rem;
-}
-
-.list__title--numbers-rotate {
-  font-family: "Acrom-Bold", sans-serif;
-  color: #ffffff;
-  background-color: #ff6b08;
-}
-
-.section__text {
-  font-family: "Acrom-Regular", sans-serif;
-  font-size: 0.84375rem;
-  line-height: 1.45;
-  color: #3f4144;
-}
-
-.section__text--acented {
-  background-color: #16ebfe;
-}
-
-.section__text--alternate {
-  color: #ffffff;
-  background-color: #000000;
-}
-
-.section__text--big {
-  font-family: "Acrom-ExtraBold", sans-serif;
-  font-size: 0.625rem;
-  text-transform: uppercase;
-}
-
-.section__text--action {
-  font-family: "Acrom-Medium", sans-serif;
-  color: #ff6b08;
-}
-
-.responses__text {
-  font-size: 0.34375rem;
-  padding: 0;
-  margin: 0;
-}
-
-.section__title {
-  font-family: "Acrom-ExtraBold", sans-serif;
-  font-size: 1.125rem;
-  line-height: 1.33;
-  text-transform: uppercase;
-  color: #000000;
-}
-
-.section__title--alternate {
-  color: #ffffff;
-  background-color: #000000;
-}
-
-.section__title--alternate-big {
-  font-size: 30px;
-}
-
-.section__title--additional {
-  font-size: 0.9375rem;
-}
-
-.section__title--decorative {
-  font-size: 6.125rem;
-  opacity: 0.05;
-}
-
-.section__title--acented {
-  font-family: "Acrom-Bold", sans-serif;
-  color: #ffffff;
-  background-color: #000000;
-}
-
-.section__title--secondary {
-  font-family: "Acrom-Medium", sans-serif;
-  font-size: 0.875rem;
-  line-height: 1.45;
-  color: #000000;
-}
-
-.section__title--secondary-alternate {
-  color: #ffffff;
-  background-color: #000000;
-}
-
-.section__title--secondary-acented {
-  background-color: #16ebfe;
-}
-
-.section__title--third {
-  font-family: "Acrom-Bold", sans-serif;
-  font-size: 0.84375rem;
-  line-height: 1.45;
-  color: #000000;
-}
-
-.responses__title {
-  font-family: "Acrom-ExtraBold", sans-serif;
-  color: #000000;
-  font-size: 0.35rem;
-}
-
-.form__placeholder {
-  font-family: "Acrom-Regular", sans-serif;
-  font-size: 0.5625rem;
-  line-height: 1.45;
-  color: #3f4144;
-}
-
-.form__input-name {
-  font-family: "Acrom-Bold", sans-serif;
-  font-size: 0.5rem;
-  line-height: 1.45;
-  color: #000000;
-  opacity: 0.36;
-}
-
 .advertising__image {
   width: 16px;
   height: 10px;
@@ -11423,46 +11296,6 @@ input[type='radio'].visually-hidden {
     font-size: 0.5625rem;
   }
 
-  .section__text {
-    font-size: 0.5rem;
-  }
-
-  .section__title--alternate-big {
-    font-size: 2.8125rem;
-  }
-
-  .section__title--additional {
-    font-size: 0.625rem;
-  }
-
-  .section__title--decorative {
-    font-size: 8.75rem;
-  }
-
-  .section__title--acented {
-    font-size: 0.5rem;
-  }
-
-  .section__title {
-    font-size: 1.6875rem;
-  }
-
-  .section__title--secondary {
-    font-size: 0.5625rem;
-  }
-
-  .section__title--third {
-    font-size: 0.5625rem;
-  }
-
-  .form__placeholder {
-    font-size: 0.5rem;
-  }
-
-  .form__input-name {
-    font-size: 0.4375rem;
-  }
-
   .advertising__image {
     width: 20px;
     height: 12px;
@@ -12287,22 +12120,6 @@ input[type='radio'].visually-hidden {
   .rotate-list-title-font {
     font-size: 0.5625rem;
     line-height: 1.44;
-  }
-
-  .list__title {
-    font-size: 1.05rem;
-  }
-
-  .list__title--numbers-rotate {
-    font-size: 0.35rem;
-  }
-
-  .responses__text {
-    font-size: 0.5rem;
-  }
-
-  .responses__title {
-    font-size: 0.5rem;
   }
 
   .banner {
@@ -14615,46 +14432,6 @@ input[type='radio'].visually-hidden {
     font-size: 0.625rem;
   }
 
-  .section__text {
-    font-size: 0.5625rem;
-  }
-
-  .section__title--alternate-big {
-    font-size: 3.125rem;
-  }
-
-  .section__title--additional {
-    font-size: 0.6875rem;
-  }
-
-  .section__title--decorative {
-    font-size: 9.75rem;
-  }
-
-  .section__title--acented {
-    font-size: 0.5625rem;
-  }
-
-  .section__title {
-    font-size: 1.875rem;
-  }
-
-  .section__title--secondary {
-    font-size: 0.625rem;
-  }
-
-  .section__title--third {
-    font-size: 0.625rem;
-  }
-
-  .form__placeholder {
-    font-size: 0.5625rem;
-  }
-
-  .form__input-name {
-    font-size: 0.46875rem;
-  }
-
   .advertising__image {
     width: 24px;
     height: 14px;
@@ -16159,22 +15936,6 @@ input[type='radio'].visually-hidden {
   .rotate-list-title-font {
     font-size: 0.625rem;
     line-height: 1.5;
-  }
-
-  .list__title {
-    font-size: 1.1875rem;
-  }
-
-  .list__title--numbers-rotate {
-    font-size: 0.375rem;
-  }
-
-  .responses__text {
-    font-size: 0.55rem;
-  }
-
-  .responses__title {
-    font-size: 0.55rem;
   }
 
   .header__wrapper {

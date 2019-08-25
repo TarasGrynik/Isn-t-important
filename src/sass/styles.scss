@@ -15,41 +15,37 @@
 /* Components */
 @import './components/list-style/list-style';
 @import './components/title-style/title-style';
-@import './components/text-style/list-text';
-@import './components/text-style/text-style';
-@import './components/text-style/title-style';
-@import './components/text-style/form-text.scss';
 @import './components/page-footer/advertising';
 @import './components/page-footer/social-list';
 @import './components/page-footer/main-contacts__button';
 
 
 /* Layout */
-@import './layout/page-header/page-header.scss';
-@import './layout/page-banner/page-banner.scss';
-@import './layout/section-start-it/section-start-it.scss';
-@import './layout/section-facts/section-facts.scss';
-@import './layout/section-except-numbers/section-except-numbers.scss';
-@import './layout/section-examples/section-examples.scss';
-@import './layout/section-warning/section-warning.scss';
-@import './layout/section-explain/section-explain.scss';
-@import './layout/section8/section8.scss';
-@import './layout/section9/section9.scss';
-@import './layout/section10-presentation/presentation.scss';
-@import './layout/page-footer/main-contacts.scss';
-@import './layout/page-footer/page-footer__main.scss';
-@import './layout/page-footer/page-footer__bottom.scss';
-@import './layout/page-footer/law-info.scss';
+@import './layout/page-header/page-header';
+@import './layout/page-banner/page-banner';
+@import './layout/section-start-it/section-start-it';
+@import './layout/section-facts/section-facts';
+@import './layout/section-except-numbers/section-except-numbers';
+@import './layout/section-examples/section-examples';
+@import './layout/section-warning/section-warning';
+@import './layout/section-explain/section-explain';
+@import './layout/section-career/section-career';
+@import './layout/section-four-steps/section-four-steps';
+@import './layout/section-presentation/section-presentation';
+@import './layout/page-footer/main-contacts';
+@import './layout/page-footer/page-footer__main';
+@import './layout/page-footer/page-footer__bottom';
+@import './layout/page-footer/law-info';
 
-@import './layout/section11/section-awards.scss';
-@import './layout/section11/section-university.scss';
-@import './layout/section12/section12.scss';
-@import './layout/section13/section13.scss';
+@import './layout/section-possibility/section-awards';
+@import './layout/section-possibility/section-university';
+@import './layout/section-record/section-record';
+@import './layout/section-profession/section-profession';
 
-@import './layout/section-14-justnow/section-14-justnow.scss';
-@import './layout/section-15/section-15.scss';
-@import './layout/page-video-course/video-course';
-@import './layout/section-get-your-bonus/section-get-your-bonus.scss';
-@import './layout/section-get-your-bonus/main-form.scss';
-@import './layout/section-important/section-important.scss';
-@import './layout/section-just-do-it/section-just-do-it.scss';
+@import './layout/section-just-now/section-just-now';
+@import './layout/section-you-get/section-you-get';
+@import './layout/section-video-course/video-course';
+@import './layout/section-get-your-bonus/section-get-your-bonus';
+@import './layout/section-get-your-bonus/main-form';
+@import './layout/section-important/section-important';
+@import './layout/section-just-do-it/section-just-do-it';
