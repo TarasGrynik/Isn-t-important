@@ -62,7 +62,7 @@
 .list--rotate {
   &:before {
     position: absolute;
-    left: -43px;
+    left: -25px;
 
     display: inline-block;
     width: 45px;
@@ -79,6 +79,7 @@
 
     @media (min-width: 48em) {
       width: 22px;
+      left: -15px;
       font-size: remy(8);
     }
 

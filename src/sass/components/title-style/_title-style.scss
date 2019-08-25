@@ -21,6 +21,11 @@
   background-color: $title-text-color;
 }
 
+.under-section-text {
+  @include media-font(remy(9));
+  @include media-font(remy(10), 1.5, 75em);
+}
+
 
 .third-title-style,
 .third-title-style--reverse {
@@ -37,6 +42,10 @@
 
 }
 
+.third-title-style {
+  color: $title-text-color;
+}
+
 .third-title-style--reverse {
   background-color: $title-text-color;
   color: $banner-title-text-color;
@@ -46,6 +55,9 @@
 .rotate-list-title-font {
   font: remy(13.5)/1.44 $section-title-font;
   color: $title-text-color;
+
+  @include media-font(remy(9));
+  @include media-font(remy(10), 1.5, 75em);
 }
 
 .important-bg-text,

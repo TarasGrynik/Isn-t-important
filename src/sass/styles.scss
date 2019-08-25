@@ -15,9 +15,14 @@
 /* Components */
 @import './components/list-style/list-style';
 @import './components/title-style/title-style';
-@import './component/page-footer/advertising.scss';
-@import './component/page-footer/social-list';
-@import './component/page-footer/main-contacts__button';
+@import './components/text-style/list-text';
+@import './components/text-style/text-style';
+@import './components/text-style/title-style';
+@import './components/text-style/form-text.scss';
+@import './components/page-footer/advertising';
+@import './components/page-footer/social-list';
+@import './components/page-footer/main-contacts__button';
+
 
 /* Layout */
 @import './layout/page-header/page-header.scss';
@@ -27,6 +32,7 @@
 @import './layout/section-except-numbers/section-except-numbers.scss';
 @import './layout/section-examples/section-examples.scss';
 @import './layout/section-warning/section-warning.scss';
+@import './layout/section-explain/section-explain.scss';
 @import './layout/section8/section8.scss';
 @import './layout/section9/section9.scss';
 @import './layout/section10-presentation/presentation.scss';
@@ -40,8 +46,8 @@
 @import './layout/section12/section12.scss';
 @import './layout/section13/section13.scss';
 
-@import './layout/section14-16/section-14-justnow/section-14-justnow.scss';
-@import './layout/section14-16/section-15/section-15.scss';
+@import './layout/section-14-justnow/section-14-justnow.scss';
+@import './layout/section-15/section-15.scss';
 @import './layout/page-video-course/video-course';
 @import './layout/section-get-your-bonus/section-get-your-bonus.scss';
 @import './layout/section-get-your-bonus/main-form.scss';
