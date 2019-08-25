@@ -1,0 +1,76 @@
+.section-title,
+.section-title--reverse  {
+  font: remy(18)/1.33 $section-title-font;
+  text-transform: uppercase;
+  
+  @media screen and (min-width: 48em) {
+    font-size: remy(27);
+  }
+  
+  @media screen and (min-width: 75em) {
+    font-size: remy(30);
+  }
+}
+
+.section-title {
+  color: $title-text-color;
+}
+
+.section-title--reverse {
+  color: $banner-title-text-color;
+  background-color: $title-text-color;
+}
+
+.under-section-text {
+  @include media-font(remy(9));
+  @include media-font(remy(10), 1.5, 75em);
+}
+
+
+.third-title-style,
+.third-title-style--reverse {
+  font: remy(13.5)/1.44 $special-font;
+  text-transform: uppercase;
+  
+  @media screen and (min-width: 48em) {
+    font-size: remy(9);
+  }
+  
+  @media screen and (min-width: 75em) {
+    font-size: remy(10);
+  }
+
+}
+
+.third-title-style {
+  color: $title-text-color;
+}
+
+.third-title-style--reverse {
+  background-color: $title-text-color;
+  color: $banner-title-text-color;
+}
+
+
+.rotate-list-title-font {
+  font: remy(13.5)/1.44 $section-title-font;
+  color: $title-text-color;
+
+  @include media-font(remy(9));
+  @include media-font(remy(10), 1.5, 75em);
+}
+
+.important-bg-text,
+.important-bg-text--diff {
+  background-color: $addition-style-color;
+  display: inline;
+  color: $title-text-color;
+}
+
+.important-bg-text {
+  font-family: $style-font;
+}
+
+.important-bg-text--diff {
+  font-family: $main-page-font;
+}

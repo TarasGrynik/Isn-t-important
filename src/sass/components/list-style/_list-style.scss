@@ -1,0 +1,91 @@
+.list--square,
+.list--number,
+.list--rotate,
+.list--square-diff {
+  list-style: none;
+  position: relative;
+}
+
+
+.list--square {
+  &:before {
+    content: "";
+    display: block;
+    position: absolute;
+    top: 5px;
+    left: -20px;
+    width: 7px;
+    height: 7px;
+    background-color: $title-text-color;
+  }
+}
+
+
+.list--square-diff {
+  &:before {
+    content: "";
+    display: block;
+    position: absolute;
+    top: 5px;
+    left: -20px;
+    width: 7px;
+    height: 7px;
+    background-color: $main-style-color;
+  }
+}
+
+.list--number {
+  &:before {
+    position: absolute;
+    display: block;
+    left: -28px;
+    counter-increment: number;
+    content: "0" counter(number) ".";
+    clip: rect(auto auto auto 5px);
+    font-family: $special-font;
+    color: $title-text-color;
+    text-align: center;
+  }
+
+  &:after {
+    position: absolute;
+    left: -18px;
+    top: 22px;
+    display: block;
+    content: "";
+    width: 10px;
+    height: 10px;
+    background-color: $addition-style-color;
+  }
+}
+
+.list--rotate {
+  &:before {
+    position: absolute;
+    left: -25px;
+
+    display: inline-block;
+    width: 45px;
+    height: 13px;
+    line-height: 13px;
+    text-align: center;
+
+    counter-increment: rotated;
+    content: "[00" counter(rotated) "]";
+    transform: rotate(-90deg) translateX(-50%);
+    background: $main-style-color;
+    clip: rect(3px auto auto auto);
+    color: $banner-title-text-color;
+
+    @media (min-width: 48em) {
+      width: 22px;
+      left: -15px;
+      font-size: remy(8);
+    }
+
+    @media (min-width: 75em) {
+      width: 25px;
+      font-size: remy(9);
+    }
+  }
+}
