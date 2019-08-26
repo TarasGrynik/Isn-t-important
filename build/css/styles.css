@@ -7239,6 +7239,10 @@ template {
   display: none;
 }
 
+* {
+  box-sizing: border-box;
+}
+
 *,
 *:before,
 *:after {
