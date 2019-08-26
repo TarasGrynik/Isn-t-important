@@ -44,11 +44,10 @@
 
 .important-additional__block {
   background-color: #052139;
-  padding: 80px;
+  padding: 60px;
   margin-bottom: 40px;
 
   @media screen and (min-width: 48em) {
-    padding: 60px;
     margin-left: 15px;
     margin-top: 20px;
   }
@@ -107,7 +106,7 @@
     content: '';
     height: 1px;
     width: 36px;
-    left: -50px;
+    left: -54px;
     top: 10px;
     background-color: $banner-title-text-color;
 
