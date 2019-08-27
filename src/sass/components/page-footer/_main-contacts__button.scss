@@ -15,7 +15,7 @@
   border-color: #1b4371;
   border-style: solid;
   margin-left: -15px;
-  padding: 6px 6px;
+  padding: 10px 6px;
   transition: all 0.2s linear;
 
   @media screen and (min-width: 30em) {
@@ -29,12 +29,13 @@
   }
 
   @media screen and (min-width: 48em) {
-    padding: 14px 30px;
-    font-size: remy(10);
+    padding: 14px 26px;
+    font-size: remy(9);
   }
 
-  @media screen and (min-width: 62em) {
-    padding: 16px 34px;
+  @media screen and (min-width: 75em) {
+    padding: 14px 30px;
+    font-size: remy(10);
   }
 
   &:hover,

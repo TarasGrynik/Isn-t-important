@@ -20,13 +20,13 @@
     font-family: $special-font;
     color: rgba(0, 0, 0, 0.04);
     position: absolute;
-    left: -44%;
+    left: 2%;
     top: 0;
     z-index: -1;
 
     @media screen and (min-width: 48em) {
-      font-size: 160px;
-      left: 55%;
+      font-size: 150px;
+      left: 52%;
     }
   }
 }
@@ -82,4 +82,15 @@
 
 .just-do-it-additional__text--decorative {
   @extend %accent-text;
+  margin-top: 16px;
+  margin-left: auto;
+
+  @media screen and (min-width: 48em) {
+    margin-top: 10px;
+    margin-right: -24px;
+  }
+
+  @media screen and (min-width: 75em) {
+    margin-right: -30px;
+  }
 }

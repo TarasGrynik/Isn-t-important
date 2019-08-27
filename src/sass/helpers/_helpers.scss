@@ -1,6 +1,6 @@
 /* Placeholder for section title */
 %sec-title-style {
-  font-family: $section-title-font;
+  font-family: $special-font;
   font-size: remy(18);
   line-height: 1.33;
   text-transform: uppercase;
@@ -16,7 +16,7 @@
 }
 
 %sec-title-style--reverse {
-  font-family: $section-title-font;
+  font-family: $special-font;
   font-size: remy(18);
   line-height: 1.33;
   text-transform: uppercase;

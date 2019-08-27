@@ -13,6 +13,7 @@
 .get-your-bonus-main__title {
   @extend %sec-title-style--reverse;
   display: inline;
+  line-height: 1.44;
 }
 
 .get-your-bonus-main__text {
@@ -27,12 +28,12 @@
 
   &::before {
     @extend %pseudo-dash;
-    left: -14px;
-    top: 30px;
+    left: -20px;
+    top: 10px;
 
     @media screen and (min-width: 48em) {
-      top: 25px;
-      left: -20px;
+      top: 5px;
+      left: -36px;
     }
   }
 }
@@ -49,7 +50,7 @@
     @extend %pseudos;
     content: '';
     left: -30px;
-    top: 30px;
+    top: 32px;
     width: 10px;
     height: 10px;
     background-color: $addition-style-color;
@@ -71,11 +72,12 @@
     left: -60px;
     top: -4px;
     font-size: 26px;
-    clip: rect(auto auto auto 7px);
+    clip: rect(auto auto auto 10px);
     font-family: $special-font;
     color: $title-text-color;
 
     @media screen and (min-width: 48em) {
+      clip: rect(auto auto auto 7px);
       font-size: 16px;
       left: -44px;
       top: -1px;
