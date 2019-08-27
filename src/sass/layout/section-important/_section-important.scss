@@ -10,10 +10,6 @@
   }
 }
 
-.important-additional {
-  text-align: start;
-}
-
 .important-additional__title,
 .important-main__title {
   @extend %sec-title-style;
@@ -44,11 +40,23 @@
 
 .important-additional__block {
   background-color: #052139;
-  padding: 60px;
+  padding: 30px 10px;
   margin-bottom: 40px;
 
+  @media screen and (min-width: 24em) {
+    padding: 40px 30px;
+  }
+
+  @media screen and (min-width: 27em) {
+    padding: 50px 40px;
+  }
+
+  @media screen and (min-width: 30em) {
+    padding: 60px 50px;
+  }
+
   @media screen and (min-width: 48em) {
-    margin-left: 15px;
+    padding: 60px 50px;
     margin-top: 20px;
   }
 
@@ -111,7 +119,7 @@
     background-color: $banner-title-text-color;
 
     @media screen and (min-width: 48em) {
-      left: -46px;
+      left: -50px;
     }
   }
 }
@@ -119,9 +127,14 @@
 .important-additional__price--special {
   margin: 0;
   font-family: $special-font;
-  font-size: remy(40);
-  margin-left: 50px;
+  font-size: remy(24);
+  margin-left: 10px;
   color: $banner-title-text-color;
+
+  @media screen and (min-width: 30em) {
+    font-size: remy(40);
+    margin-left: 50px;
+  }
 
   @media screen and (min-width: 48em) {
     margin-left: 20px;
@@ -132,9 +145,9 @@
 .important-additional__price--currency {
   margin: 0;
   @extend %article-title-style;
+  font-size: remy(16);
   color: $banner-title-text-color;
   margin-top: 14px;
-  margin-left: 6px;
 
   @media screen and (min-width: 48em) {
     margin-top: 10px;
@@ -143,6 +156,10 @@
 
 .important-main__text--bold {
   @extend %bold-text-style;
+
+  @media screen and (min-width: 48em) {
+    margin-bottom: 6px;
+  }
 }
 
 .important-main__text--light {
@@ -156,12 +173,20 @@
 
   &::before {
     @extend %pseudo-slash;
-    left: -50px;
+    left: -30px;
     top: 18px;
 
     @media screen and (min-width: 48em) {
-      left: -30px;
+      left: -12px;
       top: 12px;
     }
+  }
+}
+
+.important-main__button {
+  margin-left: 48px;
+
+  @media screen and (min-width: 48em) {
+    margin-left: 36;
   }
 }
