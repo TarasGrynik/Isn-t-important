@@ -9878,6 +9878,7 @@ input[type='radio'].visually-hidden {
   left: -60px;
   top: -4px;
   font-size: 26px;
+  clip: rect(auto auto auto 7px);
   font-family: "Acrom-ExtraBold", sans-serif;
   color: #000000;
 }
@@ -9993,7 +9994,7 @@ input[type='radio'].visually-hidden {
 
 .important-additional__block {
   background-color: #052139;
-  padding: 80px;
+  padding: 60px;
   margin-bottom: 40px;
 }
 
@@ -10030,7 +10031,7 @@ input[type='radio'].visually-hidden {
   content: '';
   height: 1px;
   width: 36px;
-  left: -50px;
+  left: -54px;
   top: 10px;
   background-color: #ffffff;
 }
@@ -12058,7 +12059,6 @@ input[type='radio'].visually-hidden {
   }
 
   .important-additional__block {
-    padding: 60px;
     margin-left: 15px;
     margin-top: 20px;
   }
