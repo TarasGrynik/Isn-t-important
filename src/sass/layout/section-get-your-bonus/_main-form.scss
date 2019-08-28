@@ -28,6 +28,10 @@
   @extend %sec-title-text-style;
   margin-bottom: 20px;
   transition: all 0.2s linear;
+
+  @media screen and (min-width: 48em) {
+    font-size: remy(12);
+  }
 }
 
 .main-form__input:focus {
@@ -39,7 +43,7 @@
 }
 
 .main-form__input:required:valid {
-  border-bottom: 3px solid #39e600;
+  border-bottom: 2px solid #39e600;
 }
 
 .main-form__input::placeholder {
